@@ -4,12 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fignberry</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/theme-strawberry.css"/>
+    <link rel="stylesheet" href="css/theme-fig.css"/>
   </head>
-  <body>
-    <main>
-      <h1>fignberry</h1>
-      <p>fig + strawberry = new project loading… 🍓🌿</p>
-    </main>
-  </body>
+ <body data-theme="strawberry">
+  <header class="topbar">
+    <div class="brand">fignberry</div>
+
+    <div class="theme-toggle" role="group" aria-label="Theme toggle">
+      <button type="button" class="theme-btn" data-set-theme="strawberry" aria-pressed="true">
+        🍓 strawberry
+      </button>
+      <button type="button" class="theme-btn" data-set-theme="fig" aria-pressed="false">
+        🌿 fig
+      </button>
+    </div>
+  </header>
+
+  <main class="card">
+    <h1>fignberry</h1>
+    <p>fig + strawberry = new project loading… 🍓🌿</p>
+  </main>
+
+  <script src="js/theme-toggle.js" defer></script>
+</body>
 </html>
