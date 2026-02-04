@@ -1,32 +1,75 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>fignberry</title>
-    <link rel="stylesheet" href="css/base.css"/>
-    <link rel="stylesheet" href="css/theme-strawberry.css"/>
-    <link rel="stylesheet" href="css/theme-fig.css"/>
-  </head>
- <body data-theme="strawberry">
-  <header class="topbar">
-    <div class="brand">fignberry</div>
+<html lang="en" data-theme="lain">
 
-    <div class="theme-toggle" role="group" aria-label="Theme toggle">
-      <button type="button" class="theme-btn" data-set-theme="strawberry" aria-pressed="true">
-        🍓 strawberry
-      </button>
-      <button type="button" class="theme-btn" data-set-theme="fig" aria-pressed="false">
-        🌿 fig
-      </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>the wired</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/effects.css" />
+</head>
+
+<body>
+  <!-- CRT overlays -->
+  <div class="fx-scanlines" aria-hidden="true"></div>
+  <div class="fx-noise" aria-hidden="true"></div>
+  <div class="fx-vignette" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <span id="status">linked</span>
+    </div>
+
+    <div class="meta">
+      <span id="uptime">00:00:00</span>
     </div>
   </header>
 
-  <main class="card">
-    <h1>fignberry</h1>
-    <p>fig + strawberry = new project loading… 🍓🌿</p>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="sig">do not index.</p>
+      <p class="sig">do not explain.</p>
+
+      <nav class="nav nav-min">
+        <a href="wired.html">/</a>
+        <a href="layers/01.html">01</a>
+        <a href="protocols/index.html">::</a>
+        <a href="log.html">...</a>
+      </nav>
+
+      <p class="tiny">enter: /index.html</p>
+    </section>
+
+    <section class="grid" id="enter">
+      <article class="pane">
+        <h2>syslog</h2>
+        <pre id="syslog"></pre>
+      </article>
+
+      <article class="pane">
+        <h2>packets</h2>
+        <pre id="packets"></pre>
+      </article>
+
+      <article class="pane" id="layers">
+        <h2>layers</h2>
+        <pre id="layersPane"></pre>
+      </article>
+
+      <article class="pane" id="protocols">
+        <h2>trace</h2>
+        <pre id="trace"></pre>
+      </article>
+    </section>
+
+    <section class="footer" id="log">
+      <p class="tiny">not all links are visible.</p>
+    </section>
   </main>
 
-  <script src="js/theme-toggle.js" defer></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,17 @@
+:root[data-theme="lain"] a {
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(120, 255, 154, 0.25);
+}
+
+:root[data-theme="lain"] a:hover {
+    color: var(--accent-2);
+    border-bottom-color: rgba(125, 249, 255, 0.55);
+}
+
+:root[data-theme="lain"] .card,
+:root[data-theme="lain"] .panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
