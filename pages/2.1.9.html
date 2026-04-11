@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.1.9 Display Components</title>
+  <link rel="stylesheet" href="../styles/site.css">
+</head>
+
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <p class="site-title">Course Navigation</p>
+            <nav class="site-nav" aria-label="Primary">
+        <section class="nav-section">
+          <p class="nav-label">Start</p>
+          <div class="nav-links">
+            <a href="../index.html" class="nav-link nav-home">Home</a>
+          </div>
+        </section>
+        <section class="nav-section">
+          <p class="nav-label">Unit 1</p>
+          <div class="nav-links">
+            <a href="1.1.2.html" class="nav-link">1.1.2</a>
+            <a href="1.2.1.html" class="nav-link">1.2.1</a>
+            <a href="1.2.2.html" class="nav-link">1.2.2</a>
+            <a href="1.2.3.html" class="nav-link">1.2.3</a>
+            <a href="1.2.4.html" class="nav-link">1.2.4</a>
+            <a href="1.2.5.html" class="nav-link">1.2.5</a>
+            <a href="1.2.6.html" class="nav-link">1.2.6</a>
+            <a href="1.2.7.html" class="nav-link">1.2.7</a>
+            <a href="1.3.1.html" class="nav-link">1.3.1</a>
+            <a href="1.4_Module_Quiz.html" class="nav-link nav-quiz">1.4 Quiz</a>
+          </div>
+        </section>
+        <section class="nav-section">
+          <p class="nav-label">Unit 2</p>
+          <div class="nav-links">
+            <a href="2.1.1.html" class="nav-link">2.1.1</a>
+            <a href="2.1.3.html" class="nav-link">2.1.3</a>
+            <a href="2.1.4.html" class="nav-link">2.1.4</a>
+            <a href="2.1.5.html" class="nav-link">2.1.5</a>
+            <a href="2.1.7.html" class="nav-link">2.1.7</a>
+            <a href="2.1.8.html" class="nav-link">2.1.8</a>
+            <a href="2.1.9.html" class="nav-link is-active" aria-current="page">2.1.9</a>
+            <a href="2.1.10.html" class="nav-link">2.1.10</a>
+            <a href="2.1.11.html" class="nav-link">2.1.11</a>
+            <a href="2.1.12.html" class="nav-link">2.1.12</a>
+            <a href="2.1.13.html" class="nav-link">2.1.13</a>
+            <a href="2.1.14.html" class="nav-link">2.1.14</a>
+            <a href="2.1.15.html" class="nav-link">2.1.15</a>
+          </div>
+        </section>
+      </nav>
+    </header>
+
+    <main class="page-content">
+      <h1>2.1.9 Display Components - Notes</h1>
+
+      <h2>Key Components</h2>
+      <ul>
+        <li><strong>Touch screens and digitizers:</strong> enable direct interaction with touch or a stylus. Common in smartphones, tablets, and some laptops.</li>
+        <li><strong>Inverter:</strong> found only in older LCDs. It converts DC power to AC power for the fluorescent backlight. Modern LED-backlit displays do not need one.</li>
+      </ul>
+
+      <h2>Display Attributes</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Attribute</th>
+            <th>What it means</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pixel density</td>
+            <td>Higher means a sharper image.</td>
+          </tr>
+          <tr>
+            <td>Refresh rate (Hz)</td>
+            <td>Higher means smoother motion and matters for gaming and video.</td>
+          </tr>
+          <tr>
+            <td>Frame rate (fps)</td>
+            <td>Describes the video source, not the display.</td>
+          </tr>
+          <tr>
+            <td>Screen resolution</td>
+            <td>Defines clarity and detail.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Resolution Reference</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Resolution</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Full HD</td>
+            <td>1920 x 1080</td>
+          </tr>
+          <tr>
+            <td>Quad HD</td>
+            <td>2560 x 1440</td>
+          </tr>
+          <tr>
+            <td>4K</td>
+            <td>3840 x 2160</td>
+          </tr>
+          <tr>
+            <td>5K</td>
+            <td>5120 x 2880</td>
+          </tr>
+          <tr>
+            <td>8K</td>
+            <td>7680 x 4320</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Color gamut:</strong> the range of colors a display can produce. A wider gamut means more accurate and vibrant color. Common standards are sRGB, Adobe RGB, and DCI-P3, with DCI-P3 being the widest of the three.</p>
+
+      <p><strong>Color depth:</strong> 24-bit true color represents about 16.7 million colors. 32-bit color adds an alpha channel for transparency.</p>
+
+      <h2>Video Cable Bandwidth</h2>
+      <p>Bandwidth needs are determined by resolution times refresh rate. For example, HD at 60 fps needs about 4.5 Gbps, while 4K at 60 fps needs about 8.91 Gbps.</p>
+      <p>Important distinction: <strong>fps</strong> describes the video source, while <strong>Hz</strong> describes the display refresh rate. To avoid ghosting and tearing, refresh rate should match or be divisible by frame rate, such as 60 fps video on a 120 Hz display.</p>
+
+      <h2>Quick Note</h2>
+      <p>LCD and TFT displays are often marketed as LED displays because of their backlight technology. Older models used fluorescent tubes and needed an inverter. OLED displays have no backlight because each pixel is its own light source.</p>
+    </main>
+  </div>
+</body>
+
+</html>
+
