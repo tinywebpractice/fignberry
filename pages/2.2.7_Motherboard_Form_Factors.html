@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1.3.1 Troubleshooting Methodology</title>
+  <title>2.2.7 Motherboard Form Factors</title>
   <link rel="stylesheet" href="../styles/site.css">
 </head>
 
@@ -12,7 +12,7 @@
   <div class="site-shell">
     <header class="site-header">
       <p class="site-title">Course Navigation</p>
-                                    <nav class="site-nav" aria-label="Primary">
+                              <nav class="site-nav" aria-label="Primary">
         <section class="nav-section">
           <p class="nav-label">Start</p>
           <div class="nav-links">
@@ -30,7 +30,7 @@
             <a href="1.2.5.html" class="nav-link">1.2.5</a>
             <a href="1.2.6.html" class="nav-link">1.2.6</a>
             <a href="1.2.7.html" class="nav-link">1.2.7</a>
-            <a href="1.3.1.html" class="nav-link is-active" aria-current="page">1.3.1</a>
+            <a href="1.3.1.html" class="nav-link">1.3.1</a>
             <a href="1.4_Module_Quiz.html" class="nav-link nav-quiz">1.4 Quiz</a>
           </div>
         </section>
@@ -58,7 +58,7 @@
             <a href="2.2.4_Motherboard_Storage_Connectors.html" class="nav-link">2.2.4 Storage Conn.</a>
             <a href="2.2.5_PCIe.html" class="nav-link">2.2.5 PCIe</a>
             <a href="2.2.6_PCI.html" class="nav-link">2.2.6 PCI</a>
-            <a href="2.2.7_Motherboard_Form_Factors.html" class="nav-link">2.2.7 Form Factors</a>
+            <a href="2.2.7_Motherboard_Form_Factors.html" class="nav-link is-active" aria-current="page">2.2.7 Form Factors</a>
             <a href="2.2.8_Motherboard_Installation.html" class="nav-link">2.2.8 Mobo Install</a>
             <a href="2.2.12_Video_Cards.html" class="nav-link">2.2.12 Video Cards</a>
             <a href="2.2.14_Capture_Cards.html" class="nav-link">2.2.14 Capture Cards</a>
@@ -70,42 +70,59 @@
     </header>
 
     <main class="page-content">
-      <h1>1.3.1 Troubleshooting Methodology - Quick Notes</h1>
+      <h1>2.2.7 Motherboard Form Factors - Notes</h1>
 
-      <p>This lesson explains the standard CompTIA troubleshooting process. The speaker goes through each step in order and shows how a technician can stay organized by taking notes, testing carefully, and documenting results.</p>
+      <p>The form factor defines the motherboard's shape, layout, compatible case, power supply, and number of expansion slots.</p>
 
-      <h2>The Six-Step Process</h2>
-      <ol>
-        <li>Identify the problem.</li>
-        <li>Establish a theory of probable cause.</li>
-        <li>Test the theory to determine the cause.</li>
-        <li>Establish a plan of action and implement the solution.</li>
-        <li>Verify full system functionality and apply preventive measures.</li>
-        <li>Document findings, actions, and outcomes.</li>
-      </ol>
+      <h2>Form Factors</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Form Factor</th>
+            <th>Size</th>
+            <th>Max Expansion Slots</th>
+            <th>Case Compatibility</th>
+            <th>Common Use</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ATX</td>
+            <td>12 x 9.6 in (305 x 244 mm)</td>
+            <td>7</td>
+            <td>ATX cases</td>
+            <td>Standard desktop PCs</td>
+          </tr>
+          <tr>
+            <td>Micro-ATX (mATX)</td>
+            <td>9.6 x 9.6 in (244 x 244 mm)</td>
+            <td>4</td>
+            <td>ATX or mATX cases</td>
+            <td>Compact desktops</td>
+          </tr>
+          <tr>
+            <td>Mini-ITX</td>
+            <td>6.7 x 6.7 in (170 x 170 mm)</td>
+            <td>1</td>
+            <td>ATX, mATX, or ITX cases</td>
+            <td>Small form factor PCs, home use, mini servers</td>
+          </tr>
+        </tbody>
+      </table>
 
-      <h2>Identify the Problem</h2>
-      <p>Start by gathering information. Ask questions, observe the symptoms, and find out what changed before the issue started. Good notes at this stage make the rest of troubleshooting easier.</p>
-
-      <h2>Build and Test a Theory</h2>
-      <p>Use the symptoms to form a likely explanation, then test that theory with a controlled step. If the theory is wrong, move to another possibility instead of guessing randomly.</p>
-
-      <h2>Plan Before Acting</h2>
-      <p>Once the cause is understood, choose the fix carefully. Consider policies, procedures, impact on users, and the possibility that a change could affect other systems.</p>
-
-      <h2>Verify the Result</h2>
-      <p>After applying the fix, confirm that the original problem is gone and that the full system still works correctly. If possible, include preventive steps so the issue is less likely to happen again.</p>
-
-      <h2>Document Everything</h2>
-      <p>Record the symptoms, cause, tests, solution, and final outcome. Clear documentation helps with future incidents and shows exactly what was done.</p>
+      <h2>Key Things to Remember</h2>
+      <ul>
+        <li>ATX is the standard, most common motherboard size, and it offers the most expansion slots.</li>
+        <li>Micro-ATX is smaller than ATX but still fits in many ATX cases.</li>
+        <li>Mini-ITX is the smallest of the common PC form factors and usually provides only one expansion slot.</li>
+        <li>Nano-ITX, pico-ITX, and mobile-ITX are aimed at embedded systems rather than standard PCs.</li>
+        <li>No commercial boards were ever widely produced from the original plain ITX spec; Mini-ITX is the version that reached the market.</li>
+      </ul>
     </main>
   </div>
 </body>
 
 </html>
-
-
-
 
 
 

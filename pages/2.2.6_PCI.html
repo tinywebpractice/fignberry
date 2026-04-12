@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1.3.1 Troubleshooting Methodology</title>
+  <title>2.2.6 PCI (Peripheral Component Interconnect)</title>
   <link rel="stylesheet" href="../styles/site.css">
 </head>
 
@@ -12,7 +12,7 @@
   <div class="site-shell">
     <header class="site-header">
       <p class="site-title">Course Navigation</p>
-                                    <nav class="site-nav" aria-label="Primary">
+                              <nav class="site-nav" aria-label="Primary">
         <section class="nav-section">
           <p class="nav-label">Start</p>
           <div class="nav-links">
@@ -30,7 +30,7 @@
             <a href="1.2.5.html" class="nav-link">1.2.5</a>
             <a href="1.2.6.html" class="nav-link">1.2.6</a>
             <a href="1.2.7.html" class="nav-link">1.2.7</a>
-            <a href="1.3.1.html" class="nav-link is-active" aria-current="page">1.3.1</a>
+            <a href="1.3.1.html" class="nav-link">1.3.1</a>
             <a href="1.4_Module_Quiz.html" class="nav-link nav-quiz">1.4 Quiz</a>
           </div>
         </section>
@@ -57,7 +57,7 @@
             <a href="2.2.3_Motherboard_CPU_System_Memory_Connectors.html" class="nav-link">2.2.3 CPU/RAM</a>
             <a href="2.2.4_Motherboard_Storage_Connectors.html" class="nav-link">2.2.4 Storage Conn.</a>
             <a href="2.2.5_PCIe.html" class="nav-link">2.2.5 PCIe</a>
-            <a href="2.2.6_PCI.html" class="nav-link">2.2.6 PCI</a>
+            <a href="2.2.6_PCI.html" class="nav-link is-active" aria-current="page">2.2.6 PCI</a>
             <a href="2.2.7_Motherboard_Form_Factors.html" class="nav-link">2.2.7 Form Factors</a>
             <a href="2.2.8_Motherboard_Installation.html" class="nav-link">2.2.8 Mobo Install</a>
             <a href="2.2.12_Video_Cards.html" class="nav-link">2.2.12 Video Cards</a>
@@ -70,42 +70,75 @@
     </header>
 
     <main class="page-content">
-      <h1>1.3.1 Troubleshooting Methodology - Quick Notes</h1>
+      <h1>2.2.6 PCI (Peripheral Component Interconnect) - Notes</h1>
 
-      <p>This lesson explains the standard CompTIA troubleshooting process. The speaker goes through each step in order and shows how a technician can stay organized by taking notes, testing carefully, and documenting results.</p>
+      <p>PCI is a legacy expansion bus that has been superseded by PCIe. It still matters because some older motherboards include PCI slots alongside PCIe slots for backward compatibility.</p>
 
-      <h2>The Six-Step Process</h2>
-      <ol>
-        <li>Identify the problem.</li>
-        <li>Establish a theory of probable cause.</li>
-        <li>Test the theory to determine the cause.</li>
-        <li>Establish a plan of action and implement the solution.</li>
-        <li>Verify full system functionality and apply preventive measures.</li>
-        <li>Document findings, actions, and outcomes.</li>
-      </ol>
+      <h2>PCI Specs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Specification</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Communication type</td>
+            <td>Parallel, unlike PCIe which is serial</td>
+          </tr>
+          <tr>
+            <td>Bit width</td>
+            <td>32-bit</td>
+          </tr>
+          <tr>
+            <td>Speed</td>
+            <td>33.3 MHz</td>
+          </tr>
+          <tr>
+            <td>Max transfer rate</td>
+            <td>133 MBps</td>
+          </tr>
+        </tbody>
+      </table>
 
-      <h2>Identify the Problem</h2>
-      <p>Start by gathering information. Ask questions, observe the symptoms, and find out what changed before the issue started. Good notes at this stage make the rest of troubleshooting easier.</p>
+      <h2>Voltage and Keying</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Voltage</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5V</td>
+            <td>Original PCI cards</td>
+          </tr>
+          <tr>
+            <td>3.3V</td>
+            <td>Became more common later</td>
+          </tr>
+          <tr>
+            <td>Dual-voltage</td>
+            <td>Supports both 5V and 3.3V</td>
+          </tr>
+        </tbody>
+      </table>
 
-      <h2>Build and Test a Theory</h2>
-      <p>Use the symptoms to form a likely explanation, then test that theory with a controlled step. If the theory is wrong, move to another possibility instead of guessing randomly.</p>
+      <p>Different keying, or notch positions, on cards and slots prevents incompatible voltage cards from being inserted incorrectly.</p>
 
-      <h2>Plan Before Acting</h2>
-      <p>Once the cause is understood, choose the fix carefully. Consider policies, procedures, impact on users, and the possibility that a change could affect other systems.</p>
-
-      <h2>Verify the Result</h2>
-      <p>After applying the fix, confirm that the original problem is gone and that the full system still works correctly. If possible, include preventive steps so the issue is less likely to happen again.</p>
-
-      <h2>Document Everything</h2>
-      <p>Record the symptoms, cause, tests, solution, and final outcome. Clear documentation helps with future incidents and shows exactly what was done.</p>
+      <h2>PCI vs PCIe Compatibility</h2>
+      <ul>
+        <li>PCIe is software-compatible with PCI, so a PCIe motherboard can still include PCI slots to support legacy cards.</li>
+        <li>PCI cards cannot fit into PCIe slots because they are physically incompatible.</li>
+        <li>PCIe replaced PCI because serial communication and dedicated point-to-point links are faster and more efficient.</li>
+      </ul>
     </main>
   </div>
 </body>
 
 </html>
-
-
-
 
 
 

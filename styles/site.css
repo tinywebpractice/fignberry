@@ -155,6 +155,59 @@ a {
   border: 1px solid var(--color-border);
 }
 
+.review-drawers {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.review-drawer {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgba(239, 235, 206, 0.45);
+  overflow: hidden;
+}
+
+.drawer-trigger {
+  width: 100%;
+  padding: var(--space-4);
+  border: 0;
+  background: transparent;
+  color: var(--color-text-strong);
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.drawer-trigger::after {
+  content: "+";
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.drawer-trigger[aria-expanded="true"]::after {
+  content: "-";
+}
+
+.drawer-trigger:hover,
+.drawer-trigger:focus {
+  background: rgba(216, 164, 143, 0.18);
+}
+
+.drawer-panel {
+  padding: 0 var(--space-4) var(--space-4);
+  border-top: 1px solid var(--color-border);
+  background: #ffffff;
+}
+
+.drawer-panel > :last-child {
+  margin-bottom: 0;
+}
+
 table {
   width: 100%;
   margin: 0 0 var(--space-5);
