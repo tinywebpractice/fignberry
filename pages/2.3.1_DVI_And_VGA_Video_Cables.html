@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1.2.6 Implement a Plan of Action</title>
+  <title>2.3.1 DVI and VGA Video Cables</title>
   <link rel="stylesheet" href="../styles/site.css">
 </head>
 
@@ -12,7 +12,7 @@
   <div class="site-shell">
     <header class="site-header">
       <p class="site-title">Course Navigation</p>
-                                    <nav class="site-nav" aria-label="Primary">
+      <nav class="site-nav" aria-label="Primary">
         <section class="nav-section">
           <p class="nav-label">Start</p>
           <div class="nav-links">
@@ -28,7 +28,7 @@
             <a href="1.2.3.html" class="nav-link">1.2.3</a>
             <a href="1.2.4.html" class="nav-link">1.2.4</a>
             <a href="1.2.5.html" class="nav-link">1.2.5</a>
-            <a href="1.2.6.html" class="nav-link is-active" aria-current="page">1.2.6</a>
+            <a href="1.2.6.html" class="nav-link">1.2.6</a>
             <a href="1.2.7.html" class="nav-link">1.2.7</a>
             <a href="1.3.1.html" class="nav-link">1.3.1</a>
             <a href="1.4_Module_Quiz.html" class="nav-link nav-quiz">1.4 Quiz</a>
@@ -65,7 +65,7 @@
             <a href="2.2.15_Sound_Cards.html" class="nav-link">2.2.15 Sound Cards</a>
             <a href="2.2.16_Network_Interface_Cards.html" class="nav-link">2.2.16 NICs</a>
             <a href="2.2.18_Lesson_Review.html" class="nav-link">2.2.18 Review</a>
-            <a href="2.3.1_DVI_And_VGA_Video_Cables.html" class="nav-link">2.3.1 DVI/VGA</a>
+            <a href="2.3.1_DVI_And_VGA_Video_Cables.html" class="nav-link is-active" aria-current="page">2.3.1 DVI/VGA</a>
             <a href="2.3.3_Serial_Cables.html" class="nav-link">2.3.3 Serial</a>
             <a href="2.3.4_Adapter_Cables.html" class="nav-link">2.3.4 Adapters</a>
             <a href="2.3.5_Lesson_Review.html" class="nav-link">2.3.5 Review</a>
@@ -75,41 +75,59 @@
     </header>
 
     <main class="page-content">
-      <h1>1.2.6 Implement a Plan of Action - Quick Notes</h1>
+      <h1>2.3.1 DVI and VGA Video Cables - Notes</h1>
 
-      <h2>Three Approaches to Resolving a Problem</h2>
+      <p><strong>Key rule:</strong> Both DVI and VGA carry video only. Neither one carries audio.</p>
+
+      <h2>DVI (Digital Visual Interface)</h2>
+      <p>DVI was introduced in 1999 and can support analog output, digital output, or both depending on the connector type. It is no longer actively developed and is mostly found on older hardware.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Signal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>DVI-A</td>
+            <td>Analog only</td>
+          </tr>
+          <tr>
+            <td>DVI-D (single/dual link)</td>
+            <td>Digital only</td>
+          </tr>
+          <tr>
+            <td>DVI-I (single/dual link)</td>
+            <td>Both analog and digital</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Dual link DVI includes extra pins for higher bandwidth.</p>
+
+      <h2>VGA (Video Graphics Array)</h2>
       <ul>
-        <li>Repair: decide whether the cost is worth it.</li>
-        <li>Replace: this may cost more and take more time, but it can also create a chance to upgrade.</li>
-        <li>Workaround: if repair or replacement is not practical, document the workaround and move on.</li>
+        <li>15-pin connector</li>
+        <li>Analog only</li>
+        <li>Long-time standard for PC monitors, now being phased out</li>
+        <li>Maximum resolution up to 1080p, depending on cable quality</li>
+        <li>D-shell connector with screw locks</li>
       </ul>
 
-      <h2>Warranty Note</h2>
-      <p>Returning a part requires an RMA (returned materials authorization) ticket from the vendor.</p>
+      <h2>Quick Memory Trick</h2>
+      <p>The DVI letter tells you the signal type: <strong>A</strong> for analog, <strong>D</strong> for digital, and <strong>I</strong> for integrated (both).</p>
 
-      <h2>Planning the Fix</h2>
+      <h2>Key Things to Remember</h2>
       <ul>
-        <li>Assess resources, time, and cost.</li>
-        <li>Consider the impact on other systems, such as a patch that breaks something else.</li>
-        <li>Get proper authorization before acting and follow corporate policies.</li>
-      </ul>
-
-      <h2>Implementing</h2>
-      <ul>
-        <li>Test after each change. If it does not work, reverse it before trying something else.</li>
-        <li>Do not make multiple changes without recording them, or you will lose track.</li>
-        <li>If the work is disruptive, schedule it at the right time and notify affected users.</li>
-        <li>If you are following vendor instructions, make sure you actually understand the steps before doing them.</li>
+        <li>DVI and VGA both carry video only.</li>
+        <li>VGA is always analog.</li>
+        <li>DVI may be analog, digital, or both depending on the connector type.</li>
+        <li>DVI is newer than VGA, but both are now mostly associated with older systems.</li>
       </ul>
     </main>
   </div>
 </body>
 
 </html>
-
-
-
-
-
-
-
