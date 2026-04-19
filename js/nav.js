@@ -313,17 +313,24 @@ function createAccordionSection(section, index, context) {
 function createMobilePageBar(context, currentItem) {
   const bar = document.createElement("div");
   bar.className = "mobile-page-bar";
+  const isHomePage = currentItem && currentItem.path === "index.html";
 
   const title = document.createElement("p");
   title.className = "mobile-page-bar__title";
   title.textContent = currentItem ? currentItem.title : "Course Navigation";
 
-  const homeLink = document.createElement("a");
-  homeLink.className = "mobile-page-bar__home";
-  homeLink.href = toRelativeHref(context.currentDirectoryPath, normalizePathname(new URL("index.html", context.siteRootUrl).pathname));
-  homeLink.textContent = "Home";
+  bar.append(title);
 
-  bar.append(title, homeLink);
+  if (!isHomePage) {
+    const homeLink = document.createElement("a");
+    homeLink.className = "mobile-page-bar__home";
+    homeLink.href = toRelativeHref(context.currentDirectoryPath, normalizePathname(new URL("index.html", context.siteRootUrl).pathname));
+    homeLink.textContent = "Home";
+    bar.append(homeLink);
+  } else {
+    bar.classList.add("mobile-page-bar--title-only");
+  }
+
   return bar;
 }
 
