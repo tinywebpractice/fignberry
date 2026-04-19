@@ -76,13 +76,13 @@ const NAV_DATA = [
       { title: "3.1.4 Power Supply Connectors", path: "pages/module_2/3.1.4_Power_Supply_Connectors.html" },
       { title: "3.1.5 20-pin to 24-pin Adapter", path: "pages/module_2/3.1.5_20_Pin_to_24_Pin_Motherboard_Adapter.html" },
       { title: "3.1.6 Modular Power Supplies", path: "pages/module_2/3.1.6_Modular_Power_Supplies.html" },
-      { title: "3.1.7 Redundant Power Supplies", path: "pages/module_2/3.1.7_Redundant_Power_Supplioes.html"},
+      { title: "3.1.7 Redundant Power Supplies", path: "pages/module_2/3.1.7_Redundant_Power_Supplioes.html" },
       { title: "3.1.9 Troubleshoot PSU Problems Lab", path: "pages/module_2/3.1.9_Lab_Troubleshoot_Power_Supply_Problems.html" },
       { title: "3.1.10 Fan Cooling Systems", path: "pages/module_2/3.1.10_Fan_Cooling_Systems.html" },
       { title: "3.1.11 Heat Sinks and Thermal Paste", path: "pages/module_2/3.1.11_Heat_Sinks_And_Thermal_Paste.html" },
       { title: "3.1.12 Fans", path: "pages/module_2/3.1.12_Fans.html" },
       { title: "3.1.13 Liquid Cooling Systems", path: "pages/module_2/3.1.13_Liquid_Cooling_Systems.html" },
-      { title: "3.1.14 Lesson Review", path: "pages/module_2/3.1.14_Lesson_Review.html" },
+      { title: "3.1.14 Lesson Review", path: "pages/module_2/3.1.14_Lesson_Review.html" }
     ]
   }
 ];
@@ -144,6 +144,10 @@ function getAllItems(section) {
   }
 
   return section.groups.flatMap((group) => group.items);
+}
+
+function getFlatNavItems() {
+  return NAV_DATA.flatMap((section) => getAllItems(section));
 }
 
 function readVisitedPages() {
@@ -268,7 +272,6 @@ function createAccordionSection(section, index, context) {
   const chevron = document.createElement("span");
   chevron.className = "nav-chevron";
   chevron.setAttribute("aria-hidden", "true");
-  chevron.textContent = "▶";
 
   const label = document.createElement("span");
   label.className = "nav-label";
@@ -305,6 +308,82 @@ function createAccordionSection(section, index, context) {
 
   module.append(button, panel);
   return module;
+}
+
+function createMobilePageBar(context, currentItem) {
+  const bar = document.createElement("div");
+  bar.className = "mobile-page-bar";
+
+  const title = document.createElement("p");
+  title.className = "mobile-page-bar__title";
+  title.textContent = currentItem ? currentItem.title : "Course Navigation";
+
+  const homeLink = document.createElement("a");
+  homeLink.className = "mobile-page-bar__home";
+  homeLink.href = toRelativeHref(context.currentDirectoryPath, normalizePathname(new URL("index.html", context.siteRootUrl).pathname));
+  homeLink.textContent = "Home";
+
+  bar.append(title, homeLink);
+  return bar;
+}
+
+function appendPageSequenceNav(mainElement, context, currentItem) {
+  const flatItems = getFlatNavItems();
+  const currentIndex = flatItems.findIndex((item) => item.path === currentItem.path);
+
+  if (currentIndex === -1) {
+    return;
+  }
+
+  const previousItem = flatItems[currentIndex - 1] || null;
+  const nextItem = flatItems[currentIndex + 1] || null;
+
+  if (!previousItem && !nextItem) {
+    return;
+  }
+
+  const nav = document.createElement("nav");
+  nav.className = "page-sequence-nav";
+  nav.setAttribute("aria-label", "Lesson navigation");
+
+  if (previousItem) {
+    const previousLink = document.createElement("a");
+    previousLink.className = "page-sequence-link";
+    previousLink.href = toRelativeHref(
+      context.currentDirectoryPath,
+      normalizePathname(new URL(previousItem.path, context.siteRootUrl).pathname)
+    );
+    previousLink.innerHTML = `<span class="page-sequence-link__eyebrow">Previous</span><span class="page-sequence-link__title">${previousItem.title}</span>`;
+    nav.append(previousLink);
+  }
+
+  if (nextItem) {
+    const nextLink = document.createElement("a");
+    nextLink.className = "page-sequence-link page-sequence-link--next";
+    nextLink.href = toRelativeHref(
+      context.currentDirectoryPath,
+      normalizePathname(new URL(nextItem.path, context.siteRootUrl).pathname)
+    );
+    nextLink.innerHTML = `<span class="page-sequence-link__eyebrow">Next</span><span class="page-sequence-link__title">${nextItem.title}</span>`;
+    nav.append(nextLink);
+  }
+
+  mainElement.append(nav);
+}
+
+function wrapTablesForMobile(mainElement) {
+  const tables = mainElement.querySelectorAll("table");
+
+  tables.forEach((table) => {
+    if (table.parentElement && table.parentElement.classList.contains("table-scroll")) {
+      return;
+    }
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "table-scroll";
+    table.parentNode.insertBefore(wrapper, table);
+    wrapper.append(table);
+  });
 }
 
 function closeSidebar() {
@@ -394,9 +473,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentDirectoryPath = normalizePathname(new URL("./", currentUrl).pathname).replace(/index\.html$/i, "");
   const visitedPages = readVisitedPages();
   const openSections = readOpenSections();
+  const currentItem = getFlatNavItems().find((item) => {
+    const itemUrl = new URL(item.path, siteRootUrl);
+    return normalizePathname(itemUrl.pathname) === currentPathname;
+  }) || null;
   const context = {
     currentPathname,
     currentDirectoryPath,
+    currentItem,
     openSections,
     siteRootUrl,
     visitedPages
@@ -409,6 +493,21 @@ document.addEventListener("DOMContentLoaded", () => {
   NAV_DATA.forEach((section, index) => {
     navElement.append(createAccordionSection(section, index, context));
   });
+
+  const pageContent = document.querySelector(".page-content");
+  const siteShell = document.querySelector(".site-shell--sidebar");
+
+  if (pageContent) {
+    wrapTablesForMobile(pageContent);
+
+    if (currentItem) {
+      appendPageSequenceNav(pageContent, context, currentItem);
+    }
+  }
+
+  if (siteShell) {
+    siteShell.insertBefore(createMobilePageBar(context, currentItem), pageContent || null);
+  }
 
   setupSidebarToggle(navElement);
 });
