@@ -408,7 +408,7 @@ function appendSiteFooter(mainElement) {
 
   const footerText = document.createElement("p");
   footerText.className = "site-footer__text";
-  footerText.textContent = "Questions or feedback?";
+  footerText.textContent = "Questions?";
 
   const footerLink = document.createElement("a");
   footerLink.className = "site-footer__link";
