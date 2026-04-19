@@ -11,15 +11,15 @@ const NAV_DATA = [
       {
         label: "Chapter 1",
         items: [
-          { title: "1.1.2", path: "pages/module_1/1.1.2.html" },
-          { title: "1.2.1", path: "pages/module_1/1.2.1.html" },
-          { title: "1.2.2", path: "pages/module_1/1.2.2.html" },
-          { title: "1.2.3", path: "pages/module_1/1.2.3.html" },
-          { title: "1.2.4", path: "pages/module_1/1.2.4.html" },
-          { title: "1.2.5", path: "pages/module_1/1.2.5.html" },
-          { title: "1.2.6", path: "pages/module_1/1.2.6.html" },
-          { title: "1.2.7", path: "pages/module_1/1.2.7.html" },
-          { title: "1.3.1", path: "pages/module_1/1.3.1.html" },
+          { title: "1.1.2 Skills and Abilities", path: "pages/module_1/1.1.2.html" },
+          { title: "1.2.1 Best Practice Methodology", path: "pages/module_1/1.2.1.html" },
+          { title: "1.2.2 Identify the Problem", path: "pages/module_1/1.2.2.html" },
+          { title: "1.2.3 Establish and Test a Theory", path: "pages/module_1/1.2.3.html" },
+          { title: "1.2.4 Question the Obvious", path: "pages/module_1/1.2.4.html" },
+          { title: "1.2.5 Establish a New Theory or Escalate", path: "pages/module_1/1.2.5.html" },
+          { title: "1.2.6 Implement a Plan of Action", path: "pages/module_1/1.2.6.html" },
+          { title: "1.2.7 Verify and Document", path: "pages/module_1/1.2.7.html" },
+          { title: "1.3.1 Troubleshooting Methodology", path: "pages/module_1/1.3.1.html" },
           { title: "1.4 Quiz", path: "pages/module_1/1.4_Module_Quiz.html", classes: ["nav-quiz"] }
         ]
       },
@@ -82,7 +82,12 @@ const NAV_DATA = [
       { title: "3.1.11 Heat Sinks and Thermal Paste", path: "pages/module_2/3.1.11_Heat_Sinks_And_Thermal_Paste.html" },
       { title: "3.1.12 Fans", path: "pages/module_2/3.1.12_Fans.html" },
       { title: "3.1.13 Liquid Cooling Systems", path: "pages/module_2/3.1.13_Liquid_Cooling_Systems.html" },
-      { title: "3.1.14 Lesson Review", path: "pages/module_2/3.1.14_Lesson_Review.html" }
+      { title: "3.1.14 Lesson Review", path: "pages/module_2/3.1.14_Lesson_Review.html" },
+      { title: "3.2.1 Storage Devices", path: "pages/module_2/3.2.1_Storage_Devices.html" },
+      { title: "3.2.2 Mass Storage Device", path: "pages/module_2/3.2.2_Mass_Storage_Device.html" },
+      { title: "3.2.3 Solid State Drives", path: "pages/module_2/3.2.3_Solid_State_Drives.html" },
+      { title: "3.2.4 Hard Disk Drives", path: "pages/module_2/3.2.4_Hard_Disk_Drives.html" },
+      { title: "3.2.5 RAID", path: "pages/module_2/3.2.5_Redundant_ Array_of_ Independent_Disks.html" }
     ]
   }
 ];
@@ -393,6 +398,27 @@ function wrapTablesForMobile(mainElement) {
   });
 }
 
+function appendSiteFooter(mainElement) {
+  if (!mainElement || mainElement.querySelector(".site-footer")) {
+    return;
+  }
+
+  const footer = document.createElement("footer");
+  footer.className = "site-footer";
+
+  const footerText = document.createElement("p");
+  footerText.className = "site-footer__text";
+  footerText.textContent = "Questions or feedback?";
+
+  const footerLink = document.createElement("a");
+  footerLink.className = "site-footer__link";
+  footerLink.href = "mailto:hello@fignberry.club";
+  footerLink.textContent = "Contact me";
+
+  footer.append(footerText, footerLink);
+  mainElement.append(footer);
+}
+
 function closeSidebar() {
   document.body.classList.remove("is-sidebar-open");
   const toggle = document.querySelector("[data-sidebar-toggle]");
@@ -510,6 +536,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentItem) {
       appendPageSequenceNav(pageContent, context, currentItem);
     }
+
+    appendSiteFooter(pageContent);
   }
 
   if (siteShell) {
