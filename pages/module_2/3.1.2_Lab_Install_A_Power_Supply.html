@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3.1.2 Lab: Install a Power Supply - Quick Notes</title>
+  <link rel="stylesheet" href="../../styles/site.css">
+  <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+  <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+    <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+    <span class="sidebar-toggle__label">Menu</span>
+  </button>
+  <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+  <div class="site-shell site-shell--sidebar">
+    <header class="site-header site-sidebar" id="site-sidebar">
+      <div class="site-sidebar__inner">
+        <p class="site-title">Course Navigation</p>
+        <nav class="site-nav" aria-label="Primary"></nav>
+      </div>
+    </header>
+
+    <main class="page-content notes-content">
+      <h1 class="notes-title">3.1.2 Lab: Install a Power Supply</h1>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Walkthrough Video</h2>
+        <p class="notes-paragraph">Use this walkthrough as your primary guide for the lab.</p>
+      <div style="position: relative; width: 100%; max-width: 750px; padding-bottom: 56.25%; margin: 0 0 24px;">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/haqyCIdYOfA"
+          title="Power Supply Lab Walkthrough"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin"
+          style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;">
+        </iframe>
+      </div>
+        <p class="notes-paragraph"><a href="https://www.youtube.com/watch?v=haqyCIdYOfA" target="_blank" rel="noreferrer">Open the video on YouTube</a></p>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Lab Scenario</h2>
+        <p class="notes-paragraph">A computer in the IT Administration Office has a failed power supply. The defective unit has already been tested, confirmed bad, and removed from the system. Your task is to choose a compatible replacement PSU, install it in the case, connect the required power leads, and start the computer successfully.</p>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 1 - Locate the Correct Power Supply</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">Switch to <b>Motherboard view</b> and select the motherboard.</li>
+          <li class="notes-list-item">Open <b>Item Detail</b> to confirm the required connectors. The motherboard needs a <b>24-pin</b> connection and an <b>8-pin</b> CPU connection.</li>
+          <li class="notes-list-item">Under <b>Inventory &gt; Power Supplies</b>, review the available units and choose the one that includes those connectors along with SATA power and graphics card support.</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 2 - Install the Power Supply</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">Drag the correct PSU into the <b>space below the motherboard</b> in the case.</li>
+          <li class="notes-list-item">Connect the <b>20+4 pin connector</b> to the motherboard's main power port on the <b>right edge, upper half</b> of the board.</li>
+          <li class="notes-list-item">Connect the <b>8-pin CPU connector</b> to the CPU power port on the <b>top edge, left side</b> of the motherboard.</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 3 - Connect the SATA Hard Drives</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">Attach a <b>SATA 15-pin power connector</b> to the power port on the <b>first hard drive</b>.</li>
+          <li class="notes-list-item">Attach another <b>SATA 15-pin power connector</b> to the <b>second hard drive</b>.</li>
+          <li class="notes-list-item">Attach a third <b>SATA 15-pin power connector</b> to the <b>third hard drive</b>.</li>
+        </ul>
+        <p class="notes-paragraph notes-paragraph--note"><b>Note:</b> Each hard drive needs its own SATA power connection.</p>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 4 - Plug In and Power On</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">Switch to <b>Back view</b> of the computer.</li>
+          <li class="notes-list-item">Select the <b>top power cord</b> from the power strip.</li>
+          <li class="notes-list-item">Drag the <b>AC female connector</b> to the PSU power port on the back of the system.</li>
+          <li class="notes-list-item">Flip the <b>PSU power switch</b> to the <b>On</b> position.</li>
+          <li class="notes-list-item">Switch to <b>Front view</b> and press the <b>power button</b> to start the computer.</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Connector Summary</h2>
+        <table class="notes-table">
+          <thead class="notes-table-head">
+            <tr class="notes-table-row">
+              <th class="notes-table-heading">Connector</th>
+              <th class="notes-table-heading">Destination</th>
+            </tr>
+          </thead>
+          <tbody class="notes-table-body">
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">20+4 pin</td>
+              <td class="notes-table-cell">Motherboard main power port (right edge, upper half)</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">8-pin CPU</td>
+              <td class="notes-table-cell">CPU power port (top edge, left side)</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">SATA 15-pin (x3)</td>
+              <td class="notes-table-cell">One connector per SATA hard drive</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">AC female connector</td>
+              <td class="notes-table-cell">PSU AC input on the back of the computer</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Key Terms</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item"><b>20+4 pin connector</b> - Main ATX motherboard power connector</li>
+          <li class="notes-list-item"><b>8-pin CPU connector</b> - Dedicated power connector for the processor</li>
+          <li class="notes-list-item"><b>SATA 15-pin power connector</b> - Power connector used for SATA storage devices</li>
+          <li class="notes-list-item"><b>AC female connector</b> - Connection point for the power cord from the wall outlet or power strip</li>
+          <li class="notes-list-item"><b>PSU power switch</b> - Rear power switch that must be turned on before the computer can boot</li>
+        </ul>
+      </section>
+
+      <blockquote>
+        <p><strong>Important:</strong> Never open the PSU housing itself. Internal capacitors can retain dangerous voltage even after the unit has been unplugged.</p>
+      </blockquote>
+    </main>
+  </div>
+</body>
+
+</html>

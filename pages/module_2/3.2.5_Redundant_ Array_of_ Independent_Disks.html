@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.2.5 Redundant Array of Independent Disks - Quick Notes</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">3.2.5 Redundant Array of Independent Disks (RAID)</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">What is RAID?</h2>
+                <p class="notes-paragraph">
+                    <b>RAID (Redundant Array of Independent/Inexpensive Disks)</b> distributes data across
+                    multiple disks to provide <b>fault tolerance</b> and improve performance. It sacrifices some
+                    disk capacity to achieve redundancy.
+                </p>
+                <p class="notes-paragraph notes-paragraph--note">
+                    <b>Note:</b> To the OS, a RAID array appears as a <b>single storage volume</b> that can be
+                    partitioned and formatted like any other drive. RAID can also stand for
+                    "Redundant Array of Independent Devices."
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Why Use RAID?</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">A failed <b>boot drive</b> causes the system to crash</li>
+                    <li class="notes-list-item">A failed <b>data drive</b> can result in permanent data loss if no
+                        backup exists</li>
+                    <li class="notes-list-item">RAID mitigates these risks through redundancy and/or performance
+                        improvements</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">RAID Implementation Types</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Type</th>
+                            <th class="notes-table-heading">How It Works</th>
+                            <th class="notes-table-heading">Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Software RAID</b></td>
+                            <td class="notes-table-cell">Implemented using OS features</td>
+                            <td class="notes-table-cell">No dedicated hardware required; uses CPU resources</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Hardware RAID</b></td>
+                            <td class="notes-table-cell">Uses a dedicated RAID controller adapter card</td>
+                            <td class="notes-table-cell">Drives connect to SATA ports on the controller, not the
+                                motherboard; often supports hot-swapping</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Integrated RAID</b></td>
+                            <td class="notes-table-cell">Built into the motherboard chipset</td>
+                            <td class="notes-table-cell">A middle-ground option; no separate adapter card needed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Common RAID Levels</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">RAID Level</th>
+                            <th class="notes-table-heading">Min. Drives</th>
+                            <th class="notes-table-heading">Method</th>
+                            <th class="notes-table-heading">Fault Tolerance</th>
+                            <th class="notes-table-heading">Use Case</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>RAID 0</b></td>
+                            <td class="notes-table-cell">2</td>
+                            <td class="notes-table-cell">Striping</td>
+                            <td class="notes-table-cell">None — any disk failure = total data loss</td>
+                            <td class="notes-table-cell">Maximum performance; no redundancy</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>RAID 1</b></td>
+                            <td class="notes-table-cell">2</td>
+                            <td class="notes-table-cell">Mirroring</td>
+                            <td class="notes-table-cell">One disk can fail; data survives on mirror</td>
+                            <td class="notes-table-cell">Critical data; OS drives</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>RAID 5</b></td>
+                            <td class="notes-table-cell">3</td>
+                            <td class="notes-table-cell">Striping with parity</td>
+                            <td class="notes-table-cell">One disk can fail</td>
+                            <td class="notes-table-cell">Balance of performance, capacity, and redundancy</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>RAID 10</b></td>
+                            <td class="notes-table-cell">4</td>
+                            <td class="notes-table-cell">RAID 1 + RAID 0 (nested)</td>
+                            <td class="notes-table-cell">One disk per mirrored pair can fail</td>
+                            <td class="notes-table-cell">High performance + redundancy</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph notes-paragraph--note">
+                    <b>Note:</b> RAID levels are numbered 0–6. Entry-level controllers may only support RAID 0 or 1;
+                    mid-level controllers may add RAID 5 and RAID 10.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>RAID</b> – Redundant Array of Independent/Inexpensive Disks;
+                        distributes data across multiple drives for fault tolerance and/or performance</li>
+                    <li class="notes-list-item"><b>Fault tolerance</b> – The ability of a system to continue operating
+                        even if one component fails</li>
+                    <li class="notes-list-item"><b>Striping (RAID 0)</b> – Data is split across multiple drives for
+                        speed; no redundancy</li>
+                    <li class="notes-list-item"><b>Mirroring (RAID 1)</b> – Data is duplicated across two drives for
+                        redundancy</li>
+                    <li class="notes-list-item"><b>Parity (RAID 5)</b> – Error-checking data distributed across drives;
+                        allows recovery if one drive fails</li>
+                    <li class="notes-list-item"><b>Nested RAID (RAID 10)</b> – Combines two RAID levels (RAID 1 + RAID
+                        0) for both performance and redundancy</li>
+                    <li class="notes-list-item"><b>Hot-swapping</b> – Replacing a failed drive without shutting down the
+                        system; supported by hardware RAID</li>
+                    <li class="notes-list-item"><b>RAID controller</b> – A dedicated adapter card that manages RAID
+                        drives; drives connect to its SATA ports</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

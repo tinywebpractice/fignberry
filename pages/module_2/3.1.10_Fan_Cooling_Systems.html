@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3.1.10 Fan Cooling Systems</title>
+  <link rel="stylesheet" href="../../styles/site.css">
+  <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+  <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+    <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+    <span class="sidebar-toggle__label">Menu</span>
+  </button>
+  <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+  <div class="site-shell site-shell--sidebar">
+    <header class="site-header site-sidebar" id="site-sidebar">
+      <div class="site-sidebar__inner">
+        <p class="site-title">Course Navigation</p>
+        <nav class="site-nav" aria-label="Primary"></nav>
+      </div>
+    </header>
+
+    <main class="page-content notes-content">
+      <h1 class="notes-title">3.1.10 Fan Cooling Systems</h1>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Why Cooling Matters</h2>
+        <p class="notes-paragraph">
+          Computer components emit heat due to electrical resistance as current passes through them.
+          Without cooling, rising temperatures can cause <b>malfunctions or permanent damage</b>.
+          All CPUs require cooling to maintain safe operating temperatures, as do memory modules and graphics adapters.
+        </p>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Components and Their Cooling Solutions</h2>
+        <table class="notes-table">
+          <thead class="notes-table-head">
+            <tr class="notes-table-row">
+              <th class="notes-table-heading">Component</th>
+              <th class="notes-table-heading">Cooling Solution</th>
+              <th class="notes-table-heading">Notes</th>
+            </tr>
+          </thead>
+          <tbody class="notes-table-body">
+            <tr class="notes-table-row">
+              <td class="notes-table-cell"><b>CPU</b></td>
+              <td class="notes-table-cell">Heatsink + fan (HSF) or liquid cooler</td>
+              <td class="notes-table-cell">Most critical component to cool; sits directly on top of the CPU with thermal paste in between</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell"><b>GPU (Graphics Card)</b></td>
+              <td class="notes-table-cell">Onboard fan(s) and heatsink</td>
+              <td class="notes-table-cell">High-end GPUs may have two or three fans; some use liquid cooling</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell"><b>RAM (Memory Modules)</b></td>
+              <td class="notes-table-cell">Passive heatspreaders or small fans</td>
+              <td class="notes-table-cell">High-speed or overclocked RAM may include metal heatspreaders to dissipate heat</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell"><b>Case (Chassis)</b></td>
+              <td class="notes-table-cell">Case fans (intake and exhaust)</td>
+              <td class="notes-table-cell">Move air through the entire case to cool all components; placement determines airflow direction</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell"><b>PSU</b></td>
+              <td class="notes-table-cell">Built-in fan</td>
+              <td class="notes-table-cell">Cools the PSU internally and also helps exhaust warm air from the case</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Fan Placement and Airflow</h2>
+        <p class="notes-paragraph">
+          Proper airflow direction is essential for effective cooling. Fans are configured as either
+          <b>intake</b> (pulling cool air in) or <b>exhaust</b> (pushing warm air out).
+        </p>
+        <ul class="notes-list">
+          <li class="notes-list-item"><b>Intake fans</b> – Typically placed at the front or bottom of the case; draw cool air in</li>
+          <li class="notes-list-item"><b>Exhaust fans</b> – Typically placed at the rear or top of the case; expel warm air out</li>
+          <li class="notes-list-item">A good airflow setup creates a <b>front-to-back, bottom-to-top</b> flow of air through the case</li>
+          <li class="notes-list-item">Poor airflow leads to <b>hot spots</b> and reduced component lifespan</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Thermal Paste</h2>
+        <p class="notes-paragraph">
+          <b>Thermal paste</b> (also called thermal compound or thermal interface material) is applied
+          between the CPU and its heatsink. It fills microscopic gaps to improve heat transfer from
+          the CPU to the heatsink. Without it, air pockets form and reduce cooling efficiency.
+        </p>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Key Terms</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item"><b>Heatsink</b> – A metal component that absorbs and disperses heat away from a component</li>
+          <li class="notes-list-item"><b>HSF (Heatsink + Fan)</b> – A combined cooling unit that sits on top of the CPU</li>
+          <li class="notes-list-item"><b>Thermal paste</b> – Compound applied between CPU and heatsink to improve heat transfer</li>
+          <li class="notes-list-item"><b>Intake fan</b> – A fan that pulls cool air into the case</li>
+          <li class="notes-list-item"><b>Exhaust fan</b> – A fan that pushes warm air out of the case</li>
+          <li class="notes-list-item"><b>Airflow</b> – The directed movement of air through the case to cool components</li>
+          <li class="notes-list-item"><b>Thermal efficiency</b> – How effectively a component manages and reduces heat output</li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+</body>
+
+</html>

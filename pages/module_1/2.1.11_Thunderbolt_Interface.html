@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.1.11 Thunderbolt Interface</title>
+  <link rel="stylesheet" href="../../styles/site.css">
+  <script defer src="../../js/nav.js"></script>
+</head>
+
+<body>
+  <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+    <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+    <span class="sidebar-toggle__label">Menu</span>
+  </button>
+  <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+  <div class="site-shell site-shell--sidebar">
+    <header class="site-header site-sidebar" id="site-sidebar">
+      <div class="site-sidebar__inner">
+        <p class="site-title">Course Navigation</p>
+        <nav class="site-nav" aria-label="Primary"></nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <h1>2.1.11 Thunderbolt Interface - Notes</h1>
+
+      <p>Thunderbolt works as both a display interface like DisplayPort or HDMI and a general peripheral interface like USB. It started out Apple-centric, but it is now common on Windows and Linux systems too.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Version</th>
+            <th>Physical connector</th>
+            <th>Max speed</th>
+            <th>Key features</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Thunderbolt 1</td>
+            <td>MiniDP</td>
+            <td>10 Gbps</td>
+            <td>Compatible with DisplayPort</td>
+          </tr>
+          <tr>
+            <td>Thunderbolt 2</td>
+            <td>MiniDP</td>
+            <td>20 Gbps</td>
+            <td>Daisy-chain multiple monitors</td>
+          </tr>
+          <tr>
+            <td>Thunderbolt 3</td>
+            <td>USB-C</td>
+            <td>40 Gbps</td>
+            <td>USB devices work in TB3 ports; Thunderbolt devices do not work in regular USB-C ports; max cable length 0.5 m</td>
+          </tr>
+          <tr>
+            <td>Thunderbolt 4</td>
+            <td>USB-C</td>
+            <td>40 Gbps</td>
+            <td>Improved minimum performance; supports docks with up to 4 TB4 ports</td>
+          </tr>
+          <tr>
+            <td>Thunderbolt 5</td>
+            <td>USB-C</td>
+            <td>Higher than TB4</td>
+            <td>Enhanced features; details still evolving</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Critical Things to Remember</h2>
+      <ul>
+        <li>Thunderbolt ports are marked with a lightning bolt icon.</li>
+        <li>Not all USB-C ports support Thunderbolt, so always check the icon or system documentation.</li>
+        <li>USB devices work in Thunderbolt 3, 4, and 5 ports, but Thunderbolt devices do not work in regular USB-C ports.</li>
+        <li>Thunderbolt 1 and 2 use the MiniDP connector, while Thunderbolt 3 and later use USB-C.</li>
+        <li>Converter cables exist to connect Thunderbolt 1 and 2 devices to Thunderbolt 3 ports.</li>
+      </ul>
+    </main>
+  </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

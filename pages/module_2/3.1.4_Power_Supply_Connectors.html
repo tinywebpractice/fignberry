@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3.1.4 Power Supply Connectors - Quick Notes</title>
+  <link rel="stylesheet" href="../../styles/site.css">
+  <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+  <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+    <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+    <span class="sidebar-toggle__label">Menu</span>
+  </button>
+  <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+  <div class="site-shell site-shell--sidebar">
+    <header class="site-header site-sidebar" id="site-sidebar">
+      <div class="site-sidebar__inner">
+        <p class="site-title">Course Navigation</p>
+        <nav class="site-nav" aria-label="Primary"></nav>
+      </div>
+    </header>
+
+    <main class="page-content notes-content">
+      <h1 class="notes-title">3.1.4 Power Supply Connectors</h1>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Overview</h2>
+        <p class="notes-paragraph">
+          Each PSU has multiple power connectors that supply DC voltage to the motherboard and devices at
+          <b>3.3 VDC</b>, <b>5 VDC</b>, and <b>12 VDC</b>. Voltage regulators adjust the supplied voltage
+          to match each component's requirements.
+        </p>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Common PSU Connectors</h2>
+        <table class="notes-table">
+          <thead class="notes-table-head">
+            <tr class="notes-table-row">
+              <th class="notes-table-heading">Connector</th>
+              <th class="notes-table-heading">Also Known As</th>
+              <th class="notes-table-heading">Powers</th>
+            </tr>
+          </thead>
+          <tbody class="notes-table-body">
+            <tr class="notes-table-row">
+              <td class="notes-table-cell"><b>P1 Connector</b></td>
+              <td class="notes-table-cell">24-pin ATX power connector</td>
+              <td class="notes-table-cell">Motherboard (main power)</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell"><b>Molex Connector</b></td>
+              <td class="notes-table-cell">—</td>
+              <td class="notes-table-cell">Older drives and devices</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell"><b>SATA Power Connector</b></td>
+              <td class="notes-table-cell">—</td>
+              <td class="notes-table-cell">SATA drives (HDDs, SSDs, optical drives)</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell"><b>4/8-pin Connector</b></td>
+              <td class="notes-table-cell">EPS / CPU power connector</td>
+              <td class="notes-table-cell">CPU power port on motherboard</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell"><b>6/8/16-pin Connector</b></td>
+              <td class="notes-table-cell">PCIe power connector</td>
+              <td class="notes-table-cell">PCIe adapter cards (GPUs)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Key Terms</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item"><b>P1 Connector</b> - The main 24-pin ATX connector supplying power to the motherboard</li>
+          <li class="notes-list-item"><b>Molex Connector</b> - Older 4-pin connector used for legacy drives and devices</li>
+          <li class="notes-list-item"><b>SATA Power Connector</b> - Powers SATA hard drives, SSDs, and optical drives</li>
+          <li class="notes-list-item"><b>PCIe Connector</b> - 6, 8, or 16-pin connector supplying power to graphics cards</li>
+          <li class="notes-list-item"><b>Voltage Regulator</b> - Adjusts the supplied voltage to match a component's specific requirements</li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.3.3 Serial Cables</title>
+  <link rel="stylesheet" href="../../styles/site.css">
+  <script defer src="../../js/nav.js"></script>
+</head>
+
+<body>
+  <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+    <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+    <span class="sidebar-toggle__label">Menu</span>
+  </button>
+  <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+  <div class="site-shell site-shell--sidebar">
+    <header class="site-header site-sidebar" id="site-sidebar">
+      <div class="site-sidebar__inner">
+        <p class="site-title">Course Navigation</p>
+        <nav class="site-nav" aria-label="Primary"></nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <h1>2.3.3 Serial Cables - Notes</h1>
+
+      <h2>Serial / RS-232</h2>
+      <ul>
+        <li>Transmits data one bit at a time over a single wire</li>
+        <li>Uses start, stop, and parity bits to format and verify data</li>
+        <li>Maximum speed is about 115 Kbps, much slower than modern interfaces</li>
+        <li>Originally used for dial-up modems</li>
+        <li>Still found on some network equipment for device management</li>
+        <li>In Windows, it appears as a COM port</li>
+      </ul>
+
+      <h2>The Connector</h2>
+      <p>RS-232 technically specifies a 25-pin connector, but most PCs used the cheaper 9-pin DB9 connector instead. This is a D-subminiature connector, and the PC port is typically female.</p>
+
+      <h2>PS/2 (Bonus Legacy Port)</h2>
+      <ul>
+        <li>Used for mice and keyboards</li>
+        <li>6-pin mini-DIN connector</li>
+        <li>Color coded: green for mouse and purple for keyboard</li>
+      </ul>
+
+      <h2>Quick Recap of Legacy Ports</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Port</th>
+            <th>Pins</th>
+            <th>Signal</th>
+            <th>Still used?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>VGA</td>
+            <td>15</td>
+            <td>Analog video</td>
+            <td>Mostly phased out</td>
+          </tr>
+          <tr>
+            <td>DB9 Serial</td>
+            <td>9</td>
+            <td>Data (RS-232)</td>
+            <td>Rare / niche</td>
+          </tr>
+          <tr>
+            <td>PS/2</td>
+            <td>6</td>
+            <td>Mouse/keyboard</td>
+            <td>Very rare</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Key Things to Remember</h2>
+      <ul>
+        <li>Serial communication sends data one bit at a time.</li>
+        <li>RS-232 is a legacy standard and is much slower than modern interfaces.</li>
+        <li>Most PCs used a 9-pin DB9 connector instead of the original 25-pin form.</li>
+        <li>PS/2 is another legacy connector used for keyboards and mice.</li>
+      </ul>
+    </main>
+  </div>
+</body>
+
+</html>
+
+
+
+

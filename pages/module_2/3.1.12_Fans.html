@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.1.12 Fans - Quick Notes</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">3.1.12 Fans</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Heat Sinks vs Fans</h2>
+                <p class="notes-paragraph">
+                    A heat sink is a <b>passive</b> cooling device — it requires no electricity and relies on good
+                    airflow
+                    to work effectively. When a PC generates more heat than passive cooling can handle, <b>fans</b> are
+                    needed to actively improve airflow and dissipate heat.
+                </p>
+                <p class="notes-paragraph notes-paragraph--note">
+                    <b>Tip:</b> To help passive cooling work better, minimize cable clutter inside the case and cover
+                    spare adapter slots with <b>blanking plates</b> to prevent warm air from recirculating.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Where Fans Are Used</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Location</th>
+                            <th class="notes-table-heading">Role</th>
+                            <th class="notes-table-heading">Airflow Direction</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Front chassis vents</td>
+                            <td class="notes-table-cell">Intake</td>
+                            <td class="notes-table-cell">Draws cool air into the case</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Rear chassis exhaust</td>
+                            <td class="notes-table-cell">Exhaust</td>
+                            <td class="notes-table-cell">Expels warm air out of the case</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Power supply (PSU)</td>
+                            <td class="notes-table-cell">Exhaust</td>
+                            <td class="notes-table-cell">Cools the PSU and helps remove warm air</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">CPU heat sink</td>
+                            <td class="notes-table-cell">Active cooling</td>
+                            <td class="notes-table-cell">Forces air over heatsink fins; connects to motherboard fan
+                                power port</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Fan Speed and Monitoring</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>Thermometer sensors</b> at each fan location monitor temperature and
+                        set appropriate fan speeds</li>
+                    <li class="notes-list-item">Sensors also detect <b>fan failures</b> and can alert the system if a
+                        fan stops working</li>
+                    <li class="notes-list-item">CPU fans must be connected to a <b>motherboard fan power port</b> for
+                        speed control and monitoring</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Airflow Management</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>Shrouds and baffles</b> – Plastic channels that direct airflow
+                        specifically over the CPU; attached with plastic clips</li>
+                    <li class="notes-list-item"><b>Blanking plates</b> – Cover unused expansion slots to prevent warm
+                        air from recirculating inside the case</li>
+                    <li class="notes-list-item"><b>Cable management</b> – Keeping cables tidy reduces obstruction to
+                        airflow</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Maintenance</h2>
+                <p class="notes-paragraph">
+                    Both fans and heat sinks become less effective when <b>dust accumulates</b>. Clean them periodically
+                    using:
+                </p>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>Soft brush</b> – Gently removes dust from fins and fan blades</li>
+                    <li class="notes-list-item"><b>Compressed air</b> – Blows dust out of hard-to-reach areas</li>
+                    <li class="notes-list-item"><b>PC-approved vacuum cleaner</b> – Safely removes dust without
+                        generating harmful static</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>Passive cooling</b> – Cooling without electricity; relies on surface
+                        area and natural airflow (e.g. a bare heat sink)</li>
+                    <li class="notes-list-item"><b>Active cooling</b> – Cooling that uses a fan or pump to move air or
+                        liquid</li>
+                    <li class="notes-list-item"><b>Blanking plate</b> – A cover for unused expansion slots that prevents
+                        warm air recirculation</li>
+                    <li class="notes-list-item"><b>Shroud / baffle</b> – A plastic channel that directs airflow over a
+                        specific component such as the CPU</li>
+                    <li class="notes-list-item"><b>Thermometer sensor</b> – Monitors temperature at fan locations and
+                        adjusts fan speed accordingly</li>
+                    <li class="notes-list-item"><b>Fan power port</b> – Motherboard connector that supplies power and
+                        enables speed control for fans</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

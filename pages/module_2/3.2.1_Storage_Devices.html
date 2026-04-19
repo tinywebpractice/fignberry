@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.2.1 Storage Devices - Quick Notes</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">3.2.1 Storage Devices</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Volatile vs Non-Volatile Memory</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Type</th>
+                            <th class="notes-table-heading">Retains Data Without Power?</th>
+                            <th class="notes-table-heading">Purpose</th>
+                            <th class="notes-table-heading">Example</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Volatile</b></td>
+                            <td class="notes-table-cell">No — data is lost when power is removed</td>
+                            <td class="notes-table-cell">Short-term; moves data quickly in and out</td>
+                            <td class="notes-table-cell">RAM</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Non-volatile</b></td>
+                            <td class="notes-table-cell">Yes — data is retained even when powered off</td>
+                            <td class="notes-table-cell">Long-term; stores programs, files, images, music</td>
+                            <td class="notes-table-cell">Hard drives, SSDs</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Magnetic Storage Devices (HDD)</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Store data magnetically on flat metal plates called <b>platters</b></li>
+                    <li class="notes-list-item"><b>Less expensive</b> and available in very large capacities</li>
+                    <li class="notes-list-item"><b>Slower</b> data transfer due to moving parts</li>
+                    <li class="notes-list-item">Moving parts can physically break, causing <b>data loss</b></li>
+                    <li class="notes-list-item">Available in <b>internal and external</b> models</li>
+                </ul>
+                <p class="notes-paragraph">Internal hard drive sizes:</p>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Size</th>
+                            <th class="notes-table-heading">Used In</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">3.5 inch</td>
+                            <td class="notes-table-cell">Desktop computers</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">2.5 inch</td>
+                            <td class="notes-table-cell">Laptops and small form factor PCs</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph notes-paragraph--note"><b>Note:</b> Internal hard drives connect to the
+                    motherboard using a <b>SATA (Serial ATA) cable</b>.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Solid-State Drives (SSD)</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Store data using <b>flash memory modules</b> — no moving parts</li>
+                    <li class="notes-list-item"><b>Much faster</b> data transfer than magnetic drives</li>
+                    <li class="notes-list-item">More <b>reliable</b> due to no moving parts</li>
+                    <li class="notes-list-item">More <b>expensive</b> than magnetic drives</li>
+                    <li class="notes-list-item">Currently available in smaller maximum capacities than HDDs</li>
+                    <li class="notes-list-item">Data can be written and rewritten many times without power to retain it
+                    </li>
+                </ul>
+                <p class="notes-paragraph notes-paragraph--note"><b>Note:</b> Portable flash memory devices (e.g. SD
+                    cards, USB drives) are popular for digital cameras, tablets, and smartphones.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Magnetic vs Solid-State Comparison</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Feature</th>
+                            <th class="notes-table-heading">HDD (Magnetic)</th>
+                            <th class="notes-table-heading">SSD (Solid-State)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Speed</td>
+                            <td class="notes-table-cell">Slower</td>
+                            <td class="notes-table-cell">Much faster</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Moving parts</td>
+                            <td class="notes-table-cell">Yes (platters)</td>
+                            <td class="notes-table-cell">No</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Reliability</td>
+                            <td class="notes-table-cell">Lower — parts can break</td>
+                            <td class="notes-table-cell">Higher</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Cost</td>
+                            <td class="notes-table-cell">Less expensive</td>
+                            <td class="notes-table-cell">More expensive</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Capacity</td>
+                            <td class="notes-table-cell">Very large</td>
+                            <td class="notes-table-cell">Smaller (for now)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">External Storage</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>External hard drives</b> – Available as magnetic or flash-based;
+                        capacities up to terabytes; connect via <b>USB</b>; ideal for backups</li>
+                    <li class="notes-list-item"><b>NAS (Network-Attached Storage)</b> – Contains multiple drives
+                        connected to a network, allowing multiple users to save and retrieve data</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">CD-ROM and Cloud Storage</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>CD-ROM</b> – Optical disc originally used for music, later for
+                        programs, games, and movies; now largely replaced</li>
+                    <li class="notes-list-item"><b>Cloud storage</b> – The modern long-term storage choice; data is
+                        stored remotely and accessed via streaming or download services</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>Volatile memory</b> – Memory that loses data when power is removed
+                        (e.g. RAM)</li>
+                    <li class="notes-list-item"><b>Non-volatile memory</b> – Memory that retains data without power
+                        (e.g. HDD, SSD)</li>
+                    <li class="notes-list-item"><b>Platter</b> – The flat metal disc inside an HDD where data is stored
+                        magnetically</li>
+                    <li class="notes-list-item"><b>SATA (Serial ATA)</b> – The cable/interface used to connect internal
+                        storage drives to the motherboard</li>
+                    <li class="notes-list-item"><b>Flash memory</b> – Non-volatile memory used in SSDs and portable
+                        storage devices</li>
+                    <li class="notes-list-item"><b>NAS (Network-Attached Storage)</b> – A networked storage device
+                        accessible by multiple users</li>
+                    <li class="notes-list-item"><b>CD-ROM</b> – Optical disc storage; largely replaced by cloud services
+                    </li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

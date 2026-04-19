@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.4 Lab</title>
+  <link rel="stylesheet" href="../../styles/site.css">
+  <script defer src="../../js/nav.js"></script>
+</head>
+
+<body>
+  <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+    <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+    <span class="sidebar-toggle__label">Menu</span>
+  </button>
+  <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+  <div class="site-shell site-shell--sidebar">
+    <header class="site-header site-sidebar" id="site-sidebar">
+      <div class="site-sidebar__inner">
+        <p class="site-title">Course Navigation</p>
+        <nav class="site-nav" aria-label="Primary"></nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <h1>2.4 Lab: Set up an A/V Workstation</h1>
+
+      <h2>Step 1: Select and Install the Video Card</h2>
+      <ul>
+        <li>Above the computer, select the change view icon, then select Motherboard to switch to the motherboard view of the computer.</li>
+        <li>Under Inventory, expand GPUs/Expansion Cards.</li>
+        <li>Drag the Video Adapter, DVI-I, HDMI, Crossfire, PCIe to the PCIe slot on the computer.</li>
+        <li>Select the power supply.</li>
+        <li>From the Selected Item pane, drag the Connector, Power Supply, 6-pin PCIe power connector into the video card power slot.</li>
+        <li>Select GPUs/Expansion Cards to return to the main Inventory list.</li>
+      </ul>
+
+      <h2>Step 2: Install Three Hard Drives for the RAID5 Array</h2>
+      <ul>
+        <li>Under Inventory, expand Storage.</li>
+        <li>Drag all three hard drives to a free 3.5&quot; drive bay.</li>
+        <li>Under Inventory, expand Cables.</li>
+        <li>Select a Cable, SATA, and from the Selected Item pane:</li>
+        <li>Drag an unconnected SATA connector to a hard drive.</li>
+        <li>Drag the other unconnected SATA connector to an open SATA port on the motherboard.</li>
+        <li>Repeat these steps to connect cables to the other two hard drives.</li>
+        <li>Select the partial Connections icon by the computer, then select the power supply.</li>
+        <li>From the Selected Item pane, drag an unconnected SATA power connector to a hard drive.</li>
+        <li>Repeat the process for the remaining drives.</li>
+        <li>Select Cables under Inventory to return to the main list.</li>
+      </ul>
+
+      <h2>Step 3: Connect the Original Monitor to the New Video Card</h2>
+      <ul>
+        <li>Above the computer, select the change view icon, then select Back.</li>
+        <li>On the computer, drag the DVI connector from the built-in video connector to the new video card in the computer.</li>
+      </ul>
+
+      <h2>Step 4: Connect a Second Monitor</h2>
+      <ul>
+        <li>Under Inventory, expand Peripherals.</li>
+        <li>Drag the Monitor to the left of the desktop.</li>
+        <li>Above the left monitor, select the change view icon, then select Back.</li>
+        <li>Under Inventory, expand Cables.</li>
+        <li>Select the HDMI to HDMI Cable.</li>
+        <li>From the Selected Item pane:</li>
+        <li>Drag an HDMI Connector to the new video card in the computer.</li>
+        <li>Drag the unconnected HDMI Connector to the HDMI port on the left monitor.</li>
+        <li>Under Inventory, select the AC Power Cable.</li>
+        <li>From the Selected Item pane:</li>
+        <li>Connect the Female AC Power Connector to the left monitor.</li>
+        <li>Connect the Male AC Power Connector to a wall outlet.</li>
+        <li>Above the left monitor, select the change view icon, then select Front.</li>
+        <li>Select the Power button to power on the left monitor.</li>
+      </ul>
+
+      <h2>Step 5: Power On the Computer and Enable RAID in BIOS</h2>
+      <ul>
+        <li>Above the computer, select the Change View icon, then select Front.</li>
+        <li>Select the power button to turn on the computer.</li>
+        <li>As the computer boots, press F2 (or Delete) to enter the BIOS setup program.</li>
+        <li>From the left menu, expand System Configuration.</li>
+        <li>Select SATA Operation.</li>
+        <li>From the right pane, select RAID On.</li>
+        <li>Select Apply.</li>
+      </ul>
+
+      <h2>Step 6: Exit BIOS and Configure the RAID Array</h2>
+      <ul>
+        <li>Select Exit to restart the system.</li>
+        <li>After the system boots and the BIOS loads, the RAID controller will load.</li>
+        <li>When the RAID message screen displays, press Ctrl + I (i).</li>
+        <li>With Create RAID Volume highlighted, press Enter.</li>
+        <li>On the Name field, press Enter.</li>
+        <li>On the RAID Level field, use the up and down arrow keys to select RAID5 (Parity).</li>
+        <li>Press Enter.</li>
+        <li>With Select Disks highlighted, press Enter.</li>
+        <li>Use the up and down arrow keys to traverse the list and the spacebar to select a drive.</li>
+        <li>Select all three drives with the model number WD800JD and press Enter.</li>
+        <li>Press the Tab key.</li>
+        <li>Verify that the Strip size is 128 KB. If needed, use the up and down arrows to set the value.</li>
+        <li>Press Enter.</li>
+        <li>Press Enter to accept the default capacity.</li>
+        <li>With Create Volume highlighted, press Enter.</li>
+        <li>Press Y to continue creating the volume.</li>
+        <li>Press the escape key (Esc).</li>
+        <li>Press Y to exit.</li>
+      </ul>
+    </main>
+  </div>
+</body>
+
+</html>
+
+
+
+

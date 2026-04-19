@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3.1.9 Lab: Troubleshoot Power Supply Problems - Quick Notes</title>
+  <link rel="stylesheet" href="../../styles/site.css">
+  <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+  <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+    <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+    <span class="sidebar-toggle__label">Menu</span>
+  </button>
+  <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+  <div class="site-shell site-shell--sidebar">
+    <header class="site-header site-sidebar" id="site-sidebar">
+      <div class="site-sidebar__inner">
+        <p class="site-title">Course Navigation</p>
+        <nav class="site-nav" aria-label="Primary"></nav>
+      </div>
+    </header>
+
+    <main class="page-content notes-content">
+      <h1 class="notes-title">3.1.9 Lab: Troubleshoot Power Supply Problems</h1>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Walkthrough Video</h2>
+        <p class="notes-paragraph">Use this walkthrough to follow the troubleshooting process in the lab.</p>
+        <div style="position: relative; width: 100%; max-width: 750px; padding-bottom: 56.25%; margin: 0 0 24px;">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/A3jkOpBEc6o"
+            title="Troubleshoot Power Supply Problems Lab Walkthrough"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"
+            style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;">
+          </iframe>
+        </div>
+        <p class="notes-paragraph"><a href="https://www.youtube.com/watch?v=A3jkOpBEc6o" target="_blank" rel="noreferrer">Open the video on YouTube</a></p>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Lab Scenario</h2>
+        <p class="notes-paragraph">A computer in the IT Administration Office is showing signs of power failure. Your job is to inspect the system, identify the source of the problem, verify the correct power connections, and restore normal startup.</p>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 1 - Identify the Problem</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">Review the symptoms shown by the computer, such as no startup, unstable power, or missing device power.</li>
+          <li class="notes-list-item">Open the system view and inspect the power supply and connected components.</li>
+          <li class="notes-list-item">Check whether the system is receiving external AC power and whether the PSU switch is in the correct position.</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 2 - Check the Motherboard and CPU Power Connections</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">Verify that the main motherboard power connector is fully seated.</li>
+          <li class="notes-list-item">Verify that the CPU power connector is attached to the CPU power header near the processor socket.</li>
+          <li class="notes-list-item">Confirm that the connector type matches the port and is not partially connected.</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 3 - Inspect Drive and Peripheral Power</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">Check each storage device to make sure it has a working power connection.</li>
+          <li class="notes-list-item">Inspect SATA power leads for loose or missing connections.</li>
+          <li class="notes-list-item">If the system includes add-in hardware that needs auxiliary power, confirm those connectors are attached correctly.</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 4 - Correct the Fault and Retest</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">Reconnect any loose power cables and replace the PSU if the lab indicates a failed unit.</li>
+          <li class="notes-list-item">Plug the computer back into power using the correct AC cable.</li>
+          <li class="notes-list-item">Turn on the switch at the back of the PSU.</li>
+          <li class="notes-list-item">Start the computer and confirm that the system powers on normally.</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Common Symptoms and Checks</h2>
+        <table class="notes-table">
+          <thead class="notes-table-head">
+            <tr class="notes-table-row">
+              <th class="notes-table-heading">Symptom</th>
+              <th class="notes-table-heading">What to Check</th>
+            </tr>
+          </thead>
+          <tbody class="notes-table-body">
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Computer does not power on</td>
+              <td class="notes-table-cell">AC connection, PSU switch, motherboard power connector, failed PSU</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Fans spin but system does not boot</td>
+              <td class="notes-table-cell">CPU power connector, motherboard connection, internal component power</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Drives are not detected</td>
+              <td class="notes-table-cell">SATA power connectors and related cabling</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">System starts intermittently</td>
+              <td class="notes-table-cell">Loose power leads, failing PSU, unstable connector fit</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Troubleshooting Reminders</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">Start with the external power source before opening the case.</li>
+          <li class="notes-list-item">Check the main power connectors before assuming another component has failed.</li>
+          <li class="notes-list-item">Reseat loose cables carefully and verify each connector is aligned correctly.</li>
+          <li class="notes-list-item">Retest after each correction so you know which change fixed the problem.</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Key Terms</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item"><b>PSU</b> - Power supply unit that converts AC power into DC power for internal components</li>
+          <li class="notes-list-item"><b>24-pin motherboard connector</b> - Main power connection for the motherboard</li>
+          <li class="notes-list-item"><b>CPU power connector</b> - Supplemental power connection for the processor</li>
+          <li class="notes-list-item"><b>SATA power connector</b> - Power connector used by SATA drives</li>
+          <li class="notes-list-item"><b>PSU switch</b> - Rear on/off switch that must be enabled before the system can start</li>
+        </ul>
+      </section>
+
+      <blockquote>
+        <p><strong>Important:</strong> Before removing or reconnecting power cables, make sure the system is unplugged and the PSU has been switched off.</p>
+      </blockquote>
+    </main>
+  </div>
+</body>
+
+</html>

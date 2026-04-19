@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3.1.1 Power Supply Units - Quick Notes</title>
+  <link rel="stylesheet" href="../../styles/site.css">
+  <script defer src="../../js/nav.js"></script>
+</head>
+
+<body>
+  <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+    <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+    <span class="sidebar-toggle__label">Menu</span>
+  </button>
+  <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+  <div class="site-shell site-shell--sidebar">
+    <header class="site-header site-sidebar" id="site-sidebar">
+      <div class="site-sidebar__inner">
+        <p class="site-title">Course Navigation</p>
+        <nav class="site-nav" aria-label="Primary"></nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <h1>3.1.1 Power Supply Units</h1>
+
+      <h2>What is a PSU?</h2>
+      <p>The power supply unit (PSU) delivers low-voltage direct current (DC) power to PC components. It converts alternating current (AC) from the wall outlet into usable DC power.</p>
+
+      <h2>Internal Components</h2>
+      <ul>
+        <li><strong>Rectifier</strong> - Converts AC from the building into DC voltage</li>
+        <li><strong>Transformers</strong> - Step down to lower voltages</li>
+        <li><strong>Regulators &amp; Filters</strong> - Ensure consistent output</li>
+        <li><strong>Fan</strong> - Dissipates heat</li>
+      </ul>
+
+      <h2>Form Factor &amp; Compatibility</h2>
+      <ul>
+        <li>Most desktop PSUs use the <strong>ATX form factor</strong></li>
+        <li>Size and shape affect compatibility with the case and motherboard</li>
+        <li>Key fit points: screw locations, fan locations, and power connectors</li>
+      </ul>
+
+      <h2>Input Voltage by Region</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Region</th>
+            <th>Typical Voltage</th>
+            <th>Tolerance Range</th>
+            <th>Line Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>North America</td>
+            <td>120 VAC</td>
+            <td>100-127 VAC</td>
+            <td>Low-line</td>
+          </tr>
+          <tr>
+            <td>UK / Europe</td>
+            <td>230 VAC</td>
+            <td>220-240 VAC</td>
+            <td>High-line</td>
+          </tr>
+          <tr>
+            <td>Data Centers</td>
+            <td>High-line preferred</td>
+            <td>220-240 VAC</td>
+            <td>High-line</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <blockquote>
+        <p><strong>Note:</strong> AC voltage supply varies by country and distribution circuits, so PSUs have a wide tolerance range: <strong>100-127 VAC</strong> for low-line and <strong>220-240 VAC</strong> for high-line.</p>
+      </blockquote>
+
+      <h2>Voltage Switching Types</h2>
+      <ul>
+        <li><strong>Autoswitching (dual voltage)</strong> - Detects input voltage automatically; most common</li>
+        <li><strong>Manual switch</strong> - User must set low-line or high-line before use</li>
+        <li><strong>Fixed voltage</strong> - Locked to one line type only</li>
+      </ul>
+      <p><strong>Always</strong> check the input voltage markings on the PSU before plugging it in.</p>
+
+      <h2>Key Terms</h2>
+      <ul>
+        <li><strong>AC (Alternating Current)</strong> - Power supplied from the building outlet</li>
+        <li><strong>DC (Direct Current)</strong> - Power delivered to PC components</li>
+        <li><strong>Low-line</strong> - ~120 VAC (North America)</li>
+        <li><strong>High-line</strong> - ~230 VAC (UK, Europe, data centers)</li>
+        <li><strong>ATX</strong> - Standard desktop PSU form factor</li>
+        <li><strong>Rectifier</strong> - Converts AC to DC</li>
+      </ul>
+    </main>
+  </div>
+</body>
+
+</html>

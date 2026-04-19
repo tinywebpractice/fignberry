@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.2.4 Motherboard Storage Connectors</title>
+  <link rel="stylesheet" href="../../styles/site.css">
+  <script defer src="../../js/nav.js"></script>
+</head>
+
+<body>
+  <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+    <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+    <span class="sidebar-toggle__label">Menu</span>
+  </button>
+  <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+  <div class="site-shell site-shell--sidebar">
+    <header class="site-header site-sidebar" id="site-sidebar">
+      <div class="site-sidebar__inner">
+        <p class="site-title">Course Navigation</p>
+        <nav class="site-nav" aria-label="Primary"></nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <h1>2.2.4 Motherboard Storage Connectors - Notes</h1>
+
+      <h2>Storage Interface Comparison</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Interface</th>
+            <th>Use</th>
+            <th>Power</th>
+            <th>Max length</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SATA</td>
+            <td>Internal HDDs, SSDs, optical drives, and tape drives</td>
+            <td>Separate SATA power or Molex connector</td>
+            <td>1 meter</td>
+            <td>Installed in a drive bay</td>
+          </tr>
+          <tr>
+            <td>M.2</td>
+            <td>Internal SSDs</td>
+            <td>Power supplied over the bus with no separate cable needed</td>
+            <td>N/A, card form factor</td>
+            <td>Lengths include 42, 60, 80, and 110 mm; check motherboard compatibility</td>
+          </tr>
+          <tr>
+            <td>eSATA</td>
+            <td>External drives</td>
+            <td>No power over the cable</td>
+            <td>2 meters</td>
+            <td>Better shielding than internal SATA</td>
+          </tr>
+          <tr>
+            <td>eSATAp</td>
+            <td>External drives</td>
+            <td>Yes, combines eSATA and USB in one port</td>
+            <td>2 meters</td>
+            <td>Also called eSATA/USB Combo</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>M.2 Installation Notes</h2>
+      <ul>
+        <li>The port is oriented horizontally.</li>
+        <li>Insert the card at an angle, push it into place, and secure it with a screw.</li>
+        <li>Available lengths include 42 mm, 60 mm, 80 mm, and 110 mm, so check motherboard labels for compatibility.</li>
+        <li>No separate power cable is needed.</li>
+      </ul>
+
+      <h2>eSATA vs USB and Thunderbolt</h2>
+      <ul>
+        <li>eSATA's main drawback is that it does not provide power over the cable.</li>
+        <li>That works fine for 3.5-inch drives with their own power source.</li>
+        <li>It is limiting for 2.5-inch portable drives that rely on bus power.</li>
+        <li>USB 3.x and Thunderbolt have largely replaced eSATA because they offer higher speeds, more versatility, and power delivery.</li>
+      </ul>
+    </main>
+  </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+

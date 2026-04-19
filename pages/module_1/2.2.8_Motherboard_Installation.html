@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.2.8 Motherboard Installation</title>
+  <link rel="stylesheet" href="../../styles/site.css">
+  <script defer src="../../js/nav.js"></script>
+</head>
+
+<body>
+  <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+    <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+    <span class="sidebar-toggle__label">Menu</span>
+  </button>
+  <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+  <div class="site-shell site-shell--sidebar">
+    <header class="site-header site-sidebar" id="site-sidebar">
+      <div class="site-sidebar__inner">
+        <p class="site-title">Course Navigation</p>
+        <nav class="site-nav" aria-label="Primary"></nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <h1>2.2.8 Motherboard Installation - Notes</h1>
+
+      <p>Installing a motherboard correctly means following the right order, using ESD protection, and making sure the board is supported and aligned properly inside the case.</p>
+
+      <h2>Installation Steps in Order</h2>
+      <ol>
+        <li>Review documentation. Read the manual, check jumper settings if needed, and use an anti-ESD wrist strap before touching components. Modern boards generally use BIOS or UEFI instead of physical jumpers.</li>
+        <li>Install the I/O shield. Snap it into the rear cutout of the case so it aligns with the motherboard's external I/O ports.</li>
+        <li>Insert standoffs. Place brass standoffs in the case only where the motherboard has matching mounting holes. Extra standoffs can cause a short circuit.</li>
+        <li>Pre-install CPU and memory if desired. It is often easier to install the CPU, RAM, and CPU cooler before mounting the board in the case.</li>
+        <li>Align and secure the motherboard. Set the board onto the standoffs, line it up with the I/O shield, and secure it with screws without overtightening.</li>
+        <li>Complete final assembly. Connect the power supply, drives, adapter cards, and all required data and power connectors.</li>
+        <li>Manage cables. Route cables neatly to preserve airflow and reduce clutter inside the case.</li>
+      </ol>
+
+      <h2>Key Things to Remember</h2>
+      <ul>
+        <li>Standoffs must only be installed where the motherboard has corresponding mounting holes. Extras can short the board.</li>
+        <li>Align the board with the I/O cutout at the top-left and make sure the board is supported by standoffs at the edges and center.</li>
+        <li>Modern motherboards are configured through BIOS or UEFI rather than physical jumpers.</li>
+        <li>Always use ESD protection before handling the motherboard or other sensitive components.</li>
+      </ul>
+
+      <h2>2.2.8 Lab - Motherboard Installation: Step by Step</h2>
+
+      <h3>Step 1: Verify Motherboard Compatibility</h3>
+      <p>Check the motherboard manual or product information for the following before installing:</p>
+      <ul>
+        <li>PCIe slot type, such as PCIe x16</li>
+        <li>M.2 storage support</li>
+        <li>Compatible CPU generation, such as 8th gen Intel Core</li>
+        <li>RAM type and slot layout, such as 4 x DDR4 DIMM with dual-channel support</li>
+        <li>Maximum RAM per slot so you can calculate total capacity</li>
+      </ul>
+
+      <h3>Step 2: Install the Motherboard</h3>
+      <ol>
+        <li>Open the computer case.</li>
+        <li>Place the motherboard onto the motherboard tray.</li>
+        <li>Screw it in securely.</li>
+      </ol>
+
+      <h3>Step 3: Connect Front Panel Cables</h3>
+      <p>Using the system panel connector diagram, item 13 on the motherboard:</p>
+      <ul>
+        <li>Power switch: pins 3 and 4, top row</li>
+        <li>Power LED: pins 1 and 2, top row</li>
+        <li>Hard drive LED: pins 1 and 2, bottom row</li>
+        <li>Case speaker: four pins, top row</li>
+      </ul>
+
+      <h3>Step 4: Install Fans</h3>
+      <ul>
+        <li>Connect the chassis fan to the fan connector at the bottom of the board.</li>
+        <li>Connect the front case fan to the fan connector at the front of the board.</li>
+      </ul>
+
+      <h3>Step 5: Connect USB and Audio Ports</h3>
+      <ul>
+        <li>USB 2.0, black cable, item 14: connect to the USB 2.0 header</li>
+        <li>Front panel audio, item 18: connect to the audio header on the left</li>
+        <li>USB 3.0, blue cable, item 9: connect to the USB 3.0 header</li>
+      </ul>
+
+      <h3>Step 6: Connect Power Supply Cables</h3>
+      <ul>
+        <li>CPU power: 8-pin connector, item 2, plugs into the CPU power socket</li>
+        <li>Main motherboard power: 20+4 pin connector, plugs into the main power socket</li>
+      </ul>
+
+      <p>Done. The motherboard has power and all case connections are made. The next steps would be installing the CPU, RAM, and adapter cards.</p>
+    </main>
+  </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+

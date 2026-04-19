@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.2.3 Solid-State Drives - Quick Notes</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">3.2.3 Solid-State Drives</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">What is an SSD?</h2>
+                <p class="notes-paragraph">
+                    A <b>solid-state drive (SSD)</b> uses <b>flash memory technology</b> for persistent mass storage.
+                    SSDs offer significantly better read performance than HDDs, are less prone to failure from
+                    mechanical shock, and have rapidly decreased in cost per gigabyte.
+                </p>
+                <p class="notes-paragraph notes-paragraph--note">
+                    <b>Note:</b> SSDs can sometimes underperform HDDs when handling constant transfers of
+                    multi-gigabyte files.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">NAND Flash Memory Types</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Type</th>
+                            <th class="notes-table-heading">Full Name</th>
+                            <th class="notes-table-heading">Reliability</th>
+                            <th class="notes-table-heading">Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>SLC</b></td>
+                            <td class="notes-table-cell">Single-Level Cell</td>
+                            <td class="notes-table-cell">Highest</td>
+                            <td class="notes-table-cell">Most expensive</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>MLC</b></td>
+                            <td class="notes-table-cell">Multi-Level Cell</td>
+                            <td class="notes-table-cell">Lower than SLC</td>
+                            <td class="notes-table-cell">Less expensive</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph notes-paragraph--note">
+                    <b>Note:</b> Flash memory degrades over many write operations. <b>Wear leveling</b> routines
+                    (used by drive firmware and the OS) evenly distribute writes across all blocks to extend the
+                    drive's lifespan.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">SSD Interface Types</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Interface</th>
+                            <th class="notes-table-heading">Form Factors</th>
+                            <th class="notes-table-heading">Max Speed</th>
+                            <th class="notes-table-heading">Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>SATA</b></td>
+                            <td class="notes-table-cell">2.5-inch caddy, mSATA</td>
+                            <td class="notes-table-cell">600 MB/s</td>
+                            <td class="notes-table-cell">Can bottleneck high-performing SSDs; mSATA plugs directly into
+                                a combined data/power port on the motherboard</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>PCIe / NVMe</b></td>
+                            <td class="notes-table-cell">PCIe expansion card, M.2</td>
+                            <td class="notes-table-cell">Up to 6.7 GB/s+</td>
+                            <td class="notes-table-cell">Uses NVMe interface for much better performance; M.2 slots
+                                provide power over the bus — no separate power cable needed</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>SAS</b></td>
+                            <td class="notes-table-cell">Enterprise drives</td>
+                            <td class="notes-table-cell">Very high</td>
+                            <td class="notes-table-cell">Used in servers and workstations; faster and more reliable than
+                                SATA; point-to-point serial protocol</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">PCIe Transfer Rates</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">PCIe Version</th>
+                            <th class="notes-table-heading">Transfer Rate per Lane</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">PCIe 4.0</td>
+                            <td class="notes-table-cell">16 GT/s per lane</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">PCIe 5.0</td>
+                            <td class="notes-table-cell">32 GT/s per lane</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">M.2 SSDs</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">M.2 is a <b>physical form factor</b> — not an interface; M.2 SSDs can
+                        use either <b>SATA/AHCI</b> or <b>NVMe</b></li>
+                    <li class="notes-list-item">NVMe-based M.2 SSDs typically <b>outperform</b> SATA-based M.2 SSDs</li>
+                    <li class="notes-list-item">Smaller and horizontal — suitable for <b>laptops and PC motherboards</b>
+                    </li>
+                    <li class="notes-list-item">M.2 size labels indicate dimensions: e.g. <b>M.2 2280</b> = 22mm wide ×
+                        80mm long</li>
+                    <li class="notes-list-item">M.2 key types: <b>B key</b> (SATA), <b>B/M key</b> (2-lane PCIe), <b>M
+                            key</b> (4-lane PCIe)</li>
+                    <li class="notes-list-item">Always check motherboard documentation for M.2 compatibility</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Safety</h2>
+                <p class="notes-paragraph">
+                    SSDs are vulnerable to <b>electrostatic discharge (ESD)</b>. Always take <b>anti-ESD precautions</b>
+                    when handling and storing SSDs.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>SSD</b> – Solid-State Drive; uses flash memory for non-volatile
+                        storage with no moving parts</li>
+                    <li class="notes-list-item"><b>NAND flash</b> – The type of flash memory used in SSDs (NOT AND logic
+                        gate)</li>
+                    <li class="notes-list-item"><b>SLC</b> – Single-Level Cell; most reliable and expensive NAND type
+                    </li>
+                    <li class="notes-list-item"><b>Wear leveling</b> – Firmware/OS technique that distributes writes
+                        evenly across flash blocks to extend SSD life</li>
+                    <li class="notes-list-item"><b>NVMe</b> – Non-Volatile Memory Express; high-speed interface for PCIe
+                        SSDs</li>
+                    <li class="notes-list-item"><b>mSATA</b> – Mini SATA; a compact SSD form factor that plugs directly
+                        into a motherboard port</li>
+                    <li class="notes-list-item"><b>M.2</b> – A compact physical SSD form factor supporting both SATA and
+                        NVMe interfaces</li>
+                    <li class="notes-list-item"><b>SAS</b> – Serial Attached SCSI; enterprise-grade interface used in
+                        servers and workstations</li>
+                    <li class="notes-list-item"><b>ESD</b> – Electrostatic Discharge; can damage SSDs during handling
+                    </li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

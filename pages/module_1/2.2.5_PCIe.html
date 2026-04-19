@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.2.5 PCIe (Peripheral Component Interconnect Express)</title>
+  <link rel="stylesheet" href="../../styles/site.css">
+  <script defer src="../../js/nav.js"></script>
+</head>
+
+<body>
+  <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+    <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+    <span class="sidebar-toggle__label">Menu</span>
+  </button>
+  <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+  <div class="site-shell site-shell--sidebar">
+    <header class="site-header site-sidebar" id="site-sidebar">
+      <div class="site-sidebar__inner">
+        <p class="site-title">Course Navigation</p>
+        <nav class="site-nav" aria-label="Primary"></nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <h1>2.2.5 PCIe (Peripheral Component Interconnect Express) - Notes</h1>
+
+      <p>PCIe is the standard interface for modern adapter cards. It uses point-to-point serial communication, which gives each component a dedicated link.</p>
+
+      <h2>PCIe Versions and Speeds</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Version</th>
+            <th>GT/s</th>
+            <th>GB/s (x1)</th>
+            <th>GB/s (x16)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>PCIe 2</td>
+            <td>5</td>
+            <td>0.984</td>
+            <td>15.754</td>
+          </tr>
+          <tr>
+            <td>PCIe 3</td>
+            <td>8</td>
+            <td>0.985</td>
+            <td>15.754</td>
+          </tr>
+          <tr>
+            <td>PCIe 4</td>
+            <td>16</td>
+            <td>1.969</td>
+            <td>31.508</td>
+          </tr>
+          <tr>
+            <td>PCIe 5</td>
+            <td>32</td>
+            <td>3.938</td>
+            <td>63.015</td>
+          </tr>
+          <tr>
+            <td>PCIe 6</td>
+            <td>64</td>
+            <td>7.561</td>
+            <td>128</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Slot Sizes and Lanes</h2>
+      <ul>
+        <li>Common lane counts are x1, x4, x8, and x16.</li>
+        <li>More lanes means a physically longer slot.</li>
+        <li>Up-plugging means putting a smaller card into a larger slot, such as an x8 card into an x16 slot. This works but may run at reduced speed.</li>
+        <li>Down-plugging means putting a larger card into a smaller slot. This is only possible if the card is not physically obstructed.</li>
+        <li>A slot may be physically x16 but only operate at x8, so check motherboard labels such as x16 @ x8.</li>
+      </ul>
+
+      <h2>Compatibility and Power</h2>
+      <ul>
+        <li>All PCIe versions are backward compatible and run at the speed of the slowest component.</li>
+        <li>A graphics slot can provide up to 75W through the slot plus another 75W through a PCIe power connector.</li>
+        <li>Other PCIe slots can provide up to 25W.</li>
+        <li>If multiple PCIe slots share lanes with other components such as M.2 devices or other slots, the available bandwidth per slot is reduced.</li>
+      </ul>
+    </main>
+  </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+

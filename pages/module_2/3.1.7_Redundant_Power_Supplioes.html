@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3.1.7 Redundant Power Supplies - Quick Notes</title>
+  <link rel="stylesheet" href="../../styles/site.css">
+  <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+  <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+    <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+    <span class="sidebar-toggle__label">Menu</span>
+  </button>
+  <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+  <div class="site-shell site-shell--sidebar">
+    <header class="site-header site-sidebar" id="site-sidebar">
+      <div class="site-sidebar__inner">
+        <p class="site-title">Course Navigation</p>
+        <nav class="site-nav" aria-label="Primary"></nav>
+      </div>
+    </header>
+
+    <main class="page-content notes-content">
+      <h1 class="notes-title">3.1.7 Redundant Power Supplies</h1>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">What is a Redundant Power Supply?</h2>
+        <p class="notes-paragraph">
+          A redundant power supply setup equips a system with <b>two PSUs</b>. One operates normally while
+          the other acts as a <b>failover</b> — if the primary PSU fails, the second immediately takes over,
+          minimizing downtime and preventing data loss.
+        </p>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Where Are They Used?</h2>
+        <table class="notes-table">
+          <thead class="notes-table-head">
+            <tr class="notes-table-row">
+              <th class="notes-table-heading">Environment</th>
+              <th class="notes-table-heading">Redundant PSU Used?</th>
+              <th class="notes-table-heading">Reason</th>
+            </tr>
+          </thead>
+          <tbody class="notes-table-body">
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Data Centers</td>
+              <td class="notes-table-cell">Yes — standard feature</td>
+              <td class="notes-table-cell">Uninterrupted service is essential</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">High-availability servers</td>
+              <td class="notes-table-cell">Yes — standard feature</td>
+              <td class="notes-table-cell">Continuous operation and data integrity required</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Desktop computers</td>
+              <td class="notes-table-cell">Uncommon</td>
+              <td class="notes-table-cell">Not required to maintain server-level uptime</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">How It Works in Servers</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">Each PSU connects to a <b>backplane</b> — a circuit board providing electrical connections between components</li>
+          <li class="notes-list-item">The backplane enables <b>hot-swappable PSUs</b>, meaning a faulty unit can be replaced without powering down the system or opening the case</li>
+          <li class="notes-list-item">This ensures critical services remain available during PSU failure or maintenance</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Key Terms</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item"><b>Redundant PSU</b> – A second PSU that takes over if the primary fails</li>
+          <li class="notes-list-item"><b>Failover</b> – The automatic switching to a backup PSU when the primary fails</li>
+          <li class="notes-list-item"><b>Backplane</b> – A circuit board that provides electrical connections between components, including PSUs in a server</li>
+          <li class="notes-list-item"><b>Hot-swappable</b> – The ability to replace a component (e.g. a PSU) without shutting down or interrupting the system</li>
+          <li class="notes-list-item"><b>Uptime</b> – The amount of time a system remains operational without interruption</li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+</body>
+
+</html>

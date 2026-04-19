@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.2.4 Hard Disk Drives - Quick Notes</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">3.2.4 Hard Disk Drives</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">How an HDD Works</h2>
+                <p class="notes-paragraph">
+                    A <b>hard disk drive (HDD)</b> stores data on metal or glass <b>platters</b> coated with a magnetic
+                    substance. Platters are mounted on a <b>spindle</b> and spin at high speeds. Each platter has a
+                    <b>read/write head</b> on both sides, moved by an <b>actuator</b> mechanism.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">HDD Internal Components</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Component</th>
+                            <th class="notes-table-heading">Function</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Platters</b></td>
+                            <td class="notes-table-cell">Metal or glass discs coated with magnetic material; where data
+                                is stored</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Spindle</b></td>
+                            <td class="notes-table-cell">The central axis that the platters are mounted on and spin
+                                around</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Read/Write Heads</b></td>
+                            <td class="notes-table-cell">One on each side of every platter; reads and writes data
+                                magnetically</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Actuator</b></td>
+                            <td class="notes-table-cell">Moves the read/write heads across the platters to locate data
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Drive Geometry</h2>
+                <p class="notes-paragraph">
+                    Each platter surface is divided into circular <b>tracks</b>, which are further divided into
+                    <b>sectors</b>. Each sector holds <b>512 bytes</b>. This low-level structure is known as
+                    <b>drive geometry</b>.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Performance – Spindle Speed (RPM)</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Drive Type</th>
+                            <th class="notes-table-heading">Spindle Speed</th>
+                            <th class="notes-table-heading">Transfer Rate</th>
+                            <th class="notes-table-heading">Access Time</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">High-performance</td>
+                            <td class="notes-table-cell">15,000 RPM</td>
+                            <td class="notes-table-cell">Up to 180 MBps</td>
+                            <td class="notes-table-cell">Below 3 ms</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">High-performance</td>
+                            <td class="notes-table-cell">10,000 RPM</td>
+                            <td class="notes-table-cell">—</td>
+                            <td class="notes-table-cell">Below 3 ms</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Standard desktop</td>
+                            <td class="notes-table-cell">7,200 RPM</td>
+                            <td class="notes-table-cell">~110 MBps</td>
+                            <td class="notes-table-cell">~6 ms</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Low-power / laptop</td>
+                            <td class="notes-table-cell">5,400 RPM</td>
+                            <td class="notes-table-cell">Lower</td>
+                            <td class="notes-table-cell">~6 ms+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Form Factors</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Size</th>
+                            <th class="notes-table-heading">Used In</th>
+                            <th class="notes-table-heading">Height Options</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">3.5 inch</td>
+                            <td class="notes-table-cell">Desktop PCs</td>
+                            <td class="notes-table-cell">Standard</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">2.5 inch</td>
+                            <td class="notes-table-cell">Laptops, portable external drives</td>
+                            <td class="notes-table-cell">15 mm, 9.5 mm, 7 mm, 5 mm</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph notes-paragraph--note"><b>Note:</b> Most HDDs use a <b>SATA interface</b> to
+                    connect to the motherboard.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>HDD</b> – Hard Disk Drive; stores data magnetically on spinning
+                        platters</li>
+                    <li class="notes-list-item"><b>Platter</b> – The magnetic disc inside an HDD where data is stored
+                    </li>
+                    <li class="notes-list-item"><b>Spindle</b> – The central axis the platters rotate around</li>
+                    <li class="notes-list-item"><b>Read/Write Head</b> – Component that reads and writes data on each
+                        platter surface</li>
+                    <li class="notes-list-item"><b>Actuator</b> – Moves the read/write heads to the correct position on
+                        the platter</li>
+                    <li class="notes-list-item"><b>Track</b> – A circular path on a platter surface where data is stored
+                    </li>
+                    <li class="notes-list-item"><b>Sector</b> – A subdivision of a track; each holds 512 bytes</li>
+                    <li class="notes-list-item"><b>Drive geometry</b> – The low-level structure of tracks and sectors on
+                        a platter</li>
+                    <li class="notes-list-item"><b>RPM</b> – Revolutions Per Minute; measures spindle speed and affects
+                        HDD performance</li>
+                    <li class="notes-list-item"><b>Access time</b> – The total delay for the read/write head to locate
+                        and reach data (includes seek time)</li>
+                    <li class="notes-list-item"><b>Seek time</b> – The time it takes the actuator to move the read/write
+                        head to the correct track</li>
+                    <li class="notes-list-item"><b>Internal transfer rate</b> – The speed at which read/write operations
+                        are performed on the platters (MBps)</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

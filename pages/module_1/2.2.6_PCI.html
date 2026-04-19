@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.2.6 PCI (Peripheral Component Interconnect)</title>
+  <link rel="stylesheet" href="../../styles/site.css">
+  <script defer src="../../js/nav.js"></script>
+</head>
+
+<body>
+  <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+    <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+    <span class="sidebar-toggle__label">Menu</span>
+  </button>
+  <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+  <div class="site-shell site-shell--sidebar">
+    <header class="site-header site-sidebar" id="site-sidebar">
+      <div class="site-sidebar__inner">
+        <p class="site-title">Course Navigation</p>
+        <nav class="site-nav" aria-label="Primary"></nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <h1>2.2.6 PCI (Peripheral Component Interconnect) - Notes</h1>
+
+      <p>PCI is a legacy expansion bus that has been superseded by PCIe. It still matters because some older motherboards include PCI slots alongside PCIe slots for backward compatibility.</p>
+
+      <h2>PCI Specs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Specification</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Communication type</td>
+            <td>Parallel, unlike PCIe which is serial</td>
+          </tr>
+          <tr>
+            <td>Bit width</td>
+            <td>32-bit</td>
+          </tr>
+          <tr>
+            <td>Speed</td>
+            <td>33.3 MHz</td>
+          </tr>
+          <tr>
+            <td>Max transfer rate</td>
+            <td>133 MBps</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Voltage and Keying</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Voltage</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5V</td>
+            <td>Original PCI cards</td>
+          </tr>
+          <tr>
+            <td>3.3V</td>
+            <td>Became more common later</td>
+          </tr>
+          <tr>
+            <td>Dual-voltage</td>
+            <td>Supports both 5V and 3.3V</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Different keying, or notch positions, on cards and slots prevents incompatible voltage cards from being inserted incorrectly.</p>
+
+      <h2>PCI vs PCIe Compatibility</h2>
+      <ul>
+        <li>PCIe is software-compatible with PCI, so a PCIe motherboard can still include PCI slots to support legacy cards.</li>
+        <li>PCI cards cannot fit into PCIe slots because they are physically incompatible.</li>
+        <li>PCIe replaced PCI because serial communication and dedicated point-to-point links are faster and more efficient.</li>
+      </ul>
+    </main>
+  </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
