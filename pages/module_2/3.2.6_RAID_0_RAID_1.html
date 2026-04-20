@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.2.6 RAID 0 and RAID 1 - Quick Notes</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">3.2.6 RAID 0 and RAID 1</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Choosing a RAID Level</h2>
+                <p class="notes-paragraph">When selecting a RAID level, consider these four factors:</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>Fault tolerance</b> – How many disks can fail without data loss?</li>
+                    <li class="notes-list-item"><b>Read/write performance</b> – Does the array need to be fast?</li>
+                    <li class="notes-list-item"><b>Capacity</b> – How much usable storage is needed?</li>
+                    <li class="notes-list-item"><b>Cost</b> – How many disks are required?</li>
+                </ul>
+                <p class="notes-paragraph notes-paragraph--note">
+                    <b>Important:</b> Always use disks that are <b>identical in capacity, type, and performance</b>.
+                    If disks differ in size, the <b>smallest disk</b> determines the maximum usable space across the
+                    array.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">RAID 0 – Striping without Parity</h2>
+                <p class="notes-paragraph">
+                    Data is divided into blocks and distributed across all disks in the array, allowing multiple
+                    disks to service requests in parallel for improved performance.
+                </p>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Property</th>
+                            <th class="notes-table-heading">Detail</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Minimum disks</td>
+                            <td class="notes-table-cell">2</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Usable capacity</td>
+                            <td class="notes-table-cell">Sum of all drive capacities (limited by smallest disk)</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Fault tolerance</td>
+                            <td class="notes-table-cell"><b>None</b> — if any disk fails, the entire volume fails</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Performance</td>
+                            <td class="notes-table-cell">Best read/write performance of all RAID levels</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Best used for</td>
+                            <td class="notes-table-cell">Non-critical cache storage where speed is the priority</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph notes-paragraph--note">
+                    <b>Warning:</b> RAID 0 provides <b>no redundancy</b>. A single disk failure causes a system crash
+                    and requires data recovery from backups.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">RAID 1 – Mirroring</h2>
+                <p class="notes-paragraph">
+                    Every write operation is duplicated on a second disk simultaneously. Read operations can use
+                    either disk, slightly boosting read performance.
+                </p>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Property</th>
+                            <th class="notes-table-heading">Detail</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Minimum disks</td>
+                            <td class="notes-table-cell">2</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Usable capacity</td>
+                            <td class="notes-table-cell">50% of total disk space (one disk is the mirror)</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Fault tolerance</td>
+                            <td class="notes-table-cell">One disk can fail; the other takes over with minimal impact
+                            </td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Write performance</td>
+                            <td class="notes-table-cell">Slight overhead — data must be written to both disks</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Read performance</td>
+                            <td class="notes-table-cell">Slightly improved — either disk can serve reads</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Rebuild speed</td>
+                            <td class="notes-table-cell">Faster than parity-based RAID levels</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Best used for</td>
+                            <td class="notes-table-cell">Critical data; OS drives where redundancy is the priority</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph notes-paragraph--note">
+                    <b>Note:</b> After a disk fails it should be <b>replaced quickly</b> to restore redundancy.
+                    The new disk is automatically populated with data from the remaining disk, though performance
+                    is temporarily reduced during the rebuild.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">RAID 0 vs RAID 1 Comparison</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Feature</th>
+                            <th class="notes-table-heading">RAID 0</th>
+                            <th class="notes-table-heading">RAID 1</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Method</td>
+                            <td class="notes-table-cell">Striping</td>
+                            <td class="notes-table-cell">Mirroring</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Min. drives</td>
+                            <td class="notes-table-cell">2</td>
+                            <td class="notes-table-cell">2</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Fault tolerance</td>
+                            <td class="notes-table-cell">None</td>
+                            <td class="notes-table-cell">1 disk failure</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Usable capacity</td>
+                            <td class="notes-table-cell">100% of all drives</td>
+                            <td class="notes-table-cell">50% of total drives</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Performance</td>
+                            <td class="notes-table-cell">Highest</td>
+                            <td class="notes-table-cell">Slight write overhead; good read speed</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Cost efficiency</td>
+                            <td class="notes-table-cell">Best</td>
+                            <td class="notes-table-cell">Most expensive per GB</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>Striping (RAID 0)</b> – Data is split into blocks and spread across
+                        multiple disks for performance; no fault tolerance</li>
+                    <li class="notes-list-item"><b>Mirroring (RAID 1)</b> – Data is written identically to two disks
+                        simultaneously; protects against one disk failure</li>
+                    <li class="notes-list-item"><b>Fault tolerance</b> – The ability to survive a disk failure without
+                        losing data</li>
+                    <li class="notes-list-item"><b>Rebuild</b> – The process of restoring data to a replacement disk
+                        after a failure</li>
+                    <li class="notes-list-item"><b>Disk striping</b> – Dividing data into blocks and distributing them
+                        across all disks for parallel access</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

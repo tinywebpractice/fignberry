@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.2.13 Lesson Review - Quick Notes</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">3.2.13 Lesson Review</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Q1 - Which Blu-ray standard defines rewritable discs?</h2>
+                <p class="notes-paragraph">Correct answer: <b>BD-RE</b></p>
+                <p class="notes-paragraph">BD-RE stands for Blu-ray Disc Recordable Erasable - the rewritable Blu-ray format. BD-ROM is read-only, and BD-R is write-once.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Q2 - Which BEST describe SSDs compared to HDDs? (Select two.)</h2>
+                <p class="notes-paragraph">Correct answers: <b>An SSD uses flash technology to store data.</b><br /><b>An SSD opens files faster than an HDD.</b></p>
+                <p class="notes-paragraph">SSDs have no moving parts and use flash memory, making them faster than HDDs. They are not affected by magnetism and have no spindles. They are also more expensive per GB than HDDs.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Q3 - Which storage device uses aluminum platters for storing data?</h2>
+                <p class="notes-paragraph">Correct answer: <b>Hard disk</b></p>
+                <p class="notes-paragraph">HDDs store data magnetically on metal (aluminum or glass) platters. SSDs, SD cards, and optical discs do not use platters.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Q4 - Which drive configuration uses striping with parity for fault tolerance?</h2>
+                <p class="notes-paragraph">Correct answer: <b>RAID 5</b></p>
+                <p class="notes-paragraph">RAID 5 uses striping with distributed parity, allowing recovery from a single disk failure. RAID 0 = striping only (no fault tolerance). RAID 1 = mirroring. RAID 10 = stripe of mirrors.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Q5 - Which RAID method should you use? (Hardware RAID controller card scenario)</h2>
+                <p class="notes-paragraph">Correct answer: <b>Hardware</b></p>
+                <p class="notes-paragraph">When a dedicated RAID controller card is present, hardware RAID is the correct method. It runs before the OS boots and offers more control and options than software RAID.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Q6 - Which storage media BEST allows quick, inexpensive file sharing with customers?</h2>
+                <p class="notes-paragraph">Correct answer: <b>Flash drive</b></p>
+                <p class="notes-paragraph">Flash drives (USB drives) are portable, inexpensive, and plug into any USB port - ideal for quickly sharing files. HDDs and SSDs are bulkier and more expensive; SDHC cards require a card reader.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Q7 - What distinguishes SD Express cards from earlier SD versions?</h2>
+                <p class="notes-paragraph">Correct answer: <b>They offer much higher speeds</b></p>
+                <p class="notes-paragraph">SD Express combines the SD card form factor with PCIe and NVMe interfaces, achieving speeds up to 985 MBps - far beyond earlier standards like UHS (108 MBps).</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Q8 - Which BEST meets your needs? (Two drives, increased performance)</h2>
+                <p class="notes-paragraph">Correct answer: <b>RAID 0</b></p>
+                <p class="notes-paragraph">RAID 0 (striping) splits data across two drives to improve performance. It requires a minimum of 2 drives and uses all available capacity. Note: there is no fault tolerance with RAID 0.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Q9 - Windows doesn't show the RAID 1 logical drive after configuring with the motherboard controller. What should you do?</h2>
+                <p class="notes-paragraph">Correct answer: <b>Install the driver for the RAID controller.</b></p>
+                <p class="notes-paragraph">When using an integrated motherboard RAID controller, Windows requires a driver to recognise the RAID volume. Without it, the logical drive won't appear in the OS.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Q10 - Which RAID BEST meets: fault tolerance, minimum drives, low cost?</h2>
+                <p class="notes-paragraph">Correct answer: <b>RAID 1</b></p>
+                <p class="notes-paragraph">RAID 1 requires only 2 drives, provides fault tolerance through mirroring, and is the simplest and least expensive redundancy option. RAID 5 and RAID 10 require more drives.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Q11 - What is an advantage of RAID 5 over RAID 1?</h2>
+                <p class="notes-paragraph">Correct answer: <b>RAID 5 improves performance over RAID 1.</b></p>
+                <p class="notes-paragraph">RAID 5 uses striping alongside parity, giving it better read performance than RAID 1. Both provide fault tolerance, but RAID 5 tolerates only 1 disk failure (same as RAID 1) and uses disk space more efficiently.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Q12 - Data storage recommendations for a high performance system? (Select two.)</h2>
+                <p class="notes-paragraph">Correct answers: <b>Store heavily used information on the hard drive.</b><br /><b>Store data that requires high performance on the SSD drive.</b></p>
+                <p class="notes-paragraph">Use the hard drive for general storage needs and put performance-sensitive data on the SSD. This balances capacity and cost while still using the SSD where speed matters most.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Q13 - What do you need to do with Disk 1 and Disk 2 before configuring RAID 1 in Windows?</h2>
+                <p class="notes-paragraph">Correct answer: <b>Convert the disks from basic to dynamic.</b></p>
+                <p class="notes-paragraph">Windows software RAID requires dynamic disks. Basic disks must be converted to dynamic before they can be used in a mirrored (RAID 1) or striped (RAID 0) volume.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Q14 - Best solution for two drives, protection from disk failure, Windows software RAID?</h2>
+                <p class="notes-paragraph">Correct answer: <b>Use mirrored volumes.</b></p>
+                <p class="notes-paragraph">A mirrored volume (RAID 1) in Windows Disk Management duplicates data across two drives. If one fails, the other takes over. RAID 5 requires at least 3 drives and is not available as a software RAID option in standard Windows.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Q15 - A RAID 1 array with two 1 TB drives only shows 1 TB of available space. What should you do?</h2>
+                <p class="notes-paragraph">Correct answer: <b>Nothing. The RAID array is working as designed.</b></p>
+                <p class="notes-paragraph">RAID 1 (mirroring) uses 50% of total disk space. With two 1 TB drives, only 1 TB is usable - the second drive is a hidden mirror copy. This is expected behaviour.</p>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

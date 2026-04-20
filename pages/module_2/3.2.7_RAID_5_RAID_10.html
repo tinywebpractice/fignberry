@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3.2.7 RAID 5 and RAID 10 - Quick Notes</title>
+  <link rel="stylesheet" href="../../styles/site.css">
+  <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+  <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+    <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+    <span class="sidebar-toggle__label">Menu</span>
+  </button>
+  <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+  <div class="site-shell site-shell--sidebar">
+    <header class="site-header site-sidebar" id="site-sidebar">
+      <div class="site-sidebar__inner">
+        <p class="site-title">Course Navigation</p>
+        <nav class="site-nav" aria-label="Primary"></nav>
+      </div>
+    </header>
+
+    <main class="page-content notes-content">
+      <h1 class="notes-title">3.2.7 RAID 5 and RAID 10</h1>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">RAID 5 – Striping with Distributed Parity</h2>
+        <p class="notes-paragraph">
+          RAID 5 combines <b>striping</b> (like RAID 0) with <b>distributed parity</b>. Error correction
+          information is spread across all disks in the array. Data and parity information are always
+          stored on <b>different disks</b>. If one disk fails, data can be <b>reconstructed</b> from the
+          remaining disks.
+        </p>
+        <table class="notes-table">
+          <thead class="notes-table-head">
+            <tr class="notes-table-row">
+              <th class="notes-table-heading">Property</th>
+              <th class="notes-table-heading">Detail</th>
+            </tr>
+          </thead>
+          <tbody class="notes-table-body">
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Minimum disks</td>
+              <td class="notes-table-cell">3 (can use more)</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Fault tolerance</td>
+              <td class="notes-table-cell">1 disk failure — data can be reconstructed from parity</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Read performance</td>
+              <td class="notes-table-cell">Excellent normally; slows down during disk failure (parity rebuild)</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Write performance</td>
+              <td class="notes-table-cell">Slower — parity must be calculated on every write</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Usable capacity</td>
+              <td class="notes-table-cell">Total capacity minus the equivalent of one disk (used for parity)</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Best used for</td>
+              <td class="notes-table-cell">Balanced performance, capacity, and redundancy</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="notes-paragraph notes-paragraph--note">
+          <b>Note:</b> Fault tolerance and usable space are <b>inversely related</b> — more disks means
+          more usable space but a greater chance of failure. If <b>more than one disk fails</b>, the entire
+          volume becomes unavailable.
+        </p>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">RAID 5 Parity Overhead Example</h2>
+        <table class="notes-table">
+          <thead class="notes-table-head">
+            <tr class="notes-table-row">
+              <th class="notes-table-heading">Number of Disks</th>
+              <th class="notes-table-heading">Parity Overhead</th>
+              <th class="notes-table-heading">Example (80 GB each)</th>
+            </tr>
+          </thead>
+          <tbody class="notes-table-body">
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">3 disks</td>
+              <td class="notes-table-cell">1/3 of each disk</td>
+              <td class="notes-table-cell">160 GB usable (240 GB total)</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">4 disks</td>
+              <td class="notes-table-cell">1/4 of each disk</td>
+              <td class="notes-table-cell">240 GB usable (320 GB total)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">RAID 10 – Stripe of Mirrors</h2>
+        <p class="notes-paragraph">
+          RAID 10 is a <b>nested RAID level</b> that combines RAID 1 (mirroring) and RAID 0 (striping).
+          It creates a <b>striped volume made up of mirrored pairs</b>. One disk in each mirrored pair
+          can fail without bringing down the entire volume.
+        </p>
+        <table class="notes-table">
+          <thead class="notes-table-head">
+            <tr class="notes-table-row">
+              <th class="notes-table-heading">Property</th>
+              <th class="notes-table-heading">Detail</th>
+            </tr>
+          </thead>
+          <tbody class="notes-table-body">
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Minimum disks</td>
+              <td class="notes-table-cell">4 (must be an even number)</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Fault tolerance</td>
+              <td class="notes-table-cell">1 disk per mirrored pair can fail without data loss</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Read performance</td>
+              <td class="notes-table-cell">Excellent — benefits from both striping and mirroring</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Write performance</td>
+              <td class="notes-table-cell">Good — no parity calculation needed</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Usable capacity</td>
+              <td class="notes-table-cell">50% of total disk space (50% overhead for mirroring)</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Best used for</td>
+              <td class="notes-table-cell">High performance <b>and</b> high redundancy environments</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">RAID 5 vs RAID 10 Comparison</h2>
+        <table class="notes-table">
+          <thead class="notes-table-head">
+            <tr class="notes-table-row">
+              <th class="notes-table-heading">Feature</th>
+              <th class="notes-table-heading">RAID 5</th>
+              <th class="notes-table-heading">RAID 10</th>
+            </tr>
+          </thead>
+          <tbody class="notes-table-body">
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Method</td>
+              <td class="notes-table-cell">Striping + distributed parity</td>
+              <td class="notes-table-cell">Striping of mirrored pairs</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Min. drives</td>
+              <td class="notes-table-cell">3</td>
+              <td class="notes-table-cell">4 (even number)</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Fault tolerance</td>
+              <td class="notes-table-cell">1 disk failure</td>
+              <td class="notes-table-cell">1 disk per mirrored pair</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Usable capacity</td>
+              <td class="notes-table-cell">Total minus 1 disk equivalent</td>
+              <td class="notes-table-cell">50% of total</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Write speed</td>
+              <td class="notes-table-cell">Slower (parity calculation)</td>
+              <td class="notes-table-cell">Faster (no parity)</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Cost efficiency</td>
+              <td class="notes-table-cell">Better</td>
+              <td class="notes-table-cell">Higher cost (50% overhead)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Key Terms</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item"><b>Distributed parity</b> – Error correction data spread evenly across all disks in the array (used in RAID 5)</li>
+          <li class="notes-list-item"><b>Parity</b> – Mathematical error-checking data used to reconstruct lost data if a disk fails</li>
+          <li class="notes-list-item"><b>RAID 5</b> – Striping with distributed parity; min. 3 disks; tolerates 1 disk failure</li>
+          <li class="notes-list-item"><b>RAID 10</b> – Nested RAID combining RAID 0 striping and RAID 1 mirroring; min. 4 disks; excellent fault tolerance and performance</li>
+          <li class="notes-list-item"><b>Nested RAID</b> – A RAID configuration that combines two RAID levels (e.g. RAID 10 = RAID 1 + RAID 0)</li>
+          <li class="notes-list-item"><b>Sub-volume</b> – A mirrored pair within a RAID 10 array that acts as one unit in the stripe</li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+</body>
+
+</html>

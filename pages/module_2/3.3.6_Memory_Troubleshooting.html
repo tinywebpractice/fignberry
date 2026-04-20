@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.3.6 Memory Troubleshooting - Quick Notes</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">3.3.6 Memory Troubleshooting</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Primary Troubleshooting Method</h2>
+                <p class="notes-paragraph">
+                    The main way to test whether RAM is faulty is to <b>swap it out with a known good stick</b>.
+                    If the problem resolves, the original module was the cause.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Identifying the Correct RAM Type</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">The primary way to identify RAM type is by the <b>position of the
+                            notch</b> on the module's edge connector</li>
+                    <li class="notes-list-item">Each DDR generation (DDR3, DDR4, DDR5) has its notch in a <b>different
+                            position</b> — this prevents incorrect installation</li>
+                    <li class="notes-list-item">A DDR3 stick <b>cannot</b> be inserted into a DDR4 slot — the notch will
+                        not line up</li>
+                    <li class="notes-list-item">Always match the module's notch position to the slot before attempting
+                        installation</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Installing RAM Safely</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Line up the notch on the module with the key in the slot before pressing
+                        down</li>
+                    <li class="notes-list-item">Press firmly but evenly until the <b>retention clips on each end click
+                            into place</b></li>
+                    <li class="notes-list-item">If the RAM does not seat properly, check the notch alignment and
+                        orientation before trying again</li>
+                    <li class="notes-list-item"><b>Never force RAM into a slot</b> — forcing it can break the module or
+                        damage the motherboard</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Troubleshooting Checklist</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Problem</th>
+                            <th class="notes-table-heading">What to Check / Do</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">RAM won't seat in slot</td>
+                            <td class="notes-table-cell">Verify notch alignment; confirm DDR generation matches the
+                                slot; check orientation</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">System unstable / crashes</td>
+                            <td class="notes-table-cell">Swap with a known good stick to test if the module is faulty
+                            </td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Wrong RAM type installed</td>
+                            <td class="notes-table-cell">Identify DDR type by notch position; replace with the correct
+                                generation</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">RAM not recognised by system</td>
+                            <td class="notes-table-cell">Reseat the module; check it is fully clicked in; verify
+                                compatibility with motherboard</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Rules</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>Do</b> check the notch position to identify DDR type before
+                        installing</li>
+                    <li class="notes-list-item"><b>Do</b> use a known good module to isolate a faulty stick</li>
+                    <li class="notes-list-item"><b>Do not</b> mix DDR generations in the same system</li>
+                    <li class="notes-list-item"><b>Do not</b> force RAM into a slot — if it doesn't fit, something is
+                        wrong</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>Notch</b> – The keyed slot on a RAM module that identifies its DDR
+                        generation and prevents incorrect insertion</li>
+                    <li class="notes-list-item"><b>Known good stick</b> – A verified working RAM module used to test
+                        whether a suspected faulty module is the cause of a problem</li>
+                    <li class="notes-list-item"><b>Retention clips</b> – The catches on each end of a DIMM slot that
+                        lock the module in place when fully seated</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

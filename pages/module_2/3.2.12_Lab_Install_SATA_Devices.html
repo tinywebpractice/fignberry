@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3.2.12 Lab: Install SATA Devices - Quick Notes</title>
+  <link rel="stylesheet" href="../../styles/site.css">
+  <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+  <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+    <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+    <span class="sidebar-toggle__label">Menu</span>
+  </button>
+  <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+  <div class="site-shell site-shell--sidebar">
+    <header class="site-header site-sidebar" id="site-sidebar">
+      <div class="site-sidebar__inner">
+        <p class="site-title">Course Navigation</p>
+        <nav class="site-nav" aria-label="Primary"></nav>
+      </div>
+    </header>
+
+    <main class="page-content notes-content">
+      <h1 class="notes-title">3.2.12 Lab: Install SATA Devices</h1>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Walkthrough Video</h2>
+        <p class="notes-paragraph">Use this walkthrough as your guide while you complete the SATA device installation lab.</p>
+        <div style="position: relative; width: 100%; max-width: 750px; padding-bottom: 56.25%; margin: 0 0 24px;">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/c4I8NPjp2_s"
+            title="Install SATA Devices Lab Walkthrough"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"
+            style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;">
+          </iframe>
+        </div>
+        <p class="notes-paragraph"><a href="https://www.youtube.com/watch?v=c4I8NPjp2_s" target="_blank" rel="noreferrer">Open the video on YouTube</a></p>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Lab Scenario</h2>
+        <p class="notes-paragraph">A desktop computer needs additional SATA storage installed and connected correctly. Your task is to place the SATA devices in the proper bays, attach the SATA data cables to the motherboard, connect SATA power leads from the power supply, and confirm the system is ready to detect the new drives.</p>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 1 - Identify the Required Devices</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">Review the lab instructions and determine which SATA devices must be installed, such as a hard drive, SSD, or optical drive.</li>
+          <li class="notes-list-item">Check that the case has the correct drive bays available for each device size.</li>
+          <li class="notes-list-item">Locate open SATA ports on the motherboard and available SATA power connectors from the PSU.</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 2 - Mount the SATA Devices</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">Install each 3.5-inch or 2.5-inch storage drive into the correct internal drive bay.</li>
+          <li class="notes-list-item">If the lab includes an optical drive, slide it into the front-facing 5.25-inch bay.</li>
+          <li class="notes-list-item">Secure each device according to the case design so it does not shift after cabling.</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 3 - Connect SATA Data Cables</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">Attach one end of a SATA data cable to each device.</li>
+          <li class="notes-list-item">Connect the other end of each cable to an available SATA port on the motherboard.</li>
+          <li class="notes-list-item">Keep the cable orientation correct. SATA connectors are keyed and should not be forced.</li>
+        </ul>
+        <p class="notes-paragraph notes-paragraph--note"><b>Note:</b> A SATA device needs both a <b>data connection</b> to the motherboard and a <b>power connection</b> from the PSU.</p>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 4 - Connect SATA Power</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">Find the 15-pin SATA power connectors coming from the power supply.</li>
+          <li class="notes-list-item">Connect one SATA power lead to each installed SATA device.</li>
+          <li class="notes-list-item">Verify that every drive has both cables attached firmly before moving on.</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 5 - Verify the Installation</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">Check that no data or power cable is loose, twisted sharply, or blocking other components.</li>
+          <li class="notes-list-item">Confirm that each SATA data cable runs from the drive directly to a motherboard SATA port.</li>
+          <li class="notes-list-item">Power on the system or complete the lab validation step to verify that the devices are recognized.</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Connection Summary</h2>
+        <table class="notes-table">
+          <thead class="notes-table-head">
+            <tr class="notes-table-row">
+              <th class="notes-table-heading">Component</th>
+              <th class="notes-table-heading">Connection Needed</th>
+              <th class="notes-table-heading">Destination</th>
+            </tr>
+          </thead>
+          <tbody class="notes-table-body">
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">SATA hard drive or SSD</td>
+              <td class="notes-table-cell">SATA data cable</td>
+              <td class="notes-table-cell">Motherboard SATA port</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">SATA hard drive or SSD</td>
+              <td class="notes-table-cell">SATA power connector</td>
+              <td class="notes-table-cell">Power supply SATA lead</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Optical drive</td>
+              <td class="notes-table-cell">SATA data cable</td>
+              <td class="notes-table-cell">Motherboard SATA port</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Optical drive</td>
+              <td class="notes-table-cell">SATA power connector</td>
+              <td class="notes-table-cell">Power supply SATA lead</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Common Mistakes to Avoid</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">Connecting only SATA power and forgetting the SATA data cable</li>
+          <li class="notes-list-item">Connecting the data cable to the drive but not to the motherboard</li>
+          <li class="notes-list-item">Using excessive force on keyed SATA connectors</li>
+          <li class="notes-list-item">Leaving a drive unsecured in the case before cabling is finished</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Key Terms</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item"><b>SATA data cable</b> - Cable that carries data between a SATA device and the motherboard</li>
+          <li class="notes-list-item"><b>SATA power connector</b> - 15-pin power connector from the PSU used by SATA devices</li>
+          <li class="notes-list-item"><b>SATA port</b> - Motherboard interface used to connect SATA storage and optical devices</li>
+          <li class="notes-list-item"><b>Drive bay</b> - Internal mounting location for a storage or optical device</li>
+          <li class="notes-list-item"><b>Optical drive</b> - CD, DVD, or Blu-ray drive that uses SATA for data and power in most desktop systems</li>
+        </ul>
+      </section>
+
+      <blockquote>
+        <p><strong>Important:</strong> Before installing or cabling drives, make sure the system is powered off and unplugged.</p>
+      </blockquote>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">CompTIA Lab Instructions</h2>
+        <p class="notes-paragraph">Complete this lab as follows:</p>
+        <ol class="notes-list">
+          <li class="notes-list-item"><b>Identify the port locations for SATA connectors on the motherboard.</b>
+            <ul class="notes-list">
+              <li class="notes-list-item">Above the computer, select <b>Motherboard</b> to switch to the motherboard view.</li>
+              <li class="notes-list-item">Select the <b>Motherboard</b>.</li>
+              <li class="notes-list-item">From the Selected Item pane, select the <b>Item Details</b> icon.</li>
+              <li class="notes-list-item">Review the Item Details to identify the location of the SATA ports.</li>
+              <li class="notes-list-item">Close the Item Details window after you have found the SATA ports.</li>
+            </ul>
+          </li>
+          <li class="notes-list-item"><b>Install the SATA hard drives.</b>
+            <ul class="notes-list">
+              <li class="notes-list-item">Switch the computer to the <b>Drive Bays</b> view.</li>
+              <li class="notes-list-item">Under Inventory, expand <b>Storage</b>.</li>
+              <li class="notes-list-item">Drag each hard drive from the Inventory to an open <b>3.5&quot; drive bay</b>.</li>
+            </ul>
+          </li>
+          <li class="notes-list-item"><b>Attach the SATA cables to the hard drives.</b>
+            <ul class="notes-list">
+              <li class="notes-list-item">Under Inventory, expand <b>Cables</b>.</li>
+              <li class="notes-list-item">Select a <b>red SATA cable</b>.</li>
+              <li class="notes-list-item">From the Selected Item pane, drag a SATA connector to a hard drive.</li>
+              <li class="notes-list-item">Under Inventory, select the other red SATA cable.</li>
+              <li class="notes-list-item">From the Selected Item pane, drag a SATA connector to the second hard drive.</li>
+            </ul>
+          </li>
+          <li class="notes-list-item"><b>Attach the SATA cables to the motherboard.</b>
+            <ul class="notes-list">
+              <li class="notes-list-item">Switch the computer to the <b>Motherboard</b> view.</li>
+              <li class="notes-list-item">Select the <b>Partial Connections</b> button, then select a SATA cable.</li>
+              <li class="notes-list-item">From the Selected Item pane, drag the unconnected SATA connector to a SATA port on the motherboard.</li>
+              <li class="notes-list-item">Repeat the previous two steps for the other cable.</li>
+            </ul>
+          </li>
+          <li class="notes-list-item"><b>Connect power to both hard drives.</b>
+            <ul class="notes-list">
+              <li class="notes-list-item">Switch to the <b>Drive Bays</b> view of the computer.</li>
+              <li class="notes-list-item">Above the computer, select <b>Partial Connections</b>, then select the <b>power supply</b>.</li>
+              <li class="notes-list-item">From the Selected Item pane, drag a <b>SATA power connector</b> to one of the hard drives.</li>
+              <li class="notes-list-item">Drag a different SATA power connector to the second hard drive.</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Accessible Steps to Complete This Lab</h2>
+        <ol class="notes-list">
+          <li class="notes-list-item"><b>Add the two hard drives to the computer.</b>
+            <ul class="notes-list">
+              <li class="notes-list-item">Press <b>ALT+I</b> to access the Inventory menu.</li>
+              <li class="notes-list-item">Tab to the <b>Storage</b> option and press <b>Enter</b>.</li>
+              <li class="notes-list-item">Tab to the first hard drive and press <b>Enter</b>. Press <b>Enter</b> again to add the drive.</li>
+              <li class="notes-list-item">In the <b>Select Location to Add Item</b> window, in the <b>Connector End to Connect</b> drop-down menu, press the down arrow key until <b>Hard Drive, Internal, SATA</b> is selected.</li>
+              <li class="notes-list-item">Tab to the <b>Destination</b> drop-down menu.</li>
+              <li class="notes-list-item">Press the down arrow key until <b>3 1/2 Inch Internal Bay 1 Standard ATX Case, v2015</b> is selected.</li>
+              <li class="notes-list-item">Tab twice and press <b>Enter</b> to confirm the selections.</li>
+              <li class="notes-list-item">Press <b>ALT+I</b> to access the Inventory menu.</li>
+              <li class="notes-list-item">Tab to the remaining hard drive and press <b>Enter</b>. Press <b>Enter</b> again to add the drive.</li>
+              <li class="notes-list-item">In the <b>Select Location to Add Item</b> window, in the <b>Connector End to Connect</b> drop-down menu, press the down arrow key until <b>Hard Drive, Internal, SATA</b> is selected.</li>
+              <li class="notes-list-item">Tab to the <b>Destination</b> drop-down menu.</li>
+              <li class="notes-list-item">Press the down arrow key until <b>3 1/2 Inch Internal Bay 2 Standard ATX Case, v2015</b> is selected.</li>
+              <li class="notes-list-item">Tab twice and press <b>Enter</b> to confirm the selections.</li>
+            </ul>
+          </li>
+          <li class="notes-list-item"><b>Connect the hard drives to the motherboard.</b>
+            <ul class="notes-list">
+              <li class="notes-list-item">Press <b>ALT+I</b> to access the Inventory menu.</li>
+              <li class="notes-list-item">Tab to the <b>Cables</b> option and press <b>Enter</b>.</li>
+              <li class="notes-list-item">Tab to the first SATA cable (red one) and press <b>Enter</b>. Press <b>Enter</b> again to add the cable.</li>
+              <li class="notes-list-item">In the <b>Select Location to Add Item</b> window, in the <b>Connector End to Connect</b> drop-down menu, press the down arrow key until <b>Connector, SATA, 7-pin</b> is selected.</li>
+              <li class="notes-list-item">Tab to the <b>Destination</b> drop-down menu.</li>
+              <li class="notes-list-item">Press the down arrow key until <b>SATA1 Motherboard, Socket AM3, NIC</b> is selected.</li>
+              <li class="notes-list-item">Tab twice and press <b>Enter</b> to confirm the selections.</li>
+              <li class="notes-list-item">Press <b>ALT+I</b> to access the Inventory menu.</li>
+              <li class="notes-list-item">Tab to the remaining SATA cable (red one) and press <b>Enter</b>. Press <b>Enter</b> again to add the cable.</li>
+              <li class="notes-list-item">In the <b>Select Location to Add Item</b> window, in the <b>Connector End to Connect</b> drop-down menu, press the down arrow key until <b>Connector, SATA, 7-pin</b> is selected.</li>
+              <li class="notes-list-item">Tab to the <b>Destination</b> drop-down menu.</li>
+              <li class="notes-list-item">Press the down arrow key until <b>SATA2 Motherboard, Socket AM3, NIC</b> is selected.</li>
+              <li class="notes-list-item">Tab twice and press <b>Enter</b> to confirm the selections.</li>
+              <li class="notes-list-item">Press <b>ALT+W</b> to access the Workspace.</li>
+              <li class="notes-list-item">Tab until the arrow next to <b>System Case (ATX)</b> is highlighted and press <b>Enter</b>.</li>
+              <li class="notes-list-item">Tab until the arrow next to <b>Motherboard, Socket AM3</b> is highlighted and press <b>Enter</b>.</li>
+              <li class="notes-list-item">Tab until the arrow next to <b>Connector, SATA, 7-pin</b> is highlighted and press <b>Enter</b>.</li>
+              <li class="notes-list-item">Tab until the disconnected <b>Connector, SATA, 7-pin (data)</b> with a red icon is highlighted and press <b>Enter</b>. Press <b>Enter</b> again to add the connector.</li>
+              <li class="notes-list-item">On the <b>Select Location to Add Item</b> window, in the drop-down menu under <b>Destination</b>, press the down arrow key until <b>SATA Data Port Hard Drive, Internal, SATA</b> is shown.</li>
+              <li class="notes-list-item">Press <b>Tab</b> twice and then <b>Enter</b> to confirm.</li>
+              <li class="notes-list-item">Press <b>ALT+W</b> to access the Workspace. The menus should all still be expanded.</li>
+              <li class="notes-list-item">Tab until the arrow next to the partially connected <b>Connector, SATA, 7-pin</b> with a yellow icon is highlighted and press <b>Enter</b>.</li>
+              <li class="notes-list-item">Tab until the disconnected <b>Connector, SATA, 7-pin (data)</b> with a red icon is highlighted and press <b>Enter</b>. Press <b>Enter</b> again to add the connector.</li>
+              <li class="notes-list-item">On the <b>Select Location to Add Item</b> window, in the drop-down menu under <b>Destination</b>, press the down arrow key until <b>SATA Data Port Hard Drive, Internal, SATA</b> is shown.</li>
+              <li class="notes-list-item">Press <b>Tab</b> twice and then <b>Enter</b> to confirm.</li>
+            </ul>
+          </li>
+          <li class="notes-list-item"><b>Connect the power connections to the SATA hard drives.</b>
+            <ul class="notes-list">
+              <li class="notes-list-item">Press <b>ALT+W</b> to access the Workspace.</li>
+              <li class="notes-list-item">Tab until the arrow next to <b>System Case (ATX)</b> is highlighted and press <b>Enter</b>.</li>
+              <li class="notes-list-item">Tab until the arrow next to <b>Power Supply, ATX, 20+4 pin, PCIe</b> is highlighted and press <b>Enter</b>.</li>
+              <li class="notes-list-item">Tab until a <b>Connector, SATA, 15-pin (power)</b> that is not connected and has a red icon is highlighted and press <b>Enter</b>. Press <b>Enter</b> again to add the connector.</li>
+              <li class="notes-list-item">On the <b>Select Location to Add Item</b> window, in the drop-down menu under <b>Destination</b>, press the down arrow key until <b>SATA Power Port Hard Drive, Internal, SATA</b> is shown.</li>
+              <li class="notes-list-item">Press <b>Tab</b> twice and then <b>Enter</b> to confirm.</li>
+              <li class="notes-list-item">Repeat this process for a second SATA connector cable.</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

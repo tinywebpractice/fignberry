@@ -87,7 +87,21 @@ const NAV_DATA = [
       { title: "3.2.2 Mass Storage Device", path: "pages/module_2/3.2.2_Mass_Storage_Device.html" },
       { title: "3.2.3 Solid State Drives", path: "pages/module_2/3.2.3_Solid_State_Drives.html" },
       { title: "3.2.4 Hard Disk Drives", path: "pages/module_2/3.2.4_Hard_Disk_Drives.html" },
-      { title: "3.2.5 RAID", path: "pages/module_2/3.2.5_Redundant_ Array_of_ Independent_Disks.html" }
+      { title: "3.2.5 RAID", path: "pages/module_2/3.2.5_Redundant_ Array_of_ Independent_Disks.html" },
+      { title: "3.2.6 RAID 0 and RAID 1", path: "pages/module_2/3.2.6_RAID_0_RAID_1.html" },
+      { title: "3.2.7 RAID 5 and RAID 10", path: "pages/module_2/3.2.7_RAID_5_RAID_10.html" },
+      { title: "3.2.8 RAID 6", path: "pages/module_2/3.2.8_RAID_6.html" },
+      { title: "3.2.9 RAID Types", path: "pages/module_2/3.2.9_RAID_Types.html" },
+      { title: "3.2.10 Removable Storage Drives", path: "pages/module_2/3.2.10_Removable_Storage_Drives.html" },
+      { title: "3.2.11 Optical Drives", path: "pages/module_2/3.2.11_Optical_Drives.html" },
+      { title: "3.2.12 Install SATA Devices Lab", path: "pages/module_2/3.2.12_Lab_Install_SATA_Devices.html" },
+      { title: "3.2.13 Lesson Review", path: "pages/module_2/3.2.13_Lesson_Review.html" },
+      { title: "3.3.1 System RAM and Virtual Memory", path: "pages/module_2/3.3.1_System_RAM_Virtual_Memory.html" },
+      { title: "3.3.2 RAM Types", path: "pages/module_2/3.3.2_RAM_Types.html" },
+      { title: "3.3.3 Memory Modules", path: "pages/module_2/3.3.3_Memory_Modules.html" },
+      { title: "3.3.4 Select Memory By Sight Lab", path: "pages/module_2/3.3.4_Lab_Select_Memory_By_Sight.html" },
+      { title: "3.3.5 Multi-channel System Memory", path: "pages/module_2/3.3.5_Multi-channel_System_Memory.html" },
+      { title: "3.3.6 Memory Troubleshooting", path: "pages/module_2/3.3.6_Memory_Troubleshooting.html" },
     ]
   }
 ];

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.3.2 RAM Types - Quick Notes</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">3.3.2 RAM Types</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Evolution of RAM Technology</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Type</th>
+                            <th class="notes-table-heading">What It Introduced</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>DRAM</b> (Dynamic RAM)</td>
+                            <td class="notes-table-cell">Stores bits as electrical charges in capacitors (charged = 1,
+                                uncharged = 0); transistors read the capacitor contents</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>SDRAM</b> (Synchronous DRAM)</td>
+                            <td class="notes-table-cell">Synchronised to the system clock so memory operations are timed
+                                with CPU instructions</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>DDR SDRAM</b> (Double Data Rate)</td>
+                            <td class="notes-table-cell">Transmits data on both the <b>rising and falling edges</b> of
+                                the clock cycle — doubles data transfer rate</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">How DDR Speed Labels Work (DDR-200 / PC1600 Example)</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Specification</th>
+                            <th class="notes-table-heading">Value</th>
+                            <th class="notes-table-heading">How It's Calculated</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Clock speed</td>
+                            <td class="notes-table-cell">100 MHz</td>
+                            <td class="notes-table-cell">Internal memory and bus speed</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Data rate</td>
+                            <td class="notes-table-cell">200 MT/s</td>
+                            <td class="notes-table-cell">100 MHz × 2 (DDR transfers on both clock edges) = DDR-200</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Peak transfer rate</td>
+                            <td class="notes-table-cell">1600 MBps (1.6 GBps)</td>
+                            <td class="notes-table-cell">200 MT/s × 8 bytes per transfer = PC-1600</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph notes-paragraph--note">
+                    <b>Note:</b> <b>MT/s</b> = megatransfers per second — how many million data transfers occur per
+                    second.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">DDR Generations Comparison</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">RAM Type</th>
+                            <th class="notes-table-heading">Data Rate</th>
+                            <th class="notes-table-heading">Transfer Rate</th>
+                            <th class="notes-table-heading">Max Module Size</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">DDR1</td>
+                            <td class="notes-table-cell">200–400 MT/s</td>
+                            <td class="notes-table-cell">1.6–3.2 GB/s</td>
+                            <td class="notes-table-cell">1 GB</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">DDR2</td>
+                            <td class="notes-table-cell">400–1066 MT/s</td>
+                            <td class="notes-table-cell">3.2–8.5 GB/s</td>
+                            <td class="notes-table-cell">4 GB</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">DDR3</td>
+                            <td class="notes-table-cell">800–2133 MT/s</td>
+                            <td class="notes-table-cell">6.4–17.1 GB/s</td>
+                            <td class="notes-table-cell">16 GB</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">DDR4</td>
+                            <td class="notes-table-cell">1600–3200 MT/s</td>
+                            <td class="notes-table-cell">12.8–25.6 GB/s</td>
+                            <td class="notes-table-cell">32 GB</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>DDR5</b></td>
+                            <td class="notes-table-cell">4800–8000+ MT/s</td>
+                            <td class="notes-table-cell">38.4–51.2+ GB/s</td>
+                            <td class="notes-table-cell">128 GB or higher</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph notes-paragraph--note">
+                    <b>Note:</b> Each DDR generation increases bandwidth by multiplying the <b>bus speed</b>,
+                    not the memory device speed — keeping modules reliable and cool.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">CAS Latency and Timing</h2>
+                <p class="notes-paragraph">
+                    Memory modules have internal timing values expressed as e.g. <b>14-15-15-35 CAS 14</b>.
+                </p>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>CAS latency (Column Access Strobe latency)</b> – The delay in clock
+                        cycles between the memory controller requesting data and it becoming available</li>
+                    <li class="notes-list-item"><b>Lower values = better performance</b> when comparing modules of the
+                        same type and speed</li>
+                    <li class="notes-list-item">CAS latency is a key factor in RAM speed and efficiency</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Architectural Improvements</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>DDR4</b> – Increased power efficiency, higher density (larger
+                        capacities), more efficient channel design for better data throughput</li>
+                    <li class="notes-list-item"><b>DDR5</b> – Further power efficiency improvements; introduces a
+                        <b>dual 32-bit subchannel architecture</b> within each DIMM for more efficient access and
+                        reduced latency</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>DRAM</b> – Dynamic RAM; stores bits as electrical charges in
+                        capacitors</li>
+                    <li class="notes-list-item"><b>SDRAM</b> – Synchronous DRAM; timed to the system clock</li>
+                    <li class="notes-list-item"><b>DDR SDRAM</b> – Double Data Rate SDRAM; transfers data on both clock
+                        edges, doubling throughput</li>
+                    <li class="notes-list-item"><b>MT/s</b> – Megatransfers per second; measures how many million data
+                        transfers occur per second</li>
+                    <li class="notes-list-item"><b>CAS latency</b> – Column Access Strobe latency; delay (in clock
+                        cycles) between requesting and receiving data from RAM; lower = faster</li>
+                    <li class="notes-list-item"><b>PC-xxxx label</b> – Denotes peak transfer rate in MBps (e.g. PC-1600
+                        = 1600 MBps)</li>
+                    <li class="notes-list-item"><b>DDR-xxx label</b> – Denotes data rate in MT/s (e.g. DDR-200 = 200
+                        MT/s)</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

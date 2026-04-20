@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.2.8 RAID 6</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">3.2.8 RAID 6 – Striping with Double Parity</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">What is RAID 6?</h2>
+                <p class="notes-paragraph">
+                    RAID 6 uses <b>striping with dual distributed parity</b> — two sets of parity information are spread
+                    across all disks. This allows the array to survive the <b>simultaneous failure of two disks</b>,
+                    providing greater fault tolerance than RAID 5.
+                </p>
+                <p class="notes-paragraph">
+                    It is ideal for environments with higher disk failure risks, such as <b>large arrays</b> or
+                    <b>critical systems</b>.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">RAID 6 Properties</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Property</th>
+                            <th class="notes-table-heading">Detail</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Minimum disks</td>
+                            <td class="notes-table-cell">4 (2 for data, 2 for parity)</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Fault tolerance</td>
+                            <td class="notes-table-cell"><b>2 simultaneous disk failures</b> — array remains operational
+                            </td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Read performance</td>
+                            <td class="notes-table-cell">Good — similar to RAID 5</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Write performance</td>
+                            <td class="notes-table-cell">Slower than RAID 5 — two sets of parity must be calculated and
+                                written</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Usable capacity</td>
+                            <td class="notes-table-cell">Total capacity minus the equivalent of <b>two disks</b> (used
+                                for parity)</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Cost</td>
+                            <td class="notes-table-cell">More expensive than RAID 5 — requires more disks and a more
+                                powerful controller</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Best used for</td>
+                            <td class="notes-table-cell">Large arrays and critical systems where two-disk failure
+                                protection is needed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Usable Capacity Example</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Array Configuration</th>
+                            <th class="notes-table-heading">Total Capacity</th>
+                            <th class="notes-table-heading">Parity Overhead</th>
+                            <th class="notes-table-heading">Usable Capacity</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">4 x 1 TB disks</td>
+                            <td class="notes-table-cell">4 TB</td>
+                            <td class="notes-table-cell">2 TB (2 disks for parity)</td>
+                            <td class="notes-table-cell"><b>2 TB usable</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">RAID 5 vs RAID 6</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Feature</th>
+                            <th class="notes-table-heading">RAID 5</th>
+                            <th class="notes-table-heading">RAID 6</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Parity sets</td>
+                            <td class="notes-table-cell">1</td>
+                            <td class="notes-table-cell">2</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Min. drives</td>
+                            <td class="notes-table-cell">3</td>
+                            <td class="notes-table-cell">4</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Disk failures tolerated</td>
+                            <td class="notes-table-cell">1</td>
+                            <td class="notes-table-cell">2</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Write speed</td>
+                            <td class="notes-table-cell">Slower than RAID 0</td>
+                            <td class="notes-table-cell">Slower than RAID 5</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Cost</td>
+                            <td class="notes-table-cell">Lower</td>
+                            <td class="notes-table-cell">Higher</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Best for</td>
+                            <td class="notes-table-cell">Moderate arrays</td>
+                            <td class="notes-table-cell">Large or critical arrays</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Maintenance Considerations</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Array continues operating if 1 or 2 disks fail, but <b>performance
+                            degrades</b></li>
+                    <li class="notes-list-item"><b>Rebuild times are longer</b> than RAID 5 — time-consuming based on
+                        disk size and system load</li>
+                    <li class="notes-list-item"><b>Monitor array health</b> regularly and plan for prompt disk
+                        replacements</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>RAID 6</b> – Striping with dual distributed parity; tolerates 2
+                        simultaneous disk failures; minimum 4 disks</li>
+                    <li class="notes-list-item"><b>Dual distributed parity</b> – Two independent sets of parity data
+                        spread across all disks in the array</li>
+                    <li class="notes-list-item"><b>Write penalty</b> – The performance cost of calculating and writing
+                        parity data on every write operation</b></li>
+                    <li class="notes-list-item"><b>Rebuild</b> – The process of reconstructing lost data onto a
+                        replacement disk using remaining parity information</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.2.11 Optical Drives - Quick Notes</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">3.2.11 Optical Drives</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">What are Optical Drives?</h2>
+                <p class="notes-paragraph">
+                    Optical drives use a <b>laser</b> to read data encoded on the surface of discs such as
+                    <b>CDs, DVDs, and Blu-ray Discs (BDs)</b>. While marketed as durable, scratches can make
+                    discs unreadable.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Disc Recording Formats</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Format</th>
+                            <th class="notes-table-heading">Write Sessions</th>
+                            <th class="notes-table-heading">Can Erase?</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Basic Recordable</b></td>
+                            <td class="notes-table-cell">Written once in a single session</td>
+                            <td class="notes-table-cell">No</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Multisession Recordable</b></td>
+                            <td class="notes-table-cell">Written across multiple sessions</td>
+                            <td class="notes-table-cell">No</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Rewritable</b></td>
+                            <td class="notes-table-cell">Written multiple times (up to a write cycle limit)</td>
+                            <td class="notes-table-cell">Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Capacity and Transfer Rates by Disc Type</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Type</th>
+                            <th class="notes-table-heading">Capacity</th>
+                            <th class="notes-table-heading">Formats</th>
+                            <th class="notes-table-heading">Base Transfer Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>CD</b></td>
+                            <td class="notes-table-cell">Up to 700 MB</td>
+                            <td class="notes-table-cell">CD-R, CD-RW</td>
+                            <td class="notes-table-cell">150 KBps</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>DVD</b></td>
+                            <td class="notes-table-cell">4.7 GB (single-layer) to ~17 GB (dual-layer, double-sided)</td>
+                            <td class="notes-table-cell">DVD+R/RW and DVD-R/RW (indicated by ± symbol)</td>
+                            <td class="notes-table-cell">1.32 MBps (= 9x CD speed)</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Blu-ray</b></td>
+                            <td class="notes-table-cell">25 GB per layer</td>
+                            <td class="notes-table-cell">BD-ROM (read-only), BD-RE (rewritable)</td>
+                            <td class="notes-table-cell">4.5 MBps base; up to 72 MBps (16x)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Installation and Connectivity</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Type</th>
+                            <th class="notes-table-heading">Bay / Connection</th>
+                            <th class="notes-table-heading">Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Internal</b></td>
+                            <td class="notes-table-cell">5.25-inch drive bay; SATA data and power connectors</td>
+                            <td class="notes-table-cell">Standard for desktop PCs</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>External</b></td>
+                            <td class="notes-table-cell">USB, eSATA, or Thunderbolt</td>
+                            <td class="notes-table-cell">Usually requires an AC adapter for power; tray-based or
+                                slot-loading mechanism</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Other Features and Considerations</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>Speed rating</b> – Expressed as record/rewrite/read (e.g.
+                        24x/16x/52x); newer drives are typically multi-format</li>
+                    <li class="notes-list-item"><b>Emergency eject</b> – A small hole on the drive face; insert a paper
+                        clip to manually eject the disc if the button fails or there is no power</li>
+                    <li class="notes-list-item"><b>DRM (Digital Rights Management)</b> – Copy protection used on
+                        consumer DVDs and Blu-rays</li>
+                    <li class="notes-list-item"><b>Region coding</b> – Restricts disc playback to players from the same
+                        geographic region; can be changed via device properties on a PC, but the firmware limits the
+                        number of changes allowed</li>
+                    <li class="notes-list-item">Older drives may not support Blu-ray — check compatibility before
+                        purchasing</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>CD</b> – Compact Disc; up to 700 MB; formats include CD-R and CD-RW
+                    </li>
+                    <li class="notes-list-item"><b>DVD</b> – Digital Versatile Disc; up to ~17 GB; formats include DVD±R
+                        and DVD±RW</li>
+                    <li class="notes-list-item"><b>Blu-ray (BD)</b> – High-capacity optical disc; 25 GB per layer;
+                        formats include BD-ROM and BD-RE</li>
+                    <li class="notes-list-item"><b>CD-R / DVD-R / BD-R</b> – Recordable (write once) disc formats</li>
+                    <li class="notes-list-item"><b>CD-RW / DVD-RW / BD-RE</b> – Rewritable disc formats (can be erased
+                        and rewritten)</li>
+                    <li class="notes-list-item"><b>DRM</b> – Digital Rights Management; copy protection technology on
+                        commercial discs</li>
+                    <li class="notes-list-item"><b>Region coding</b> – Locks disc playback to a specific geographic
+                        region</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

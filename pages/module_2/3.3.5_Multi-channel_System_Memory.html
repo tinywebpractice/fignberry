@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.3.5 Multi-channel System Memory - Quick Notes</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">3.3.5 Multi-channel System Memory</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Single-Channel vs Dual-Channel Memory</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Feature</th>
+                            <th class="notes-table-heading">Single-Channel</th>
+                            <th class="notes-table-heading">Dual-Channel</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Data bus width</td>
+                            <td class="notes-table-cell">64-bit</td>
+                            <td class="notes-table-cell">128-bit (two 64-bit pathways)</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Bandwidth</td>
+                            <td class="notes-table-cell">Standard</td>
+                            <td class="notes-table-cell">Effectively doubled</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Requires special RAM?</td>
+                            <td class="notes-table-cell">No</td>
+                            <td class="notes-table-cell">No — standard RAM modules are used</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Requires special hardware?</td>
+                            <td class="notes-table-cell">No</td>
+                            <td class="notes-table-cell">Yes — CPU, memory controller, and motherboard must all support
+                                it</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph notes-paragraph--note">
+                    <b>Note:</b> DDR memory kits sold for dual-channel use contain standard identical modules —
+                    there is no such thing as a special "dual-channel" RAM module.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Configuring Dual-Channel</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Dual-channel motherboards typically have <b>4 DIMM slots in colour-coded
+                            pairs</b> — each colour pair represents one channel (e.g. slots 1 &amp; 3 = Channel A, slots
+                        2 &amp; 4 = Channel B)</li>
+                    <li class="notes-list-item">To enable dual-channel, install <b>identical modules</b> in matching
+                        slots across channels (e.g. A1 and B1)</li>
+                    <li class="notes-list-item">Modules should match in <b>clock speed, capacity, timings, and
+                            latency</b> — mismatched modules cause the system to default to the lowest (worst) values
+                    </li>
+                    <li class="notes-list-item">Dual-channel mode may need to be <b>enabled in the PC firmware/BIOS</b>
+                    </li>
+                    <li class="notes-list-item"><b>Always consult the motherboard documentation</b> — not all boards use
+                        consistent slot labelling or colour-coding</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Mismatched Modules and Flex Mode</h2>
+                <p class="notes-paragraph">When modules are mismatched (different sizes or speeds), the system may:</p>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Outcome</th>
+                            <th class="notes-table-heading">What Happens</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Default to single-channel</td>
+                            <td class="notes-table-cell">All RAM runs in single-channel mode — lower performance</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Disable spare module</td>
+                            <td class="notes-table-cell">Dual-channel enabled but extra RAM is ignored</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Flex mode</b></td>
+                            <td class="notes-table-cell">The matching portion runs in dual-channel; the remainder runs
+                                in single-channel. Example: A1 = 2 GB, B1 = 6 GB → 2 GB dual-channel + 4 GB
+                                single-channel</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Triple-Channel and Quad-Channel Memory</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Some CPUs and chipsets support <b>triple-channel</b> or
+                        <b>quad-channel</b> memory controllers</li>
+                    <li class="notes-list-item">If not all channel slots are populated, the system reverts to as many
+                        channels as are filled</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">DDR5 Channel Architecture</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Each DDR5 module has <b>two 32-bit channels</b> built in</li>
+                    <li class="notes-list-item">In a dual-channel configuration, this results in <b>four 32-bit
+                            channels</b> total</li>
+                    <li class="notes-list-item">Distributes load more effectively → supports higher density, reduces
+                        latency, and works better with multi-core CPUs</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>Single-channel</b> – One 64-bit data bus between the CPU and RAM</li>
+                    <li class="notes-list-item"><b>Dual-channel</b> – Two 64-bit pathways (128-bit total); doubles
+                        memory bandwidth; requires CPU, controller, and motherboard support</li>
+                    <li class="notes-list-item"><b>Flex mode</b> – A fallback mode where matched memory runs
+                        dual-channel and excess memory runs single-channel</li>
+                    <li class="notes-list-item"><b>Triple/quad-channel</b> – Extended multi-channel architectures
+                        supported by some high-end CPUs and chipsets</li>
+                    <li class="notes-list-item"><b>Memory kit</b> – A paired set of identical RAM modules sold for
+                        multi-channel use; the modules themselves are standard</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

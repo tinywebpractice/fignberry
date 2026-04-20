@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.3.3 Memory Modules - Quick Notes</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">3.3.3 Memory Modules</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">What is a Memory Module?</h2>
+                <p class="notes-paragraph">
+                    A memory module is a <b>printed circuit board</b> that holds a group of RAM devices acting as a
+                    single unit. Each DDR generation sets an upper limit on maximum capacity per module.
+                </p>
+                <p class="notes-paragraph notes-paragraph--note">
+                    <b>Safety:</b> Memory modules are vulnerable to <b>electrostatic discharge (ESD)</b>.
+                    Always take anti-ESD precautions when handling and storing them.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">DIMM vs SODIMM</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Feature</th>
+                            <th class="notes-table-heading">DIMM</th>
+                            <th class="notes-table-heading">SODIMM</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Full name</td>
+                            <td class="notes-table-cell">Dual Inline Memory Module</td>
+                            <td class="notes-table-cell">Small Outline DIMM</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Size</td>
+                            <td class="notes-table-cell">Larger</td>
+                            <td class="notes-table-cell">Smaller</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Used in</td>
+                            <td class="notes-table-cell">Desktop PCs, workstations, servers, gaming rigs</td>
+                            <td class="notes-table-cell">Laptops, mini PCs, compact/small form factor systems</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Capacity</td>
+                            <td class="notes-table-cell">Higher — better for performance-critical systems</td>
+                            <td class="notes-table-cell">Typically 4 GB to 32 GB</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Performance</td>
+                            <td class="notes-table-cell">Higher</td>
+                            <td class="notes-table-cell">Lower — limited by smaller size</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Insertion method</td>
+                            <td class="notes-table-cell">Press straight down; catches on each end lock it in</td>
+                            <td class="notes-table-cell">Insert at a 45° angle, then press flat to lock</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Physical Identification</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>Notches</b> on the edge connector identify the DDR generation (DDR3,
+                        DDR4, DDR5) and prevent incorrect insertion — each generation's notch is in a different position
+                    </li>
+                    <li class="notes-list-item">DIMMs often feature <b>heat sinks</b> to manage heat from high clock
+                        speeds</li>
+                    <li class="notes-list-item">Memory slots have <b>catches on each end</b> to secure the module once
+                        inserted</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Installation and Compatibility</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">The <b>DDR type must match the motherboard</b> — e.g. DDR5 modules
+                        cannot be installed in DDR4 slots</li>
+                    <li class="notes-list-item">For best performance, use modules rated at the <b>same bus speed as the
+                            motherboard</b></li>
+                    <li class="notes-list-item">Mixing different speeds is possible but <b>not recommended</b> — the
+                        system will run at the speed of the <b>slowest module</b></li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>Memory module</b> – A PCB holding multiple RAM chips that act as a
+                        single unit</li>
+                    <li class="notes-list-item"><b>DIMM</b> – Dual Inline Memory Module; standard desktop RAM form
+                        factor</li>
+                    <li class="notes-list-item"><b>SODIMM</b> – Small Outline DIMM; compact RAM for laptops and small
+                        form factor systems</li>
+                    <li class="notes-list-item"><b>Notch</b> – The keyed slot on a RAM module's edge connector that
+                        identifies DDR generation and prevents incorrect installation</li>
+                    <li class="notes-list-item"><b>Heat sink</b> – A metal component on some RAM modules that dissipates
+                        heat from high-speed operation</li>
+                    <li class="notes-list-item"><b>ESD (Electrostatic Discharge)</b> – Can damage memory modules; always
+                        use anti-ESD precautions when handling RAM</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.3.1 System RAM and Virtual Memory - Quick Notes</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">3.3.1 System RAM and Virtual Memory</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">How RAM Fits in the Memory Hierarchy</h2>
+                <p class="notes-paragraph">
+                    When a process runs or a file opens, the data is loaded from the <b>fixed disk</b> into
+                    <b>system RAM</b>. The CPU then fetches instructions from RAM into its <b>cache and registers</b>
+                    as needed, managed by a <b>memory controller</b>.
+                </p>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Storage Type</th>
+                            <th class="notes-table-heading">Speed</th>
+                            <th class="notes-table-heading">Volatile?</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">CPU Registers / Cache</td>
+                            <td class="notes-table-cell">Fastest</td>
+                            <td class="notes-table-cell">Yes</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>RAM (System Memory)</b></td>
+                            <td class="notes-table-cell">Very fast</td>
+                            <td class="notes-table-cell">Yes — data lost without power</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">SSD (Flash memory)</td>
+                            <td class="notes-table-cell">Fast</td>
+                            <td class="notes-table-cell">No</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">HDD (Magnetic)</td>
+                            <td class="notes-table-cell">Slowest</td>
+                            <td class="notes-table-cell">No</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph notes-paragraph--note">
+                    <b>Note:</b> The amount of RAM determines a PC's ability to handle multiple applications
+                    simultaneously and process large files efficiently. RAM is measured in <b>gigabytes (GB)</b>.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Address Space – Data vs Address Pathways</h2>
+                <p class="notes-paragraph">
+                    The <b>bus</b> connects the CPU, memory controller, and RAM. It has two key pathways:
+                </p>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Pathway</th>
+                            <th class="notes-table-heading">Function</th>
+                            <th class="notes-table-heading">Typical Width</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Data pathway</b></td>
+                            <td class="notes-table-cell">Determines how much data is transferred per clock cycle</td>
+                            <td class="notes-table-cell">64 bits (single channel)</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Address pathway</b></td>
+                            <td class="notes-table-cell">Determines how many memory locations the CPU can track; limits
+                                max physical and virtual memory</td>
+                            <td class="notes-table-cell">32-bit or 48-bit (on 64-bit CPUs)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">32-bit vs 64-bit CPU Memory Limits</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">CPU Type</th>
+                            <th class="notes-table-heading">Address Bus</th>
+                            <th class="notes-table-heading">Max Memory</th>
+                            <th class="notes-table-heading">Virtual Memory Address Space</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>32-bit CPU</b></td>
+                            <td class="notes-table-cell">32-bit</td>
+                            <td class="notes-table-cell">Up to <b>4 GB</b></td>
+                            <td class="notes-table-cell">4 GB (with paging to mass storage)</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>64-bit CPU</b></td>
+                            <td class="notes-table-cell">48-bit (typical)</td>
+                            <td class="notes-table-cell">Up to <b>256 TB</b></td>
+                            <td class="notes-table-cell">256 TB (with paging to mass storage)</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">64-bit CPU (theoretical)</td>
+                            <td class="notes-table-cell">64-bit</td>
+                            <td class="notes-table-cell">Up to <b>16 exabytes</b></td>
+                            <td class="notes-table-cell">Not used in practice</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph notes-paragraph--note">
+                    <b>Note:</b> Both 32-bit and 64-bit CPUs use a <b>64-bit data bus</b> to transfer data between
+                    the CPU and RAM. It is the <b>address bus</b> width that limits how much memory can be accessed.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Virtual Memory and Paging</h2>
+                <p class="notes-paragraph">
+                    When physical RAM runs low, the OS uses <b>virtual memory</b> — a portion of the hard drive or
+                    SSD is used as an extension of RAM. This process is called <b>paging</b>. Data is swapped
+                    between RAM and mass storage as needed. Paging is much slower than using physical RAM.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>RAM (Random Access Memory)</b> – Volatile system memory; faster than
+                        SSDs and HDDs; stores active data and instructions</li>
+                    <li class="notes-list-item"><b>Memory controller</b> – Manages the flow of data between the CPU and
+                        RAM</li>
+                    <li class="notes-list-item"><b>Bus</b> – The communication system connecting the CPU, memory
+                        controller, and RAM</li>
+                    <li class="notes-list-item"><b>Data pathway</b> – The part of the bus that transfers data; typically
+                        64 bits wide</li>
+                    <li class="notes-list-item"><b>Address pathway</b> – The part of the bus that identifies memory
+                        locations; determines max addressable memory</li>
+                    <li class="notes-list-item"><b>Virtual memory</b> – An extension of RAM using mass storage (HDD/SSD)
+                        when physical RAM is full</li>
+                    <li class="notes-list-item"><b>Paging</b> – The process of moving data between RAM and mass storage
+                        to support virtual memory</li>
+                    <li class="notes-list-item"><b>32-bit CPU</b> – Limited to 4 GB of addressable memory due to 32-bit
+                        address bus</li>
+                    <li class="notes-list-item"><b>64-bit CPU</b> – Uses a 48-bit address bus in practice; supports up
+                        to 256 TB of memory</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

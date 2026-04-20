@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.2.9 RAID Types - Quick Notes</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">3.2.9 RAID Types</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Hardware RAID vs Software RAID</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Type</th>
+                            <th class="notes-table-heading">How It's Set Up</th>
+                            <th class="notes-table-heading">When It Runs</th>
+                            <th class="notes-table-heading">Options</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Hardware RAID</b></td>
+                            <td class="notes-table-cell">Configured via a dedicated RAID controller</td>
+                            <td class="notes-table-cell">Before the OS boots</td>
+                            <td class="notes-table-cell">More options and control over RAID types</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Software RAID</b></td>
+                            <td class="notes-table-cell">Configured through the operating system (e.g. Disk Management
+                                in Windows)</td>
+                            <td class="notes-table-cell">Within the OS</td>
+                            <td class="notes-table-cell">Fewer options; no dedicated controller needed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Configuring Software RAID in Windows</h2>
+                <p class="notes-paragraph">Software RAID in Windows is configured through <b>Disk Management</b>. Drives
+                    must be unallocated before being added to an array.</p>
+
+                <h2 class="notes-section-title">Creating a Striped Volume (RAID 0)</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Right-click an unallocated drive and select <b>New Striped Volume</b>
+                    </li>
+                    <li class="notes-list-item">Add the desired drives to the stripe and click Next</li>
+                    <li class="notes-list-item">Assign a label (e.g. "Striped") and complete the wizard</li>
+                    <li class="notes-list-item">Data is <b>split across all drives</b> — each drive does less work,
+                        improving performance</li>
+                    <li class="notes-list-item">The usable volume size is the <b>combined capacity of all drives</b> in
+                        the stripe</li>
+                </ul>
+
+                <h2 class="notes-section-title">Creating a Mirrored Volume (RAID 1)</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Right-click an unallocated drive and select <b>New Mirrored Volume</b>
+                    </li>
+                    <li class="notes-list-item">Add one additional drive to the mirror and click Next</li>
+                    <li class="notes-list-item">Assign a label (e.g. "Mirrored") and complete the wizard</li>
+                    <li class="notes-list-item">All data written to the drive is <b>copied to the second drive</b>
+                        automatically</li>
+                    <li class="notes-list-item">The usable volume size is the <b>size of one drive only</b> — the second
+                        drive is hidden and used purely for redundancy</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Dynamic Disks</h2>
+                <p class="notes-paragraph">
+                    When setting up software RAID in Windows, drives are converted to <b>dynamic disks</b>.
+                </p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Dynamic disks are required for software RAID configurations in Windows
+                    </li>
+                    <li class="notes-list-item"><b>You cannot install an operating system on a dynamic disk</b> — only
+                        use dynamic disks for non-boot drives</li>
+                    <li class="notes-list-item">If Windows is already installed, converting remaining drives to dynamic
+                        disks is safe</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">What You See in File Explorer</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Volume Type</th>
+                            <th class="notes-table-heading">Visible Size in File Explorer</th>
+                            <th class="notes-table-heading">Reason</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Striped (RAID 0)</td>
+                            <td class="notes-table-cell">Combined size of all drives</td>
+                            <td class="notes-table-cell">All drives contribute to the total usable space</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Mirrored (RAID 1)</td>
+                            <td class="notes-table-cell">Size of one drive only</td>
+                            <td class="notes-table-cell">The second drive is hidden — it is a copy used for redundancy
+                                only</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><b>Hardware RAID</b> – RAID configured by a dedicated controller before
+                        the OS boots; more options and control</li>
+                    <li class="notes-list-item"><b>Software RAID</b> – RAID configured within the OS (e.g. Windows Disk
+                        Management); fewer options</li>
+                    <li class="notes-list-item"><b>Striped Volume (RAID 0)</b> – Data split across multiple drives for
+                        performance; no redundancy</li>
+                    <li class="notes-list-item"><b>Mirrored Volume (RAID 1)</b> – Data duplicated across two drives for
+                        redundancy; usable space = one drive</li>
+                    <li class="notes-list-item"><b>Dynamic disk</b> – A Windows disk type required for software RAID;
+                        cannot be used to install an OS</li>
+                    <li class="notes-list-item"><b>Disk Management</b> – The Windows tool used to configure partitions,
+                        volumes, and software RAID arrays</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>
