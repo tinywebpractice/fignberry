@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.4.2 Frequency Bands</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+        <main class="page-content notes-content">
+            <h1 class="notes-title">5.4.2 Frequency Bands</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Channels</h2>
+                <p class="notes-paragraph">Each frequency band is divided into channels, which act as lanes within the
+                    band and allow multiple wireless networks to operate without interfering with each other. Channel
+                    width is determined by the band and AP configuration. Some standards support channel bonding
+                    (combining channels for greater width), which increases throughput.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Wi-Fi Frequency Band Comparison</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Band</th>
+                            <th>Nominal Indoor Range</th>
+                            <th>Penetration</th>
+                            <th>Channels</th>
+                            <th>Speed</th>
+                            <th>Interference Risk</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2.4 GHz</td>
+                            <td>45 m (150 ft)</td>
+                            <td>Best; penetrates solid surfaces well</td>
+                            <td>Few; often congested</td>
+                            <td>Lowest</td>
+                            <td>High: Bluetooth, other Wi-Fi, microwave ovens</td>
+                        </tr>
+                        <tr>
+                            <td>5 GHz</td>
+                            <td>30 m (100 ft)</td>
+                            <td>Moderate; less effective than 2.4 GHz</td>
+                            <td>More channels; less congestion</td>
+                            <td>Higher than 2.4 GHz</td>
+                            <td>Lower than 2.4 GHz</td>
+                        </tr>
+                        <tr>
+                            <td>6 GHz</td>
+                            <td>15 m (50 ft)</td>
+                            <td>Weakest; least effective at penetrating surfaces</td>
+                            <td>Most channels; newest band, least congestion</td>
+                            <td>Highest</td>
+                            <td>Lowest; newer band with fewer competing devices</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph">Note: clients are only likely to connect at full speed from one-third to
+                    one-half of the nominal ranges listed, depending on building features, interference, and the
+                    wireless standard in use. Power output is also regulated, which limits range.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Frequency band</dt>
+                    <dd class="notes-definition">A range of radio frequencies used by wireless networks. The three main
+                        Wi-Fi bands are 2.4 GHz, 5 GHz, and 6 GHz.</dd>
+                    <dt class="notes-term">Channel</dt>
+                    <dd class="notes-definition">A smaller frequency range within a band that acts as a lane for a
+                        wireless network. Multiple channels allow multiple networks to share the same band without
+                        interfering.</dd>
+                    <dt class="notes-term">Channel bonding</dt>
+                    <dd class="notes-definition">Combining adjacent channels to create a wider channel, increasing the
+                        amount of data that can be transmitted at once.</dd>
+                </dl>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

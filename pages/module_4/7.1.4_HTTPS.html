@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.1.4 Hypertext Transfer Protocol Secure</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content lesson-review-content">
+        <h1 class="notes-title">7.1.4 Hypertext Transfer Protocol Secure (HTTPS)</h1>
+
+        <section class="notes-section" id="ssl-tls">
+            <h2 class="notes-section-title">SSL and TLS</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">SSL (Secure Sockets Layer)</dt>
+                <dd class="notes-definition">Developed by Netscape in the 1990s to address HTTP's lack of encryption and
+                    authentication. Widely adopted but now superseded.</dd>
+                <dt class="notes-term">TLS (Transport Layer Security)</dt>
+                <dd class="notes-definition">Developed from SSL; ratified as a standard by the IETF. Current replacement
+                    for SSL. Provides encryption and authentication for application protocols.</dd>
+                <dt class="notes-term">DTLS (Datagram Transport Layer Security)</dt>
+                <dd class="notes-definition">TLS adapted for use with UDP. Most commonly used in VPN solutions.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="https">
+            <h2 class="notes-section-title">HTTPS</h2>
+            <p class="notes-paragraph">HTTPS = HTTP + TLS. Encrypted traffic is sent over TCP/443 instead of the
+                unencrypted TCP/80.</p>
+            <p class="notes-paragraph">The "S" suffix pattern applies broadly: if a protocol acronym ends in "S" (HTTPS,
+                SMTPS, LDAPS, FTPS, etc.), TLS/SSL is providing the security.</p>
+        </section>
+
+        <section class="notes-section" id="certificates">
+            <h2 class="notes-section-title">Digital Certificates and Key Pairs</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">Certificate Authority (CA)</dt>
+                <dd class="notes-definition">A trusted third party that issues digital certificates. The client must
+                    trust the CA for the certificate to be valid.</dd>
+                <dt class="notes-term">Digital Certificate</dt>
+                <dd class="notes-definition">Installed on the web server. Uses encrypted data to prove the server's
+                    identity to the client. Contains the server's public key.</dd>
+                <dt class="notes-term">Public Key</dt>
+                <dd class="notes-definition">Distributed to clients via the digital certificate. Used to set up the
+                    encrypted tunnel.</dd>
+                <dt class="notes-term">Private Key</dt>
+                <dd class="notes-definition">Kept secret on the server only. Required to decrypt tunnel contents.
+                    Without it, the encrypted session cannot be read or altered by a third party.</dd>
+                <dt class="notes-term">Cipher Suite</dt>
+                <dd class="notes-definition">A set of cryptographic algorithms agreed upon by the client and server
+                    within TLS to establish the encrypted tunnel.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="browser">
+            <h2 class="notes-section-title">Browser Indicators</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item">URL begins with <code>https://</code></li>
+                <li class="notes-list-item">Padlock icon displayed in the address bar — indicates the server's
+                    certificate is trusted and the connection is secure.</li>
+                <li class="notes-list-item">A website can be configured to require HTTPS and reject or redirect plain
+                    HTTP requests.</li>
+            </ul>
+        </section>
+
+        <section class="notes-section" id="tls-scope">
+            <h2 class="notes-section-title">TLS Scope — Protocols Secured by TLS</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Protocol</th>
+                        <th>Secured Version</th>
+                        <th>Default Port</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTTP</td>
+                        <td>HTTPS</td>
+                        <td>TCP/443</td>
+                    </tr>
+                    <tr>
+                        <td>FTP</td>
+                        <td>FTPS</td>
+                        <td>TCP/990</td>
+                    </tr>
+                    <tr>
+                        <td>SMTP</td>
+                        <td>SMTPS</td>
+                        <td>TCP/465</td>
+                    </tr>
+                    <tr>
+                        <td>POP3 / IMAP</td>
+                        <td>POP3S / IMAPS</td>
+                        <td>TCP/995 / TCP/993</td>
+                    </tr>
+                    <tr>
+                        <td>LDAP</td>
+                        <td>LDAPS</td>
+                        <td>TCP/636</td>
+                    </tr>
+                    <tr>
+                        <td>UDP (VPN)</td>
+                        <td>DTLS</td>
+                        <td>Varies</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        </main>
+    </div>
+</body>
+
+</html>

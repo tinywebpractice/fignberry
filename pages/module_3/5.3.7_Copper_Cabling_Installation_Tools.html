@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.3.7 Copper Cabling Installation Tools</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+        <main class="page-content notes-content">
+            <h1 class="notes-title">5.3.7 Copper Cabling Installation Tools</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Structured Cabling Termination Types</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Cable Type</th>
+                            <th>Termination Method</th>
+                            <th>Wire Type</th>
+                            <th>Max Length</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Patch cord</td>
+                            <td>RJ45 plug crimped to end</td>
+                            <td>Stranded (flexible, more attenuation)</td>
+                            <td>5 m</td>
+                        </tr>
+                        <tr>
+                            <td>Permanent cable</td>
+                            <td>IDC punchdown at wall port / patch panel</td>
+                            <td>Solid (thicker, less attenuation)</td>
+                            <td>Remainder of 100 m channel link</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph">The 100 m limit applies to the full channel link (permanent cable + patch
+                    cords combined).</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Installation Tools</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Tool</th>
+                            <th>Purpose</th>
+                            <th>Key Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cable stripper</td>
+                            <td>Removes the outer jacket to expose wire pairs</td>
+                            <td>Set to correct diameter; rotate once or twice to score the jacket without damaging inner
+                                insulation.</td>
+                        </tr>
+                        <tr>
+                            <td>Snips (electrician's scissors)</td>
+                            <td>Cuts the plastic star filler (Cat 6/6A) and excess ripcord before termination</td>
+                            <td>Star filler keeps pairs separated inside the cable. Ripcord can open the jacket further
+                                if inner pairs are damaged.</td>
+                        </tr>
+                        <tr>
+                            <td>Punchdown tool</td>
+                            <td>Presses conductors into IDC terminals at wall ports and patch panels</td>
+                            <td>Arrange wires in T568A or T568B order. Untwist no more than 1/2" (13 mm) per pair to
+                                minimize interference. IDC blades cut through insulation to make contact.</td>
+                        </tr>
+                        <tr>
+                            <td>Crimper</td>
+                            <td>Attaches an RJ45 plug to a patch cord</td>
+                            <td>Orient plug with tab latch down; Pin 1 on the left. Arrange wires in T568A or T568B
+                                order, push into plug, then crimp to pierce insulation at pins and seal jacket.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Channel link</dt>
+                    <dd class="notes-definition">The full end-to-end cabling run including permanent cable and all patch
+                        cords. Maximum length is 100 m.</dd>
+                    <dt class="notes-term">Solid cable</dt>
+                    <dd class="notes-definition">Cable with a single thick conductor per wire, used for permanent runs.
+                        Less flexible but lower attenuation than stranded.</dd>
+                    <dt class="notes-term">Stranded cable</dt>
+                    <dd class="notes-definition">Cable with multiple thin conductors twisted together per wire, used for
+                        patch cords. More flexible but higher attenuation.</dd>
+                    <dt class="notes-term">Star filler</dt>
+                    <dd class="notes-definition">A plastic cross-shaped insert in Cat 6 and Cat 6A cable that keeps the
+                        wire pairs physically separated to reduce crosstalk. Must be trimmed before termination.</dd>
+                    <dt class="notes-term">Ripcord</dt>
+                    <dd class="notes-definition">A nylon thread inside the cable jacket that can be pulled to open the
+                        jacket further. Excess must be snipped before termination.</dd>
+                    <dt class="notes-term">T568A / T568B</dt>
+                    <dd class="notes-definition">Two TIA/EIA wiring standards that define the pin-to-pair order for
+                        terminating twisted pair cable at RJ45 plugs and IDC connectors.</dd>
+                </dl>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

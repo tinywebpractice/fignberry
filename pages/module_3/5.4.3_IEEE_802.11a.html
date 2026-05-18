@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.4.3 IEEE 802.11a</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+        <main class="page-content notes-content">
+            <h1 class="notes-title">5.4.3 IEEE 802.11a</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">802.11a Overview</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><strong>Band:</strong> 5 GHz only.</li>
+                    <li class="notes-list-item"><strong>Max data rate:</strong> 54 Mbps.</li>
+                    <li class="notes-list-item"><strong>Channels:</strong> 23 non-overlapping channels, each 20 MHz
+                        wide.</li>
+                    <li class="notes-list-item"><strong>Regulatory impacts:</strong> channel availability varies by
+                        country; power output is regulated, which limits range.</li>
+                    <li class="notes-list-item"><strong>DFS requirement:</strong> devices operating in the 5 GHz band
+                        must implement Dynamic Frequency Selection (DFS) to avoid interfering with radar and satellite
+                        installations. Channels in the DFS range are disabled if radar signals are detected.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">U-NII Sub-Bands (5 GHz Channel Layout)</h2>
+                <p class="notes-paragraph">The 5 GHz band is organized into U-NII (Unlicensed National Information
+                    Infrastructure) sub-bands. Each sub-band is 5 MHz wide; channels are spaced in intervals of four to
+                    provide 20 MHz bandwidth per channel.</p>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Sub-band</th>
+                            <th>Channels</th>
+                            <th>DFS Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>U-NII-1</td>
+                            <td>36, 40, 44, 48</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>U-NII-2</td>
+                            <td>52, 56, 60, 64</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>U-NII-2 Extended</td>
+                            <td>100, 104, 108, 112, 116, 120, 124, 128, 132, 136, 140</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>U-NII-3</td>
+                            <td>149, 153, 157, 161</td>
+                            <td>No</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">IEEE 802.11a</dt>
+                    <dd class="notes-definition">A Wi-Fi standard using the 5 GHz band with a maximum data rate of 54
+                        Mbps and 23 non-overlapping 20 MHz channels.</dd>
+                    <dt class="notes-term">DFS (Dynamic Frequency Selection)</dt>
+                    <dd class="notes-definition">A requirement for 5 GHz Wi-Fi devices to detect radar signals and
+                        automatically switch away from channels that would interfere with radar or satellite
+                        installations.</dd>
+                    <dt class="notes-term">U-NII (Unlicensed National Information Infrastructure)</dt>
+                    <dd class="notes-definition">The sub-band groupings that make up the 5 GHz Wi-Fi band. Divided into
+                        U-NII-1, U-NII-2, U-NII-2 Extended, and U-NII-3.</dd>
+                </dl>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

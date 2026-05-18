@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.4.1 Access Points</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+        <main class="page-content notes-content">
+            <h1 class="notes-title">5.4.1 Access Points</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Wireless LANs and Infrastructure Mode</h2>
+                <p class="notes-paragraph">Wireless LANs (WLANs) use radio waves as transmission media, with antennas
+                    tuned to specific frequencies. Most WLANs are based on IEEE 802.11 standards (Wi-Fi). The most
+                    common configuration is infrastructure mode, where each client device (station) connects to the
+                    network through an access point (AP).</p>
+                <p class="notes-paragraph">In 802.11 documentation, this setup is called a Basic Service Set (BSS). The
+                    MAC address of the AP's radio is used as the Basic Service Set ID (BSSID).</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Access Point Role</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">An AP can create a wireless-only network, or act as a bridge between
+                        wireless stations and a wired network.</li>
+                    <li class="notes-list-item">The wired network the AP connects to is called the distribution system
+                        (DS).</li>
+                    <li class="notes-list-item">The AP connects to the wired network the same way a host computer does:
+                        via a wall port and cabling to an Ethernet switch.</li>
+                    <li class="notes-list-item">Enterprise APs are typically powered via PoE over the data cabling,
+                        eliminating the need for a separate power supply.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Access point (AP)</dt>
+                    <dd class="notes-definition">A wireless networking device that allows client stations to connect to
+                        a network via radio signals. Can operate as a wireless-only hub or as a bridge to a wired
+                        distribution system.</dd>
+                    <dt class="notes-term">Infrastructure mode</dt>
+                    <dd class="notes-definition">A Wi-Fi network configuration where client devices connect to the
+                        network through a central access point rather than directly to each other.</dd>
+                    <dt class="notes-term">BSS (Basic Service Set)</dt>
+                    <dd class="notes-definition">The 802.11 term for a Wi-Fi network in infrastructure mode, consisting
+                        of an AP and the stations associated with it.</dd>
+                    <dt class="notes-term">BSSID (Basic Service Set ID)</dt>
+                    <dd class="notes-definition">The MAC address of the AP's radio interface, used to uniquely identify
+                        a BSS.</dd>
+                    <dt class="notes-term">Distribution system (DS)</dt>
+                    <dd class="notes-definition">The wired network that an access point bridges wireless stations to.
+                    </dd>
+                    <dt class="notes-term">Station</dt>
+                    <dd class="notes-definition">Any client device that connects to a Wi-Fi network through an access
+                        point.</dd>
+                </dl>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

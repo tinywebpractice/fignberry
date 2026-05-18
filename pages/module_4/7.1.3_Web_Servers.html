@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.1.3 Web Servers</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content lesson-review-content">
+        <h1 class="notes-title">7.1.3 Web Servers</h1>
+
+        <section class="notes-section" id="http">
+            <h2 class="notes-section-title">HyperText Transfer Protocol (HTTP)</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">HTTP</dt>
+                <dd class="notes-definition">Enables clients (typically web browsers) to request resources from an HTTP
+                    server. Client connects on TCP/80 by default and submits a GET request. Server returns the requested
+                    data or responds with an error code.</dd>
+                <dt class="notes-term">HTTPS</dt>
+                <dd class="notes-definition">Secure version of HTTP using TLS encryption. Runs on TCP/443.</dd>
+                <dt class="notes-term">GET</dt>
+                <dd class="notes-definition">HTTP method used by the client to request a resource from the server.</dd>
+                <dt class="notes-term">POST</dt>
+                <dd class="notes-definition">HTTP method used to submit data from the client to the server (e.g., form
+                    submissions).</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="html">
+            <h2 class="notes-section-title">HTML and Web Applications</h2>
+            <p class="notes-paragraph">HTTP typically serves HTML (HyperText Markup Language) pages. HTML is a plain
+                text file with coded tags describing document formatting. Browsers interpret the tags and render text,
+                images, and other media. HTML supports hyperlinks to related documents.</p>
+            <p class="notes-paragraph">HTTP server functionality is often extended by scripting and programmable
+                features, forming web applications.</p>
+        </section>
+
+        <section class="notes-section" id="url">
+            <h2 class="notes-section-title">Uniform Resource Locators (URLs)</h2>
+            <p class="notes-paragraph">Resources on the Internet are accessed using URLs. A URL contains all the
+                information needed to identify and access an item.</p>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>URL Component</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Protocol</td>
+                        <td>Access method or service type</td>
+                        <td>https://</td>
+                    </tr>
+                    <tr>
+                        <td>Host (FQDN)</td>
+                        <td>Fully Qualified Domain Name; not case-sensitive. Can also be an IP address; IPv6 must be in
+                            square brackets.</td>
+                        <td>store.comptia.org</td>
+                    </tr>
+                    <tr>
+                        <td>File Path</td>
+                        <td>Directory and file name of the resource. Case-sensitivity depends on server configuration.
+                        </td>
+                        <td>/bundles/aplus.html</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="notes-section" id="deployment">
+            <h2 class="notes-section-title">Web Server Deployment</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item">Organizations typically lease a web server or space on a server from an ISP.
+                </li>
+                <li class="notes-list-item">Larger organizations with Internet-connected datacenters may self-host.</li>
+                <li class="notes-list-item"><strong>Intranet</strong> — private network using web technologies; permits
+                    local access only.</li>
+                <li class="notes-list-item"><strong>Extranet</strong> — private network using web technologies; permits
+                    remote access.</li>
+            </ul>
+        </section>
+
+        <section class="notes-section" id="ports">
+            <h2 class="notes-section-title">Port Reference</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Protocol</th>
+                        <th>Port</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTTP</td>
+                        <td>TCP/80</td>
+                        <td>Unencrypted web traffic</td>
+                    </tr>
+                    <tr>
+                        <td>HTTPS</td>
+                        <td>TCP/443</td>
+                        <td>TLS-encrypted web traffic</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        </main>
+    </div>
+</body>
+
+</html>

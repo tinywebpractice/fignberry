@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.1.6 Mailbox Servers</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content lesson-review-content">
+        <h1 class="notes-title">7.1.6 Mailbox Servers</h1>
+
+        <section class="notes-section" id="overview">
+            <h2 class="notes-section-title">Overview</h2>
+            <p class="notes-paragraph">SMTP delivers mail to server hosts that are permanently available. Once received,
+                SMTP passes the message to a mailbox server (separate machine or process). A mailbox access protocol
+                then allows the client email software to retrieve messages from the mailbox.</p>
+        </section>
+
+        <section class="notes-section" id="pop3">
+            <h2 class="notes-section-title">POP3 (Post Office Protocol v3)</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">Function</dt>
+                <dd class="notes-definition">Early mailbox access protocol. Authenticates the user (username/password),
+                    then downloads mailbox contents to the local PC for processing.</dd>
+                <dt class="notes-term">Message Handling</dt>
+                <dd class="notes-definition">Messages are typically deleted from the server after download. Some clients
+                    offer an option to leave messages on the server.</dd>
+                <dt class="notes-term">Ports</dt>
+                <dd class="notes-definition">TCP/110 (unencrypted), TCP/995 (secure/TLS).</dd>
+                <dt class="notes-term">Clients</dt>
+                <dd class="notes-definition">Microsoft Outlook, Mozilla Thunderbird.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="imap">
+            <h2 class="notes-section-title">IMAP (Internet Message Access Protocol)</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">Function</dt>
+                <dd class="notes-definition">Mail retrieval protocol that addresses POP3 limitations. Messages remain on
+                    the server; clients sync with the server mailbox.</dd>
+                <dt class="notes-term">Key Features</dt>
+                <dd class="notes-definition">Supports permanent server connections, multiple simultaneous clients on the
+                    same mailbox, server-side folder management, controlled deletion, and multiple mailboxes.</dd>
+                <dt class="notes-term">Ports</dt>
+                <dd class="notes-definition">TCP/143 (unencrypted), TCP/993 (IMAPS / TLS-secured).</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="comparison">
+            <h2 class="notes-section-title">POP3 vs. IMAP</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>POP3</th>
+                        <th>IMAP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Message Storage</td>
+                        <td>Downloaded to local PC; deleted from server</td>
+                        <td>Remains on server; client syncs</td>
+                    </tr>
+                    <tr>
+                        <td>Multi-device Access</td>
+                        <td>Poor (messages removed after download)</td>
+                        <td>Yes (multiple simultaneous clients)</td>
+                    </tr>
+                    <tr>
+                        <td>Server-side Folders</td>
+                        <td>No</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Permanent Connection</td>
+                        <td>No</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Unencrypted Port</td>
+                        <td>TCP/110</td>
+                        <td>TCP/143</td>
+                    </tr>
+                    <tr>
+                        <td>Encrypted Port</td>
+                        <td>TCP/995</td>
+                        <td>TCP/993</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="notes-section" id="ports">
+            <h2 class="notes-section-title">Port Reference</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Protocol</th>
+                        <th>Port</th>
+                        <th>Encrypted?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>POP3</td>
+                        <td>TCP/110</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>POP3S</td>
+                        <td>TCP/995</td>
+                        <td>Yes (TLS)</td>
+                    </tr>
+                    <tr>
+                        <td>IMAP</td>
+                        <td>TCP/143</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>IMAPS</td>
+                        <td>TCP/993</td>
+                        <td>Yes (TLS)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        </main>
+    </div>
+</body>
+
+</html>

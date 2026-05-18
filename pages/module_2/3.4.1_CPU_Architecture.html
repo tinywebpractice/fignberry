@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.4.1 CPU Architecture - Quick Notes</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">3.4.1 CPU Architecture</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Overview</h2>
+                <p class="notes-paragraph">
+                    The <b>CPU</b> executes program instruction code loaded into system memory using a 4-step cycle.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">The Instruction Cycle</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Step</th>
+                            <th class="notes-table-heading">Name</th>
+                            <th class="notes-table-heading">What Happens</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">1</td>
+                            <td class="notes-table-cell"><b>Fetch</b></td>
+                            <td class="notes-table-cell">Control unit retrieves the next instruction from system memory
+                            </td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">2</td>
+                            <td class="notes-table-cell"><b>Decode</b></td>
+                            <td class="notes-table-cell">Control unit decodes it, then executes it directly or passes it
+                                to the ALU/FPU</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">3</td>
+                            <td class="notes-table-cell"><b>Execute</b></td>
+                            <td class="notes-table-cell">ALU or FPU carries out the instruction</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">4</td>
+                            <td class="notes-table-cell"><b>Write-back</b></td>
+                            <td class="notes-table-cell">Result is written to a register, cache, or system memory</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Components Involved</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Component</th>
+                            <th class="notes-table-heading">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>ALU</b> (Arithmetic Logic Unit)</td>
+                            <td class="notes-table-cell">Handles logical and arithmetic instructions</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>FPU</b> (Floating-Point Unit)</td>
+                            <td class="notes-table-cell">Handles floating-point math instructions</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Register</b></td>
+                            <td class="notes-table-cell">Temporary storage inside the CPU; runs at full CPU clock speed
+                            </td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>Cache</b></td>
+                            <td class="notes-table-cell">Small, fast memory block near the CPU; stores frequently used
+                                data and instructions to avoid slower RAM lookups</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Cache Levels</h2>
+                <p class="notes-paragraph">
+                    Cache levels include <b>L1, L2, and L3</b>. Each level is progressively larger but slightly slower,
+                    while still being much faster than system RAM.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Why This Matters</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Registers and cache reduce how often the CPU has to reach out to slower
+                        system memory</li>
+                    <li class="notes-list-item">The control unit manages the <b>fetch</b> and <b>decode</b> steps</li>
+                    <li class="notes-list-item">The ALU and FPU handle the actual <b>execute</b> step</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

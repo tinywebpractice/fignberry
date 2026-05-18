@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.2.6 Switches</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+        <main class="page-content notes-content">
+            <h1 class="notes-title">5.2.6 Switches</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">How a Switch Works</h2>
+                <p class="notes-paragraph">An Ethernet switch connects multiple devices on a network, provisioning one
+                    port per device. When a device connects, the switch records its MAC address and the port it is on in
+                    a MAC address table. When a frame arrives, the switch decodes it, reads the destination MAC address,
+                    and forwards the frame only to the matching port via the high-speed backplane — creating a temporary
+                    virtual circuit.</p>
+                <p class="notes-paragraph">Frame forwarding process:</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Host sends a frame to the switch.</li>
+                    <li class="notes-list-item">Switch buffers the frame and reads the destination MAC address.</li>
+                    <li class="notes-list-item">Switch looks up the destination MAC in its MAC address table.</li>
+                    <li class="notes-list-item">Switch forwards the frame out only the matching port.</li>
+                    <li class="notes-list-item">All other devices are unaware of the exchange and remain free to
+                        transmit/receive simultaneously.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">MAC Address Table</h2>
+                <p class="notes-paragraph">The switch builds its MAC address table dynamically: when a frame arrives,
+                    the switch reads the <strong>source</strong> MAC address and records it against the incoming port.
+                    If the <strong>destination</strong> MAC address is not yet in the table, the switch
+                    <strong>floods</strong> the frame out all ports until it learns which port the destination is on.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Collision Domains and Full Duplex</h2>
+                <p class="notes-paragraph">Each switch port is a separate collision domain, eliminating the negative
+                    effects of collisions. Every connected device gets a full duplex connection — it can send and
+                    receive simultaneously at the full speed supported by its NIC and cabling.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Ethernet switch</dt>
+                    <dd class="notes-definition">A network device that connects multiple devices and forwards frames
+                        only to the port matching the destination MAC address, using a MAC address table.</dd>
+                    <dt class="notes-term">MAC address table</dt>
+                    <dd class="notes-definition">A table maintained by the switch that maps each known MAC address to
+                        the port it was learned on.</dd>
+                    <dt class="notes-term">Flooding</dt>
+                    <dd class="notes-definition">When a switch receives a frame with an unknown destination MAC address,
+                        it sends the frame out all ports except the one it arrived on, until it learns the correct port.
+                    </dd>
+                    <dt class="notes-term">Collision domain</dt>
+                    <dd class="notes-definition">A network segment where two devices transmitting simultaneously can
+                        cause a collision. Each switch port is its own collision domain, preventing collisions between
+                        ports.</dd>
+                    <dt class="notes-term">Full duplex</dt>
+                    <dd class="notes-definition">A connection mode where a device can send and receive data
+                        simultaneously at full speed, made possible by switches eliminating shared collision domains.
+                    </dd>
+                    <dt class="notes-term">Backplane</dt>
+                    <dd class="notes-definition">The high-speed internal bus of a switch used to transfer frames between
+                        ports.</dd>
+                </dl>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

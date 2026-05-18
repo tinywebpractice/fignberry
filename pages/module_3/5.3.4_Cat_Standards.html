@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.3.4 Cat Standards</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+        <main class="page-content notes-content">
+            <h1 class="notes-title">5.3.4 Cat Standards</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Category (Cat) Standards Overview</h2>
+                <p class="notes-paragraph">A Category (Cat) standard defines the performance of twisted-pair cabling.
+                    Higher Cat numbers support higher data rates. Specifications are defined in TIA/EIA-568-C and are
+                    printed on the cable jacket along with the cable type (e.g. UTP, F/UTP).</p>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Cat</th>
+                            <th>Max Speed</th>
+                            <th>Max Distance</th>
+                            <th>Ethernet Standard</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>5</td>
+                            <td>100 Mbps</td>
+                            <td>100 m (328 ft)</td>
+                            <td>100BASE-TX (Fast Ethernet)</td>
+                            <td>Obsolete; no longer commercially available.</td>
+                        </tr>
+                        <tr>
+                            <td>5e</td>
+                            <td>1 Gbps</td>
+                            <td>100 m (328 ft)</td>
+                            <td>1000BASE-T (Gigabit Ethernet)</td>
+                            <td>Still acceptable for Gigabit links; most sites now use Cat 6.</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">6</td>
+                            <td>1 Gbps</td>
+                            <td>100 m (328 ft)</td>
+                            <td>1000BASE-T</td>
+                            <td rowspan="2">More reliable than Cat 5e for Gigabit; supports 10 Gbps at reduced range.
+                                Current mainstream choice.</td>
+                        </tr>
+                        <tr>
+                            <td>10 Gbps</td>
+                            <td>55 m (180 ft)</td>
+                            <td>10GBASE-T</td>
+                        </tr>
+                        <tr>
+                            <td>6A</td>
+                            <td>10 Gbps</td>
+                            <td>100 m (328 ft)</td>
+                            <td>10GBASE-T</td>
+                            <td>Full 10 Gbps at 100 m. Bulkier/heavier; more stringent install requirements. Recommended
+                                for healthcare, 802.3bt PoE, and AP distribution cabling.</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">7</td>
+                            <td>10 Gbps</td>
+                            <td>100 m (328 ft)</td>
+                            <td>10GBASE-T</td>
+                            <td rowspan="2">Not widely deployed. Preferred connectors: GG45 or TERA (not standard RJ45
+                                for full spec).</td>
+                        </tr>
+                        <tr>
+                            <td>100 Gbps</td>
+                            <td>15 m (50 ft)</td>
+                            <td>100GBASE-T</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">8</td>
+                            <td>25 Gbps</td>
+                            <td>30 m (100 ft)</td>
+                            <td>25GBASE-T</td>
+                            <td rowspan="2">Mainly for data centers. Cat 8.1: RJ45 (backward compatible). Cat 8.2:
+                                GG45/TERA (not backward compatible).</td>
+                        </tr>
+                        <tr>
+                            <td>40 Gbps</td>
+                            <td>30 m (100 ft)</td>
+                            <td>40GBASE-T</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Practical Guidance</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><strong>Cat 5:</strong> obsolete. Networks still using it will need
+                        rewiring to support Gigabit Ethernet.</li>
+                    <li class="notes-list-item"><strong>Cat 5e:</strong> acceptable for Gigabit links but Cat 6 is
+                        preferred for new installations.</li>
+                    <li class="notes-list-item"><strong>Cat 6:</strong> current mainstream standard; more reliable than
+                        Cat 5e, and supports 10 Gbps at short range.</li>
+                    <li class="notes-list-item"><strong>Cat 6A:</strong> recommended by TIA/EIA for healthcare
+                        facilities, 802.3bt PoE installations, and AP distribution cabling.</li>
+                    <li class="notes-list-item"><strong>Cat 7/8:</strong> niche use in data centers and high-bandwidth
+                        short-run installations; not common in typical office or home networks.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Cat standard</dt>
+                    <dd class="notes-definition">A TIA/EIA-defined specification printed on cable jackets that describes
+                        the performance rating of twisted-pair cabling, including maximum speed and distance.</dd>
+                    <dt class="notes-term">TIA/EIA-568-C</dt>
+                    <dd class="notes-definition">The Commercial Building Telecommunications Cabling Standard that
+                        defines Cat cable specifications.</dd>
+                    <dt class="notes-term">GG45 / TERA</dt>
+                    <dd class="notes-definition">Connector types used with Cat 7 and Cat 8.2 cabling. GG45 is backward
+                        compatible with RJ45 plugs but may not deliver full Cat 7 performance with a standard RJ45 jack.
+                    </dd>
+                    <dt class="notes-term">Cat 8.1 vs. Cat 8.2</dt>
+                    <dd class="notes-definition">Cat 8.1 uses RJ45 connectors and is backward compatible with standard
+                        RJ45 systems. Cat 8.2 uses GG45 or TERA connectors and is not backward compatible.</dd>
+                </dl>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

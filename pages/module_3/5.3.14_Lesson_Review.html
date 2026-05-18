@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.3.14 Lesson Review - Q&A</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+        <main class="page-content notes-content">
+            <h1 class="notes-title">5.3.14 Lesson Review - Q&amp;A</h1>
+
+            <div class="notes-section question">
+                <p>Q1. A network technician needs to deploy a computer on an Ethernet network and notices that the
+                    computer will sit on a shelf directly under a fluorescent light. What type of cable will the
+                    technician use?</p>
+                <ul>
+                    <li>UTP</li>
+                    <li class="correct">STP</li>
+                    <li>Fiber optic</li>
+                    <li>Coax</li>
+                </ul>
+                <p class="note">Fluorescent lights are a known source of EMI. STP is required in high-interference
+                    environments. UTP has no shielding, fiber is immune but not used for standard desktop Ethernet
+                    connections, and coax is not used for Ethernet workstation connections.</p>
+            </div>
+
+            <div class="notes-section question">
+                <p>Q2. A network technician is installing a device with an inductor that will copy all the traffic
+                    coming through the cable to a monitor port. What type of device is the technician installing?</p>
+                <ul>
+                    <li>SMF</li>
+                    <li>Active TAP</li>
+                    <li>MMF</li>
+                    <li class="correct">Passive TAP</li>
+                </ul>
+                <p class="note">A passive TAP uses an inductor (or optical splitter) to physically copy signals to a
+                    monitor port with no powered logic. An active TAP performs signal regeneration and does not use an
+                    inductor. SMF and MMF are fiber optic cable types, not monitoring devices.</p>
+            </div>
+
+            <div class="notes-section question">
+                <p>Q3. You are installing network cabling in the air space between the ceiling and the roof of a
+                    building. The cabling needs to be fire-resistant. Which type of cabling should you use?</p>
+                <ul>
+                    <li>STP</li>
+                    <li>Multi-mode fiber</li>
+                    <li class="correct">Plenum</li>
+                    <li>PVC</li>
+                </ul>
+                <p class="note">The air space between ceiling and roof is a plenum space used for HVAC airflow, which
+                    makes it an effective fire conduit. Building codes require CMP-rated plenum cable there. PVC is
+                    specifically not allowed in plenum spaces.</p>
+            </div>
+
+            <div class="notes-section question">
+                <p>Q4. What distinguishes single-mode fiber (SMF) from multi-mode fiber (MMF) in terms of usage?</p>
+                <ul>
+                    <li>SMF has a larger core than MMF, allowing for more light to pass through.</li>
+                    <li>SMF uses lower-cost LEDs, while MMF uses high-power lasers.</li>
+                    <li>SMF and MMF perform identically, with only minor cost differences.</li>
+                    <li class="correct">SMF is better suited for long distances and high speeds, whereas MMF is ideal
+                        for shorter distances in LANs.</li>
+                </ul>
+                <p class="note">SMF has the smaller core (8-10 microns) and uses high-power laser diodes for
+                    long-distance, high-speed runs. MMF has the larger core (50 or 62.5 microns) and uses cheaper
+                    LEDs/VCSELs for shorter LAN runs. The first two options have the core size and light source
+                    relationships reversed.</p>
+            </div>
+
+            <div class="notes-section question">
+                <p>Q5. A network technician used a tool that energizes each wire in a cable. When the technician sent
+                    energy to some of the wires, the LED on the tool did not light up. What tool was the technician
+                    using?</p>
+                <ul>
+                    <li>Tone generator</li>
+                    <li>Loopback plug</li>
+                    <li>Toner probe</li>
+                    <li class="correct">Cable tester</li>
+                </ul>
+                <p class="note">A cable tester energizes each wire in turn and uses LEDs to indicate continuity at each
+                    pin. An unlit LED means that wire is not conducting, pointing to a bad termination or damaged
+                    insulation. A tone generator applies an audio signal to identify a cable in a bundle. A loopback
+                    plug tests a port, not individual wires.</p>
+            </div>
+
+            <div class="notes-section question">
+                <p>Q6. What is a major benefit STP provides that UTP does not?</p>
+                <ul>
+                    <li>Safer for installations in overhead ceiling spaces</li>
+                    <li>Lower cost</li>
+                    <li class="correct">Greater resistance to interference</li>
+                    <li>Ability to install longer cable lengths</li>
+                </ul>
+                <p class="note">STP's shielding protects against EMI and crosstalk in high-interference environments.
+                    UTP is actually the lower-cost option. Plenum-rated cable (not STP) addresses ceiling safety. Both
+                    STP and UTP share the same 100 m maximum distance limitation.</p>
+            </div>
+
+            <div class="notes-section question">
+                <p>Q7. Your workstation is unable to communicate with any other computer on the network. Which of the
+                    following tools should you use to test the network card's abilities to send and receive signals?</p>
+                <ul>
+                    <li>Cable tester</li>
+                    <li>ping command</li>
+                    <li class="correct">Loopback plug</li>
+                    <li>Multimeter</li>
+                </ul>
+                <p class="note">A loopback plug tests whether a NIC port can send and receive by crossing the transmit
+                    and receive pins (1-to-3, 2-to-6). A solid link LED confirms the port is functional. A cable tester
+                    checks cable continuity. ping requires network connectivity to already exist. A multimeter measures
+                    electrical properties but does not test NIC port function.</p>
+            </div>
+
+            <div class="notes-section question">
+                <p>Q8. Why might an active network tap be used instead of a passive tap?</p>
+                <ul>
+                    <li>Because active taps work without power, making them reliable in power outages.</li>
+                    <li>Because active taps filter out corrupt or malformed frames before sending data to the monitor.
+                    </li>
+                    <li>Because active taps are exclusively used for fiber optic connections.</li>
+                    <li class="correct">Because active taps regenerate signals, which is necessary for complex or
+                        high-speed links.</li>
+                </ul>
+                <p class="note">Active TAPs are needed when the signal is too complex for a passive inductor/splitter to
+                    copy accurately, specifically Gigabit copper signaling and some fiber links. The first option
+                    describes a passive TAP. Active TAPs do not filter frames and are not exclusive to fiber.</p>
+            </div>
+
+            <div class="notes-section question">
+                <p>Q9. Why can fiber optic cables support higher bandwidth and longer distances compared to copper
+                    cables?</p>
+                <ul>
+                    <li>Copper signals are stronger than light pulses, leading to shorter cable runs.</li>
+                    <li class="correct">The light pulses in fiber optics are not susceptible to interference and
+                        experience less attenuation.</li>
+                    <li>Fiber optic cables are thicker, which reduces interference.</li>
+                    <li>Fiber optic cables are less durable and, therefore, require longer cable runs.</li>
+                </ul>
+                <p class="note">Light pulses are immune to EMI and suffer far less attenuation than electrical signals,
+                    enabling higher bandwidth and longer runs. Physical thickness is not the reason for reduced
+                    interference, and durability has nothing to do with cable run distance.</p>
+            </div>
+
+            <div class="notes-section question">
+                <p>Q10. You are creating patch cables and notice data transmission is not functioning properly in some
+                    cables. One cable is interfering with transmission at the near end. What is this type of
+                    interference called?</p>
+                <ul>
+                    <li class="correct">Cross-talk interference</li>
+                    <li>Router interference</li>
+                    <li>Wi-Fi interference</li>
+                    <li>Cat 5 Ethernet interference</li>
+                </ul>
+                <p class="note">Crosstalk is interference caused by signals bleeding between adjacent wire pairs. The
+                    "near end" detail points specifically to NEXT (Near-End CrossTalk). Router interference, Wi-Fi
+                    interference, and Cat 5 Ethernet interference are not recognized terms for this phenomenon.</p>
+            </div>
+
+            <div class="notes-section question">
+                <p>Q11. You recently purchased a digital HD antenna to connect to your television. Which of the
+                    following is the type of coaxial cable connector you need to make the connection?</p>
+                <ul>
+                    <li>BNC</li>
+                    <li class="correct">F-type</li>
+                    <li>UTP</li>
+                    <li>EMI</li>
+                </ul>
+                <p class="note">F-type is the standard screw-down coaxial connector used for TV/antenna and CATV
+                    connections. BNC uses a bayonet coupling and is used for professional video/radio equipment. UTP is
+                    a cable type. EMI is electromagnetic interference, not a connector.</p>
+            </div>
+
+            <div class="notes-section question">
+                <p>Q12. A network cable runs across high-traffic floor areas, causing it to wear and break. The
+                    replacement cable is plenum-rated and shielded. Which of the following will BEST protect the cable
+                    from further damage?</p>
+                <ul>
+                    <li class="correct">Run the cable through the ceiling area instead of across the floor.</li>
+                    <li>Encase the cable in a protective shield and secure the cable to prevent it from slipping.</li>
+                    <li>Periodically check the cable for kinks and wear. Replace the cable when necessary.</li>
+                    <li>Run the cable under the carpet.</li>
+                </ul>
+                <p class="note">Because the replacement cable is plenum-rated, it can be run through the ceiling/plenum
+                    space, completely removing it from floor traffic. Encasing it still leaves it on the floor where it
+                    will eventually wear out again. Periodic replacement is reactive and costly. Running cable under
+                    carpet is a fire hazard.</p>
+            </div>
+
+            <div class="notes-section question">
+                <p>Q13. What is the primary function of a network tap?</p>
+                <ul>
+                    <li class="correct">To intercept and copy signals passing over a cable for monitoring or analysis.
+                    </li>
+                    <li>To provide additional ports for connecting multiple network devices.</li>
+                    <li>To replace network switches in small networks.</li>
+                    <li>To amplify signals passing over a cable for longer transmission distances.</li>
+                </ul>
+                <p class="note">A network tap copies signals to a monitor port for analysis. Adding ports is a switch
+                    function. Taps do not replace switches. Signal amplification describes a repeater.</p>
+            </div>
+
+            <div class="notes-section question">
+                <p>Q14. You need to trace the route that a Cat 6 UTP cable takes through the ceiling and walls of your
+                    building. Which tool should you use?</p>
+                <ul>
+                    <li>Cable tester</li>
+                    <li>Loopback plug</li>
+                    <li class="correct">Tone generator</li>
+                    <li>Multimeter</li>
+                </ul>
+                <p class="note">A toner probe (tone generator + probe) is used to trace a cable's physical route through
+                    walls and ceilings. The generator applies an audio signal; the probe detects it along the run. A
+                    cable tester checks continuity and pin mapping. A loopback plug tests a NIC or port. A multimeter
+                    measures electrical properties.</p>
+            </div>
+
+            <div class="notes-section question">
+                <p>Q15. A technician is running a network above a dropped ceiling that is also used for ventilation. The
+                    cable must be a twisted pair and must be capable of Gigabit Ethernet speeds. Which of the following
+                    cables should the technician use?</p>
+                <ul>
+                    <li>Plenum-rated multimode fiber</li>
+                    <li>Riser-rated RG-58</li>
+                    <li>Riser-rated Cat 5e</li>
+                    <li class="correct">Plenum-rated Cat 6a</li>
+                </ul>
+                <p class="note">Three requirements narrow this down: plenum-rated (ventilated dropped ceiling = plenum
+                    space), twisted pair (rules out fiber and coax), and Gigabit capable. Cat 6a is plenum-rated twisted
+                    pair supporting 10 Gbps. Multimode fiber is not twisted pair. RG-58 is coaxial. Riser-rated cable is
+                    not approved for plenum spaces.</p>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6.4.8 Lesson Review - Q&amp;A</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+    <style>
+        .question {
+            margin-bottom: 2rem;
+        }
+
+        ul.answer-list {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0 0.75rem;
+        }
+
+        ul.answer-list li {
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.25rem;
+        }
+
+        ul.answer-list li.correct {
+            background: #d4edda;
+            font-weight: bold;
+        }
+
+        p.note {
+            font-size: 0.92em;
+            color: #555;
+            margin: 0.25rem 0 0;
+        }
+    </style>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content lesson-review-content">
+            <h1 class="notes-title">6.4.8 Lesson Review - Q&amp;A</h1>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q1. Legitimate emails from a domain are being marked as spam because
+                recipient servers cannot verify the sender's authenticity. What is the most likely cause?</h2>
+            <ul class="answer-list">
+                <li>The domain's A record is missing</li>
+                <li>The domain's MX record is pointing to the wrong mail server</li>
+                <li>The domain's DNS server is down</li>
+                <li class="correct">The domain does not have an SPF record configured</li>
+            </ul>
+            <p class="note">SPF (Sender Policy Framework) is a DNS record listing which mail servers are authorized to
+                send email for a domain. Without it, recipient servers can't verify authenticity and flag mail as spam.
+                The A record maps hostnames to IPs. A wrong MX record affects incoming mail, not outbound
+                authentication. A downed DNS server would cause complete delivery failure, not spam classification.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q2. What is the primary purpose of a Virtual LAN (VLAN)?</h2>
+            <ul class="answer-list">
+                <li>To replace the need for a Domain Name System (DNS)</li>
+                <li>To assign static IP addresses to devices on a network</li>
+                <li class="correct">To logically segment a network into smaller, isolated broadcast domains</li>
+                <li>To physically separate devices on a network</li>
+            </ul>
+            <p class="note">VLANs divide a physical network into separate logical networks at the switch level,
+                containing broadcast traffic and improving security without requiring separate hardware. VLANs have
+                nothing to do with DNS or IP assignment. Physical separation requires separate switches and cabling --
+                VLANs are a logical separation.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q3. What is the primary purpose of a DNS query in a network?</h2>
+            <ul class="answer-list">
+                <li class="correct">To resolve a hostname or FQDN to an IP address</li>
+                <li>To encrypt communication between a client and a server</li>
+                <li>To assign IP addresses dynamically to devices on the network</li>
+                <li>To establish a secure connection for web traffic</li>
+            </ul>
+            <p class="note">DNS translates human-readable names (e.g. www.example.com) into IP addresses that devices
+                can route to. Encryption = TLS/SSL. Dynamic IP assignment = DHCP. Secure web connections = TLS/HTTPS.
+            </p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q4. Which port is used by a client to communicate with a DNS server during a
+                DNS query?</h2>
+            <ul class="answer-list">
+                <li>Port 67</li>
+                <li class="correct">Port 53</li>
+                <li>Port 80</li>
+                <li>Port 443</li>
+            </ul>
+            <p class="note">DNS uses port 53 for both UDP (standard queries) and TCP (zone transfers and large
+                responses). Port 67 = DHCP server (68 = DHCP client). Port 80 = HTTP. Port 443 = HTTPS.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q5. After acquiring companyB.com, an administrator needs users typing
+                www.companyB.com to be redirected to www.companyA.com. Which DNS record type should be used?</h2>
+            <ul class="answer-list">
+                <li class="correct">CNAME Record</li>
+                <li>AAAA Record</li>
+                <li>PTR Record</li>
+                <li>A Record</li>
+            </ul>
+            <p class="note">A CNAME (Canonical Name) record creates an alias from one domain name to another. AAAA maps
+                a hostname to an IPv6 address. PTR is for reverse DNS (IP to hostname). A Record maps a hostname to an
+                IPv4 address -- not for aliasing one domain to another.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q6. Several devices have 169.254.x.x addresses and can't connect to the
+                internet. The DHCP server is running and other devices are fine. What is the most likely cause?</h2>
+            <ul class="answer-list">
+                <li>The DHCP server is configured with an incorrect subnet mask for the network</li>
+                <li class="correct">The DHCP scope does not have enough available IP addresses to assign to new devices
+                </li>
+                <li>The affected devices are using static IP addresses that conflict with the DHCP scope</li>
+                <li>The DNS server is misconfigured, preventing devices from resolving domain names</li>
+            </ul>
+            <p class="note">169.254.x.x is APIPA -- devices self-assign these when they can't get a DHCP lease. The
+                server is running and other devices are fine, so the scope is likely exhausted. An incorrect subnet mask
+                would affect all devices. Static IP conflicts cause IP conflicts, not APIPA. DNS issues cause name
+                resolution failures, not APIPA assignment.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q7. A remote employee needs to securely access the company network from a
+                coffee shop's public Wi-Fi. Which solution should they use?</h2>
+            <ul class="answer-list">
+                <li>Use the coffee shop's DNS server to resolve company domain names securely</li>
+                <li>Set up a VLAN on the coffee shop's Wi-Fi network</li>
+                <li>Configure their device to use a static IP address assigned by the company</li>
+                <li class="correct">Connect to the company's network using a Virtual Private Network (VPN)</li>
+            </ul>
+            <p class="note">A VPN creates an encrypted tunnel over the public internet, securing all traffic regardless
+                of the underlying Wi-Fi. A public DNS server provides no transmission security. The employee doesn't
+                control the coffee shop's infrastructure to set up a VLAN. A static IP doesn't encrypt or protect the
+                transmission.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q8. What is the primary purpose of a DHCP server in a network?</h2>
+            <ul class="answer-list">
+                <li>To manually assign static IP addresses to all devices on the network</li>
+                <li>To act as a firewall and block unauthorized access to the network</li>
+                <li class="correct">To allocate IP addresses dynamically to devices on the network</li>
+                <li>To resolve domain names into IP addresses for devices on the network</li>
+            </ul>
+            <p class="note">DHCP automatically assigns IP addresses, subnet masks, default gateways, and DNS server info
+                when devices join the network. Static assignment is the opposite of DHCP. Blocking unauthorized access =
+                firewall. Resolving domain names = DNS.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q9. Users can access a website by IP address but not by domain name. What is
+                the most likely cause?</h2>
+            <ul class="answer-list">
+                <li class="correct">The DNS server is not resolving the domain name to its corresponding IP address</li>
+                <li>The MAC address of the client devices is not registered with the network</li>
+                <li>The VLAN configuration on the network switch is incorrect</li>
+                <li>The DHCP server is not assigning IP addresses to client devices</li>
+            </ul>
+            <p class="note">IP access works but domain name access doesn't -- the classic DNS failure symptom. Routing
+                and connectivity are fine; only name resolution is broken. MAC addresses don't affect web access by
+                domain name. A VLAN misconfiguration would affect all connectivity. If DHCP were failing, users wouldn't
+                have IPs and couldn't reach the site by IP either.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q10. How does a VPN ensure secure communication over an untrusted network?
+            </h2>
+            <ul class="answer-list">
+                <li class="correct">By encrypting data transmitted between the client and the server</li>
+                <li>By resolving domain names into IP addresses for secure access</li>
+                <li>By dynamically assigning IP addresses to devices on the network</li>
+                <li>By dividing a network into smaller segments to isolate traffic</li>
+            </ul>
+            <p class="note">A VPN creates an encrypted tunnel so intercepted traffic cannot be read. Resolving domain
+                names = DNS. Dynamically assigning IPs = DHCP. Dividing a network into segments = VLANs.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q11. Which DNS record type specifies which mail servers are authorized to
+                send emails on behalf of a domain?</h2>
+            <ul class="answer-list">
+                <li class="correct">SPF (Sender Policy Framework) Record</li>
+                <li>CNAME (Canonical Name) Record</li>
+                <li>AAAA (IPv6 Address) Record</li>
+                <li>A (Address) Record</li>
+            </ul>
+            <p class="note">SPF is a DNS TXT record that lists authorized mail servers for a domain, helping recipient
+                servers reject spoofed senders. CNAME creates domain name aliases. AAAA maps hostnames to IPv6
+                addresses. A Record maps hostnames to IPv4 addresses.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q12. Devices in the Sales VLAN cannot communicate with devices in the
+                Finance VLAN, but inter-department communication is required. What is the most likely cause and
+                resolution?</h2>
+            <ul class="answer-list">
+                <li>The devices are using different IP address ranges, which prevents communication</li>
+                <li>The VLANs are misconfigured and all devices should be assigned to the same VLAN</li>
+                <li>VLANs are designed to block all inter-VLAN communication and the network must use a single VLAN</li>
+                <li class="correct">The switch is not configured with a router or Layer 3 device to enable inter-VLAN
+                    communication</li>
+            </ul>
+            <p class="note">VLANs are isolated broadcast domains by design -- traffic between VLANs requires a router or
+                Layer 3 switch. Different subnets across VLANs are normal and expected; a router handles that. Merging
+                all devices into one VLAN defeats the purpose of VLANs. Inter-VLAN communication is possible via routing
+                -- a single VLAN is not required.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q13. Broadcast traffic from one department is affecting others on the same
+                physical switch. VLANs are being implemented. Which configuration best solves the problem?</h2>
+            <ul class="answer-list">
+                <li class="correct">Create separate VLANs for each department and assign devices to their respective
+                    VLANs</li>
+                <li>Enable a single VLAN for all devices to centralize traffic management</li>
+                <li>Use VLANs to physically separate devices by connecting each department to a different switch</li>
+                <li>Configure the switch to assign IP addresses dynamically to reduce broadcast traffic</li>
+            </ul>
+            <p class="note">Segmenting departments into separate VLANs on a single switch contains each department's
+                broadcast traffic. A single VLAN for all devices does nothing to reduce broadcast interference. VLANs
+                are a logical separation -- physically connecting to different switches doesn't require VLANs. Switches
+                don't assign IPs (that's DHCP), and dynamic IP assignment doesn't reduce broadcast traffic.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q14. A DNS query for a domain returns an NXDOMAIN response, but other
+                websites work fine. What is the most likely cause?</h2>
+            <ul class="answer-list">
+                <li class="correct">The domain name does not exist or is not registered in the DNS hierarchy</li>
+                <li>The user's local DNS cache is corrupted and needs to be cleared</li>
+                <li>The DNS server is down and not responding to any queries</li>
+                <li>The user's device has an incorrect subnet mask configured in its TCP/IP settings</li>
+            </ul>
+            <p class="note">NXDOMAIN means "Non-Existent Domain" -- the DNS server responded but has no record of that
+                domain. Other sites resolve fine, confirming DNS is functional. A corrupted cache would return a wrong
+                IP, not NXDOMAIN. If DNS were down, no sites would resolve and no response would come back at all. A
+                subnet mask issue would break all internet connectivity.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q15. A company wants to redirect traffic from an acquired company's domain
+                to its own without maintaining two separate websites. Which DNS record type should be used?</h2>
+            <ul class="answer-list">
+                <li>A Record</li>
+                <li class="correct">CNAME Record</li>
+                <li>MX Record</li>
+                <li>AAAA Record</li>
+            </ul>
+            <p class="note">A CNAME creates an alias from one domain to another, redirecting traffic without maintaining
+                two separate sites. An A Record maps a hostname to an IPv4 address -- requires pointing to a specific
+                IP, not another domain. MX Records direct incoming email traffic, not web traffic. AAAA maps to an IPv6
+                address, not for domain aliasing.</p>
+        </div>
+
+        </main>
+    </div>
+</body>
+
+</html>

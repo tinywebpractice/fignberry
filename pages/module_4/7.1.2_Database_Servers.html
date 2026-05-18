@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.1.2 Database Servers</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content lesson-review-content">
+        <h1 class="notes-title">7.1.2 Database Servers</h1>
+
+        <section class="notes-section" id="overview">
+            <h2 class="notes-section-title">Overview</h2>
+            <p class="notes-paragraph">Database servers store, organize, and manage large amounts of structured and
+                unstructured data. Unlike flat files (e.g., spreadsheets), databases support querying for reports,
+                modification for special purposes, and data-driven business decisions.</p>
+        </section>
+
+        <section class="notes-section" id="relational">
+            <h2 class="notes-section-title">Relational Databases (SQL)</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">Structure</dt>
+                <dd class="notes-definition">Stores data in tables using columns and rows. Links data points together
+                    based on their relationships to one another.</dd>
+                <dt class="notes-term">Query Language</dt>
+                <dd class="notes-definition">SQL (Structured Query Language) is used to interact with the database. Also
+                    referred to as SQL databases.</dd>
+                <dt class="notes-term">Examples</dt>
+                <dd class="notes-definition">Oracle, MySQL, MariaDB.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="nonrelational">
+            <h2 class="notes-section-title">Non-Relational Databases (NoSQL)</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">Structure</dt>
+                <dd class="notes-definition">Stores data flexibly using graphs, documents, or key-value pairs. No fixed
+                    table schema.</dd>
+                <dt class="notes-term">Best For</dt>
+                <dd class="notes-definition">High flexibility with various data types; large volumes of data.</dd>
+                <dt class="notes-term">Examples</dt>
+                <dd class="notes-definition">MongoDB, CouchDB, Amazon SimpleDB.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="comparison">
+            <h2 class="notes-section-title">Comparison</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Relational (SQL)</th>
+                        <th>Non-Relational (NoSQL)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data Format</td>
+                        <td>Tables (rows and columns)</td>
+                        <td>Graphs, documents, key-value pairs</td>
+                    </tr>
+                    <tr>
+                        <td>Schema</td>
+                        <td>Fixed/structured</td>
+                        <td>Flexible</td>
+                    </tr>
+                    <tr>
+                        <td>Query Language</td>
+                        <td>SQL</td>
+                        <td>Varies by platform</td>
+                    </tr>
+                    <tr>
+                        <td>Best For</td>
+                        <td>Structured, relational data</td>
+                        <td>Large volumes, varied data types</td>
+                    </tr>
+                    <tr>
+                        <td>Examples</td>
+                        <td>Oracle, MySQL, MariaDB</td>
+                        <td>MongoDB, CouchDB, Amazon SimpleDB</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        </main>
+    </div>
+</body>
+
+</html>

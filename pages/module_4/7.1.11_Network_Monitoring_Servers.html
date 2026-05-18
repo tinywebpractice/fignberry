@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.1.11 Network Monitoring Servers</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content lesson-review-content">
+        <h1 class="notes-title">7.1.11 Network Monitoring Servers</h1>
+
+        <section class="notes-section" id="snmp">
+            <h2 class="notes-section-title">SNMP (Simple Network Management Protocol)</h2>
+            <p class="notes-paragraph">Framework for managing and monitoring network devices. The network management
+                system polls agents at regular intervals and displays information and trap alerts for administrator
+                review.</p>
+            <dl class="notes-terms">
+                <dt class="notes-term">Versions</dt>
+                <dd class="notes-definition">SNMPv1 and v2 should NOT be used due to security vulnerabilities. SNMPv3 is
+                    preferred as it supports authentication between the management system and enrolled devices.</dd>
+                <dt class="notes-term">Ports</dt>
+                <dd class="notes-definition">UDP/161 (device queries), UDP/162 (trap notifications).</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="snmp-components">
+            <h2 class="notes-section-title">SNMP Components</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Network Management System (NMS)</td>
+                        <td>Central system that polls agents, collects MIB data, and displays alerts for the
+                            administrator.</td>
+                    </tr>
+                    <tr>
+                        <td>Managed Devices</td>
+                        <td>Switches, routers, servers, and other SNMP-compatible network devices being monitored.</td>
+                    </tr>
+                    <tr>
+                        <td>Agent</td>
+                        <td>Process running on a managed device. Maintains the MIB and can send trap notifications to
+                            the NMS.</td>
+                    </tr>
+                    <tr>
+                        <td>MIB (Management Information Base)</td>
+                        <td>Database maintained by an agent. Holds activity statistics for the device (e.g., frames per
+                            second on a switch).</td>
+                    </tr>
+                    <tr>
+                        <td>Trap</td>
+                        <td>Agent-initiated alert sent to the NMS when a notable event occurs (e.g., port failure).
+                            Thresholds are configurable per metric.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="notes-section" id="syslog">
+            <h2 class="notes-section-title">Syslog</h2>
+            <p class="notes-paragraph">De facto standard protocol and software for collecting event logs from
+                distributed systems. A log collector aggregates event messages from multiple devices (routers, switches,
+                UNIX/Linux servers, workstations) to a single storage location. Can also be configured to run status and
+                alerting dashboards.</p>
+            <dl class="notes-terms">
+                <dt class="notes-term">Port</dt>
+                <dd class="notes-definition">UDP/514 (default)</dd>
+                <dt class="notes-term">Severity Levels</dt>
+                <dd class="notes-definition">info, notice, warn, error, critical, alert, emergency</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="syslog-format">
+            <h2 class="notes-section-title">Syslog Message Format</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PRI Code</td>
+                        <td>Calculated from facility + severity level.</td>
+                    </tr>
+                    <tr>
+                        <td>Header</td>
+                        <td>Contains timestamp and hostname.</td>
+                    </tr>
+                    <tr>
+                        <td>Message Part</td>
+                        <td>Tag (source process) + content (application-dependent format).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="notes-section" id="ports">
+            <h2 class="notes-section-title">Port Reference</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Protocol</th>
+                        <th>Port</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SNMP</td>
+                        <td>UDP/161</td>
+                        <td>Device queries (NMS polls agents)</td>
+                    </tr>
+                    <tr>
+                        <td>SNMP Trap</td>
+                        <td>UDP/162</td>
+                        <td>Agent-to-NMS trap notifications</td>
+                    </tr>
+                    <tr>
+                        <td>Syslog</td>
+                        <td>UDP/514</td>
+                        <td>Log forwarding to collector</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        </main>
+    </div>
+</body>
+
+</html>

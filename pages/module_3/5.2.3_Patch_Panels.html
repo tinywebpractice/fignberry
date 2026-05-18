@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.2.3 Patch Panels</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+        <main class="page-content notes-content">
+            <h1 class="notes-title">5.2.3 Patch Panels</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">How Patch Panels Work</h2>
+                <p class="notes-paragraph">In office cabling, computers connect to wall ports. Cables run through the
+                    walls and terminate at the back of a patch panel via insulation displacement connector (IDC)
+                    punchdown blocks. The front of the panel has pre-wired RJ45 ports. A patch cord then connects each
+                    front port to a port on an Ethernet switch.</p>
+                <p class="notes-paragraph">Signal path: Computer → Wall port → In-wall cable → IDC punchdown (rear of
+                    patch panel) → RJ45 port (front of patch panel) → Patch cord → Switch port.</p>
+                <p class="notes-paragraph">This design makes it easy to reconfigure which wall port connects to which
+                    switch port without touching the in-wall cabling.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Labeling</h2>
+                <p class="notes-paragraph">Effective labeling is vital when installing structured cabling. Every patch
+                    panel port must be labeled to identify which wall port it corresponds to, enabling faster
+                    troubleshooting and reconfiguration.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Patch panel</dt>
+                    <dd class="notes-definition">A passive panel that terminates in-wall cabling runs on the rear (via
+                        IDC punchdowns) and provides RJ45 ports on the front for patch cord connections to a switch.
+                    </dd>
+                    <dt class="notes-term">IDC (Insulation Displacement Connector)</dt>
+                    <dd class="notes-definition">A punchdown block on the rear of a patch panel where in-wall cables are
+                        terminated. The connector pierces the wire insulation to make contact without stripping.</dd>
+                    <dt class="notes-term">Patch cord</dt>
+                    <dd class="notes-definition">A short, flexible cable used to connect a port on the patch panel to a
+                        port on an Ethernet switch.</dd>
+                </dl>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

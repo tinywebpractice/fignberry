@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.1.1 File/Print Servers</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content lesson-review-content">
+        <h1 class="notes-title">7.1.1 File/Print Servers</h1>
+
+        <section class="notes-section" id="overview">
+            <h2 class="notes-section-title">Overview</h2>
+            <p class="notes-paragraph">File and print sharing uses a client/server architecture. The machine hosting
+                disk or printer resources is the server; machines accessing those resources are clients. A server disk
+                configured for network access is a file share.</p>
+            <p class="notes-paragraph">Resource sharing can be implemented using proprietary protocols (e.g., File and
+                Print Services for Windows Networks) or TCP/IP protocols (e.g., FTP).</p>
+        </section>
+
+        <section class="notes-section" id="smb">
+            <h2 class="notes-section-title">Server Message Block (SMB)</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">SMB</dt>
+                <dd class="notes-definition">Application protocol underpinning file and printer sharing on Windows
+                    networks. Runs directly over TCP/445.</dd>
+                <dt class="notes-term">SMB Versions</dt>
+                <dd class="notes-definition">SMB3 is the current version. SMB1 has serious security vulnerabilities and
+                    is disabled by default on current Windows versions.</dd>
+                <dt class="notes-term">Samba</dt>
+                <dd class="notes-definition">Software suite providing SMB support on UNIX/Linux machines and NAS
+                    appliances. Allows a Windows client to access a Linux host as a Windows file or print server.</dd>
+                <dt class="notes-term">CIFS</dt>
+                <dd class="notes-definition">Common Internet File System. SMB is sometimes called CIFS, but technically
+                    CIFS refers only to a specific dialect of SMB version 1.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="print-servers">
+            <h2 class="notes-section-title">Print Servers</h2>
+            <p class="notes-paragraph">Print servers manage printers and print jobs across a network. They can be
+                hardware or software based.</p>
+            <ul class="notes-list">
+                <li class="notes-list-item">Provide centralized management for high-volume print environments.</li>
+                <li class="notes-list-item">Allow print jobs to be queued.</li>
+                <li class="notes-list-item">Can hold a print job until a user releases it to a printer, preventing
+                    uncollected printouts.</li>
+            </ul>
+        </section>
+
+        <section class="notes-section" id="netbios">
+            <h2 class="notes-section-title">NetBIOS / NetBT</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">NetBIOS</dt>
+                <dd class="notes-definition">Early Windows protocol stack used for name addressing and session
+                    establishment (e.g., for SMB). Predates TCP/IP on local networks.</dd>
+                <dt class="notes-term">NetBT (NetBIOS over TCP/IP)</dt>
+                <dd class="notes-definition">Re-engineered NetBIOS to run over TCP/UDP. Ports: UDP/137 (name services),
+                    UDP/138 (UDP connections), TCP/139 (TCP session services).</dd>
+                <dt class="notes-term">Status</dt>
+                <dd class="notes-definition">Obsolete. Modern networks use IP, TCP/UDP, and DNS instead. NetBT should be
+                    disabled on most networks due to significant security risk. Only required to support file sharing
+                    for Windows versions earlier than Windows 2000.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="ftp">
+            <h2 class="notes-section-title">File Transfer Protocol (FTP)</h2>
+            <p class="notes-paragraph">FTP allows a client to upload and download files from a network server. Commonly
+                used to upload files to websites.</p>
+            <dl class="notes-terms">
+                <dt class="notes-term">Ports</dt>
+                <dd class="notes-definition">TCP/21 — control connection (establish and maintain). TCP/20 — data
+                    transfer (active mode). Server-assigned port — data transfer (passive mode).</dd>
+                <dt class="notes-term">Security</dt>
+                <dd class="notes-definition">Plain FTP is unencrypted; passwords are submitted in plaintext. High
+                    security risk.</dd>
+                <dt class="notes-term">FTPS</dt>
+                <dd class="notes-definition">FTP-Secure. Adds TLS/SSL encryption to FTP sessions.</dd>
+                <dt class="notes-term">SFTP</dt>
+                <dd class="notes-definition">FTP over Secure Shell. Encrypted FTP tunneled through SSH. Most widely used
+                    today.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="ports">
+            <h2 class="notes-section-title">Port Reference</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Protocol</th>
+                        <th>Port(s)</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SMB</td>
+                        <td>TCP/445</td>
+                        <td>File and printer sharing (Windows)</td>
+                    </tr>
+                    <tr>
+                        <td>NetBT</td>
+                        <td>UDP/137</td>
+                        <td>NetBIOS name services</td>
+                    </tr>
+                    <tr>
+                        <td>NetBT</td>
+                        <td>UDP/138</td>
+                        <td>NetBIOS UDP connections</td>
+                    </tr>
+                    <tr>
+                        <td>NetBT</td>
+                        <td>TCP/139</td>
+                        <td>NetBIOS TCP session services</td>
+                    </tr>
+                    <tr>
+                        <td>FTP</td>
+                        <td>TCP/21</td>
+                        <td>FTP control connection</td>
+                    </tr>
+                    <tr>
+                        <td>FTP</td>
+                        <td>TCP/20</td>
+                        <td>FTP data transfer (active mode)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        </main>
+    </div>
+</body>
+
+</html>

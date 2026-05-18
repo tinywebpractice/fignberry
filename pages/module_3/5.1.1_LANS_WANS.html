@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.1.1 LANs and WANs</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+        <main class="page-content notes-content">
+            <h1 class="notes-title">5.1.1 LANs and WANs</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Network Types Overview</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Full Name</th>
+                            <th>Scope</th>
+                            <th>Key Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>LAN</td>
+                            <td>Local Area Network</td>
+                            <td>Single site; nodes within ~1-2 km</td>
+                            <td>Connected by cabling and switches; owned/managed by the organization. Based on IEEE
+                                802.3 (Ethernet).</td>
+                        </tr>
+                        <tr>
+                            <td>WLAN</td>
+                            <td>Wireless LAN</td>
+                            <td>Same as LAN</td>
+                            <td>Uses radios/antennas. Based on IEEE 802.11 (Wi-Fi). Complements wired Ethernet on the
+                                same network.</td>
+                        </tr>
+                        <tr>
+                            <td>WAN</td>
+                            <td>Wide Area Network</td>
+                            <td>Multiple geographic locations</td>
+                            <td>Spans cities, countries, or globally (e.g. the Internet). Uses cabling/equipment leased
+                                from an ISP to link LAN sites.</td>
+                        </tr>
+                        <tr>
+                            <td>MAN</td>
+                            <td>Metropolitan Area Network</td>
+                            <td>City or municipality</td>
+                            <td>Larger than a LAN, smaller than a WAN. Multiple connected networks within the same metro
+                                area.</td>
+                        </tr>
+                        <tr>
+                            <td>PAN</td>
+                            <td>Personal Area Network</td>
+                            <td>A few meters</td>
+                            <td>Connects personal devices wirelessly (e.g. Bluetooth earbuds, smartwatches, phones).
+                                Growing with IoT.</td>
+                        </tr>
+                        <tr>
+                            <td>SAN</td>
+                            <td>Storage Area Network</td>
+                            <td>Dedicated storage network</td>
+                            <td>Dedicated network for storage devices; block-level access; consolidated storage;
+                                high-speed (Fibre Channel or iSCSI).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Ethernet Standards (IEEE 802.3)</h2>
+                <p class="notes-paragraph">Ethernet standards follow the naming format <strong>xBASE-Y</strong>, where x
+                    = nominal data rate and Y = cable type.</p>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Standard</th>
+                            <th>Speed</th>
+                            <th>Cable</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>100BASE-T</td>
+                            <td>100 Mbps</td>
+                            <td>Copper twisted pair</td>
+                            <td>Fast Ethernet</td>
+                        </tr>
+                        <tr>
+                            <td>1000BASE-T</td>
+                            <td>1 Gbps</td>
+                            <td>Copper twisted pair</td>
+                            <td>Gigabit Ethernet; mainstream LAN standard</td>
+                        </tr>
+                        <tr>
+                            <td>10GBASE-T</td>
+                            <td>10 Gbps</td>
+                            <td>Copper twisted pair</td>
+                            <td>High-speed; used in backbones and high-demand links</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph">Most LANs use copper cabling (electrical signaling). Fiber optic cabling
+                    (light pulses) is used for LAN backbones or special high-speed segments.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">SAN Key Characteristics</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><strong>Dedicated network:</strong> independent of the LAN to prevent
+                        storage traffic from interfering with normal network operations.</li>
+                    <li class="notes-list-item"><strong>Block-level access:</strong> data transferred as raw blocks with
+                        no file system structure, enabling efficient transfers and flexible storage management.</li>
+                    <li class="notes-list-item"><strong>Consolidated storage:</strong> multiple storage types (RAID
+                        arrays, tape drives) joined together as centralized resources for servers.</li>
+                    <li class="notes-list-item"><strong>High speed:</strong> typically uses Fibre Channel or iSCSI
+                        connections.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">IEEE 802.3</dt>
+                    <dd class="notes-definition">The set of standards governing Ethernet on wired LANs, using the
+                        xBASE-Y naming format.</dd>
+                    <dt class="notes-term">IEEE 802.11 (Wi-Fi)</dt>
+                    <dd class="notes-definition">The set of standards governing wireless LAN communications.</dd>
+                    <dt class="notes-term">ISP (Internet Service Provider)</dt>
+                    <dd class="notes-definition">A company that provides access to the Internet or leases WAN
+                        cabling/equipment to connect enterprise LAN sites.</dd>
+                    <dt class="notes-term">IoT (Internet of Things)</dt>
+                    <dd class="notes-definition">The growing ecosystem of everyday objects with embedded digital/network
+                        functionality, driving expanded PAN use.</dd>
+                    <dt class="notes-term">Fibre Channel</dt>
+                    <dd class="notes-definition">A high-speed networking technology commonly used in SANs for connecting
+                        servers to storage devices.</dd>
+                    <dt class="notes-term">iSCSI (Internet Small Computer System Interface)</dt>
+                    <dd class="notes-definition">A protocol that enables block-level storage access over standard IP
+                        networks, used as a lower-cost alternative to Fibre Channel in SANs.</dd>
+                </dl>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.3.9 Network Taps</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+        <main class="page-content notes-content">
+            <h1 class="notes-title">5.3.9 Network Taps</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Network Tap Overview</h2>
+                <p class="notes-paragraph">A network tap intercepts signals passing over a cable and forwards them to a
+                    packet or protocol analyzer for monitoring. Taps are either passive (unpowered) or active (powered).
+                </p>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>How It Works</th>
+                            <th>Pros</th>
+                            <th>Cons</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Passive TAP</td>
+                            <td>Uses an inductor or optical splitter to physically copy the signal to a monitor port. No
+                                logic decisions made.</td>
+                            <td>Captures every frame including corrupt/malformed ones; unaffected by network load; no
+                                power required.</td>
+                            <td>Cannot monitor Gigabit copper signaling (too complex); optical splitting may affect some
+                                fiber links.</td>
+                        </tr>
+                        <tr>
+                            <td>Active TAP</td>
+                            <td>Powered device that regenerates the signal before copying it to a monitor port.</td>
+                            <td>Can handle Gigabit copper and fiber links where passive taps fall short.</td>
+                            <td>Becomes a point of failure for the monitored link if power is lost.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Switched Port Analysis (SPAN) / Mirror Port</h2>
+                <p class="notes-paragraph">An alternative to a physical tap is a switched port analysis (SPAN) or mirror
+                    port configured on a network switch. A sensor attached to the mirror port receives copies of frames
+                    from nominated access ports or all other ports on the switch.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Network tap</dt>
+                    <dd class="notes-definition">A device that intercepts and copies signals on a network cable,
+                        forwarding them to a packet or protocol analyzer for monitoring.</dd>
+                    <dt class="notes-term">Passive TAP (test access point)</dt>
+                    <dd class="notes-definition">An unpowered tap that uses an inductor or optical splitter to copy
+                        signals. Captures all frames regardless of load, but cannot handle Gigabit copper or some fiber
+                        links.</dd>
+                    <dt class="notes-term">Active TAP</dt>
+                    <dd class="notes-definition">A powered tap that regenerates signals before copying them. Required
+                        for Gigabit copper and some fiber links, but becomes a point of failure if power is lost.</dd>
+                    <dt class="notes-term">SPAN / mirror port (switched port analysis)</dt>
+                    <dd class="notes-definition">A switch feature that copies frames from nominated ports to a
+                        designated monitor port, allowing network sniffing without a physical tap.</dd>
+                </dl>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

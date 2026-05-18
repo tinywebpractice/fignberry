@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.1.10 Time Servers</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content lesson-review-content">
+        <h1 class="notes-title">7.1.10 Time Servers</h1>
+
+        <section class="notes-section" id="ntp">
+            <h2 class="notes-section-title">NTP (Network Time Protocol)</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">Purpose</dt>
+                <dd class="notes-definition">Allows networked systems to sync their clocks to a common source. Ensures
+                    accurate timestamps in network logs. Some communication protocols also rely on accurate clocks to
+                    control data transmission.</dd>
+                <dt class="notes-term">Port</dt>
+                <dd class="notes-definition">UDP/123</dd>
+                <dt class="notes-term">Windows Default Server</dt>
+                <dd class="notes-definition">time.windows.com. Check sync status with: <code>w32tm /query /status</code>
+                </dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="stratum">
+            <h2 class="notes-section-title">Stratum Levels</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Stratum</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Stratum-0</td>
+                        <td>Atomic clock (most accurate; reference clock, not directly on network)</td>
+                    </tr>
+                    <tr>
+                        <td>Stratum-1</td>
+                        <td>NTP server synced directly to a Stratum-0 source</td>
+                    </tr>
+                    <tr>
+                        <td>Stratum-2</td>
+                        <td>NTP server synced to a Stratum-1 server</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="notes-section" id="nts">
+            <h2 class="notes-section-title">NTS (Network Time Security)</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">Purpose</dt>
+                <dd class="notes-definition">Secure replacement/extension for NTP. Uses TLS encryption to protect time
+                    data in transit.</dd>
+                <dt class="notes-term">Approved</dt>
+                <dd class="notes-definition">2020</dd>
+                <dt class="notes-term">Port</dt>
+                <dd class="notes-definition">TCP/4460</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="ports">
+            <h2 class="notes-section-title">Port Reference</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Protocol</th>
+                        <th>Port</th>
+                        <th>Encrypted?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>NTP</td>
+                        <td>UDP/123</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>NTS</td>
+                        <td>TCP/4460</td>
+                        <td>Yes (TLS)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        </main>
+    </div>
+</body>
+
+</html>

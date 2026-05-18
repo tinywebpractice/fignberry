@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.1.2 SOHO and Enterprise Networks</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+        <main class="page-content notes-content">
+            <h1 class="notes-title">5.1.2 SOHO and Enterprise Networks</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">SOHO Networks</h2>
+                <p class="notes-paragraph">A small office/home office (SOHO) LAN uses a single networking appliance —
+                    commonly called a SOHO router, Internet router, or broadband router — to provide both LAN and
+                    Internet connectivity for a small number of users.</p>
+                <p class="notes-paragraph">A typical SOHO router combines three functions in one device:</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><strong>Switch ports</strong> — connect wired client devices on a local
+                        private network.</li>
+                    <li class="notes-list-item"><strong>Wireless access point (AP)</strong> — extends the local network
+                        to wireless devices.</li>
+                    <li class="notes-list-item"><strong>Digital modem</strong> — connects the local network to the ISP
+                        and public Internet.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Enterprise Networks</h2>
+                <p class="notes-paragraph">Enterprise networks serve larger businesses and institutions. They perform
+                    the same basic functions as a SOHO router, but each function is handled by a dedicated device to
+                    support more clients with greater reliability.</p>
+                <p class="notes-paragraph">Enterprise network layout by zone:</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><strong>Work areas</strong> — client computers and printers connect via
+                        cabling through wall conduit to wall ports, then to a patch panel, then to workgroup switches.
+                    </li>
+                    <li class="notes-list-item"><strong>Wireless work areas</strong> — laptops and mobile devices
+                        connect via APs, which also link to workgroup switches.</li>
+                    <li class="notes-list-item"><strong>Server room</strong> — network servers and printers are
+                        separated from client areas and connected through their own switch to core/distribution
+                        switches.</li>
+                    <li class="notes-list-item"><strong>Core/distribution layer</strong> — switches aggregate traffic
+                        from all workgroup switches and route it to routers, firewalls, DMZ, and remote access/VPN.</li>
+                    <li class="notes-list-item"><strong>DMZ / screened subnet</strong> — a protected border zone between
+                        the private LAN and public Internet; traffic is strictly filtered and monitored. Hosts
+                        internet-facing services.</li>
+                    <li class="notes-list-item"><strong>Network border services</strong> — provide Internet access,
+                        email, remote access, WAN/VPN links, and web services for external clients.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">SOHO vs. Enterprise Comparison</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>SOHO</th>
+                            <th>Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Scale</td>
+                            <td>Small number of users</td>
+                            <td>Large number of users</td>
+                        </tr>
+                        <tr>
+                            <td>Routing</td>
+                            <td>Built into SOHO router</td>
+                            <td>Dedicated router(s)</td>
+                        </tr>
+                        <tr>
+                            <td>Switching</td>
+                            <td>Built into SOHO router</td>
+                            <td>Workgroup + core/distribution switches</td>
+                        </tr>
+                        <tr>
+                            <td>Wireless</td>
+                            <td>Built into SOHO router</td>
+                            <td>Dedicated APs</td>
+                        </tr>
+                        <tr>
+                            <td>Firewall</td>
+                            <td>Basic, built-in</td>
+                            <td>Dedicated firewall appliance</td>
+                        </tr>
+                        <tr>
+                            <td>Servers</td>
+                            <td>Optional, may be absent</td>
+                            <td>Dedicated server room</td>
+                        </tr>
+                        <tr>
+                            <td>Internet border</td>
+                            <td>Simple NAT/modem</td>
+                            <td>DMZ / screened subnet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">SOHO router</dt>
+                    <dd class="notes-definition">An all-in-one networking appliance combining a switch, wireless AP, and
+                        modem/router for small networks. Also called an Internet router or broadband router.</dd>
+                    <dt class="notes-term">Workgroup switch</dt>
+                    <dd class="notes-definition">A switch that connects client devices in a work area to the
+                        core/distribution layer of an enterprise network.</dd>
+                    <dt class="notes-term">Core/distribution switch</dt>
+                    <dd class="notes-definition">A high-capacity switch that aggregates traffic from workgroup switches
+                        and connects to routers, firewalls, and other network border devices.</dd>
+                    <dt class="notes-term">DMZ (Demilitarized Zone)</dt>
+                    <dd class="notes-definition">A screened subnet that sits between the private LAN and the public
+                        Internet. Hosts internet-facing services; traffic is strictly filtered and monitored.</dd>
+                    <dt class="notes-term">VPN (Virtual Private Network)</dt>
+                    <dd class="notes-definition">An encrypted tunnel used to provide secure remote access or connect WAN
+                        branch offices over the public Internet.</dd>
+                    <dt class="notes-term">Access point (AP)</dt>
+                    <dd class="notes-definition">A dedicated wireless networking device that connects wireless clients
+                        to the wired network infrastructure.</dd>
+                </dl>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.2.10 Power over Ethernet</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+        <main class="page-content notes-content">
+            <h1 class="notes-title">5.2.10 Power over Ethernet</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">What is PoE?</h2>
+                <p class="notes-paragraph">Power over Ethernet (PoE) supplies electrical power from a switch port over
+                    ordinary data cabling to a powered device (PD) such as a VoIP handset, IP camera, or wireless access
+                    point — eliminating the need for a separate AC adapter at each device.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">PoE Standards</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Standard</th>
+                            <th>Name</th>
+                            <th>Usable Power</th>
+                            <th>Max Current</th>
+                            <th>Typical Devices</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>802.3af</td>
+                            <td>PoE / Type 1 / 2-pair PoE</td>
+                            <td>~13 W</td>
+                            <td>350 mA @ 48V (15.4W supplied, ~13W usable over 100m)</td>
+                            <td>VoIP phones, basic APs, basic security cameras</td>
+                        </tr>
+                        <tr>
+                            <td>802.3at</td>
+                            <td>PoE+ / Type 2</td>
+                            <td>~25 W</td>
+                            <td>600 mA</td>
+                            <td>Advanced APs, pan-tilt-zoom cameras, video IP phones</td>
+                        </tr>
+                        <tr>
+                            <td>802.3bt Type 3</td>
+                            <td>PoE++ / 4PPoE</td>
+                            <td>~51 W</td>
+                            <td>—</td>
+                            <td>LED lighting, digital signage, point-of-sale systems</td>
+                        </tr>
+                        <tr>
+                            <td>802.3bt Type 4</td>
+                            <td>PoE++ / 4PPoE</td>
+                            <td>~73 W</td>
+                            <td>—</td>
+                            <td>High-power devices</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">PoE Switch (Endspan PSE)</h2>
+                <p class="notes-paragraph">A PoE-enabled switch is called endspan power sourcing equipment (PSE). When a
+                    device is connected, the switch performs a detection phase to determine if the device is
+                    PoE-enabled, then sets an appropriate supply voltage. Non-PoE devices are not damaged — no power is
+                    supplied if PoE is not detected.</p>
+                <p class="notes-paragraph">Benefits over individual AC adapters: more efficient, enables network
+                    management software to control devices, apply sleep states, and power cap unused devices.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">PoE Injector (Midspan)</h2>
+                <p class="notes-paragraph">If the switch does not support PoE, a power injector (midspan) can be used
+                    inline: one port connects to the switch, the other connects to the powered device. Total cable
+                    length still cannot exceed 100m.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">PoE (Power over Ethernet)</dt>
+                    <dd class="notes-definition">A technology that delivers electrical power over standard Ethernet data
+                        cabling to powered devices, removing the need for separate power supplies.</dd>
+                    <dt class="notes-term">Powered device (PD)</dt>
+                    <dd class="notes-definition">Any PoE-compatible device that receives power over the Ethernet cable,
+                        such as a VoIP phone, IP camera, or wireless access point.</dd>
+                    <dt class="notes-term">Endspan PSE (Power Sourcing Equipment)</dt>
+                    <dd class="notes-definition">A PoE-capable switch that supplies power directly from its ports.
+                        Performs device detection before supplying power to avoid damaging non-PoE devices.</dd>
+                    <dt class="notes-term">PoE injector (midspan)</dt>
+                    <dd class="notes-definition">An inline device that adds PoE capability between a non-PoE switch and
+                        a powered device. Total cable run must remain within 100m.</dd>
+                </dl>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

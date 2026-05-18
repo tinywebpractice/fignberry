@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6.7 Module Quiz - Q&amp;A</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content lesson-review-content">
+            <h1 class="notes-title">6.7 Module Quiz - Q&amp;A</h1>
+
+        <div class="notes-section question" id="q1">
+            <h2 class="notes-section-title">Question 1 — SOHO Firewall Configuration</h2>
+            <p class="notes-paragraph">You are an IT professional tasked with securing a small office network. The
+                office uses a SOHO router with a built-in firewall. Employees are unable to access certain required
+                websites, and some unauthorized traffic is being allowed in. What is the MOST effective action to
+                resolve both issues while maintaining network security?</p>
+            <ul class="notes-list">
+                <li class="notes-list-item">Enable port forwarding on the SOHO router to allow all incoming traffic to
+                    reach internal devices.</li>
+                <li class="notes-list-item">Replace the SOHO router with a new one that does not include a firewall to
+                    simplify network management.</li>
+                <li class="notes-list-item correct">Configure the firewall to allow specific outbound traffic to the
+                    required websites while blocking unauthorized inbound traffic. &#10003;</li>
+                <li class="notes-list-item">Disable the firewall on the SOHO router to allow unrestricted access to all
+                    websites.</li>
+            </ul>
+            <p class="note">Port forwarding allows specific inbound traffic to internal devices but does not fix blocked
+                outbound access and removes security. Replacing the router without a firewall eliminates protection
+                entirely. Disabling the firewall solves the blocking issue but exposes the network to unauthorized
+                traffic. The correct answer addresses both problems: explicitly permitting required outbound traffic
+                while continuing to block unauthorized inbound traffic.</p>
+        </div>
+
+        <div class="notes-section question" id="q2">
+            <h2 class="notes-section-title">Question 2 — DNS Records for IPv4 and IPv6</h2>
+            <p class="notes-paragraph">A company wants to ensure that its web server is accessible via both IPv4 and
+                IPv6. Which combination of DNS record types should they configure?</p>
+            <ul class="notes-list">
+                <li class="notes-list-item">PTR Record and A Record</li>
+                <li class="notes-list-item correct">A Record and AAAA Record &#10003;</li>
+                <li class="notes-list-item">MX Record and AAAA Record</li>
+                <li class="notes-list-item">CNAME Record and A Record</li>
+            </ul>
+            <p class="note">A records map a hostname to an IPv4 address. AAAA records map a hostname to an IPv6 address.
+                PTR records handle reverse DNS lookups. MX records route email. CNAME records create hostname aliases.
+                Only A + AAAA covers both IPv4 and IPv6 accessibility.</p>
+        </div>
+
+        <div class="notes-section question" id="q3">
+            <h2 class="notes-section-title">Question 3 — Connectionless Protocol for Video Conferencing</h2>
+            <p class="notes-paragraph">A network administrator troubleshoots a video conferencing application with
+                occasional dropped frames and slight audio delays. Traffic analysis shows the application uses a
+                connectionless protocol with minimal overhead. Which conclusion can the administrator make about the
+                protocol and its suitability?</p>
+            <ul class="notes-list">
+                <li class="notes-list-item">The application uses SSH, which is unsuitable because it is designed for
+                    secure remote access, not real-time communication.</li>
+                <li class="notes-list-item">The application uses TCP, which is unsuitable because it prioritizes
+                    reliability over speed.</li>
+                <li class="notes-list-item">The application uses HTTPS, which is unsuitable because it is designed for
+                    secure web browsing, not video conferencing.</li>
+                <li class="notes-list-item correct">The application uses UDP, which is suitable because it prioritizes
+                    speed and can tolerate minor data loss. &#10003;</li>
+            </ul>
+            <p class="note">SSH and HTTPS both run over TCP, which is connection-oriented. TCP's retransmission and flow
+                control add overhead unsuitable for real-time media. UDP is the connectionless, low-overhead protocol.
+                Minor glitches (dropped frames, audio delay) are the expected trade-off for UDP's speed advantage in
+                real-time applications.</p>
+        </div>
+
+        <div class="notes-section question" id="q4">
+            <h2 class="notes-section-title">Question 4 — Secure Remote Access over Public Wi-Fi</h2>
+            <p class="notes-paragraph">A remote employee needs to securely access their company's internal network while
+                working from a coffee shop's public Wi-Fi. Which solution should the employee use to ensure their data
+                is protected during transmission?</p>
+            <ul class="notes-list">
+                <li class="notes-list-item">Use the coffee shop's DNS server to resolve company domain names securely.
+                </li>
+                <li class="notes-list-item">Set up a Virtual LAN (VLAN) on the coffee shop's Wi-Fi network.</li>
+                <li class="notes-list-item">Configure their device to use a static IP address assigned by the company.
+                </li>
+                <li class="notes-list-item correct">Connect to the company's network using a Virtual Private Network
+                    (VPN). &#10003;</li>
+            </ul>
+            <p class="note">DNS resolves hostnames but does not encrypt traffic. VLANs segment traffic on a managed
+                switch; a remote employee has no control over the coffee shop's infrastructure. A static IP only
+                identifies the device and provides no encryption. A VPN creates an encrypted tunnel between the device
+                and the company network, protecting all data regardless of the underlying public connection.</p>
+        </div>
+
+        <div class="notes-section question" id="q5">
+            <h2 class="notes-section-title">Question 5 — Geostationary Orbital Satellite Internet</h2>
+            <p class="notes-paragraph">You are setting up internet for a remote research station in a mountainous region
+                where DSL and cable are unavailable. You decide to use Geostationary Orbital Satellite Internet Access.
+                Which consideration is MOST important for successful implementation?</p>
+            <ul class="notes-list">
+                <li class="notes-list-item">The satellite modem must be connected to a DSL splitter for proper
+                    functionality.</li>
+                <li class="notes-list-item">The connection will provide low latency, making it ideal for real-time
+                    applications.</li>
+                <li class="notes-list-item">The satellite internet connection will not require any additional hardware,
+                    such as a router.</li>
+                <li class="notes-list-item correct">The satellite dish must have a clear line of sight to the southern
+                    sky. &#10003;</li>
+            </ul>
+            <p class="note">DSL splitters are used with phone-line DSL connections, not satellite. Geostationary
+                satellites orbit at ~35,786 km, introducing significant latency (500-600ms+ round trip) — low latency is
+                the opposite of what GEO satellite provides. Satellite internet requires a dish, modem, and router.
+                Geostationary satellites are positioned over the equator; dishes in the Northern Hemisphere must point
+                south for line of sight.</p>
+        </div>
+
+        <div class="notes-section question" id="q6">
+            <h2 class="notes-section-title">Question 6 — DNS Record for Email Spam Management</h2>
+            <p class="notes-paragraph">Which type of DNS record is specifically used to manage email spam by specifying
+                which mail servers are authorized to send emails on behalf of a domain?</p>
+            <ul class="notes-list">
+                <li class="notes-list-item correct">SPF (Sender Policy Framework) Record &#10003;</li>
+                <li class="notes-list-item">CNAME (Canonical Name) Record</li>
+                <li class="notes-list-item">AAAA (IPv6 Address) Record</li>
+                <li class="notes-list-item">A (Address) Record</li>
+            </ul>
+            <p class="note">CNAME maps an alias to a canonical hostname. AAAA and A records are used for address
+                resolution (IPv6 and IPv4 respectively). SPF records are published as TXT records in DNS and list the IP
+                addresses and servers permitted to send email for a domain. Receiving mail servers check SPF to detect
+                spoofed or unauthorized senders.</p>
+        </div>
+
+        <div class="notes-section question" id="q7">
+            <h2 class="notes-section-title">Question 7 — Valid IP Addresses (Select two)</h2>
+            <p class="notes-paragraph">Which of the following are valid IP addresses? (Select two.)</p>
+            <ul class="notes-list">
+                <li class="notes-list-item correct">172.16.1.26 &#10003;</li>
+                <li class="notes-list-item correct">2.2.2.2 &#10003;</li>
+                <li class="notes-list-item">1.254.1.1024 — last octet (1024) exceeds 255</li>
+                <li class="notes-list-item">256.0.0.1 — first octet (256) exceeds 255</li>
+                <li class="notes-list-item">254.7.1.417 — last octet (417) exceeds 255</li>
+                <li class="notes-list-item">192.168.1.512 — last octet (512) exceeds 255</li>
+                <li class="notes-list-item">10.384.0.3 — second octet (384) exceeds 255</li>
+            </ul>
+            <p class="note">Each octet in an IPv4 address must be in the range 0-255. Both 172.16.1.26 and 2.2.2.2
+                satisfy this requirement. All other options contain at least one octet exceeding 255.</p>
+        </div>
+
+        <div class="notes-section question" id="q8">
+            <h2 class="notes-section-title">Question 8 — IPv6 Address Characteristics (Select two)</h2>
+            <p class="notes-paragraph">Which of the following describes an IPv6 address? (Select two.)</p>
+            <ul class="notes-list">
+                <li class="notes-list-item correct">128-bit address &#10003;</li>
+                <li class="notes-list-item">Four decimal octets</li>
+                <li class="notes-list-item">64-bit address</li>
+                <li class="notes-list-item correct">Eight hexadecimal quartets &#10003;</li>
+                <li class="notes-list-item">32-bit address</li>
+            </ul>
+            <p class="note">IPv4 is 32-bit, written as four decimal octets. IPv6 is 128-bit, written as eight groups
+                (quartets) of four hexadecimal digits separated by colons (e.g.,
+                2001:0db8:85a3:0000:0000:8a2e:0370:7334). 64-bit is not a valid address size for either version.</p>
+        </div>
+
+        <div class="notes-section question" id="q9">
+            <h2 class="notes-section-title">Question 9 — Link Layer Troubleshooting</h2>
+            <p class="notes-paragraph">Devices on the same Ethernet segment cannot communicate. You suspect the issue
+                lies at the Link layer of the TCP/IP model. Which action is the MOST appropriate first step?</p>
+            <ul class="notes-list">
+                <li class="notes-list-item">Test the devices' ability to access a web server on the Internet.</li>
+                <li class="notes-list-item">Check the IP addresses assigned to the devices to ensure they are in the
+                    same subnet.</li>
+                <li class="notes-list-item correct">Verify that the Ethernet cables are properly connected and
+                    functional. &#10003;</li>
+                <li class="notes-list-item">Inspect the router's configuration to ensure proper packet forwarding.</li>
+            </ul>
+            <p class="note">Internet access testing involves Application and Internet layers. IP address checking is an
+                Internet layer (Layer 3) task. Router configuration is also Internet layer. The Link layer handles
+                physical transmission and MAC-level communication. When devices on the same Ethernet segment cannot
+                communicate, the first check is the physical medium: cables and connections.</p>
+        </div>
+
+        <div class="notes-section question" id="q10">
+            <h2 class="notes-section-title">Question 10 — HTTPS Port Number</h2>
+            <p class="notes-paragraph">While making an online bank transaction, a customer sees a lock icon indicating
+                an encrypted TCP/IP suite protocol is being used. Which TCP/IP port number does this protocol typically
+                use?</p>
+            <ul class="notes-list">
+                <li class="notes-list-item correct">443 &#10003;</li>
+                <li class="notes-list-item">143 — IMAP (email retrieval)</li>
+                <li class="notes-list-item">80 — HTTP (unencrypted web)</li>
+                <li class="notes-list-item">25 — SMTP (email sending)</li>
+            </ul>
+            <p class="note">The lock icon in a browser indicates HTTPS. HTTPS uses TLS encryption and runs on port 443.
+                Port 80 is unencrypted HTTP. Port 143 is IMAP. Port 25 is SMTP.</p>
+        </div>
+
+        <div class="notes-section question" id="q11">
+            <h2 class="notes-section-title">Question 11 — Reverse DNS / PTR Record</h2>
+            <p class="notes-paragraph">Some external email systems are rejecting emails from a company's server, citing
+                a lack of reverse DNS configuration. The IT team needs to configure a DNS record to map the server's IP
+                address back to its domain name. Which DNS record type should they configure?</p>
+            <ul class="notes-list">
+                <li class="notes-list-item">MX Record</li>
+                <li class="notes-list-item">A Record</li>
+                <li class="notes-list-item">CNAME Record</li>
+                <li class="notes-list-item correct">PTR Record &#10003;</li>
+            </ul>
+            <p class="note">MX records point to the mail server for a domain. A records map hostnames to IPv4 addresses
+                (forward lookup). CNAME maps an alias to a canonical hostname. PTR (Pointer) records handle reverse DNS
+                lookups: IP address to hostname. Many mail servers perform a reverse DNS check on incoming connections;
+                missing PTR records cause email rejection as a spam prevention measure.</p>
+        </div>
+
+        <div class="notes-section question" id="q12">
+            <h2 class="notes-section-title">Question 12 — Multimedia Streaming Transport Protocol</h2>
+            <p class="notes-paragraph">You are creating a multimedia streaming application. Data will be streamed from
+                your server to clients over IP networks. Which transport protocol should your application use?</p>
+            <ul class="notes-list">
+                <li class="notes-list-item">TCP</li>
+                <li class="notes-list-item">ICMP</li>
+                <li class="notes-list-item correct">UDP &#10003;</li>
+                <li class="notes-list-item">SNMP</li>
+            </ul>
+            <p class="note">TCP's error checking, retransmission, and flow control add latency that disrupts real-time
+                streaming. ICMP is a diagnostic/control protocol, not a transport protocol for application data. SNMP is
+                for network device management. UDP's low overhead and lack of retransmission make it ideal for
+                multimedia streaming, where speed matters more than perfect delivery.</p>
+        </div>
+
+        <div class="notes-section question" id="q13">
+            <h2 class="notes-section-title">Question 13 — Router Role in a SOHO Network</h2>
+            <p class="notes-paragraph">You are setting up a small office network. You already have a modem connected to
+                your ISP. You need devices on your local network to communicate with external networks. What device
+                should you configure next, and what is its primary role?</p>
+            <ul class="notes-list">
+                <li class="notes-list-item">A switch, to connect multiple devices within the local network</li>
+                <li class="notes-list-item">A DSL splitter, to separate voice and data signals for better communication
+                </li>
+                <li class="notes-list-item correct">A router, to forward data packets between your local network and
+                    external networks using IP &#10003;</li>
+                <li class="notes-list-item">A cable modem, to establish a physical connection to the ISP's network</li>
+            </ul>
+            <p class="note">A switch connects devices within a LAN at the MAC level and cannot route between networks. A
+                DSL splitter separates voice and data signals on a phone line and plays no routing role. A modem is
+                already in place; adding another is redundant. The router sits between the modem and the LAN, using IP
+                to forward packets between the local network and external networks.</p>
+        </div>
+
+        <div class="notes-section question" id="q14">
+            <h2 class="notes-section-title">Question 14 — Incomplete SPF Record</h2>
+            <p class="notes-paragraph">A company has an SPF record configured, but some legitimate emails are still
+                being marked as spam. The IT team finds the SPF record is missing critical information. What is the MOST
+                likely cause?</p>
+            <ul class="notes-list">
+                <li class="notes-list-item correct">The SPF record does not include all authorized mail servers used by
+                    the company. &#10003;</li>
+                <li class="notes-list-item">The SPF record is pointing to an incorrect IP address for the company's web
+                    server.</li>
+                <li class="notes-list-item">The SPF record is missing the domain's MX record information.</li>
+                <li class="notes-list-item">The SPF record is configured as a CNAME record instead of a TXT record.</li>
+            </ul>
+            <p class="note">SPF records list authorized mail servers, not web servers. MX and SPF records are
+                independent DNS entries. The CNAME answer describes a configuration format error, not missing
+                information. If legitimate emails are rejected, the most likely cause is that some sending mail servers
+                are not listed in the SPF record; recipient servers reject any sender not on the authorized list.</p>
+        </div>
+
+        <div class="notes-section question" id="q15">
+            <h2 class="notes-section-title">Question 15 — DSL Modem Wiring</h2>
+            <p class="notes-paragraph">You are setting up a DSL internet connection for a small office. Which of the
+                following steps should you take to connect the DSL modem to the network?</p>
+            <ul class="notes-list">
+                <li class="notes-list-item">Connect the DSL modem's RJ11 port to the router and the RJ45 port to the
+                    phone line.</li>
+                <li class="notes-list-item correct">Connect the DSL modem's RJ11 port to the phone line and the RJ45
+                    port to the router. &#10003;</li>
+                <li class="notes-list-item">Connect the DSL modem's coaxial port to the phone line and the RJ45 port to
+                    the router.</li>
+                <li class="notes-list-item">Connect the DSL modem's RJ45 port to the phone line and the RJ11 port to the
+                    router.</li>
+            </ul>
+            <p class="note">RJ11 is the small 4-pin phone connector used for DSL phone lines. RJ45 is the larger 8-pin
+                Ethernet connector used for LAN/router connections. Coaxial ports are used for cable internet (DOCSIS),
+                not DSL. Correct wiring: RJ11 in to phone line, RJ45 out to router.</p>
+        </div>
+
+        <div class="notes-section question" id="q16">
+            <h2 class="notes-section-title">Question 16 — RDP Port Number</h2>
+            <p class="notes-paragraph">A help desk technician uses a Windows proprietary network protocol that allows
+                them to open a graphical interface to connect with a user's Windows computer. Which TCP/IP port number
+                is the default port used by this protocol?</p>
+            <ul class="notes-list">
+                <li class="notes-list-item">143 — IMAP</li>
+                <li class="notes-list-item correct">3389 &#10003;</li>
+                <li class="notes-list-item">443 — HTTPS</li>
+                <li class="notes-list-item">80 — HTTP</li>
+            </ul>
+            <p class="note">The protocol described is RDP (Remote Desktop Protocol), Microsoft's proprietary protocol
+                for graphical remote access to Windows machines. Its default port is 3389. Port 143 is IMAP, 443 is
+                HTTPS, and 80 is HTTP.</p>
+        </div>
+
+        <div class="notes-section question" id="q17">
+            <h2 class="notes-section-title">Question 17 — Invalid IPv4 Addresses (Select three)</h2>
+            <p class="notes-paragraph">Which of the following are NOT valid IPv4 addresses? (Select three.)</p>
+            <ul class="notes-list">
+                <li class="notes-list-item">122.0.0.0 — valid (all octets 0-255)</li>
+                <li class="notes-list-item correct">45.22.156.256 — invalid: last octet (256) exceeds 255 &#10003;</li>
+                <li class="notes-list-item correct">145.8.260.7 — invalid: third octet (260) exceeds 255 &#10003;</li>
+                <li class="notes-list-item correct">257.0.122.55 — invalid: first octet (257) exceeds 255 &#10003;</li>
+                <li class="notes-list-item">116.0.0.116 — valid</li>
+                <li class="notes-list-item">132.64.32.8 — valid</li>
+                <li class="notes-list-item">1.55.254.3 — valid</li>
+            </ul>
+            <p class="note">Each octet in an IPv4 address must be 0-255. Any address with an octet exceeding 255 is
+                invalid.</p>
+        </div>
+
+        <div class="notes-section question" id="q18">
+            <h2 class="notes-section-title">Question 18 — 5G Primary Advantage</h2>
+            <p class="notes-paragraph">What is a primary advantage of 5G Cellular Radio Internet Connections?</p>
+            <ul class="notes-list">
+                <li class="notes-list-item">Limited to text messaging and voice calls only</li>
+                <li class="notes-list-item">Exclusive compatibility with 3G devices</li>
+                <li class="notes-list-item correct">Ultra-high speeds and low latency for real-time applications
+                    &#10003;</li>
+                <li class="notes-list-item">Operates solely on the public-switched-telephone-network (PSTN)</li>
+            </ul>
+            <p class="note">5G is a broadband data technology, not limited to voice/SMS (that describes 2G). It
+                supersedes 3G and is not backward-limited to 3G devices. 5G operates on cellular radio frequencies,
+                entirely separate from the PSTN. 5G's defining advantages are significantly higher throughput and lower
+                latency compared to previous generations.</p>
+        </div>
+
+        <div class="notes-section question" id="q19">
+            <h2 class="notes-section-title">Question 19 — DHCP Facts (Select two)</h2>
+            <p class="notes-paragraph">Which of the following statements about Dynamic Host Configuration Protocol
+                (DHCP) are true? (Select two.)</p>
+            <ul class="notes-list">
+                <li class="notes-list-item correct">A workstation must request addressing information from a DHCP
+                    server. &#10003;</li>
+                <li class="notes-list-item correct">It can deliver a DNS server address in addition to the host IP
+                    address. &#10003;</li>
+                <li class="notes-list-item">The DHCP server detects workstations when they attach to the network and
+                    automatically delivers IP addressing information to them.</li>
+                <li class="notes-list-item">It cannot be configured to assign the same IP address to the same host each
+                    time it boots.</li>
+                <li class="notes-list-item">It can only deliver IP addresses to hosts.</li>
+            </ul>
+            <p class="note">DHCP is client-initiated: the client sends a DHCPDISCOVER broadcast; the server does not
+                proactively push addresses. DHCP reservations (static leases) allow a specific IP to be consistently
+                assigned to a specific MAC address. DHCP can deliver IP address, subnet mask, default gateway, DNS
+                server addresses, and more — not just IP addresses.</p>
+        </div>
+
+        <div class="notes-section question" id="q20">
+            <h2 class="notes-section-title">Question 20 — File Transfer with Authentication</h2>
+            <p class="notes-paragraph">You want to allow users to download files from a server running the IP protocol,
+                and protect access by requiring user authentication to access specific directories. Which IP protocol
+                should you implement?</p>
+            <ul class="notes-list">
+                <li class="notes-list-item">SSH</li>
+                <li class="notes-list-item">LDAP</li>
+                <li class="notes-list-item">SMTP</li>
+                <li class="notes-list-item correct">FTP &#10003;</li>
+                <li class="notes-list-item">SNMP</li>
+                <li class="notes-list-item">TFTP — no authentication support</li>
+            </ul>
+            <p class="note">SSH provides encrypted remote command-line access, not user-authenticated file downloads.
+                LDAP manages directory services. SMTP sends email. SNMP manages network devices. TFTP is a stripped-down
+                file transfer protocol with no authentication. FTP supports file downloads and user authentication for
+                directory access control, satisfying both requirements.</p>
+        </div>
+
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.2.9 Unmanaged and Managed Switches</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+        <main class="page-content notes-content">
+            <h1 class="notes-title">5.2.9 Unmanaged and Managed Switches</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Unmanaged vs. Managed Switches</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Unmanaged</th>
+                            <th>Managed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Configuration required</td>
+                            <td>None — plug and play</td>
+                            <td>Optional via management port (web or CLI)</td>
+                        </tr>
+                        <tr>
+                            <td>Typical port count</td>
+                            <td>4–8 ports</td>
+                            <td>24 or 48 access ports</td>
+                        </tr>
+                        <tr>
+                            <td>Use case</td>
+                            <td>Small/home networks, SOHO routers</td>
+                            <td>Workgroups, corporate/enterprise LANs</td>
+                        </tr>
+                        <tr>
+                            <td>Rack-mountable</td>
+                            <td>Typically no</td>
+                            <td>Yes, standard network racks</td>
+                        </tr>
+                        <tr>
+                            <td>Uplink ports</td>
+                            <td>Typically no</td>
+                            <td>Yes, for connecting to other switches</td>
+                        </tr>
+                        <tr>
+                            <td>Advanced features</td>
+                            <td>No</td>
+                            <td>Yes (security settings, VLANs, etc.)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph">A managed switch works as an unmanaged switch out-of-the-box. Advanced
+                    features are enabled by an administrator via a management port.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Modular Switches</h2>
+                <p class="notes-paragraph">Enterprise networks may use modular switches — a chassis with a shared power
+                    supply and high-speed backplane that interconnects multiple switch modules. This allows hundreds of
+                    access ports to be provisioned through a single compact appliance.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Unmanaged switch</dt>
+                    <dd class="notes-definition">A plug-and-play switch requiring no configuration. Typically 4–8 ports;
+                        used in small or home networks. Embedded in most ISP-supplied SOHO router/modems.</dd>
+                    <dt class="notes-term">Managed switch</dt>
+                    <dd class="notes-definition">A switch that supports administrator configuration via a management
+                        port (web interface or CLI). Used in workgroup and enterprise environments; typically
+                        rack-mounted with 24 or 48 ports.</dd>
+                    <dt class="notes-term">Uplink port</dt>
+                    <dd class="notes-definition">A higher-speed port on a managed switch used to connect it to other
+                        switches, enabling network expansion.</dd>
+                    <dt class="notes-term">Modular switch</dt>
+                    <dd class="notes-definition">An enterprise switch chassis that houses multiple switch modules
+                        sharing a common power supply and backplane, enabling hundreds of ports in a single appliance.
+                    </dd>
+                </dl>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

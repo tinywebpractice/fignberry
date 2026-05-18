@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6.3.7 Lesson Review - Q&amp;A</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+    <style>
+        .question {
+            margin-bottom: 2rem;
+        }
+
+        ul.answer-list {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0 0.75rem;
+        }
+
+        ul.answer-list li {
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.25rem;
+        }
+
+        ul.answer-list li.correct {
+            background: #d4edda;
+            font-weight: bold;
+        }
+
+        p.note {
+            font-size: 0.92em;
+            color: #555;
+            margin: 0.25rem 0 0;
+        }
+    </style>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content lesson-review-content">
+            <h1 class="notes-title">6.3.7 Lesson Review - Q&amp;A</h1>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q1. A video streaming service prioritizes speed over guaranteed delivery.
+                Which Transport layer protocol is most likely used?</h2>
+            <ul class="answer-list">
+                <li class="correct">User Datagram Protocol (UDP)</li>
+                <li>Transport Layer Protocol (TCP)</li>
+                <li>File Transfer Protocol (FTP)</li>
+                <li>Internet Control Message Protocol (ICMP)</li>
+            </ul>
+            <p class="note">Speed over guaranteed delivery = UDP. Video streaming prioritizes low latency and continuous
+                flow -- dropped frames are acceptable but retransmission delays are not. TCP adds latency via
+                retransmissions. FTP is an Application layer file transfer protocol. ICMP is used for diagnostics (ping,
+                traceroute).</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q2. Which best describes why TCP is considered a "connection-oriented"
+                protocol?</h2>
+            <ul class="answer-list">
+                <li>It uses encryption to secure data transmissions and prevent unauthorized access</li>
+                <li>It assigns random port numbers to ensure multiple applications can communicate simultaneously</li>
+                <li>It prioritizes speed over reliability, making it suitable for time-sensitive applications</li>
+                <li class="correct">It establishes a connection using a three-way handshake and ensures reliable data
+                    delivery</li>
+            </ul>
+            <p class="note">TCP's three-way handshake (SYN, SYN-ACK, ACK) formally establishes a connection before data
+                flows, after which ordered reliable delivery is guaranteed. TCP has no built-in encryption (that is
+                TLS/SSL). Ports are assigned systematically, not randomly. Prioritizing speed over reliability describes
+                UDP.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q3. Why does the Transport layer use port numbers in network communication?
+            </h2>
+            <ul class="answer-list">
+                <li class="correct">To distinguish between applications communicating on the same device</li>
+                <li>To identify the physical address of the destination device</li>
+                <li>To ensure data is routed to the correct network</li>
+                <li>To encrypt data for secure transmission</li>
+            </ul>
+            <p class="note">Port numbers allow multiple applications to send and receive simultaneously on the same
+                device (e.g. port 80 for HTTP, port 25 for SMTP). Physical (MAC) addresses are a Link layer concern.
+                Routing between networks is the Internet layer's job. Encryption is handled by TLS/SSL, not port
+                numbers.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q4. You've installed DNS on a Windows server. Which port must be opened on
+                the firewall to allow clients to access it?</h2>
+            <ul class="answer-list">
+                <li>143</li>
+                <li>110</li>
+                <li>123</li>
+                <li class="correct">53</li>
+            </ul>
+            <p class="note">Port 53 is the well-known port for DNS. Port 143 = IMAP. Port 110 = POP3. Port 123 = NTP
+                (Network Time Protocol).</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q5. A client sends packets to a web server on port 80 but the server does
+                not respond. What is the most likely cause?</h2>
+            <ul class="answer-list">
+                <li>The client device has an incorrect IP address</li>
+                <li class="correct">The server is using a different port for HTTP communication</li>
+                <li>The Transport layer protocol being used is UDP instead of TCP</li>
+                <li>The server's MAC address is not configured correctly</li>
+            </ul>
+            <p class="note">Packets are reaching the server (confirmed by packet analyzer) but it is not responding --
+                the web service is likely configured on a non-standard port. An incorrect client IP would prevent
+                packets from arriving at all. HTTP uses TCP, and the packets are already arriving. MAC addresses are
+                hardware-assigned and not manually configured.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q6. A client sends SYN, the server responds SYN-ACK, but the client never
+                sends the final ACK. What is the most likely cause?</h2>
+            <ul class="answer-list">
+                <li class="correct">The client's TCP connection is being blocked by a firewall, preventing the
+                    completion of the three-way handshake</li>
+                <li>The client's application is using an outdated protocol that does not support the three-way handshake
+                </li>
+                <li>The server's port number is incorrectly configured, causing the client to fail to respond</li>
+                <li>The server is using UDP instead of TCP, which does not require a three-way handshake</li>
+            </ul>
+            <p class="note">SYN sent, SYN-ACK received, but the final ACK never goes out -- a firewall blocking outbound
+                ACK packets is the classic explanation. The client clearly supports the handshake (it sent the SYN). The
+                server responded correctly so its port is fine. The SYN/SYN-ACK exchange is TCP-specific; UDP has no
+                handshake.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q7. A video conferencing app uses a connectionless protocol with minimal
+                overhead and occasionally drops frames or has slight audio delays. What conclusion can be drawn?</h2>
+            <ul class="answer-list">
+                <li>The application uses SSH, which is unsuitable because it is designed for secure remote access, not
+                    real-time communication</li>
+                <li>The application uses TCP, which is unsuitable because it prioritizes reliability over speed</li>
+                <li>The application uses HTTPS, which is unsuitable because it is designed for secure web browsing</li>
+                <li class="correct">The application uses UDP, which is suitable because it prioritizes speed and can
+                    tolerate minor data loss</li>
+            </ul>
+            <p class="note">Connectionless with minimal overhead = UDP. Dropped frames and audio delays are the expected
+                tradeoff for real-time video -- minor loss is acceptable to avoid retransmission latency. SSH is
+                TCP-based and connection-oriented. TCP is connection-oriented, not connectionless. HTTPS is an
+                Application layer protocol, not Transport layer.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q8. Which scenario best demonstrates the appropriate use of UDP?</h2>
+            <ul class="answer-list">
+                <li class="correct">A video streaming service that prioritizes speed over guaranteed delivery of every
+                    data packet</li>
+                <li>A remote server login session requiring authentication and reliable data transmission</li>
+                <li>A secure online banking transaction requiring encryption and acknowledgment of data delivery</li>
+                <li>A file transfer process where missing packets would result in corrupted files</li>
+            </ul>
+            <p class="note">UDP is ideal when speed matters more than perfection. Remote login (SSH) requires reliable
+                delivery -- use TCP. Banking requires reliability and security -- use TCP + TLS. File transfers where
+                missing packets corrupt the file require TCP. Video streaming can tolerate minor loss and benefits from
+                UDP's lower latency.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q9. An email protocol stores messages on the server, syncs across multiple
+                devices, and keeps messages until explicitly deleted. Which port does this protocol use?</h2>
+            <ul class="answer-list">
+                <li>21</li>
+                <li>110</li>
+                <li class="correct">143</li>
+                <li>80</li>
+            </ul>
+            <p class="note">Server-side storage, multi-device sync, messages kept until deleted = IMAP (Internet Message
+                Access Protocol), which uses port 143. Port 21 = FTP. Port 110 = POP3 (downloads and deletes from
+                server, opposite of IMAP). Port 80 = HTTP.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q10. Which layer of the TCP/IP protocol stack is responsible for assigning
+                port numbers to network applications?</h2>
+            <ul class="answer-list">
+                <li class="correct">Transport Layer</li>
+                <li>Application Layer</li>
+                <li>Internet Layer</li>
+                <li>Link Layer</li>
+            </ul>
+            <p class="note">Port numbers are a Transport layer function -- TCP and UDP both use ports to multiplex
+                traffic between applications. The Application layer uses port numbers but does not assign them. The
+                Internet layer handles IP addressing and routing. The Link layer handles framing and physical
+                transmission with no concept of ports.</p>
+        </div>
+
+        </main>
+    </div>
+</body>
+
+</html>

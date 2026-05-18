@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.3.8 ECC RAM - Quick Notes</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">3.3.8 ECC RAM</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Overview</h2>
+                <p class="notes-paragraph">
+                    <b>ECC (Error Correction Code) RAM</b> is used in workstations and servers where reliability is
+                    critical.
+                </p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">What ECC RAM Does</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Error Type</th>
+                            <th class="notes-table-heading">What Happens</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Single-bit error</td>
+                            <td class="notes-table-cell">Detects <b>and</b> corrects automatically</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Multi-bit error</td>
+                            <td class="notes-table-cell">Detects only, generates an error message, and halts the system
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">How It Works</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Adds an <b>8-bit checksum</b> to each data transfer</li>
+                    <li class="notes-list-item">Requires a <b>72-bit data bus</b> instead of the standard 64-bit data bus
+                    </li>
+                    <li class="notes-list-item">The <b>memory controller</b> calculates and compares the checksum to
+                        detect errors</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">DIMM Types</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Type</th>
+                            <th class="notes-table-heading">Description</th>
+                            <th class="notes-table-heading">Common Use</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>RDIMM</b> (Registered)</td>
+                            <td class="notes-table-cell">Includes a register to reduce electrical load on the memory
+                                controller, with a slight performance penalty</td>
+                            <td class="notes-table-cell">Most ECC RAM, servers, and workstations</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell"><b>UDIMM</b> (Unbuffered)</td>
+                            <td class="notes-table-cell">Standard consumer DIMMs, typically no ECC</td>
+                            <td class="notes-table-cell">Consumer PCs</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Compatibility Rules</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Both the <b>motherboard and CPU</b> must support ECC for it to work</li>
+                    <li class="notes-list-item">Most motherboards support either <b>UDIMMs or RDIMMs</b>, not both</li>
+                    <li class="notes-list-item">Mixing UDIMMs and RDIMMs causes the <b>system not to boot</b></li>
+                    <li class="notes-list-item">Mixing ECC and non-ECC UDIMMs causes <b>system instability</b> or
+                        failure to boot</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">DDR5 Note</h2>
+                <p class="notes-paragraph notes-paragraph--note">
+                    <b>Note:</b> DDR5 has a built-in internal error-checking mechanism, but this is not the same as ECC.
+                    DDR5 still comes in ECC and non-ECC versions, and only the ECC version provides full error correction
+                    through the memory controller.
+                </p>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

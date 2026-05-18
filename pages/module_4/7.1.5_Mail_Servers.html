@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.1.5 Mail Servers</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content lesson-review-content">
+        <h1 class="notes-title">7.1.5 Mail Servers</h1>
+
+        <section class="notes-section" id="overview">
+            <h2 class="notes-section-title">Overview</h2>
+            <p class="notes-paragraph">Two types of protocols process email: mail transfer protocols (move messages
+                between servers) and mailbox access protocols (allow clients to retrieve messages).</p>
+            <p class="notes-paragraph">Internet email addresses follow the format <code>username@domain.com</code>
+                (local part + @ + domain name).</p>
+        </section>
+
+        <section class="notes-section" id="smtp">
+            <h2 class="notes-section-title">SMTP (Simple Mail Transfer Protocol)</h2>
+            <p class="notes-paragraph">Specifies how email is delivered from one mail domain to another. The sending
+                SMTP server uses the domain portion of the recipient's address to look up the recipient's SMTP server
+                via DNS MX and A/AAAA records.</p>
+            <dl class="notes-terms">
+                <dt class="notes-term">MTA (Message Transfer Agent)</dt>
+                <dd class="notes-definition">SMTP server that relays messages between mail domains. Uses TCP/25
+                    (typically unencrypted, server-to-server).</dd>
+                <dt class="notes-term">MSA (Message Submission Agent)</dt>
+                <dd class="notes-definition">SMTP server that accepts messages from mail clients for delivery. Uses
+                    TCP/587 with encryption and authentication.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="imap">
+            <h2 class="notes-section-title">IMAP (Internet Message Access Protocol)</h2>
+            <p class="notes-paragraph">Mailbox access protocol used by mail clients to retrieve and manage messages
+                stored on the mail server. Supports folder synchronization (e.g., Sent Items, Inbox). Secure port:
+                TCP/993.</p>
+            <p class="notes-paragraph">POP3 (Post Office Protocol v3) is an older mailbox access protocol (TCP/110
+                unencrypted, TCP/995 encrypted). Unlike IMAP, POP3 typically downloads and deletes messages from the
+                server rather than syncing.</p>
+        </section>
+
+        <section class="notes-section" id="email-flow">
+            <h2 class="notes-section-title">Email Delivery Flow</h2>
+            <ol class="notes-list">
+                <li class="notes-list-item"><strong>Step 1:</strong> Client submits message to local SMTP server via
+                    TCP/587 (secure). Message is copied to Sent Items on local IMAP server via TCP/993.</li>
+                <li class="notes-list-item"><strong>Step 2:</strong> Local SMTP server uses DNS to look up the MX record
+                    for the recipient's domain and connects to the remote SMTP server via TCP/25 (unencrypted).</li>
+                <li class="notes-list-item"><strong>Step 3:</strong> Remote SMTP server accepts the message and copies
+                    it to the recipient's Inbox on the remote IMAP server.</li>
+                <li class="notes-list-item"><strong>Step 4:</strong> Remote mail client connects to its IMAP server via
+                    TCP/993 (secure) to download the message.</li>
+            </ol>
+        </section>
+
+        <section class="notes-section" id="ports">
+            <h2 class="notes-section-title">Port Reference</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Protocol</th>
+                        <th>Port</th>
+                        <th>Use</th>
+                        <th>Encrypted?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SMTP (MTA relay)</td>
+                        <td>TCP/25</td>
+                        <td>Server-to-server mail relay</td>
+                        <td>No (typically)</td>
+                    </tr>
+                    <tr>
+                        <td>SMTP (MSA submit)</td>
+                        <td>TCP/587</td>
+                        <td>Client to SMTP server submission</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>IMAP</td>
+                        <td>TCP/143</td>
+                        <td>Mailbox access (unencrypted)</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>IMAPS</td>
+                        <td>TCP/993</td>
+                        <td>Mailbox access (secure)</td>
+                        <td>Yes (TLS)</td>
+                    </tr>
+                    <tr>
+                        <td>POP3</td>
+                        <td>TCP/110</td>
+                        <td>Mailbox download (unencrypted)</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>POP3S</td>
+                        <td>TCP/995</td>
+                        <td>Mailbox download (secure)</td>
+                        <td>Yes (TLS)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        </main>
+    </div>
+</body>
+
+</html>

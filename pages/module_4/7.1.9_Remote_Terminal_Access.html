@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.1.9 Remote Terminal Access Servers</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content lesson-review-content">
+        <h1 class="notes-title">7.1.9 Remote Terminal Access Servers</h1>
+
+        <section class="notes-section" id="overview">
+            <h2 class="notes-section-title">Overview</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">TTY (Teletype)</dt>
+                <dd class="notes-definition">The original terminal device. Handles text input/output between the user
+                    and the shell. The terminal accepts input and displays output; the shell performs the actual
+                    processing.</dd>
+                <dt class="notes-term">Terminal Emulator</dt>
+                <dd class="notes-definition">Software that replicates TTY input/output function. A remote terminal
+                    emulator connects to the shell of a different host over the network.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="ssh">
+            <h2 class="notes-section-title">SSH (Secure Shell)</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">Purpose</dt>
+                <dd class="notes-definition">Principal means of secure remote access to UNIX/Linux servers and network
+                    appliances (switches, routers, firewalls). Provides encrypted terminal emulation.</dd>
+                <dt class="notes-term">Additional Uses</dt>
+                <dd class="notes-definition">SFTP (file transfer over SSH) and other network configurations.</dd>
+                <dt class="notes-term">Port</dt>
+                <dd class="notes-definition">TCP/22</dd>
+                <dt class="notes-term">Common Implementation</dt>
+                <dd class="notes-definition">OpenSSH (openssh.com) — available on UNIX, Linux, Windows, and macOS.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="telnet">
+            <h2 class="notes-section-title">Telnet</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">Purpose</dt>
+                <dd class="notes-definition">Protocol and terminal emulation tool that transmits shell commands and
+                    output between client and remote host.</dd>
+                <dt class="notes-term">Port</dt>
+                <dd class="notes-definition">TCP/23</dd>
+                <dt class="notes-term">Security</dt>
+                <dd class="notes-definition">No encryption. Password and all communications sent in plaintext.
+                    Vulnerable to packet sniffing and replay attacks. Should NOT be used for device configuration; SSH
+                    should be used instead.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="rdp">
+            <h2 class="notes-section-title">RDP (Remote Desktop Protocol)</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">Purpose</dt>
+                <dd class="notes-definition">Microsoft's protocol for remote GUI connections to a Windows machine. Sends
+                    screen and audio from the remote host to the client; transfers mouse and keyboard input from the
+                    client to the host.</dd>
+                <dt class="notes-term">Port</dt>
+                <dd class="notes-definition">TCP/3389</dd>
+                <dt class="notes-term">Platform Support</dt>
+                <dd class="notes-definition">RDP clients available on Linux, macOS, iOS, and Android. Open-source RDP
+                    server: xrdp (xrdp.org).</dd>
+                <dt class="notes-term">Security</dt>
+                <dd class="notes-definition">Administrator can specify connection permissions and configure encryption.
+                </dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="comparison">
+            <h2 class="notes-section-title">Comparison</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>SSH</th>
+                        <th>Telnet</th>
+                        <th>RDP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Interface</td>
+                        <td>Command-line (CLI)</td>
+                        <td>Command-line (CLI)</td>
+                        <td>Graphical (GUI)</td>
+                    </tr>
+                    <tr>
+                        <td>Encrypted</td>
+                        <td>Yes</td>
+                        <td>No</td>
+                        <td>Yes (configurable)</td>
+                    </tr>
+                    <tr>
+                        <td>Port</td>
+                        <td>TCP/22</td>
+                        <td>TCP/23</td>
+                        <td>TCP/3389</td>
+                    </tr>
+                    <tr>
+                        <td>Primary Use</td>
+                        <td>UNIX/Linux/network devices</td>
+                        <td>Legacy; now deprecated for config tasks</td>
+                        <td>Windows remote desktop</td>
+                    </tr>
+                    <tr>
+                        <td>Proprietary?</td>
+                        <td>No (open standard)</td>
+                        <td>No</td>
+                        <td>Yes (Microsoft)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="notes-section" id="ports">
+            <h2 class="notes-section-title">Port Reference</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Protocol</th>
+                        <th>Port</th>
+                        <th>Encrypted?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SSH</td>
+                        <td>TCP/22</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Telnet</td>
+                        <td>TCP/23</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>RDP</td>
+                        <td>TCP/3389</td>
+                        <td>Yes (configurable)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        </main>
+    </div>
+</body>
+
+</html>

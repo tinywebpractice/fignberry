@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.4.3 x64 CPU Architecture</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+        <main class="page-content notes-content">
+            <h1 class="notes-title">3.4.3 x64 CPU Architecture</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">x86 vs. x64</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Architecture</th>
+                            <th>Bit Width</th>
+                            <th>Max RAM</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>x86</td>
+                            <td>32-bit</td>
+                            <td>4 GB</td>
+                            <td>Standard through the 1990s; cannot run 64-bit software.</td>
+                        </tr>
+                        <tr>
+                            <td>x64 (x86-64)</td>
+                            <td>64-bit</td>
+                            <td>More than 4 GB</td>
+                            <td>64-bit extension of x86. Developed by AMD (AMD64), adopted by Intel (Intel 64 / EM64T).
+                                Can run both 32-bit and 64-bit software.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Software and Driver Compatibility</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Software (OS, drivers, applications) must be compiled specifically for
+                        x64 to take advantage of the architecture.</li>
+                    <li class="notes-list-item">Device drivers must match the OS architecture: a 64-bit OS requires
+                        64-bit drivers.</li>
+                    <li class="notes-list-item">Windows 11 and most modern Linux distributions require 64-bit versions.
+                        32-bit OS versions are becoming obsolete.</li>
+                    <li class="notes-list-item">macOS Catalina dropped 32-bit application support entirely.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">x64 Benefits</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><strong>Performance:</strong> handles wider data paths and larger
+                        instruction sets.</li>
+                    <li class="notes-list-item"><strong>Memory:</strong> supports more than 4 GB of RAM.</li>
+                    <li class="notes-list-item"><strong>Virtualization:</strong> supports hardware-based virtualization
+                        via Intel VT-x and AMD-V, improving VM performance and efficiency.</li>
+                    <li class="notes-list-item"><strong>Security:</strong> supports Data Execution Prevention (DEP),
+                        which prevents code from executing in non-executable memory regions.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">x86</dt>
+                    <dd class="notes-definition">The 32-bit CPU instruction set architecture, standard through the
+                        1990s. Cannot run 64-bit software.</dd>
+                    <dt class="notes-term">x64 (x86-64)</dt>
+                    <dd class="notes-definition">The 64-bit extension of x86, developed by AMD as AMD64 and adopted by
+                        Intel as Intel 64/EM64T. Supports more than 4 GB RAM and can run both 32-bit and 64-bit
+                        software.</dd>
+                    <dt class="notes-term">Device driver</dt>
+                    <dd class="notes-definition">Code that provides OS support for a specific hardware component. Must
+                        match the OS architecture (64-bit OS requires 64-bit drivers).</dd>
+                    <dt class="notes-term">Intel VT-x / AMD-V</dt>
+                    <dd class="notes-definition">Hardware-based virtualization technologies supported by x64 CPUs that
+                        improve the performance and efficiency of virtual machines.</dd>
+                    <dt class="notes-term">DEP (Data Execution Prevention)</dt>
+                    <dd class="notes-definition">A security feature on 64-bit systems that prevents code from executing
+                        in memory regions marked as non-executable, helping to block certain types of malware.</dd>
+                </dl>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

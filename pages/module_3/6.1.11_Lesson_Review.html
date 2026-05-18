@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6.1.11 Lesson Review - Q&amp;A</title>
+  <link rel="stylesheet" href="../../styles/site.css">
+  <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+  <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+    <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+    <span class="sidebar-toggle__label">Menu</span>
+  </button>
+  <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+  <div class="site-shell site-shell--sidebar">
+    <header class="site-header site-sidebar" id="site-sidebar">
+      <div class="site-sidebar__inner">
+        <p class="site-title">Course Navigation</p>
+        <nav class="site-nav" aria-label="Primary"></nav>
+      </div>
+    </header>
+
+    <main class="page-content notes-content lesson-review-content">
+      <h1 class="notes-title">6.1.11 Lesson Review - Q&amp;A</h1>
+
+      <div class="notes-section question">
+        <p>Q1. A coaxial cable is not properly connected to a cable modem. What should you do to secure it?</p>
+        <ul>
+          <li>Use an RJ11 connector to replace the coaxial cable</li>
+          <li class="correct">Screw down the F-type connector on the coaxial cable to secure it</li>
+          <li>Replace the RJ45 cable with a USB cable for better connectivity</li>
+          <li>Install a DSL splitter to separate voice and data signals</li>
+        </ul>
+        <p class="note">Coaxial cables use threaded F-type connectors that screw onto the modem port. RJ11 is for telephone/DSL lines. The RJ45 connects modem to router. A DSL splitter is irrelevant on a cable modem.</p>
+      </div>
+
+      <div class="notes-section question">
+        <p>Q2. Which BEST describes the primary characteristic of FTTC and FTTP internet connections?</p>
+        <ul>
+          <li>They use legacy copper telephone lines for data transmission</li>
+          <li>They are exclusively used for cellular internet connections</li>
+          <li>They use coaxial cables to connect the ISP to the customer's premises</li>
+          <li class="correct">They rely on fiber optic cables to deliver high-speed internet connections</li>
+        </ul>
+        <p class="note">Both FTTC and FTTP are fiber-based. The difference is how far the fiber runs: to the curb or all the way to the building. Copper telephone lines describe DSL; coaxial describes cable internet; neither is cellular.</p>
+      </div>
+
+      <div class="notes-section question">
+        <p>Q3. A firewall ACL must allow access to a cloud email service but block social media during work hours. Which rule best meets this requirement?</p>
+        <ul>
+          <li>Allow all traffic during work hours and block all traffic after work hours</li>
+          <li>Allow all outbound traffic and block all inbound traffic</li>
+          <li class="correct">Allow outbound traffic to the email server's IP address and block outbound traffic to known social media IP addresses</li>
+          <li>Block all traffic except for traffic on port 80 (HTTP) and port 443 (HTTPS)</li>
+        </ul>
+        <p class="note">ACLs permit or deny traffic based on specific criteria. Allowing and blocking by IP directly meets both requirements. Blocking all traffic after hours also blocks email. Allowing all outbound permits social media. Allowing only ports 80 and 443 still allows social media because it runs on those ports.</p>
+      </div>
+
+      <div class="notes-section question">
+        <p>Q4. What type of connector is typically used to connect a cable modem to the service provider's network?</p>
+        <ul>
+          <li>RJ11</li>
+          <li class="correct">F-type connector</li>
+          <li>RJ45</li>
+          <li>USB</li>
+        </ul>
+        <p class="note">The F-type is the threaded coaxial connector used on the ISP side of a cable modem. RJ11 is for telephone/DSL. RJ45 connects the modem to the router. USB is not used for ISP cable connections.</p>
+      </div>
+
+      <div class="notes-section question">
+        <p>Q5. Employees can access local resources but not the internet. The modem is confirmed working and connected to the ISP. What is the most likely issue?</p>
+        <ul>
+          <li>The switch is malfunctioning and needs to be replaced to restore internet access</li>
+          <li class="correct">The router is not properly configured to forward data packets between the local network and external networks</li>
+          <li>The modem's physical connection to the ISP is faulty and needs to be re-established</li>
+          <li>The DSL splitter is incorrectly installed, causing interference between voice and data signals</li>
+        </ul>
+        <p class="note">Local resources work, so the switch and LAN are fine. The modem is confirmed working. The router sits between LAN and WAN, so a router misconfiguration is the likely cause of broken internet access with working local traffic.</p>
+      </div>
+
+      <div class="notes-section question">
+        <p>Q6. How does a firewall contribute to network security?</p>
+        <ul>
+          <li class="correct">By filtering network traffic based on predefined security rules</li>
+          <li>By increasing the speed of data transmission across the network</li>
+          <li>By physically connecting the local network to the ISP's network</li>
+          <li>By converting IP addresses into domain names for easier access</li>
+        </ul>
+        <p class="note">Firewalls inspect traffic and permit or deny it based on rules such as port, IP address, and protocol. Increasing speed is handled by network hardware such as switches and NICs. Physical ISP connection is handled by a modem or ONT. IP-to-domain conversion is DNS.</p>
+      </div>
+
+      <div class="notes-section question">
+        <p>Q7. A small business in a rural area needs basic internet (email, web, cloud docs) where fiber and cable are unavailable. What is the most appropriate solution?</p>
+        <ul>
+          <li>Suggest waiting for 5G infrastructure to be deployed in the area</li>
+          <li class="correct">Install a 3G Cellular Radio Internet Connection</li>
+          <li>Advise the business to use dial-up internet for connectivity</li>
+          <li>Recommend a satellite internet connection for ultra-high speeds</li>
+        </ul>
+        <p class="note">Cellular radio is practical and available now. Waiting for 5G is not a solution. Dial-up is far too slow for cloud documents and modern web. Satellite may be viable, but the answer mischaracterizes it as ultra-high speed; satellite typically has high latency and higher cost than cellular for basic needs.</p>
+      </div>
+
+      <div class="notes-section question">
+        <p>Q8. How should a DSL modem be connected to the network?</p>
+        <ul>
+          <li>Connect the DSL modem's RJ11 port to the router and the RJ45 port to the phone line</li>
+          <li class="correct">Connect the DSL modem's RJ11 port to the phone line and the RJ45 port to the router</li>
+          <li>Connect the DSL modem's coaxial port to the phone line and the RJ45 port to the router</li>
+          <li>Connect the DSL modem's RJ45 port to the phone line and the RJ11 port to the router</li>
+        </ul>
+        <p class="note">RJ11 is the telephone connector, so it goes to the phone line carrying the DSL signal. RJ45 is Ethernet, so it connects to the router for the LAN side. DSL uses phone lines and RJ11, not coaxial.</p>
+      </div>
+
+      <div class="notes-section question">
+        <p>Q9. Why might Geostationary Orbital Satellite Internet not fully meet the needs of a business requiring video conferencing and real-time collaboration?</p>
+        <ul>
+          <li>Satellite internet connections are not compatible with modern networking hardware like routers</li>
+          <li>Geostationary satellites are unable to provide sufficient bandwidth for large data uploads</li>
+          <li class="correct">The high latency of satellite internet can negatively impact real-time collaboration and video conferencing</li>
+          <li>The satellite dish requires frequent realignment due to the movement of geostationary satellites</li>
+        </ul>
+        <p class="note">Geostationary satellites orbit at about 35,000 km, causing round-trip latency high enough to degrade real-time video and collaboration. Satellite modems can connect to standard routers. Bandwidth may be adequate; latency is the main issue. Geostationary satellites remain fixed relative to Earth, so frequent realignment is not required.</p>
+      </div>
+
+      <div class="notes-section question">
+        <p>Q10. Why is LEO Satellite Internet Access suitable for a disaster response team needing real-time communication and live video streaming?</p>
+        <ul>
+          <li>LEO satellite systems require minimal hardware, such as a single satellite dish, to maintain a connection</li>
+          <li class="correct">LEO satellite systems provide low latency, making them ideal for real-time communication and live video streaming</li>
+          <li>LEO satellite systems offer unlimited bandwidth, making them ideal for rapid data uploads to cloud storage</li>
+          <li>LEO satellite systems are unaffected by weather conditions, ensuring uninterrupted connectivity</li>
+        </ul>
+        <p class="note">LEO satellites orbit much closer to Earth than geostationary satellites, reducing latency and making them more suitable for real-time use. LEO systems still require specialized hardware, may have data limits, and can still be affected by weather.</p>
+      </div>
+
+      <div class="notes-section question">
+        <p>Q11. A SOHO connects to the internet via an antenna sending and receiving microwave signals to an ISP antenna, requiring clear line-of-sight. What connection type is this?</p>
+        <ul>
+          <li class="correct">WISP</li>
+          <li>Fiber</li>
+          <li>DSL</li>
+          <li>Satellite</li>
+        </ul>
+        <p class="note">WISP uses point-to-point microwave between the customer antenna and ISP antenna, requiring line-of-sight. Fiber uses glass cable. DSL uses copper phone lines. Satellite communicates with equipment in orbit rather than a nearby ground-based ISP antenna.</p>
+      </div>
+
+      <div class="notes-section question">
+        <p>Q12. You are installing a satellite connection for a home office. Which of the following statements is true?</p>
+        <ul>
+          <li>You must have at least one available phone line for data uploads</li>
+          <li class="correct">The satellite dish must be pointed in the correct direction to communicate properly</li>
+          <li>The connection to your computer from the satellite modem uses an RJ11</li>
+          <li>The connection between the satellite modem and dish uses a USB cable and connector</li>
+        </ul>
+        <p class="note">Satellite dishes must be aimed correctly. Satellite internet requires no phone line. The modem connects to a computer or router by RJ45 Ethernet, not RJ11. The dish connects to the modem using coaxial cable, not USB.</p>
+      </div>
+
+      <div class="notes-section question">
+        <p>Q13. What is the primary purpose of a firewall in a network?</p>
+        <ul>
+          <li>To convert digital signals into analog signals for transmission</li>
+          <li>To establish a physical connection to the ISP's network</li>
+          <li>To provide high-speed internet access through fiber optic cables</li>
+          <li class="correct">To block unauthorized access while permitting authorized communication</li>
+        </ul>
+        <p class="note">A firewall's core function is traffic filtering: denying unauthorized traffic while allowing legitimate traffic through based on rules. Converting digital to analog is a modem function. Physical ISP connection is handled by a modem or ONT. Fiber access is ISP infrastructure.</p>
+      </div>
+
+      <div class="notes-section question">
+        <p>Q14. Employees can't access required websites and unauthorized traffic is entering the network. What is the most effective fix while maintaining security?</p>
+        <ul>
+          <li>Enable port forwarding on the SOHO router to allow all incoming traffic to reach internal devices</li>
+          <li>Replace the SOHO router with a new one that does not include a firewall to simplify network management</li>
+          <li class="correct">Configure the firewall to allow specific outbound traffic to the required websites while blocking unauthorized inbound traffic</li>
+          <li>Disable the firewall on the SOHO router to allow unrestricted access to all websites</li>
+        </ul>
+        <p class="note">Updating firewall rules precisely addresses both issues. Port forwarding would worsen the inbound problem. Replacing the router with one that lacks a firewall or disabling the firewall removes the security boundary entirely.</p>
+      </div>
+
+      <div class="notes-section question">
+        <p>Q15. Your cellular plan provides maximum speeds of up to 10 Gbps. Which cellular network type are you using?</p>
+        <ul>
+          <li>2G</li>
+          <li>4G</li>
+          <li>3G</li>
+          <li class="correct">5G</li>
+        </ul>
+        <p class="note">10 Gbps is associated with the theoretical maximum speed of 5G. 2G, 3G, and 4G have much lower maximum speeds.</p>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.4.4 IEEE 802.11b/g</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+        <main class="page-content notes-content">
+            <h1 class="notes-title">5.4.4 IEEE 802.11b/g</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">802.11b vs. 802.11g Comparison</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>802.11b</th>
+                            <th>802.11g</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Band</td>
+                            <td>2.4 GHz</td>
+                            <td>2.4 GHz</td>
+                        </tr>
+                        <tr>
+                            <td>Max data rate</td>
+                            <td>11 Mbps</td>
+                            <td>54 Mbps</td>
+                        </tr>
+                        <tr>
+                            <td>Modulation</td>
+                            <td>DSSS (Direct-Sequence Spread Spectrum)</td>
+                            <td>OFDM (Orthogonal Frequency-Division Multiplexing)</td>
+                        </tr>
+                        <tr>
+                            <td>Channel width</td>
+                            <td>22 MHz</td>
+                            <td>20 MHz</td>
+                        </tr>
+                        <tr>
+                            <td>Backward compatibility</td>
+                            <td>N/A</td>
+                            <td>Compatible with 802.11b clients</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph">802.11g uses the same 54 Mbps rate and OFDM encoding as 802.11a, but operates
+                    in the 2.4 GHz band. This made backward compatibility with 802.11b straightforward. The channel
+                    layout in the 2.4 GHz range is kept the same between b and g for compatibility.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">2.4 GHz Channel Layout</h2>
+                <p class="notes-paragraph">The 2.4 GHz band has up to 14 channels spaced 5 MHz apart (2,412 MHz to 2,484
+                    MHz center frequencies). Because each channel is 22 MHz wide (802.11b) or 20 MHz wide (802.11g),
+                    channels overlap significantly. To avoid interference, only three non-overlapping channels should be
+                    used: <strong>1, 6, and 11</strong>.</p>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Region</th>
+                            <th>Permitted Channels</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Americas</td>
+                            <td>1-11</td>
+                        </tr>
+                        <tr>
+                            <td>Europe</td>
+                            <td>1-13</td>
+                        </tr>
+                        <tr>
+                            <td>Japan</td>
+                            <td>1-14</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">DSSS (Direct-Sequence Spread Spectrum)</dt>
+                    <dd class="notes-definition">The modulation technique used by 802.11b. Spreads the signal across a
+                        22 MHz channel to improve resistance to interference.</dd>
+                    <dt class="notes-term">OFDM (Orthogonal Frequency-Division Multiplexing)</dt>
+                    <dd class="notes-definition">A more efficient modulation technique used by 802.11g (and 802.11a).
+                        Sends more data across a 20 MHz channel by dividing it into multiple sub-carriers.</dd>
+                    <dt class="notes-term">Modulation</dt>
+                    <dd class="notes-definition">The process of modifying a radio wave so it can carry data.</dd>
+                    <dt class="notes-term">Non-overlapping channels (2.4 GHz)</dt>
+                    <dd class="notes-definition">Channels 1, 6, and 11 are the only three non-overlapping channels in
+                        the 2.4 GHz band in the Americas, and should be used to avoid co-channel interference.</dd>
+                </dl>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

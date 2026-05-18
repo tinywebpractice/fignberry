@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.1.8 Directory and Authentication Servers</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content lesson-review-content">
+        <h1 class="notes-title">7.1.8 Directory and Authentication Servers</h1>
+
+        <section class="notes-section" id="overview">
+            <h2 class="notes-section-title">Overview</h2>
+            <p class="notes-paragraph">Networks must authenticate and authorize clients before allowing access to
+                resources. Enterprise networks use directory servers to maintain a centralized database of user
+                accounts.</p>
+            <dl class="notes-terms">
+                <dt class="notes-term">SSO (Single Sign-On)</dt>
+                <dd class="notes-definition">A user authenticates once to gain authorization for all compatible
+                    application servers on the network.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="ldap">
+            <h2 class="notes-section-title">LDAP (Lightweight Directory Access Protocol)</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">Directory</dt>
+                <dd class="notes-definition">A database where network resources are recorded as objects (like records)
+                    with attributes (like fields). Based on the X.500 standard.</dd>
+                <dt class="notes-term">LDAP</dt>
+                <dd class="notes-definition">TCP/IP protocol used to query and update an X.500 directory. Supported by
+                    Windows Active Directory and open-source OpenLDAP.</dd>
+                <dt class="notes-term">Ports</dt>
+                <dd class="notes-definition">TCP/UDP 389 (default, unencrypted). TCP/636 (LDAPS — TLS-encrypted).</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="aaa">
+            <h2 class="notes-section-title">AAA (Authentication, Authorization, and Accounting)</h2>
+            <p class="notes-paragraph">Consolidates authentication services across multiple access devices, eliminating
+                the need for each device to store credentials locally.</p>
+            <dl class="notes-terms">
+                <dt class="notes-term">Supplicant</dt>
+                <dd class="notes-definition">The device requesting access (e.g., a user's PC or laptop).</dd>
+                <dt class="notes-term">NAS / NAP (Network Access Server / Network Access Point)</dt>
+                <dd class="notes-definition">Network access appliances (switches, access points, VPN gateways). Also
+                    called AAA clients or authenticators. They forward credentials between the supplicant and the AAA
+                    server — they do not store credentials themselves.</dd>
+                <dt class="notes-term">AAA Server</dt>
+                <dd class="notes-definition">The centralized authentication server, positioned within the local network.
+                    Validates credentials and issues access decisions.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section" id="radius-tacacs">
+            <h2 class="notes-section-title">RADIUS vs. TACACS+</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>RADIUS</th>
+                        <th>TACACS+</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Full Name</td>
+                        <td>Remote Authentication Dial In User Service</td>
+                        <td>Terminal Access Controller Access Control System Plus</td>
+                    </tr>
+                    <tr>
+                        <td>Protocol / Port</td>
+                        <td>TCP/UDP 1812 (auth), 1813 (accounting)</td>
+                        <td>TCP/49</td>
+                    </tr>
+                    <tr>
+                        <td>Primarily Used For</td>
+                        <td>Authenticating users to a network</td>
+                        <td>Authenticating devices (routers, switches)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="notes-section" id="radius-flow">
+            <h2 class="notes-section-title">RADIUS Authentication Flow</h2>
+            <ol class="notes-list">
+                <li class="notes-list-item"><strong>Step 1:</strong> RADIUS server and NAS (switch) are pre-configured
+                    with the same shared secret.</li>
+                <li class="notes-list-item"><strong>Step 2:</strong> Supplicant connects to the network.</li>
+                <li class="notes-list-item"><strong>Step 3:</strong> Switch instructs the supplicant to authenticate and
+                    blocks other network traffic.</li>
+                <li class="notes-list-item"><strong>Step 4:</strong> Supplicant transmits a credential.</li>
+                <li class="notes-list-item"><strong>Step 5:</strong> Switch forwards the credential to the RADIUS
+                    server.</li>
+                <li class="notes-list-item"><strong>Step 6:</strong> RADIUS server validates the credential.</li>
+                <li class="notes-list-item"><strong>Step 7:</strong> RADIUS server issues an Access-Accept.</li>
+                <li class="notes-list-item"><strong>Step 8:</strong> Switch opens the network channel for regular
+                    traffic.</li>
+            </ol>
+        </section>
+
+        <section class="notes-section" id="ports">
+            <h2 class="notes-section-title">Port Reference</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Protocol</th>
+                        <th>Port(s)</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>LDAP</td>
+                        <td>TCP/UDP 389</td>
+                        <td>Unencrypted directory queries</td>
+                    </tr>
+                    <tr>
+                        <td>LDAPS</td>
+                        <td>TCP/636</td>
+                        <td>TLS-encrypted LDAP</td>
+                    </tr>
+                    <tr>
+                        <td>RADIUS</td>
+                        <td>TCP/UDP 1812, 1813</td>
+                        <td>User authentication / accounting</td>
+                    </tr>
+                    <tr>
+                        <td>TACACS+</td>
+                        <td>TCP/49</td>
+                        <td>Device authentication</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        </main>
+    </div>
+</body>
+
+</html>
