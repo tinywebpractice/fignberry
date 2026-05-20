@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7.2.2 Lab: Use A Proxy Server - Quick Notes</title>
+  <link rel="stylesheet" href="../../styles/site.css">
+  <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+  <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+    <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+    <span class="sidebar-toggle__label">Menu</span>
+  </button>
+  <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+  <div class="site-shell site-shell--sidebar">
+    <header class="site-header site-sidebar" id="site-sidebar">
+      <div class="site-sidebar__inner">
+        <p class="site-title">Course Navigation</p>
+        <nav class="site-nav" aria-label="Primary"></nav>
+      </div>
+    </header>
+
+    <main class="page-content notes-content">
+      <h1 class="notes-title">7.2.2 Lab: Use A Proxy Server</h1>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Walkthrough Video</h2>
+        <p class="notes-paragraph">Use this walkthrough as your primary guide for the lab. If you prefer written instructions, refer to the steps below.</p>
+        <div style="position: relative; width: 100%; max-width: 750px; padding-bottom: 56.25%; margin: 0 0 24px;">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/16q8BBicn_A"
+            title="Use A Proxy Server Lab Walkthrough"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"
+            style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;">
+          </iframe>
+        </div>
+        <p class="notes-paragraph"><a href="https://www.youtube.com/watch?v=16q8BBicn_A" target="_blank" rel="noreferrer">Open the video on YouTube</a></p>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Lab Scenario</h2>
+        <p class="notes-paragraph">Configure a Windows workstation to use the organization's manual proxy server. You will open the Windows proxy settings, enable manual proxy setup, enter the proxy server address and port, and save the configuration.</p>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 1 - Access the Proxy Settings</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">Right-click <b>Start</b> and then select <b>Settings</b>.</li>
+          <li class="notes-list-item">Select <b>Network &amp; Internet</b>.</li>
+          <li class="notes-list-item">From the left pane, scroll down and select <b>Proxy</b>.</li>
+          <li class="notes-list-item">Maximize the window for better viewing.</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 2 - Configure a Manual Proxy</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">Under <b>Manual proxy setup</b>, slide the <b>Use a proxy server</b> button to <b>On</b>.</li>
+          <li class="notes-list-item">In the <b>Proxy IP Address</b> field, enter <b>proxy.corpnet.local</b>.</li>
+          <li class="notes-list-item">In the <b>Port</b> field, enter <b>9000</b>.</li>
+          <li class="notes-list-item">Select <b>Save</b>.</li>
+          <li class="notes-list-item">Close the <b>Settings</b> app.</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 3 - Verify the Configuration</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">Confirm that manual proxy setup is enabled.</li>
+          <li class="notes-list-item">Confirm that the address is <b>proxy.corpnet.local</b>.</li>
+          <li class="notes-list-item">Confirm that the port is <b>9000</b>.</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Connection Summary</h2>
+        <table class="notes-table">
+          <thead class="notes-table-head">
+            <tr class="notes-table-row">
+              <th class="notes-table-heading">Setting</th>
+              <th class="notes-table-heading">Value</th>
+              <th class="notes-table-heading">Purpose</th>
+            </tr>
+          </thead>
+          <tbody class="notes-table-body">
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Use a proxy server</td>
+              <td class="notes-table-cell">On</td>
+              <td class="notes-table-cell">Enables manual proxy settings for the workstation.</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Proxy IP Address</td>
+              <td class="notes-table-cell">proxy.corpnet.local</td>
+              <td class="notes-table-cell">Identifies the proxy server the workstation should use.</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Port</td>
+              <td class="notes-table-cell">9000</td>
+              <td class="notes-table-cell">Identifies the network port used by the proxy service.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Key Terms</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item"><b>Proxy server</b> - An intermediary server that forwards client web requests to the destination network or internet resource.</li>
+          <li class="notes-list-item"><b>Proxy address</b> - The hostname or IP address of the proxy server.</li>
+          <li class="notes-list-item"><b>Proxy port</b> - The TCP port number the client uses to connect to the proxy service.</li>
+        </ul>
+      </section>
+
+      <blockquote>
+        <p><strong>Important:</strong> Enter the proxy address and port exactly as shown: <b>proxy.corpnet.local</b> and <b>9000</b>.</p>
+      </blockquote>
+    </main>
+  </div>
+</body>
+
+</html>
