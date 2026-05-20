@@ -127,6 +127,7 @@ const NAV_DATA = [
       { title: "5.3.10 Copper Cabling Installation Considerations", path: "pages/module_3/5.3.10_Copper_Cabling_Installation_Considerations.html" },
       { title: "5.3.11 Optical Cabling", path: "pages/module_3/5.3.11_Optical_Cabling.html" },
       { title: "5.3.13 Coaxial Cabling", path: "pages/module_3/5.3.13_Coaxial_Cabling.html" },
+      { title: "5.3.14 Lesson Review", path: "pages/module_3/5.3.14_Lesson_Review.html" },
       { title: "5.4.1 Access Points", path: "pages/module_3/5.4.1_Access_Points.html" },
       { title: "5.4.2 Frequency Bands", path: "pages/module_3/5.4.2_Frequency_Bands.html" },
       { title: "5.4.3 IEEE 802.11a", path: "pages/module_3/5.4.3_IEEE_802.11a.html" },
@@ -151,6 +152,7 @@ const NAV_DATA = [
       { title: "7.1.10 Time Servers", path: "pages/module_4/7.1.10_Time_Servers.html" },
       { title: "7.1.11 Network Monitoring Servers", path: "pages/module_4/7.1.11_Network_Monitoring_Servers.html" },
       { title: "7.1.12 Lesson Review", path: "pages/module_4/7.1.12_Lesson_Review.html" },
+      { title: "7.2.2 Use A Proxy Server Lab", path: "pages/module_4/7.2.2_Lab_Use_A_Proxy_Server.html" },
     ]
   }
 ];
