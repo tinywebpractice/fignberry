@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8.2.5 Common Cloud Service Models</title>
+  <link rel="stylesheet" href="../../styles/site.css">
+  <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+  <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+    <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+    <span class="sidebar-toggle__label">Menu</span>
+  </button>
+
+  <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+  <div class="site-shell site-shell--sidebar">
+    <header class="site-header site-sidebar" id="site-sidebar">
+      <div class="site-sidebar__inner">
+        <p class="site-title">Course Navigation</p>
+        <nav class="site-nav" aria-label="Primary"></nav>
+      </div>
+    </header>
+
+    <main class="page-content notes-content">
+      <h1 class="notes-title">8.2.5 Common Cloud Service Models</h1>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Cloud Service Models Overview</h2>
+        <p class="notes-paragraph">Cloud service models are differentiated by the level of complexity and preconfiguration provided, in addition to the deployment model. The four most common models are IaaS, SaaS, PaaS, and DaaS.</p>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Service Model Definitions</h2>
+        <dl class="notes-terms">
+          <dt class="notes-term">Infrastructure as a Service (IaaS)</dt>
+          <dd class="notes-definition">Provision and manage IT resources, including virtual servers, storage, networking, and load balancers, from a cloud provider without owning physical hardware. Resources deploy and scale quickly. Examples include Amazon EC2, Microsoft Azure Virtual Machines, and OpenStack.</dd>
+
+          <dt class="notes-term">Software as a Service (SaaS)</dt>
+          <dd class="notes-definition">Software applications delivered over the internet on a subscription or pay-as-you-go basis. No local installation is required. Supports single-tenancy for one user or multi-tenancy for multiple specified users. Examples include Microsoft 365, Salesforce, and Google Workspace.</dd>
+
+          <dt class="notes-term">Platform as a Service (PaaS)</dt>
+          <dd class="notes-definition">A development environment that includes infrastructure, such as servers and storage, plus tools for building, testing, and deploying applications. No pre-built application is included. Developers create, secure, and manage their own software while the provider maintains platform availability and infrastructure integrity. Platforms may be based on Oracle, MS SQL, PHP, or MySQL. Examples include Oracle Cloud, Microsoft Azure SQL Database, and Google App Engine.</dd>
+
+          <dt class="notes-term">Desktop as a Service (DaaS)</dt>
+          <dd class="notes-definition">Virtual desktops delivered to end users over the internet, accessible from any device and location. The desktop environment is managed entirely by a third-party provider.</dd>
+        </dl>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Comparison Table</h2>
+        <table class="notes-table">
+          <thead class="notes-table-head">
+            <tr class="notes-table-row">
+              <th class="notes-table-heading">Model</th>
+              <th class="notes-table-heading">Provider Manages</th>
+              <th class="notes-table-heading">Customer Manages</th>
+              <th class="notes-table-heading">Key Distinction</th>
+            </tr>
+          </thead>
+          <tbody class="notes-table-body">
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">IaaS</td>
+              <td class="notes-table-cell">Physical hardware, networking</td>
+              <td class="notes-table-cell">VMs, OS, apps, data</td>
+              <td class="notes-table-cell">Raw compute and storage resources</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">SaaS</td>
+              <td class="notes-table-cell">Everything, including the app</td>
+              <td class="notes-table-cell">Data, user access</td>
+              <td class="notes-table-cell">Ready-to-use application</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">PaaS</td>
+              <td class="notes-table-cell">Infrastructure and platform tools</td>
+              <td class="notes-table-cell">Application code, security</td>
+              <td class="notes-table-cell">Build and deploy environment; no pre-built app</td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">DaaS</td>
+              <td class="notes-table-cell">Everything, including virtual desktop</td>
+              <td class="notes-table-cell">Usage only</td>
+              <td class="notes-table-cell">Full desktop environment via internet</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

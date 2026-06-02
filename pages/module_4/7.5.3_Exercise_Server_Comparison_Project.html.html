@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.5.3 Exercise: Server Comparison Project</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">7.5.3 Exercise: Server Comparison Project</h1>
+
+            <p class="notes-paragraph">This lesson is a research and presentation exercise. CompTIA asks you to pick two
+                of the three server types below, compare their purposes and functions, and present your findings. The
+                table below covers all three as reference.</p>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Server Type Comparison</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>File Server</th>
+                            <th>Application Server</th>
+                            <th>Database Server</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Primary Purpose</strong></td>
+                            <td>Centralized storage and access to files across the network</td>
+                            <td>Hosts and runs applications that clients access remotely</td>
+                            <td>Stores, manages, and retrieves structured data for clients and applications</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Key Functions</strong></td>
+                            <td>File sharing, permissions management, storage allocation</td>
+                            <td>Application execution, session management, business logic processing</td>
+                            <td>Query processing, data integrity, transaction management</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Real-World Examples</strong></td>
+                            <td>Windows Server with shared drives; NAS devices</td>
+                            <td>Web app servers (Apache Tomcat, IIS); ERP systems</td>
+                            <td>MySQL, Microsoft SQL Server, Oracle DB</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Common Software</strong></td>
+                            <td>Windows Server, Samba (Linux)</td>
+                            <td>IIS, Apache Tomcat, JBoss</td>
+                            <td>MySQL, PostgreSQL, Microsoft SQL Server</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hardware Needs</strong></td>
+                            <td>High storage capacity, RAID, fast network I/O</td>
+                            <td>High CPU and RAM for processing application logic</td>
+                            <td>Fast storage (SSD/NVMe), high RAM, fast I/O</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Benefits</strong></td>
+                            <td>Centralized backups, easy access control, simple to implement</td>
+                            <td>Centralized app management, reduces load on client devices</td>
+                            <td>Efficient data retrieval, supports complex queries, multi-user access</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Limitations</strong></td>
+                            <td>Single point of failure without redundancy; performance degrades with heavy use</td>
+                            <td>Server becomes bottleneck if underpowered; complex to configure</td>
+                            <td>Requires skilled administration; performance-intensive for large datasets</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Exam Objective</h2>
+                <p class="notes-paragraph">This exercise supports <strong>A+ Core 1 (220-1201) Objective 2.3</strong>:
+                    Summarize services provided by networked hosts.</p>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8.1.7 Lesson Review</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+
+<body>
+    <button class="sidebar-toggle" aria-label="Toggle sidebar">&#9776;</button>
+    <div class="sidebar-backdrop"></div>
+    <nav class="site-sidebar" aria-label="Site navigation"></nav>
+    <nav class="site-nav" aria-label="Primary"></nav>
+
+    <main class="page-content notes-content">
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q1. Which key advantages do containers have over virtual machines? (Select
+                two.)</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item">Portability between hypervisor environments</li>
+                <li class="notes-list-item">Hardware optimization</li>
+                <li class="notes-list-item correct">Smaller size and may only require a few megabytes ✓</li>
+                <li class="notes-list-item correct">Faster start times for containerized applications ✓</li>
+                <li class="notes-list-item">The ability to run legacy software on an updated operating system</li>
+            </ul>
+            <p class="note">Containers win on size (no full OS image, just the app and its dependencies) and speed (no
+                hypervisor or full OS boot sequence needed). Portability between hypervisors is a VM advantage; running
+                legacy software on a different OS is also a VM strength since containers share the host kernel.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q2. A network technician installs virtual machines in hypervisor software
+                that runs directly onto a server. What kind of hypervisor setup is this? (Select two.)</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item correct">Bare metal ✓</li>
+                <li class="notes-list-item correct">Type 1 ✓</li>
+                <li class="notes-list-item">Type 2</li>
+                <li class="notes-list-item">Guest OS</li>
+            </ul>
+            <p class="note">Bare metal and Type 1 are two names for the same thing -- a hypervisor that runs directly on
+                hardware with no host OS underneath. Type 2 runs on top of a host OS. Guest OS runs inside a VM on top
+                of the hypervisor.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q3. While creating a virtual machine, you decide to set it up to use an
+                external network. What else do you need to do to enable the external network configuration?</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item correct">Select a NIC using the virtual switch manager. ✓</li>
+                <li class="notes-list-item">Set the RAM on the virtual machine to match the host.</li>
+                <li class="notes-list-item">Make sure that you are using a Type 1 hypervisor.</li>
+                <li class="notes-list-item">Configure the virtual machine to use Remote Desktop Protocol (RDP).</li>
+            </ul>
+            <p class="note">To bridge a VM to an external network, the hypervisor's virtual switch manager must bind a
+                virtual switch to a physical NIC on the host. RAM allocation is unrelated to networking; external
+                networking works on both Type 1 and Type 2; RDP is a remote access protocol, not a network configuration
+                tool.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q4. A developer wants to ensure that all the clients using their application
+                always use the latest, most updated version. How can the developer make sure of this?</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item correct">Application virtualization ✓</li>
+                <li class="notes-list-item">Client-side virtualization</li>
+                <li class="notes-list-item">Server-side virtualization</li>
+                <li class="notes-list-item">Container virtualization</li>
+            </ul>
+            <p class="note">Application virtualization streams the app from a central server at runtime -- it never
+                fully installs on the client, so the developer controls the version centrally and all clients
+                automatically get the current version. Client-side virtualization still requires per-client updates;
+                server-side virtualization is about resource management; containers don't inherently guarantee all
+                clients run the latest version without additional orchestration.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q5. You are tasked with setting up a virtualization environment for a team
+                of developers who need to test applications on their existing desktop computers. The developers require
+                the ability to run multiple operating systems simultaneously without replacing their current OS. Which
+                type of hypervisor would be the most appropriate for this scenario?</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item">Virtual Desktop Infrastructure (VDI)</li>
+                <li class="notes-list-item correct">Type 2 (Host-based Hypervisor) ✓</li>
+                <li class="notes-list-item">Type 1 (Bare Metal Hypervisor)</li>
+                <li class="notes-list-item">Container virtualization</li>
+            </ul>
+            <p class="note">Type 2 installs as an application on top of an existing OS, allowing developers to keep
+                their current OS and run additional guest OSes alongside it. Type 1 replaces the host OS entirely; VDI
+                streams desktops from a central server; containers share the host kernel and cannot run multiple
+                different full OSes simultaneously.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q6. What is the primary benefit of server-side virtualization?</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item correct">It improves hardware utilization through server consolidation. ✓
+                </li>
+                <li class="notes-list-item">It simplifies the process of creating isolated environments for testing and
+                    development.</li>
+                <li class="notes-list-item">It allows users to access applications without installing them locally.</li>
+                <li class="notes-list-item">It eliminates the need for a hypervisor by isolating resources at the OS
+                    level.</li>
+            </ul>
+            <p class="note">Server-side virtualization consolidates multiple workloads onto fewer physical machines,
+                maximizing hardware utilization. Isolated testing environments describe client-side/Type 2
+                virtualization; accessing apps without local installation describes application virtualization; OS-level
+                isolation without a hypervisor describes container virtualization.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q7. Which of the following is a key consideration for ensuring security in a
+                client-side virtualization environment?</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item correct">Ensuring the host OS and hypervisor are regularly updated with
+                    security patches ✓</li>
+                <li class="notes-list-item">Avoiding the use of snapshots to reduce storage requirements</li>
+                <li class="notes-list-item">Disabling virtualization extensions in the CPU to prevent unauthorized
+                    access</li>
+                <li class="notes-list-item">Using 32-bit hypervisors to limit the number of guest OSes that can be
+                    installed</li>
+            </ul>
+            <p class="note">Both the host OS and hypervisor are attack surfaces; keeping both patched is foundational
+                security practice. Snapshots are a security asset enabling rollback to known-good states. Disabling CPU
+                extensions (Intel VT-x/AMD-V) would break virtualization entirely. 32-bit hypervisors are a legacy
+                limitation, not a security control.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q8. You want to create a virtualization environment that runs directly on
+                the host machine's hardware to manage the virtual machines. Which of the following virtualization types
+                should you use?</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item correct">Type 1 hypervisor ✓</li>
+                <li class="notes-list-item">Type 2 hypervisor</li>
+                <li class="notes-list-item">Container virtualization</li>
+                <li class="notes-list-item">VDI</li>
+            </ul>
+            <p class="note">Type 1 hypervisors run directly on bare metal hardware with no underlying host OS. Type 2
+                runs on top of an existing host OS. Containers share the host OS kernel and don't use a hypervisor. VDI
+                is a desktop delivery model, not a hypervisor type.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q9. A network technician gathers requirements to implement virtualization of
+                multiple guest VMs that will need to communicate. Which of the following resource requirements will the
+                technician need to employ? (Select three.)</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item correct">Memory above what the OS requires ✓</li>
+                <li class="notes-list-item correct">Virtualization support enabled on the CPU ✓</li>
+                <li class="notes-list-item correct">A virtual network environment ✓</li>
+                <li class="notes-list-item">Low storage requirements</li>
+            </ul>
+            <p class="note">Each guest VM needs its own RAM allocation on top of host OS usage; CPU virtualization
+                extensions (Intel VT-x/AMD-V) must be enabled in BIOS/UEFI; a virtual switch/network is required for VMs
+                to communicate with each other. Storage requirements are actually high, not low -- each VM has its own
+                virtual disk image.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q10. Rachel, an employee in the support department, wants to run a virtual
+                machine on her computer to troubleshoot customer issues. Which of the following must she complete before
+                virtualization will work on her computer?</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item correct">Enable virtualization support in the BIOS settings. ✓</li>
+                <li class="notes-list-item">Install an extra hard disk that the new virtual machine will run on.</li>
+                <li class="notes-list-item">Flash the computer's BIOS to add virtualization support.</li>
+                <li class="notes-list-item">Install additional memory.</li>
+            </ul>
+            <p class="note">CPU virtualization extensions (Intel VT-x/AMD-V) are present on modern processors but are
+                often disabled by default in BIOS/UEFI -- enabling them is the required prerequisite. VMs use virtual
+                disk files on existing storage, so a separate physical disk is not needed. A BIOS flash doesn't add
+                virtualization capability; it's already built into the CPU hardware. Additional RAM may improve
+                performance but is not a prerequisite.</p>
+        </div>
+
+    </main>
+
+    <script src="../../js/nav.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.5.2 Troubleshooting Networks (Part 1)</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">7.5.2 Troubleshooting Networks (Part 1)</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Common Network Failure Points</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><strong>Cables</strong> — damaged, improperly seated, or faulty patch
+                        cords</li>
+                    <li class="notes-list-item"><strong>NICs</strong> — failed hardware or bad/incompatible drivers</li>
+                    <li class="notes-list-item"><strong>Switch/router ports</strong> — damaged ports, disabled ports,
+                        misconfigured settings</li>
+                    <li class="notes-list-item"><strong>Wi-Fi</strong> — interference, misconfiguration, signal issues
+                    </li>
+                    <li class="notes-list-item"><strong>Power problems</strong> — power blinks can wipe unsaved
+                        configurations</li>
+                    <li class="notes-list-item"><strong>Driver problems</strong> — new/updated drivers that cause
+                        issues; rollback may be required</li>
+                    <li class="notes-list-item"><strong>Configuration mistakes</strong> — human error (wrong IPs,
+                        gateway, VLAN, etc.)</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">SOHO Network Failure Points</h2>
+                <p class="notes-paragraph">A typical SOHO device combines a wireless access point, physical switch
+                    ports, and a router in one unit. Common failure points include:</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><strong>Cabling</strong> &mdash; home cables are more likely to be
+                        moved, pulled, or damaged accidentally</li>
+                    <li class="notes-list-item"><strong>Wi-Fi configuration</strong> &mdash; incorrect SSID or password
+                        on the AP or client device</li>
+                    <li class="notes-list-item"><strong>Switch ports</strong> &mdash; ports can degrade or fail on the
+                        combo device</li>
+                    <li class="notes-list-item"><strong>NICs</strong> &mdash; wired or wireless adapters on client
+                        devices can fail</li>
+                    <li class="notes-list-item"><strong>ISP / outside the DMARC</strong> &mdash; line cuts, ISP
+                        equipment issues, or configuration problems on the provider side</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Troubleshooting Process: Inside Out</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Step</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1</strong></td>
+                            <td>Test everything inside the private network first. Ping between wired computers, ping
+                                wireless devices, ping the default gateway.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2</strong></td>
+                            <td>If internal connectivity is confirmed but internet access fails, the issue is likely on
+                                the ISP side (outside the DMARC).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3</strong></td>
+                            <td>Contact the ISP if the problem appears to be beyond the DMARC (line cut, ISP equipment
+                                fault, provider-side config issue).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">DMARC (Demarcation Point)</h2>
+                <p class="notes-paragraph">The boundary between the customer's private network and the ISP's
+                    infrastructure. Problems on the customer side are the technician's responsibility; problems beyond
+                    the DMARC belong to the ISP.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">OSI Model Approach to Troubleshooting</h2>
+                <p class="notes-paragraph">Always start at <strong>Layer 1 (Physical)</strong> and work upward. Most
+                    network problems are resolved at the lower layers before reaching application-level issues.</p>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Layer</th>
+                            <th>What to Check</th>
+                            <th>Tools / Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1 — Physical</strong></td>
+                            <td>Cables, link LEDs, NIC hardware</td>
+                            <td>Visual inspection, cable tester, loopback ping, swap cable/port</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2 — Data Link</strong></td>
+                            <td>NIC driver, switch port status, port configuration</td>
+                            <td>Check switch config, enable/move port, update or roll back NIC driver</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3 — Network</strong></td>
+                            <td>IP address, subnet mask, default gateway, DHCP scope</td>
+                            <td><code>ipconfig /all</code>, ping default gateway, check DHCP server scope</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Upper layers</strong></td>
+                            <td>Application faults, driver issues</td>
+                            <td>Reinstall application, roll back driver</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Troubleshooting Tools</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">ping</dt>
+                    <dd class="notes-definition">Tests connectivity to a target IP. Use a loopback ping
+                        (<code>ping 127.0.0.1</code>) to test the local NIC. Ping the default gateway to confirm Layer 3
+                        reachability. Ping devices hop by hop to isolate where connectivity breaks.</dd>
+                    <dt class="notes-term">ipconfig /all</dt>
+                    <dd class="notes-definition">Displays IP address, subnet mask, default gateway, DNS servers, and
+                        other adapter settings. Confirms whether DHCP-issued configuration is correct.</dd>
+                    <dt class="notes-term">tracert</dt>
+                    <dd class="notes-definition">Traces the route packets take to a destination, showing each hop.
+                        Useful for identifying where in the path communication fails.</dd>
+                </dl>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Scope-Based Isolation</h2>
+                <p class="notes-paragraph">Before diving into physical checks, determine the scope of the problem:</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><strong>Only one host affected</strong> — problem is likely local
+                        (cable, NIC, IP config).</li>
+                    <li class="notes-list-item"><strong>Multiple hosts affected</strong> — problem is likely
+                        infrastructure (switch port, DHCP server, router, gateway config).</li>
+                    <li class="notes-list-item"><strong>Other hosts can reach the target but one cannot</strong> —
+                        server/path is fine; focus troubleshooting on the affected host.</li>
+                </ul>
+                <p class="notes-paragraph">Real-world example: a DHCP scope configured with the wrong default gateway
+                    address caused all clients to receive incorrect gateway IPs, blocking all external access.
+                    Correcting the scope fixed the issue network-wide.</p>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

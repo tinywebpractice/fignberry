@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.6 Module Quiz — Q&amp;A</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">7.6 Module Quiz — Q&amp;A</h1>
+
+            <!-- Q1 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 1</h2>
+                <p class="notes-paragraph">A security technician is installing a doorbell/video entry system for a
+                    customer so that the customer can see and communicate with people who come to their home when they
+                    aren't there. What kind of device is the doorbell/video entry system?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">OT</li>
+                    <li class="notes-list-item">Hub and control system</li>
+                    <li class="correct">Smart device</li>
+                    <li class="notes-list-item">Zigbee</li>
+                </ul>
+                <p class="note">A video doorbell is a consumer IoT smart device — it connects to the internet and is
+                    controlled via a smartphone app. It is an endpoint device, not a hub, not an industrial OT device,
+                    and Zigbee is a protocol, not a device category.</p>
+            </div>
+
+            <!-- Q2 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 2</h2>
+                <p class="notes-paragraph">Your company has recently launched an e-commerce website currently using HTTP
+                    for data exchange. Customers are hesitant to make purchases due to security concerns. What should
+                    you do?</p>
+                <ul class="notes-list">
+                    <li class="correct">Implement HTTPS by installing a digital certificate on the server and
+                        redirecting all HTTP traffic to HTTPS to ensure encrypted data transmission.</li>
+                    <li class="notes-list-item">Configure the website to use HTTP over port 443 to give the appearance
+                        of security without making any actual changes to data encryption.</li>
+                    <li class="notes-list-item">Increase the server's bandwidth to improve data transmission speed and
+                        reassure customers about the website's performance.</li>
+                    <li class="notes-list-item">Advise customers to use a VPN when accessing the website to secure their
+                        data independently of the website's configuration.</li>
+                </ul>
+                <p class="note">HTTPS encrypts data in transit using TLS. A digital certificate authenticates the
+                    server; redirecting HTTP to HTTPS ensures all traffic is encrypted. Running HTTP over port 443
+                    provides no encryption. Bandwidth and VPN advice do not fix the server-side security gap.</p>
+            </div>
+
+            <!-- Q3 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 3</h2>
+                <p class="notes-paragraph">Which of the following statements best describes the function of Hypertext
+                    Transfer Protocol Secure (HTTPS)?</p>
+                <ul class="notes-list">
+                    <li class="correct">HTTPS is a secure version of HTTP that uses encryption to protect data
+                        transmitted between a client and a server.</li>
+                    <li class="notes-list-item">HTTPS is a protocol that allows users to upload files to a web server
+                        without encryption.</li>
+                    <li class="notes-list-item">HTTPS is a protocol used to establish a connection between two servers
+                        without verifying their identities.</li>
+                    <li class="notes-list-item">HTTPS is a protocol used to transfer unencrypted data between a client
+                        and a server over the internet.</li>
+                </ul>
+                <p class="note">HTTPS = HTTP + TLS encryption. It authenticates the server via certificate and encrypts
+                    all traffic. Unencrypted transfers describe HTTP; no identity verification describes neither HTTPS
+                    nor any correct protocol; file uploads without encryption describes FTP.</p>
+            </div>
+
+            <!-- Q4 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 4</h2>
+                <p class="notes-paragraph">What is a common cause of reduced network speed in a cabled link?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Weak wireless signal strength</li>
+                    <li class="notes-list-item">Incorrect network password</li>
+                    <li class="notes-list-item">Outdated VoIP application</li>
+                    <li class="correct">Mismatched duplex settings</li>
+                </ul>
+                <p class="note">A duplex mismatch between the NIC and switch port is a primary cause of reduced
+                    throughput on a cabled link; both should be set to autonegotiate. The other options are wireless or
+                    application-layer issues unrelated to cabled link speed.</p>
+            </div>
+
+            <!-- Q5 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 5</h2>
+                <p class="notes-paragraph">Company employees are accessing the same resources on the internet many times
+                    a day. As the network administrator, you configure a solution that forwards traffic to and from the
+                    internet and also caches content to improve performance and reduce bandwidth consumption. What
+                    solution are you implementing?</p>
+                <ul class="notes-list">
+                    <li class="correct">Proxy server</li>
+                    <li class="notes-list-item">UTM</li>
+                    <li class="notes-list-item">NAT</li>
+                    <li class="notes-list-item">Load balancer</li>
+                </ul>
+                <p class="note">A proxy server forwards traffic on behalf of clients and caches frequently accessed
+                    content. UTM consolidates security functions but does not cache content. NAT translates addresses
+                    only. A load balancer distributes traffic across backend servers.</p>
+            </div>
+
+            <!-- Q6 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 6</h2>
+                <p class="notes-paragraph">You are an IT administrator setting up email access for remote employees who
+                    need to download their emails to their local devices and read them offline. Which protocol would you
+                    apply to configure their email clients to meet this requirement?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Simple Mail Transfer Protocol (SMTP)</li>
+                    <li class="notes-list-item">Hypertext Transfer Protocol Secure (HTTPS)</li>
+                    <li class="notes-list-item">Internet Message Access Protocol (IMAP)</li>
+                    <li class="correct">Post Office Protocol (POP3)</li>
+                </ul>
+                <p class="note">POP3 downloads emails to the local device for offline access. SMTP is for sending email.
+                    HTTPS is a web protocol. IMAP keeps email on the server and syncs across devices but is not designed
+                    for offline reading.</p>
+            </div>
+
+            <!-- Q7 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 7</h2>
+                <p class="notes-paragraph">Which of the following functions are performed by proxy servers? (Select
+                    two.)</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Block unwanted packets from entering your private network.</li>
+                    <li class="notes-list-item">Store client files.</li>
+                    <li class="correct">Cache web pages.</li>
+                    <li class="correct">Block employees from accessing certain websites.</li>
+                    <li class="notes-list-item">Filter unwanted email.</li>
+                </ul>
+                <p class="note">Proxy servers cache content and act as content filters. Blocking unwanted packets is a
+                    firewall function. Storing files is a file server function. Filtering email is a spam gateway
+                    function.</p>
+            </div>
+
+            <!-- Q8 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 8</h2>
+                <p class="notes-paragraph">You are an IT technician tasked with resolving a wired connectivity issue for
+                    a workstation in an office. The user reports intermittent connectivity problems. Upon inspection,
+                    you notice that the link LEDs on the network adapter and switch port are flickering inconsistently.
+                    What is the BEST next step to troubleshoot and resolve the issue?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Use a loopback tool to test the switch port.</li>
+                    <li class="correct">Substitute the current patch cord with a known good cable.</li>
+                    <li class="notes-list-item">Update the NIC's device driver software.</li>
+                    <li class="notes-list-item">Replace the network adapter (NIC) on the workstation.</li>
+                </ul>
+                <p class="note">Inconsistently flickering LEDs indicate an unstable physical link. Step 1 is always to
+                    substitute the patch cord. Loopback testing is Step 2, driver updates are Step 5, and NIC
+                    replacement is a last resort.</p>
+            </div>
+
+            <!-- Q9 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 9</h2>
+                <p class="notes-paragraph">A network technician troubleshoots a computer on the wired network that is
+                    experiencing slow network speeds. Which of the following would NOT be a possible cause for the
+                    technician to troubleshoot?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Improperly terminated patch cords</li>
+                    <li class="notes-list-item">Improper speed/duplex configuration</li>
+                    <li class="correct">Another radio source broadcasting at the same frequency</li>
+                    <li class="notes-list-item">External interference on the cable</li>
+                </ul>
+                <p class="note">RF interference from competing radio sources is a wireless issue only; it does not
+                    affect cabled Ethernet links. Improperly terminated patch cords cause crosstalk, duplex mismatch
+                    reduces throughput, and external EMI degrades copper cabling — all are valid wired causes.</p>
+            </div>
+
+            <!-- Q10 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 10</h2>
+                <p class="notes-paragraph">Your company is experiencing issues with email delivery, and employees are
+                    unable to send or receive emails. As the network administrator, you suspect there might be a problem
+                    with the mail server. Which of the following actions would be the MOST appropriate first step to
+                    diagnose and resolve the issue?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Review the database server's performance metrics for any anomalies.</li>
+                    <li class="notes-list-item">Check the web server logs for any error messages related to email
+                        delivery.</li>
+                    <li class="notes-list-item">Inspect the file/print server for any disk space issues that might
+                        affect email storage.</li>
+                    <li class="correct">Verify the mail server's network connectivity and ensure it is online.</li>
+                </ul>
+                <p class="note">When the mail server is suspected, confirm it is reachable and online first. Database,
+                    web, and file/print servers are separate roles unrelated to email delivery.</p>
+            </div>
+
+            <!-- Q11 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 11</h2>
+                <p class="notes-paragraph">A company has recently experienced performance issues with its web
+                    application during peak usage times. The application is hosted on multiple servers, but users report
+                    slow response times and occasional timeouts. Which solution would BEST address the company's
+                    performance problems?</p>
+                <ul class="notes-list">
+                    <li class="correct">Implement a load balancer to distribute incoming requests evenly across all
+                        servers.</li>
+                    <li class="notes-list-item">Install a firewall to block unnecessary traffic and reduce server load.
+                    </li>
+                    <li class="notes-list-item">Set up a spam gateway to filter out unwanted email traffic.</li>
+                    <li class="notes-list-item">Deploy an intrusion detection system to monitor and alert on suspicious
+                        activities.</li>
+                </ul>
+                <p class="note">A load balancer distributes requests across all available servers, preventing overload
+                    during peak times. Firewalls, spam gateways, and IDS are security tools that do not address server
+                    performance distribution.</p>
+            </div>
+
+            <!-- Q12 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 12</h2>
+                <p class="notes-paragraph">What is the first step in troubleshooting a limited connectivity issue for a
+                    single host in a wired network?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Update the NIC's device driver software.</li>
+                    <li class="notes-list-item">Use a cable tester to verify the structured cabling.</li>
+                    <li class="correct">Verify that the patch cords are properly terminated and connected to the network
+                        ports.</li>
+                    <li class="notes-list-item">Check the switch configuration for port security settings.</li>
+                </ul>
+                <p class="note">Step 1 is always to check patch cord termination and connection. Structured cabling
+                    testing is Step 4; driver updates are Step 5; port security is a secondary consideration.</p>
+            </div>
+
+            <!-- Q13 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 13</h2>
+                <p class="notes-paragraph">As a network engineer, you are tasked with improving the security of a legacy
+                    network that still uses older Windows systems. The network currently relies on NetBIOS over TCP/IP
+                    for name resolution and session services. What should you do to enhance the network's security while
+                    maintaining necessary functionality?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Enable NetBIOS over TCP/IP on all devices to ensure consistent name
+                        resolution across the network.</li>
+                    <li class="notes-list-item">Maintain the current configuration of NetBIOS over TCP/IP, as it is
+                        essential for supporting file sharing on all Windows versions.</li>
+                    <li class="notes-list-item">Upgrade all systems to use SMB1 for improved security and disable
+                        NetBIOS over TCP/IP.</li>
+                    <li class="correct">Disable NetBIOS over TCP/IP and implement DNS for name resolution, ensuring
+                        compatibility with modern systems.</li>
+                </ul>
+                <p class="note">NetBIOS over TCP/IP is an older, insecure protocol. DNS is the modern, secure standard
+                    for name resolution and is compatible with all current systems. SMB1 is deprecated and highly
+                    insecure (associated with ransomware exploits); upgrading to it would worsen security.</p>
+            </div>
+
+            <!-- Q14 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 14</h2>
+                <p class="notes-paragraph">A user reports that their file transfers over the network are significantly
+                    slower than usual. Upon investigation, you find that the issue is isolated to this user's
+                    workstation. You check the cabling and find no visible damage or interference. What should you do
+                    next to troubleshoot the issue?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Reposition the user's workstation closer to the router.</li>
+                    <li class="correct">Check the duplex settings on the user's network adapter and the switch port.
+                    </li>
+                    <li class="notes-list-item">Replace the user's Ethernet cable with a shielded cable.</li>
+                    <li class="notes-list-item">Update the firmware on the router.</li>
+                </ul>
+                <p class="note">Cabling cleared; issue is single-host. The next step is checking for a speed/duplex
+                    mismatch. Repositioning is a wireless fix. Shielded cable addresses interference that was not found.
+                    Router firmware affects all users, not just one.</p>
+            </div>
+
+            <!-- Q15 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 15</h2>
+                <p class="notes-paragraph">As a network administrator for your company, you want to set up a network
+                    device that manages traffic leaving and entering your network from the outside. Which of the
+                    following proxy server configurations would BEST meet your requirements?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">VPN</li>
+                    <li class="correct">Transparent proxy</li>
+                    <li class="notes-list-item">Non-transparent proxy</li>
+                    <li class="notes-list-item">Content filter</li>
+                </ul>
+                <p class="note">A transparent proxy intercepts all inbound and outbound traffic inline without requiring
+                    client-side configuration. A non-transparent proxy requires manual client configuration. VPN creates
+                    encrypted tunnels for remote access. A content filter is a feature, not a proxy configuration type.
+                </p>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9.2.4 – Email Configuration Options</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+<main class="page-content notes-content">
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Email Configuration Methods</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">Autodiscover</dt>
+                <dd class="notes-definition">The mail service publishes special DNS records identifying how the account
+                    for a domain should be configured. To connect, select the provider (Exchange, Gmail, Yahoo,
+                    Outlook.com, iCloud, etc.) and enter email address and credentials -- no manual server entry needed.
+                </dd>
+
+                <dt class="notes-term">Manual Configuration</dt>
+                <dd class="notes-definition">Used when the provider does not support autodiscovery (ISP or corporate
+                    mail gateway). Select "Other" and enter server addresses manually.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Manual Configuration Fields</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Setting</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Incoming mail server</td>
+                        <td>FQDN or IP of the IMAP or POP3 server. Use IMAP for multi-device access (mail stays on
+                            server); use POP3 to download mail to the device and remove it from the server.</td>
+                    </tr>
+                    <tr>
+                        <td>Outgoing mail server</td>
+                        <td>FQDN or IP of the SMTP server</td>
+                    </tr>
+                    <tr>
+                        <td>TLS</td>
+                        <td>Enable to encrypt credentials and data. Required when connecting over public/open Wi-Fi.
+                            Only available if the mail provider supports it.</td>
+                    </tr>
+                    <tr>
+                        <td>Ports</td>
+                        <td>Leave at defaults for IMAP, POP3, and SMTP unless the provider uses custom ports</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Exchange ActiveSync (EAS)</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item">Microsoft Exchange uses its own proprietary protocol (EAS), not IMAP or POP3
+                    (though it can support them)</li>
+                <li class="notes-list-item">Manual Exchange ActiveSync setup requires: email address, username, host
+                    address (from Exchange admin), password, TLS option, and optionally a domain field (usually left
+                    blank)</li>
+                <li class="notes-list-item">If a single "Domain\Username" field is present, prefix the email address
+                    with a backslash: \me@company.com</li>
+            </ul>
+        </section>
+
+    </main>
+    </div>
+</body>
+
+</html>

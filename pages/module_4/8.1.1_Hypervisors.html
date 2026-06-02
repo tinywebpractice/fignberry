@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8.1.1 Hypervisors</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">8.1.1 Hypervisors</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Virtualization</dt>
+                    <dd class="notes-definition">The ability to run multiple operating systems simultaneously on one
+                        physical system. Supported by most modern computers; not available on entry-level models.</dd>
+                    <dt class="notes-term">Hypervisor</dt>
+                    <dd class="notes-definition">Software that manages virtual machines (VMs) by emulating hardware
+                        resources (CPU, memory, storage, peripherals) so each guest OS functions as if it has exclusive
+                        access to the system.</dd>
+                    <dt class="notes-term">Virtual Machine (VM) / Guest OS</dt>
+                    <dd class="notes-definition">An OS instance running within the hypervisor. VMs require drivers for
+                        the emulated hardware. Hypervisors may limit which guest OS types are supported.</dd>
+                </dl>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Hypervisor Types Comparison</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Type 1 — Bare Metal</th>
+                            <th>Type 2 — Host-Based</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Installed on</strong></td>
+                            <td>Directly on hardware (no host OS)</td>
+                            <td>On top of an existing host OS</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stack (bottom to top)</strong></td>
+                            <td>Hardware → Hypervisor → Guest OSs</td>
+                            <td>Hardware → OS → Hypervisor → Guest OSs</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Resource requirement</strong></td>
+                            <td>Hardware only needs to meet hypervisor + guest OS requirements</td>
+                            <td>Must support host OS AND guest OSs simultaneously</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Performance</strong></td>
+                            <td>Higher (no host OS overhead)</td>
+                            <td>Lower (host OS consumes resources)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Use case</strong></td>
+                            <td>Enterprise servers, data centers</td>
+                            <td>Desktop/workstation development and testing</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Examples</strong></td>
+                            <td>VMware ESXi, Microsoft Hyper-V, Citrix XEN Server</td>
+                            <td>VMware Workstation, Oracle VirtualBox, Parallels Workstation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

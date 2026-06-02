@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.3.4 Troubleshoot Wireless Issues</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">7.3.4 Troubleshoot Wireless Issues</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Walkthrough Video</h2>
+                <p class="notes-paragraph">Use this walkthrough as your primary guide for the lab.</p>
+                <div style="position: relative; width: 100%; max-width: 750px; padding-bottom: 56.25%; margin: 0 0 24px;">
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/9fXVazWa1Vc"
+                        title="Troubleshoot Wireless Issues Lab Walkthrough"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;">
+                    </iframe>
+                </div>
+                <p class="notes-paragraph"><a href="https://www.youtube.com/watch?v=9fXVazWa1Vc" target="_blank" rel="noreferrer">Open the video on YouTube</a></p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Lab Scenario</h2>
+                <p class="notes-paragraph">A help desk ticket reports that a laptop in Office 2 cannot connect to Wi-Fi. You will verify that the wireless network is working from another computer, troubleshoot the laptop hardware, reconnect it to CorpNet, and close the ticket with a professional note.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Step 1 - Open Issue Trax</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">From the taskbar, select <b>Start</b>.</li>
+                    <li class="notes-list-item">Select <b>All apps</b>.</li>
+                    <li class="notes-list-item">Select <b>Issue Trax</b>.</li>
+                    <li class="notes-list-item">Maximize the window for better viewing.</li>
+                    <li class="notes-list-item">Select and read <b>ticket #25</b>.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Step 2 - Test Wireless from ITAdmin</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">In the Notification Area of the ITAdmin computer, select the <b>network icon</b>.</li>
+                    <li class="notes-list-item">Select the arrow next to the wireless icon to view available networks.</li>
+                    <li class="notes-list-item">Select the <b>CorpNet</b> wireless network.</li>
+                    <li class="notes-list-item">Select <b>Connect</b>.</li>
+                    <li class="notes-list-item">Because ITAdmin connects to CorpNet, the wireless access point is powered on and broadcasting. The problem is likely limited to the laptop in Office 2.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Step 3 - Troubleshoot Exec-Laptop</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">From the top left, select <b>Floor 1 Overview</b>.</li>
+                    <li class="notes-list-item">Under <b>Office 2</b>, select <b>Office2-Lap</b>.</li>
+                    <li class="notes-list-item">In the Notification Area, select the <b>globe icon</b>.</li>
+                    <li class="notes-list-item">Notice that there is no option to connect to Wi-Fi.</li>
+                    <li class="notes-list-item">Since ITAdmin connected to CorpNet, the likely issue is the laptop wireless network interface card being turned off.</li>
+                    <li class="notes-list-item">From the top left, select <b>Office 2</b> to switch to the hardware view.</li>
+                    <li class="notes-list-item">On the front of the laptop, check the wireless network interface card switch.</li>
+                    <li class="notes-list-item">Notice that the switch is in the <b>Off</b> position.</li>
+                    <li class="notes-list-item">Slide the wireless switch to the <b>On</b> position.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Step 4 - Connect Exec-Laptop to CorpNet</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Select the laptop monitor to view the operating system.</li>
+                    <li class="notes-list-item">In the Notification Area, select the <b>wireless network icon</b>.</li>
+                    <li class="notes-list-item">Select the arrow next to the wireless icon to view available networks.</li>
+                    <li class="notes-list-item">Confirm that <b>CorpNet</b> is now displayed in the list.</li>
+                    <li class="notes-list-item">Select the <b>CorpNet</b> wireless network.</li>
+                    <li class="notes-list-item">Select <b>Connect</b>.</li>
+                    <li class="notes-list-item">Because the laptop was previously connected to CorpNet, it reconnects without needing the security key.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Step 5 - Resolve the Ticket</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Go back to the ITAdmin computer in the IT Administration Office.</li>
+                    <li class="notes-list-item">In the <b>New Comment</b> field, type a polite and professional comment explaining what you did.</li>
+                    <li class="notes-list-item">Click the <b>plus</b> icon to add the comment.</li>
+                    <li class="notes-list-item">At the top of the screen, set the ticket to <b>Closed</b>.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Troubleshooting Summary</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Observation</th>
+                            <th class="notes-table-heading">Meaning</th>
+                            <th class="notes-table-heading">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">ITAdmin connects to CorpNet</td>
+                            <td class="notes-table-cell">The wireless network is available and broadcasting.</td>
+                            <td class="notes-table-cell">Focus troubleshooting on Office2-Lap.</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Office2-Lap shows no Wi-Fi option</td>
+                            <td class="notes-table-cell">The laptop wireless NIC may be disabled.</td>
+                            <td class="notes-table-cell">Turn on the physical wireless switch.</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">CorpNet appears after turning on the switch</td>
+                            <td class="notes-table-cell">The wireless adapter is active again.</td>
+                            <td class="notes-table-cell">Connect to CorpNet and close ticket #25.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <blockquote>
+                <p><strong>Important:</strong> Since another computer can connect to CorpNet, the access point and SSID broadcast are working. Troubleshoot the affected laptop next.</p>
+            </blockquote>
+        </main>
+    </div>
+</body>
+
+</html>

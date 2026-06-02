@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10.1.8 Printer Sharing</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+<main class="page-content notes-content">
+
+        <h1 class="notes-title">10.1.8 Printer Sharing</h1>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Sharing Models</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">Integrated print server</dt>
+                <dd class="notes-definition">Printer connects directly to the network without requiring a server
+                    computer. Clients install via vendor tools, which discover the printer by IP, hardware address, and
+                    hostname.</dd>
+                <dt class="notes-term">Public printer</dt>
+                <dd class="notes-definition">No access controls -- any guest can print. Modern implementations typically
+                    add some security such as network segmentation, user authentication, or a dedicated guest Wi-Fi
+                    network.</dd>
+                <dt class="notes-term">Windows print server (shared printer)</dt>
+                <dd class="notes-definition">Any Windows computer with an installed printer can share it. The print
+                    server connects to the printer via USB or network and enforces permissions so only authenticated
+                    users can submit jobs.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Windows Print Server Configuration</h2>
+            <p class="notes-paragraph">Configure sharing via <strong>Printer Properties &gt; Sharing tab</strong>. Key
+                options:</p>
+            <ul class="notes-list">
+                <li class="notes-list-item"><strong>Share this printer</strong> -- enables the share and sets the share
+                    name (network-visible name).</li>
+                <li class="notes-list-item"><strong>Render print jobs on client computers</strong> -- offloads rendering
+                    from the server to the client.</li>
+                <li class="notes-list-item"><strong>Additional Drivers</strong> -- install x86 (32-bit) and/or x64
+                    (64-bit) drivers so clients on different Windows architectures can download the correct driver
+                    automatically when connecting.</li>
+            </ul>
+            <p class="notes-paragraph">Driver type notes:</p>
+            <ul class="notes-list">
+                <li class="notes-list-item"><strong>Type 2</strong> -- requires specific driver versions per Windows
+                    release.</li>
+                <li class="notes-list-item"><strong>Type 3</strong> -- add x86/x64 variants for mixed-architecture
+                    networks.</li>
+                <li class="notes-list-item"><strong>Type 4</strong> (Windows 10+) -- print class driver framework; one
+                    driver works with multiple devices. Client can pull the driver from Windows Update instead of the
+                    print server.</li>
+            </ul>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Connecting to a Shared Printer (GUI)</h2>
+            <p class="notes-paragraph">File Explorer &gt; Network &gt; [server name] &gt; right-click the printer &gt;
+                <strong>Connect</strong>. Requires appropriate permissions.</p>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">PowerShell Printer Management</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Cmdlet</th>
+                        <th>Purpose</th>
+                        <th>Key Switches</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>Set-Printer</code></td>
+                        <td>Modify properties of an existing printer</td>
+                        <td>
+                            <code>-Name</code> -- local printer name<br>
+                            <code>-Shared $true/$false</code> -- enable/disable sharing<br>
+                            <code>-ShareName</code> -- network-visible share name<br>
+                            <code>-RenderPrintJobsOnClient $true/$false</code> -- client ($true) or server ($false)
+                            renders jobs
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>Add-Printer</code></td>
+                        <td>Connect a computer to an existing shared network printer</td>
+                        <td><code>-ConnectionName \\ServerName\SharedPrinterName</code> (UNC path)</td>
+                    </tr>
+                    <tr>
+                        <td><code>Set-DefaultPrinter</code></td>
+                        <td>Set the default printer</td>
+                        <td><code>-Name</code> -- local or network printer name</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+    </div>
+</body>
+
+</html>

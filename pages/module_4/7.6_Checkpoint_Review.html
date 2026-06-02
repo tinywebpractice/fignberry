@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.7 Checkpoint Review — Q&amp;A</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">7.7 Checkpoint Review — Q&amp;A</h1>
+
+            <!-- Q1 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 1</h2>
+                <p class="notes-paragraph">You are an IT technician tasked with setting up a home office network for a
+                    client. The client has a DSL internet connection and reports that their phone line experiences
+                    interference when they are online. The phone line and DSL modem are connected to the same wall
+                    socket without any additional hardware. What is the MOST appropriate solution?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Upgrade the client's internet connection to a fiber optic service to
+                        avoid using the phone line.</li>
+                    <li class="notes-list-item">Adjust the modem's settings to prioritize voice signals over data
+                        signals.</li>
+                    <li class="notes-list-item">Replace the DSL modem with a cable modem to eliminate interference.</li>
+                    <li class="correct">Install a DSL splitter (filter) to separate voice and data signals on the phone
+                        line.</li>
+                </ul>
+                <p class="note">A DSL splitter (microfilter) separates the high-frequency DSL data signal from the
+                    low-frequency voice signal on the same phone line, eliminating interference. Fiber is a major
+                    infrastructure change for a simple fix. Modem settings cannot physically separate signals. Cable
+                    modems require coaxial infrastructure, not phone lines.</p>
+            </div>
+
+            <!-- Q2 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 2</h2>
+                <p class="notes-paragraph">You have configured Disk 3 and Disk 4 as a RAID 1 array with NTFS, assigned
+                    drive letter F, with each disk at 1 TB capacity. Drive F shows only 1 TB available instead of 2 TB.
+                    What should you do?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Make sure both disks are set to dynamic instead of basic.</li>
+                    <li class="correct">Nothing. The RAID array is working as designed.</li>
+                    <li class="notes-list-item">Change the volume to a spanned volume.</li>
+                    <li class="notes-list-item">You need to change to a RAID 5 array.</li>
+                </ul>
+                <p class="note">RAID 1 is mirroring — both disks hold identical copies for redundancy. Usable capacity
+                    equals one disk (1 TB), not the combined total. Seeing 1 TB is correct behavior. A spanned volume
+                    maximizes capacity but provides no redundancy. RAID 5 requires at least 3 disks.</p>
+            </div>
+
+            <!-- Q3 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 3</h2>
+                <p class="notes-paragraph">A computer transported to a new office location will not power on. Visual
+                    inspection reveals a small crack on the case and bent pins on the peripheral connectors. What is the
+                    MOST likely cause?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">The small crack on the computer case has led to internal component
+                        misalignment.</li>
+                    <li class="notes-list-item">Electrostatic Discharge (ESD) has damaged the motherboard's soldered
+                        chips and components.</li>
+                    <li class="notes-list-item">The computer's power supply unit has failed due to physical impact
+                        during transportation.</li>
+                    <li class="notes-list-item">The bent pins on the peripheral connectors are causing a short circuit,
+                        preventing the computer from powering on.</li>
+                </ul>
+                <p class="note">The crack indicates the unit took a fall or knock during transport, which could cause
+                    internal components (RAM, expansion cards, cables) to become misaligned or disconnected. Bent pins
+                    on peripheral connectors typically affect the connected peripherals but do not prevent the entire
+                    system from powering on. ESD leaves no visible evidence. PSU failure is possible but the crack
+                    provides more direct evidence of internal impact damage.</p>
+            </div>
+
+            <!-- Q4 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 4</h2>
+                <p class="notes-paragraph">An employee's monitor is powered on but the screen is blank. Which of the
+                    following steps should you take next to troubleshoot the missing video issue?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Replace the monitor with a new one to see if the problem persists.</li>
+                    <li class="notes-list-item">Immediately update the video card drivers to the latest version.</li>
+                    <li class="notes-list-item">Adjust the monitor's brightness and contrast settings using the OSD
+                        menu.</li>
+                    <li class="correct">Check the cable and connectors between the video card and monitor.</li>
+                </ul>
+                <p class="note">Physical-first troubleshooting: a loose or disconnected video cable is the most common
+                    cause of a blank screen on a powered monitor. Hardware replacement and driver updates come after
+                    physical checks. Brightness/contrast does not cause a completely blank no-signal screen.</p>
+            </div>
+
+            <!-- Q5 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 5</h2>
+                <p class="notes-paragraph">A hardware technician is following CompTIA's troubleshooting model for a
+                    monitor with a squiggly screen. The technician suspects the cause is fluorescent light interference.
+                    What is the next step?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Establish a plan of action.</li>
+                    <li class="notes-list-item">Verify full system functionality.</li>
+                    <li class="notes-list-item">Identify the problem.</li>
+                    <li class="correct">Test the theory.</li>
+                </ul>
+                <p class="note">CompTIA troubleshooting steps: 1) Identify the problem, 2) Establish a theory, 3) Test
+                    the theory, 4) Establish a plan of action, 5) Implement solution, 6) Verify full functionality, 7)
+                    Document. The problem has been identified and a theory formed; the next step is testing it (e.g.,
+                    move the monitor away from the light).</p>
+            </div>
+
+            <!-- Q6 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 6</h2>
+                <p class="notes-paragraph">What function does an Ethernet switch perform when it receives a data frame?
+                </p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">It discards the frame if the destination is not in its MAC address
+                        table.</li>
+                    <li class="notes-list-item">It stores the frame until the destination device requests it.</li>
+                    <li class="correct">It decodes the frame and forwards it to the appropriate port based on the
+                        destination MAC address.</li>
+                    <li class="notes-list-item">It broadcasts the frame to all ports.</li>
+                </ul>
+                <p class="note">A switch uses its MAC address table to forward frames only to the port where the
+                    destination device resides. If the destination MAC is unknown, it floods (not discards) the frame to
+                    all ports. Broadcasting to all ports describes a hub. Holding frames for device requests is not
+                    switch behavior.</p>
+            </div>
+
+            <!-- Q7 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 7</h2>
+                <p class="notes-paragraph">When troubleshooting a computer problem, what is the purpose of "Questioning
+                    the Obvious"?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">To skip basic checks and move directly to complex diagnostics.</li>
+                    <li class="notes-list-item">To focus only on software-related issues.</li>
+                    <li class="notes-list-item">To escalate the issue to senior technical staff immediately.</li>
+                    <li class="correct">To identify and eliminate non-causes systematically.</li>
+                </ul>
+                <p class="note">Questioning the Obvious means checking the simplest possible causes first and ruling
+                    them out methodically before moving to complex diagnostics. It applies across all layers, not just
+                    software. Escalation is a separate concept.</p>
+            </div>
+
+            <!-- Q8 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 8</h2>
+                <p class="notes-paragraph">Where should you apply thermal paste when installing a processor?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Between the CPU and fan</li>
+                    <li class="notes-list-item">Between the motherboard and CPU</li>
+                    <li class="notes-list-item">Between the heat sink and fan</li>
+                    <li class="correct">Between the heat sink and CPU</li>
+                </ul>
+                <p class="note">Thermal paste fills microscopic air gaps between the CPU heat spreader and the heat sink
+                    base to maximize thermal transfer. The fan attaches mechanically to the heat sink; no paste is used
+                    there. Paste on the motherboard socket would damage it.</p>
+            </div>
+
+            <!-- Q9 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 9</h2>
+                <p class="notes-paragraph">Why does an Ethernet switch eliminate the negative effects of collisions in a
+                    network?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">It limits the amount of data transmitted to avoid congestion.</li>
+                    <li class="notes-list-item">It prevents devices from sending data at the same time.</li>
+                    <li class="correct">It assigns a separate collision domain to each port.</li>
+                    <li class="notes-list-item">It reduces the number of devices connected to the network.</li>
+                </ul>
+                <p class="note">Each switch port is its own collision domain, so collisions can only occur between a
+                    device and that port. This isolates collision effects network-wide. Limiting data describes QoS.
+                    Preventing simultaneous transmission describes CSMA/CD on hubs. Reducing device count is not how
+                    switches eliminate collisions.</p>
+            </div>
+
+            <!-- Q10 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 10</h2>
+                <p class="notes-paragraph">An engineer is designing a new computer system and wants to provide active
+                    cooling to improve airflow and dissipate heat from around the components. What will the engineer
+                    use?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Heat sinks</li>
+                    <li class="notes-list-item">Thermal paste</li>
+                    <li class="notes-list-item">Thermal pads</li>
+                    <li class="correct">Fans</li>
+                </ul>
+                <p class="note">Fans are active cooling devices — they require power and mechanically move air. Heat
+                    sinks, thermal paste, and thermal pads are all passive thermal management components with no moving
+                    parts.</p>
+            </div>
+
+            <!-- Q11 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 11</h2>
+                <p class="notes-paragraph">Devices on a SOHO local network can communicate with each other but cannot
+                    access the internet. Investigation reveals the router's IPv4 forwarding feature is disabled. What
+                    action should you take?</p>
+                <ul class="notes-list">
+                    <li class="correct">Enable IPv4 forwarding on the router.</li>
+                    <li class="notes-list-item">Enable NAT (Network Address Translation) on the router.</li>
+                    <li class="notes-list-item">Configure a new subnet mask for the local network.</li>
+                    <li class="notes-list-item">Assign static IP addresses to all devices on the network.</li>
+                </ul>
+                <p class="note">IPv4 forwarding allows the router to pass packets between the local network and the
+                    internet. The cause is already identified; enabling it directly resolves it. Subnet mask and static
+                    IPs do not affect routing. NAT may also be needed, but the specific identified cause is IPv4
+                    forwarding being disabled.</p>
+            </div>
+
+            <!-- Q12 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 12</h2>
+                <p class="notes-paragraph">A user reports that their laptop is not connecting to the office Wi-Fi
+                    network. As part of "Questioning the Obvious," which of the following actions should you take first?
+                </p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Reinstall the laptop's network drivers.</li>
+                    <li class="notes-list-item">Replace the office Wi-Fi router with a new one.</li>
+                    <li class="correct">Verify that the Wi-Fi is enabled on the laptop.</li>
+                    <li class="notes-list-item">Escalate the issue to the network infrastructure team.</li>
+                </ul>
+                <p class="note">Questioning the Obvious: check if Wi-Fi is simply turned off (physical switch or
+                    function key). This is the most basic check before any diagnostics, driver reinstalls, hardware
+                    replacement, or escalation.</p>
+            </div>
+
+            <!-- Q13 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 13</h2>
+                <p class="notes-paragraph">Which of the following motherboard form factors BEST allows for
+                    low-consumption power supplies?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Micro-ATX</li>
+                    <li class="notes-list-item">EATX</li>
+                    <li class="correct">Mini-ITX</li>
+                    <li class="notes-list-item">NLX</li>
+                </ul>
+                <p class="note">Mini-ITX is a small form factor designed for compact, low-power systems with minimal
+                    expansion, making it ideal for low-consumption power supplies. Micro-ATX is mid-size and draws more
+                    power. EATX is a large high-performance form factor requiring high-wattage PSUs. NLX is an older
+                    slim desktop standard.</p>
+            </div>
+
+            <!-- Q14 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 14</h2>
+                <p class="notes-paragraph">You are setting up a DSL internet connection for a small office. Which of the
+                    following steps should you take to connect the DSL modem to the network?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Connect the DSL modem's RJ11 port to the router and the RJ45 port to the
+                        phone line.</li>
+                    <li class="correct">Connect the DSL modem's RJ11 port to the phone line and the RJ45 port to the
+                        router.</li>
+                    <li class="notes-list-item">Connect the DSL modem's coaxial port to the phone line and the RJ45 port
+                        to the router.</li>
+                    <li class="notes-list-item">Connect the DSL modem's RJ45 port to the phone line and the RJ11 port to
+                        the router.</li>
+                </ul>
+                <p class="note">DSL runs over a phone line using an RJ11 connector. The modem's LAN side connects to the
+                    router via RJ45 Ethernet. DSL does not use coaxial cable (that's cable internet/DOCSIS). The other
+                    options reverse or incorrectly substitute the connector types.</p>
+            </div>
+
+            <!-- Q15 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 15</h2>
+                <p class="notes-paragraph">A desktop computer powers on (fans spin) but does not boot — screen is blank,
+                    no beep codes. The user mentions the system firmware was recently updated. Which action should you
+                    take first?</p>
+                <ul class="notes-list">
+                    <li class="correct">Reset the system firmware to its default settings.</li>
+                    <li class="notes-list-item">Remove and re-seat all non-essential adapter cards and cables.</li>
+                    <li class="notes-list-item">Check the power supply unit (PSU) for faults.</li>
+                    <li class="notes-list-item">Replace the CPU with a known good one to check for faults.</li>
+                </ul>
+                <p class="note">The firmware was recently updated — a bad or corrupted update is the most likely cause
+                    of a no-POST, no-beep situation. Resetting firmware to defaults directly addresses the recent
+                    change. Fans spinning indicate the PSU is delivering power. CPU replacement is a last resort.</p>
+            </div>
+
+            <!-- Q16 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 16</h2>
+                <p class="notes-paragraph">What is the primary function of an embedded system?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">To provide a user interface for general computing applications.</li>
+                    <li class="correct">To manage and control industrial processes and machinery.</li>
+                    <li class="notes-list-item">To operate as a standalone personal computer.</li>
+                    <li class="notes-list-item">To perform a variety of general-purpose computing tasks.</li>
+                </ul>
+                <p class="note">Embedded systems are purpose-built to perform specific dedicated tasks, most classically
+                    in industrial control environments. They are not general-purpose computers, do not typically have
+                    user interfaces, and are embedded within larger devices rather than operating standalone.</p>
+            </div>
+
+            <!-- Q17 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 17</h2>
+                <p class="notes-paragraph">Your company upgraded your laptop. You plug your external USB 2.0 hard disk
+                    into the new USB 3.0 port. Which of the following is the MOST accurate statement regarding how this
+                    device will function?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">The device will be able to transfer at USB 3.0 speeds.</li>
+                    <li class="correct">The device will work but only transfer at USB 2.0 speeds.</li>
+                    <li class="notes-list-item">The device will require an external power source.</li>
+                    <li class="notes-list-item">The USB 2.0 device will not work in the USB 3.0 port.</li>
+                </ul>
+                <p class="note">USB 3.0 is backward compatible with USB 2.0 devices. The connection negotiates down to
+                    the slower standard (USB 2.0 max 480 Mbps). The device cannot operate at USB 3.0 speeds regardless
+                    of port. USB 3.0 ports provide more power than USB 2.0, so no external power source is needed.</p>
+            </div>
+
+            <!-- Q18 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 18</h2>
+                <p class="notes-paragraph">Which standard is most commonly used for cabled LANs?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">ISO 9001</li>
+                    <li class="notes-list-item">Wi-Fi Alliance Standard</li>
+                    <li class="notes-list-item">IEEE 802.11</li>
+                    <li class="correct">IEEE 802.3</li>
+                </ul>
+                <p class="note">IEEE 802.3 is the Ethernet standard governing cabled LANs. ISO 9001 is a quality
+                    management standard. Wi-Fi Alliance governs wireless certification. IEEE 802.11 is the wireless LAN
+                    (Wi-Fi) standard.</p>
+            </div>
+
+            <!-- Q19 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 19</h2>
+                <p class="notes-paragraph">Which of the following is a primary function of a mail server?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Storing and managing large amounts of structured data</li>
+                    <li class="correct">Facilitating the sending and receiving of email messages</li>
+                    <li class="notes-list-item">Hosting websites and web applications</li>
+                    <li class="notes-list-item">Providing remote terminal access to network resources</li>
+                </ul>
+                <p class="note">A mail server handles email routing, sending (SMTP), and receiving/storing (POP3/IMAP).
+                    Structured data storage describes a database server. Hosting websites describes a web server. Remote
+                    terminal access describes an SSH/RDP server.</p>
+            </div>
+
+            <!-- Q20 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 20</h2>
+                <p class="notes-paragraph">Why are adapter cables important when integrating legacy devices with modern
+                    systems?</p>
+                <ul class="notes-list">
+                    <li class="correct">They allow legacy devices to connect to modern systems by converting
+                        incompatible interfaces.</li>
+                    <li class="notes-list-item">They are used to upgrade the firmware of legacy devices to be compatible
+                        with modern systems.</li>
+                    <li class="notes-list-item">They increase the data transfer rate between legacy and modern devices.
+                    </li>
+                    <li class="notes-list-item">They ensure that legacy devices can operate at the same speed as modern
+                        devices.</li>
+                </ul>
+                <p class="note">Adapter cables (e.g., DVI-to-HDMI, USB-A-to-USB-C) bridge incompatible physical
+                    interfaces, allowing legacy devices to connect to modern systems. They cannot modify firmware,
+                    increase speeds beyond the device's native capability, or make legacy hardware perform at modern
+                    speeds.</p>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>

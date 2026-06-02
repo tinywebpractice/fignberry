@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8.3.3 – Exercise: Exploring Hypervisors</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+
+<body>
+    <button class="sidebar-toggle" aria-label="Toggle sidebar">&#9776;</button>
+    <div class="sidebar-backdrop"></div>
+    <nav class="site-sidebar" aria-label="Site navigation"></nav>
+    <nav class="site-nav" aria-label="Primary"></nav>
+
+    <main class="page-content notes-content">
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Exercise Overview</h2>
+            <p class="notes-paragraph">CompTIA A+ Core 1 (220-1201) Exam Objective: 4.1 Explain virtualization concepts.
+            </p>
+            <p class="notes-paragraph">Goal: Compare Type 1 and Type 2 hypervisors across definitions, examples, use
+                cases, and advantages/disadvantages.</p>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Type 1 vs. Type 2 Hypervisors</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Type 1 (Bare Metal)</th>
+                        <th>Type 2 (Host-Based)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Definition</strong></td>
+                        <td>Runs directly on physical hardware; no host OS required</td>
+                        <td>Runs as an application on top of an existing host OS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Examples</strong></td>
+                        <td>VMware ESXi, Microsoft Hyper-V, Citrix XenServer, KVM</td>
+                        <td>Oracle VirtualBox, VMware Workstation, Parallels Desktop</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Use Cases</strong></td>
+                        <td>Enterprise server farms, cloud infrastructure, datacenters</td>
+                        <td>Development/testing, home labs, running alternate OSes on a personal machine</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Advantages</strong></td>
+                        <td>High performance, direct hardware access, better security isolation, production-grade
+                            stability</td>
+                        <td>Easy to install, no dedicated hardware needed, accessible to individuals</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Disadvantages</strong></td>
+                        <td>Requires dedicated hardware, more complex setup and management</td>
+                        <td>Performance overhead from host OS layer, not suitable for production workloads</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Summary</h2>
+            <p class="notes-paragraph">Hypervisors are the software layer that makes virtualization possible, allowing
+                multiple operating systems to run simultaneously on a single physical machine. Type 1 hypervisors run
+                directly on hardware and are used in enterprise and cloud environments where performance and stability
+                are critical. Type 2 hypervisors run on top of a host OS and are well suited for personal use,
+                development, and testing. Both types enable efficient use of hardware resources by allowing multiple
+                isolated virtual machine instances to share the same physical infrastructure. Virtualization through
+                hypervisors is the foundational technology driving modern cloud computing, enabling rapid provisioning
+                of servers in minutes rather than days.</p>
+        </section>
+
+    </main>
+
+    <script src="../../js/nav.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9.3.4 Disk Upgrades and Replacement</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+<main class="page-content notes-content">
+
+        <h1 class="notes-title">9.3.4 Disk Upgrades and Replacement</h1>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Data Strategies Before Upgrading</h2>
+            <p class="notes-paragraph">A laptop typically supports only one internal mass storage device, so upgrading
+                the fixed disk requires a plan for existing data. Two approaches:</p>
+            <dl class="notes-terms">
+                <dt class="notes-term">Migration</dt>
+                <dd class="notes-definition">Use backup software to create an image or clone of the old drive on USB
+                    media, then restore it to the new drive. System images are technology-neutral (an HDD image can
+                    apply to an SSD). The new drive must be the same size or larger, unless a cloning tool that can
+                    shrink the source image is used. A disk enclosure can connect the new SSD as an external drive so
+                    the image is migrated directly before swapping drives.</dd>
+                <dt class="notes-term">Replacement</dt>
+                <dd class="notes-definition">Back up user data only from the old drive. Install the new drive, reinstall
+                    the OS and apps, then restore user data from backup.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Laptop HDD Form Factors</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item">Laptop HDDs are usually <strong>2.5"</strong> form factor; sometimes
+                    <strong>1.8"</strong>.</li>
+                <li class="notes-list-item">2.5" magnetic HDDs are slower (typically 5400 rpm) and lower capacity than
+                    3.5" desktop drives.</li>
+                <li class="notes-list-item">Z-height variants within 2.5": standard = 9.5 mm; thin = 7 mm; ultrathin = 5
+                    mm.</li>
+                <li class="notes-list-item">Magnetic drives use SATA data and power connectors; connectors mate directly
+                    to the drive bay port (no cable). 1.8" bays may require <strong>micro SATA (uSATA / uSATA)</strong>.
+                </li>
+            </ul>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">SSD Interfaces</h2>
+            <p class="notes-paragraph">SSDs can use SATA connectors but are more likely to use an adapter card
+                interface:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Interface</th>
+                        <th>Bus</th>
+                        <th>Max Speed</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>mSATA</strong> (Mini-SATA)</td>
+                        <td>SATA</td>
+                        <td>6 Gb/s</td>
+                        <td>Resembles Mini PCIe cards but not physically compatible with Mini PCIe slots</td>
+                    </tr>
+                    <tr>
+                        <td><strong>M.2</strong></td>
+                        <td>PCIe</td>
+                        <td>Much higher than SATA</td>
+                        <td>Available lengths: 42, 60, 80, 110 mm; most common laptop size is 80 mm (M.2 2280)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="notes-paragraph">M.2 form factor notation is <strong>xxyy</strong>: xx = width in mm, yy = length
+                in mm. Example: 2280 = 22 mm wide, 80 mm long.</p>
+        </section>
+
+    </main>
+    </div>
+</body>
+
+</html>

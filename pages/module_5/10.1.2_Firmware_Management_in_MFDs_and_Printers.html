@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10.1.2 Firmware Management in MFDs and Printers</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+<main class="page-content notes-content">
+
+        <h1 class="notes-title">10.1.2 Firmware Management in MFDs and Printers</h1>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Overview</h2>
+            <p class="notes-paragraph">Firmware in multifunctional devices (MFDs) and printers controls printing,
+                scanning, and network connectivity. It ensures driver/OS compatibility and provides access to advanced
+                settings including IP addresses, DNS configurations, security features, and network scanning options.
+            </p>
+            <p class="notes-paragraph">Regular updates improve performance, fix bugs, and patch security vulnerabilities
+                -- especially important for networked printers handling sensitive data.</p>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Checking and Updating Firmware</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Method</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Check firmware version</td>
+                        <td>Control panel &gt; System Information, or enter the device IP in a browser to access the web
+                            interface</td>
+                    </tr>
+                    <tr>
+                        <td>Update firmware</td>
+                        <td>Control panel, web interface, or manufacturer tools (e.g., HP Web Jetadmin, Canon imageWARE)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Resetting vs. Reflashing</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">Resetting</dt>
+                <dd class="notes-definition">Control panel &gt; Settings or Maintenance &gt; Reset / Restore Factory
+                    Defaults. Reverts configuration without replacing firmware.</dd>
+                <dt class="notes-term">Reflashing</dt>
+                <dd class="notes-definition">Web interface &gt; Firmware Update or Maintenance section &gt; upload
+                    latest firmware file from manufacturer site. Replaces the firmware image entirely. Only do this when
+                    necessary -- interruption can cause issues.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Best Practices</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item">Back up device configurations before performing any firmware update.</li>
+                <li class="notes-list-item">Test new firmware on a single device before deploying across multiple
+                    devices to verify compatibility and stability.</li>
+            </ul>
+        </section>
+
+    </main>
+    </div>
+</body>
+
+</html>

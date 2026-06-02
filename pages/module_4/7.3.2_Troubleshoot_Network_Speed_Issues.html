@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.3.2 Troubleshoot Network Speed Issues</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">7.3.2 Troubleshoot Network Speed Issues</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">First Check: Duplex / Speed Mismatch</h2>
+                <p class="notes-paragraph">Mismatched duplex settings between the NIC and switch port can reduce
+                    transfer speeds. With Gigabit Ethernet, both should be set to <strong>autonegotiate</strong>. Check
+                    the NIC driver settings in the client OS and the switch port settings via switch management
+                    software.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Structured Troubleshooting Steps</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Step</th>
+                            <th>Action</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1</strong></td>
+                            <td>Identify the specific network activity (web browsing, file transfer, authentication,
+                                etc.). Measure actual transfer rate independently of apps using a utility.</td>
+                            <td>Establish whether there is a true link speed problem vs. application issue.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2</strong></td>
+                            <td>If isolated to a single cable segment, check for interference or crosstalk. Inspect
+                                cable ends for excessive untwisting or improper termination.</td>
+                            <td>External interference sources: power lines, fluorescent lighting, motors, generators.
+                                Use a network tap/analyzer to check for damaged frames; view error rates via switch
+                                interface. Consider shielded cables.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3</strong></td>
+                            <td>If cabling is not the issue, check the NIC driver. Install updates if available; check
+                                if other hosts with the same NIC/driver version are also affected.</td>
+                            <td>Driver issues can throttle NIC performance.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4</strong></td>
+                            <td>Consider malware or faulty software on the host. Remove the host from the network for
+                                scanning. Substitute a different host on the same port to compare.</td>
+                            <td>If the substitute host performs normally, investigate what differs about the original
+                                host.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5</strong></td>
+                            <td>Determine the scope: single user, all users on the same switch, or all users accessing
+                                the Internet?</td>
+                            <td>Wider scope suggests congestion or a fault at the switch/router level; could also be
+                                caused by a user transferring large volumes of data.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Crosstalk</h2>
+                <p class="notes-paragraph"><strong>Crosstalk</strong> is interference caused by poorly installed cabling
+                    or improper connector termination. Excessive untwisting of wire pairs at cable ends is a common
+                    cause. High damaged frame counts in analyzer software or elevated switch error rates indicate this
+                    problem.</p>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.3.3 Lab: Fix A Network Connection</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">7.3.3 Lab: Fix A Network Connection</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Walkthrough Video</h2>
+                <p class="notes-paragraph">Use this walkthrough as your primary guide for the lab.</p>
+                <div style="position: relative; width: 100%; max-width: 750px; padding-bottom: 56.25%; margin: 0 0 24px;">
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/11tT8NcPxRM"
+                        title="Fix A Network Connection Lab Walkthrough"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;">
+                    </iframe>
+                </div>
+                <p class="notes-paragraph"><a href="https://www.youtube.com/watch?v=11tT8NcPxRM" target="_blank" rel="noreferrer">Open the video on YouTube</a></p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Lab Scenario</h2>
+                <p class="notes-paragraph">A workstation has no internet connection. You will verify the reported problem, identify the unplugged network cable, connect the cable to the wall plate, configure a valid IPv4 address, and test connectivity from PowerShell.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Step 1 - Verify the Problem</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">From the notification area, right-click the <b>network icon</b> and select <b>Network &amp; Internet settings</b>.</li>
+                    <li class="notes-list-item">Notice that the computer shows no connection to the internet.</li>
+                    <li class="notes-list-item">Select <b>Advanced network settings</b>.</li>
+                    <li class="notes-list-item">Under <b>Related Settings</b>, select <b>More network adapter options</b>.</li>
+                    <li class="notes-list-item">Notice that the network connection status is <b>Network cable unplugged</b>.</li>
+                    <li class="notes-list-item">Close the <b>Network Connections</b> window.</li>
+                    <li class="notes-list-item">Close the <b>Settings</b> app.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Step 2 - Connect the Cable</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">From the top left, select <b>Office 1</b> to work with the computer hardware.</li>
+                    <li class="notes-list-item">Switch to the <b>Back</b> view of the computer.</li>
+                    <li class="notes-list-item">Observe that the computer has a network cable, but the link light is not on.</li>
+                    <li class="notes-list-item">Select the network cable connected to the computer to see what is connected to the other end.</li>
+                    <li class="notes-list-item">In the <b>Selected Item</b> pane, notice that one end is unconnected.</li>
+                    <li class="notes-list-item">Select the unconnected end and drag it to the network connection on the wall plate.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Step 3 - Configure the IP Addresses</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Select the monitor to switch to the operating system view.</li>
+                    <li class="notes-list-item">Confirm that the notification area now shows a network connection.</li>
+                    <li class="notes-list-item">Right-click <b>Start</b> and select <b>Settings</b>.</li>
+                    <li class="notes-list-item">Select <b>Network &amp; internet</b>.</li>
+                    <li class="notes-list-item">Select <b>Ethernet</b>.</li>
+                    <li class="notes-list-item">For <b>IP assignment</b>, select <b>Edit</b>.</li>
+                    <li class="notes-list-item">If necessary, change the <b>Edit IP settings</b> dropdown to <b>Manual</b>.</li>
+                    <li class="notes-list-item">For <b>IPv4</b>, make sure the button is slid to the <b>On</b> position.</li>
+                    <li class="notes-list-item">Enter a valid IP address, subnet mask, gateway, and preferred DNS server.</li>
+                    <li class="notes-list-item">Select <b>Save</b>.</li>
+                    <li class="notes-list-item">Close the <b>Settings</b> app.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">IPv4 Configuration</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Field</th>
+                            <th class="notes-table-heading">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">IP address</td>
+                            <td class="notes-table-cell">Valid IP address, such as 192.168.0.27</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Subnet mask</td>
+                            <td class="notes-table-cell">255.255.255.0</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Gateway</td>
+                            <td class="notes-table-cell">192.168.0.5</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Preferred DNS</td>
+                            <td class="notes-table-cell">163.128.78.93 or 163.128.80.93</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Step 4 - Verify Internet Connectivity</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Right-click <b>Start</b> and select <b>Terminal</b>.</li>
+                    <li class="notes-list-item">At the PowerShell prompt, type <b>ping 163.128.78.93</b>.</li>
+                    <li class="notes-list-item">Press <b>Enter</b>.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Troubleshooting Summary</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Symptom</th>
+                            <th class="notes-table-heading">Cause</th>
+                            <th class="notes-table-heading">Fix</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">No internet connection</td>
+                            <td class="notes-table-cell">Network cable unplugged</td>
+                            <td class="notes-table-cell">Connect the cable to the wall plate.</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Cable connected but network needs valid addressing</td>
+                            <td class="notes-table-cell">Manual IPv4 settings need configuration</td>
+                            <td class="notes-table-cell">Enter a valid IP address, subnet mask, gateway, and DNS server.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <blockquote>
+                <p><strong>Important:</strong> Fix the physical connection first, then configure IPv4 settings, then verify connectivity with <b>ping</b>.</p>
+            </blockquote>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.2.4 Load Balancers</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">7.2.4 Load Balancers</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">What Is a Load Balancer?</h2>
+                <p class="notes-paragraph">A <strong>load balancer</strong> distributes client requests across multiple
+                    server nodes in a farm or pool. It sits in front of the server network and forwards requests from
+                    the client network or Internet to the application servers.</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">The service address is advertised to clients as a <strong>virtual
+                            server</strong>.</li>
+                    <li class="notes-list-item">Provides <strong>high-availability</strong> services that scale from
+                        light to heavy loads.</li>
+                    <li class="notes-list-item">Used with web servers, email servers, web conferencing servers, and
+                        streaming media servers.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">How It Works (3 Steps)</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Step</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1</strong></td>
+                            <td>Client connects to the <strong>virtual server</strong> (e.g., 203.0.113.1) over the
+                                Internet.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2</strong></td>
+                            <td>The load balancer selects a server node (e.g., 10.1.0.1, 10.1.0.2, or 10.1.0.3) and
+                                forwards the traffic.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3</strong></td>
+                            <td>A <strong>persistence mechanism</strong> can keep the client connected to the same
+                                server, if it is available.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Virtual Server</dt>
+                    <dd class="notes-definition">The single IP/address advertised to clients; the load balancer sits
+                        behind it and routes to real servers.</dd>
+                    <dt class="notes-term">Server Farm / Pool</dt>
+                    <dd class="notes-definition">The group of backend servers that the load balancer distributes
+                        requests across.</dd>
+                    <dt class="notes-term">Persistence (Session Persistence / Sticky Sessions)</dt>
+                    <dd class="notes-definition">Mechanism that ensures a client is routed to the same backend server
+                        for the duration of a session, if that server is still available.</dd>
+                </dl>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

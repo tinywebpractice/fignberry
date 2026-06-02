@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.3.6 Troubleshoot Limited Connectivity</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">7.3.6 Troubleshoot Limited Connectivity</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Limited Connectivity vs. No Internet Access</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Windows Message</th>
+                            <th>Meaning</th>
+                            <th>IP Address State</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Limited connectivity</strong></td>
+                            <td>Physical connection established, but no IP lease received from DHCP server.</td>
+                            <td>APIPA address: <strong>169.254.x.y</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>No Internet access</strong></td>
+                            <td>IP configuration obtained (DHCP or static), but cannot reach Microsoft test site.
+                                Indicates a gateway or DNS issue.</td>
+                            <td>Valid IP assigned</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph">On Linux, APIPA may also be used, or the IP may be set to
+                    <strong>0.0.0.0</strong> (unknown) or left unconfigured.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Troubleshooting Limited Connectivity (DHCP / APIPA)</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Check</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Scope of issue</strong></td>
+                            <td>Multiple users affected = likely a DHCP server problem. DHCP leases take time to expire,
+                                so the problem may manifest gradually as clients try to renew. Possible causes: DHCP
+                                server offline, out of available leases, or forwarding misconfigured.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Patch cord / wall port</strong></td>
+                            <td>Verify the wall port is connected to an appropriate switch port via the patch panel.
+                                Wrong switch port = no access to default gateway, DHCP, or DNS.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>VLAN configuration</strong></td>
+                            <td>If the switch port has an incorrect VLAN ID, the effect is the same as being connected
+                                to the wrong switch port.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Troubleshooting No Internet Access</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Access the router management interface and check the Internet connection
+                        status page.</li>
+                    <li class="notes-list-item">If the WAN link is down, contact your <strong>ISP</strong>.</li>
+                    <li class="notes-list-item">Use router diagnostic tools to test connectivity to configured
+                        <strong>DNS servers</strong>.</li>
+                    <li class="notes-list-item">Issue is either with Internet access at the gateway router or with name
+                        resolution (DNS).</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

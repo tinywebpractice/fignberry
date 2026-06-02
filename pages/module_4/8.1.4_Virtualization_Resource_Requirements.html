@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8.1.4 Virtualization Resource Requirements</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">8.1.4 Virtualization Resource Requirements</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">CPU: Virtualization Extensions</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Intel</th>
+                            <th>AMD</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Virtualization Technology</strong></td>
+                            <td>VT-x</td>
+                            <td>AMD-V</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SLAT</strong> (Second Level Address Translation — improves virtual memory
+                                performance with multiple VMs)</td>
+                            <td>EPT (Extended Page Table)</td>
+                            <td>RVI (Rapid Virtualization Indexing)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Most virtualization software requires VT-x or AMD-V enabled. If
+                        disabled, VM performance suffers significantly.</li>
+                    <li class="notes-list-item">Virtualization support may be disabled in BIOS/UEFI by default on some
+                        CPUs — verify and enable it.</li>
+                    <li class="notes-list-item">Multiple CPU resources (multi-core, HyperThreading, multiple physical
+                        CPUs) greatly improve performance when running multiple guest OSs concurrently.</li>
+                    <li class="notes-list-item">A <strong>64-bit hypervisor</strong> can support 32-bit guest OSs. A
+                        <strong>32-bit hypervisor cannot</strong> support 64-bit guest OSs.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">System Memory (RAM)</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Each guest OS requires RAM on top of what the host OS/hypervisor needs.
+                    </li>
+                    <li class="notes-list-item">Example: Windows 11 requires at least 4 GB; a workstation running one
+                        Windows 11 guest needs at least <strong>8 GB total RAM</strong>.</li>
+                    <li class="notes-list-item">Running multiple guest OSs concurrently increases memory demands
+                        proportionally.</li>
+                    <li class="notes-list-item">Development/testing VMs are less performance-critical and can tolerate
+                        lower RAM specs.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Mass Storage</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Each VM's "hard disk" is stored as an <strong>image file</strong> on the
+                        host.</li>
+                    <li class="notes-list-item">Most hypervisors use <strong>dynamically expanding disk images</strong>
+                        that grow as data is added.</li>
+                    <li class="notes-list-item">Typical Windows VM: ~20-30 GB depending on version and installed
+                        applications.</li>
+                    <li class="notes-list-item"><strong>Snapshots</strong> capture the VM's disk state at a point in
+                        time. Useful for rolling back changes during testing but consume additional space per snapshot.
+                    </li>
+                    <li class="notes-list-item">In enterprise environments, VM disk images can be stored on a high-speed
+                        <strong>SAN (Storage Area Network)</strong>, removing local disk space limitations.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Networking</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">A hypervisor can create a <strong>virtual network</strong> to allow
+                        communication between VMs, the host, and other hosts.</li>
+                    <li class="notes-list-item">Enterprise virtualization platforms support configuring <strong>virtual
+                            switches and routers</strong>.</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

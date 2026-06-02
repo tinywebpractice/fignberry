@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9.3.6 Lesson Review</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+<main class="page-content notes-content">
+
+        <h1 class="notes-title">9.3.6 Lesson Review</h1>
+
+        <!-- Q1 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 1</h2>
+            <p class="notes-paragraph">When disassembling a laptop, what is a recommended practice to ensure screws are
+                not lost and can be reassembled correctly?</p>
+            <ul class="notes-list">
+                <li>Use screws of the same size for all parts of the laptop to simplify reassembly.</li>
+                <li class="correct">Take a photo of the underside of the laptop and tape screws to the relevant points
+                    in the photo. &#10003;</li>
+                <li>Use a magnetic screwdriver to hold all screws together in one place.</li>
+                <li>Place all screws in a single container to avoid losing them.</li>
+            </ul>
+            <p class="note">Photographing the underside and taping each screw to its location in the photo ensures you
+                know which screw goes where during reassembly. Laptops use different sized screws throughout, so a
+                single container is not sufficient. Magnetic screwdrivers risk ESD damage and do not track individual
+                screw locations.</p>
+        </div>
+
+        <!-- Q2 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 2</h2>
+            <p class="notes-paragraph">A technician plans a memory upgrade for a fleet of computers for sales users.
+                When evaluating the various types of memory modules, what module types are commonly used for
+                ultraportable laptops? (Select two.)</p>
+            <ul class="notes-list">
+                <li class="correct">Mini-DIMM &#10003;</li>
+                <li class="correct">Micro-DIMM &#10003;</li>
+                <li>DIMM</li>
+                <li>SODIMM</li>
+            </ul>
+            <p class="note">Mini-DIMM and Micro-DIMM are smaller than SODIMM and are used in ultraportable laptop
+                models. SODIMM is the standard laptop form factor but is not specific to ultraportables. DIMM is a
+                full-size desktop module and does not fit in any laptop.</p>
+        </div>
+
+        <!-- Q3 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 3</h2>
+            <p class="notes-paragraph">A Windows-based laptop has an internal battery that requires tools to access and
+                remove. What steps must a repair technician take prior to opening the laptop to install a replacement?
+                (Select two.)</p>
+            <ul class="notes-list">
+                <li>Discharge the battery.</li>
+                <li class="correct">Power the laptop off. &#10003;</li>
+                <li>Charge the battery.</li>
+                <li class="correct">Disconnect the AC power. &#10003;</li>
+            </ul>
+            <p class="note">All power must be removed before opening a laptop for internal work. Powering off and
+                disconnecting AC are the required safe work steps. Discharging or charging the battery beforehand is
+                unnecessary and potentially harmful to Li-ion cells.</p>
+        </div>
+
+        <!-- Q4 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 4</h2>
+            <p class="notes-paragraph">A user reports that their laptop battery no longer holds a charge for more than
+                30 minutes, even after being fully charged. Based on recommended practices, what would be the best
+                course of action?</p>
+            <ul class="notes-list">
+                <li class="correct">Replace the battery with a new one. &#10003;</li>
+                <li>Increase the charging frequency to keep the battery at 100% charge.</li>
+                <li>Fully drain the battery and recharge it to restore its capacity.</li>
+                <li>Use the laptop only while connected to the AC adapter.</li>
+            </ul>
+            <p class="note">A battery that degrades to under 30 minutes of runtime has reached end of life and should be
+                replaced. Keeping a Li-ion battery at 100% charge accelerates degradation. Deep discharge cycles do not
+                restore Li-ion capacity and can cause harm. Running only on AC power is a workaround, not a fix.</p>
+        </div>
+
+        <!-- Q5 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 5</h2>
+            <p class="notes-paragraph">What is the first step you should take before replacing a laptop keyboard or
+                security component?</p>
+            <ul class="notes-list">
+                <li>Power on the laptop to test the keyboard functionality.</li>
+                <li>Disconnect the ribbon cable connecting the keyboard to the motherboard.</li>
+                <li>Unscrew the keyboard from the laptop chassis.</li>
+                <li class="correct">Remove the laptop's battery and disconnect it from AC power. &#10003;</li>
+            </ul>
+            <p class="note">Removing all power is always the first step before any internal component work.
+                Disconnecting the ribbon cable and unscrewing the keyboard are disassembly steps that come after power
+                is removed. Testing functionality is a diagnostic step, not part of the replacement process.</p>
+        </div>
+
+        <!-- Q6 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 6</h2>
+            <p class="notes-paragraph">When upgrading or replacing a laptop's disk drive, which of the following is the
+                MOST critical step to ensure compatibility and proper functionality?</p>
+            <ul class="notes-list">
+                <li>Backup all data on the original drive before starting the replacement process.</li>
+                <li>Use a screwdriver of the correct size to avoid stripping screws during disassembly.</li>
+                <li>Place the removed drive in an antistatic bag to prevent damage from static electricity.</li>
+                <li class="correct">Ensure the replacement drive uses the same interface type as the original drive
+                    (e.g., SATA or NVMe). &#10003;</li>
+            </ul>
+            <p class="note">Interface compatibility (SATA, mSATA, M.2/NVMe) determines whether the replacement drive
+                will physically connect and function. Backing up data is essential but is a data safety step, not a
+                compatibility one. Correct screwdriver size and antistatic handling are good practices but do not affect
+                drive compatibility.</p>
+        </div>
+
+        <!-- Q7 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 7</h2>
+            <p class="notes-paragraph">As a technician, you have been tasked with increasing the RAM memory on a laptop
+                by adding a SO-DIMM module to an empty memory slot. Which of the following processes seats the module in
+                the slot?</p>
+            <ul class="notes-list">
+                <li class="correct">Align the notch on the long side of the memory module with the rise in the memory
+                    slot. Insert the module pins into the slot at a 45-degree angle. Rotate the module by pressing down
+                    until the side hold-down clips snap into place. &#10003;</li>
+                <li>Align the notch on the long side of the memory module with the rise in the memory slot. Insert the
+                    module pins into the slot at a 90-degree angle to the motherboard and press down until the side
+                    hold-down clips snap into place.</li>
+                <li>Add the mounting pegs to the side of the memory module. Attach the ribbon cable and press into place
+                    until the mounting clips catch the mounting pegs.</li>
+                <li>Slide the memory into the external ExpressCard slot horizontally until the card is even with the
+                    laptop case and you hear a click.</li>
+            </ul>
+            <p class="note">SODIMMs insert at a 45-degree angle and are then rotated down until the side catches snap
+                into place. 90-degree insertion is incorrect for SODIMM slots. Ribbon cables and mounting pegs describe
+                keyboard/touchpad connections, not RAM. ExpressCard is an external expansion interface, not a RAM slot.
+            </p>
+        </div>
+
+        <!-- Q8 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 8</h2>
+            <p class="notes-paragraph">A non-tech-savvy laptop user orders a new hard drive from a large online retailer
+                to install in the laptop. When the drive arrives, the user discovers that it is physically too big to
+                install. What size drive did the user order?</p>
+            <ul class="notes-list">
+                <li class="correct">3.5 inch &#10003;</li>
+                <li>9.5 mm</li>
+                <li>7 mm</li>
+                <li>1.8 inch</li>
+            </ul>
+            <p class="note">Laptop HDDs use the 2.5" or 1.8" form factor. A 3.5" drive is the desktop form factor and is
+                too large to fit in a laptop drive bay. 9.5 mm and 7 mm are z-height measurements for 2.5" drives. 1.8"
+                is a smaller laptop form factor.</p>
+        </div>
+
+        <!-- Q9 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 9</h2>
+            <p class="notes-paragraph">Why is it important to document the location and orientation of screws and
+                connectors during laptop disassembly?</p>
+            <ul class="notes-list">
+                <li class="correct">To simplify the reassembly process and ensure all parts are correctly reinstalled.
+                    &#10003;</li>
+                <li>To avoid damaging the laptop's internal components during disassembly.</li>
+                <li>To ensure the laptop's warranty remains valid.</li>
+                <li>To prevent static electricity from damaging sensitive components.</li>
+            </ul>
+            <p class="note">Laptops use different sized screws throughout and ribbon cables have specific orientations.
+                Documenting during disassembly prevents a reassembly puzzle. Damage prevention is addressed by careful
+                technique. Warranty considerations determine whether to perform the work at all. ESD prevention requires
+                antistatic packaging and grounding, not documentation.</p>
+        </div>
+
+        <!-- Q10 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 10</h2>
+            <p class="notes-paragraph">A technician needs to replace a solid-state drive (SSD) in a user's laptop. The
+                technician requested the purchasing department to order a drive that has higher bus speeds than other
+                SSDs and fits into a PCI Express bus when incorporating the appropriate adapter. Which drive type does
+                the purchasing department order?</p>
+            <ul class="notes-list">
+                <li>mSATA</li>
+                <li class="correct">M.2 &#10003;</li>
+                <li>SATA</li>
+                <li>uSATA</li>
+            </ul>
+            <p class="note">M.2 SSDs interface with the PCIe bus, providing much higher speeds than SATA-based drives.
+                mSATA uses the SATA bus and is capped at 6 Gb/s. Standard SATA is also capped at 6 Gb/s. uSATA (micro
+                SATA) is for 1.8" drive bays and is still a SATA interface.</p>
+        </div>
+
+        <!-- Q11 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 11</h2>
+            <p class="notes-paragraph">A technician is replacing a laptop keyboard and notices that one of the screws
+                securing the keyboard is stripped. After analyzing the situation, what is the BEST course of action to
+                complete the repair without causing further damage?</p>
+            <ul class="notes-list">
+                <li>Drill out the stripped screw and proceed with the keyboard replacement.</li>
+                <li>Skip removing the stripped screw and install the new keyboard around it.</li>
+                <li class="correct">Use a rubber band between the screwdriver and the screw head to improve grip and
+                    remove the screw. &#10003;</li>
+                <li>Use a larger screwdriver to force the screw out of its position.</li>
+            </ul>
+            <p class="note">A rubber band placed over the stripped screw head fills the damaged notch and provides
+                enough friction to turn the screw. Drilling is a last resort that risks chassis damage. Skipping the
+                screw prevents full removal of the old keyboard and proper seating of the new one. Using a larger
+                screwdriver risks further stripping and chassis damage.</p>
+        </div>
+
+        <!-- Q12 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 12</h2>
+            <p class="notes-paragraph">A user has configured their mobile device to unlock with facial recognition.
+                Which of the following methods for securing the mobile device is being used?</p>
+            <ul class="notes-list">
+                <li>Antivirus application</li>
+                <li>Trusted source</li>
+                <li>Locator application</li>
+                <li class="correct">Biometric authentication &#10003;</li>
+            </ul>
+            <p class="note">Facial recognition uses the camera to scan a unique body feature and is a form of biometric
+                authentication. Antivirus detects malware. Trusted source refers to approved app installation sources.
+                Locator applications are used to track or remotely locate a lost device.</p>
+        </div>
+
+        <!-- Q13 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 13</h2>
+            <p class="notes-paragraph">A technician is tasked with replacing an internal laptop hard drive. Which of the
+                following hard drive standards is of MOST concern when selecting a replacement that is compatible with
+                the laptop?</p>
+            <ul class="notes-list">
+                <li class="correct">The hard drive's form factor &#10003;</li>
+                <li>The hard drive's read and write speeds</li>
+                <li>The hard drive's minimum voltage requirements</li>
+                <li>The hard drive's storage capacity</li>
+            </ul>
+            <p class="note">Form factor (2.5", 1.8", and z-height variants) determines whether the drive physically fits
+                in the laptop chassis and drive bay. Speed, voltage, and capacity are secondary considerations that do
+                not affect physical compatibility.</p>
+        </div>
+
+        <!-- Q14 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 14</h2>
+            <p class="notes-paragraph">A technician is preparing to disassemble a laptop to replace a damaged component.
+                They have the following options for organizing screws and connectors. Which method is the MOST effective
+                and aligns with best practices in the industry?</p>
+            <ul class="notes-list">
+                <li>Place all screws and connectors in a single container and label it with the laptop model.</li>
+                <li>Use a magnetic tray to hold all screws and connectors together during the disassembly process.</li>
+                <li class="correct">Take photos during each stage of disassembly and tape screws to the corresponding
+                    points in the photos. &#10003;</li>
+                <li>Group screws and connectors by size and store them in separate labeled bags.</li>
+            </ul>
+            <p class="note">Photographing each disassembly stage and taping screws to their corresponding photo
+                locations is the explicitly recommended best practice. A single container or magnetic tray keeps screws
+                together but provides no location tracking. Grouping by size is better but insufficient since the same
+                size screw may be used in multiple locations.</p>
+        </div>
+
+        <!-- Q15 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 15</h2>
+            <p class="notes-paragraph">What types of batteries are typically used in laptops?</p>
+            <ul class="notes-list">
+                <li>Nickel-Metal Hydride (NiMH)</li>
+                <li class="correct">Lithium-ion (Li-ion) &#10003;</li>
+                <li>Nickel-Cadmium (NiCd)</li>
+                <li>Alkaline</li>
+            </ul>
+            <p class="note">Li-ion is the standard battery technology in modern laptops due to its high energy density,
+                low self-discharge, and no memory effect. NiMH and NiCd are older technologies no longer used in
+                laptops. Alkaline batteries are disposable and non-rechargeable, unsuitable for laptop use.</p>
+        </div>
+
+    </main>
+    </div>
+</body>
+
+</html>

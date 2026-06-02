@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.5.1 Client Server Relationship</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">7.5.1 Client Server Relationship</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Peer-to-Peer (Workgroup) vs. Client-Server</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Peer-to-Peer (Workgroup)</th>
+                            <th>Client-Server</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Roles</strong></td>
+                            <td>Any computer can act as client or server depending on context</td>
+                            <td>Dedicated servers provide services; clients only consume them</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Accounts</strong></td>
+                            <td>Each user needs accounts on every other computer</td>
+                            <td>Centralized account management</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Security</strong></td>
+                            <td>Low; difficult to control access</td>
+                            <td>High; servers are secured and isolated</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Scale</strong></td>
+                            <td>Practical for fewer than ~10 devices</td>
+                            <td>Suitable for enterprise networks of any size</td>
+                        </tr>
+                        <tr>
+                            <td><strong>File sharing</strong></td>
+                            <td>Shared directly from individual computers</td>
+                            <td>Stored on a dedicated file server</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Peer-to-Peer: Role Is Perspective-Based</h2>
+                <p class="notes-paragraph">In a workgroup, client and server roles are not fixed. A computer sharing a
+                    folder is acting as a server to the computer requesting it. The same computer can simultaneously be
+                    a client to another shared resource. Example roles a single workstation might fill:</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><strong>Server</strong> — sharing a folder others can pull from</li>
+                    <li class="notes-list-item"><strong>Client</strong> — pulling files from another shared folder</li>
+                    <li class="notes-list-item"><strong>Print server</strong> — forwarding print jobs to a locally
+                        attached printer</li>
+                    <li class="notes-list-item"><strong>Gateway</strong> — using two NICs to connect the private network
+                        to the ISP</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Client-Server: Dedicated Roles</h2>
+                <p class="notes-paragraph">In a client-server network, servers run specific services activated by an
+                    administrator. A freshly installed server OS offers only basic file services by default; additional
+                    services must be enabled.</p>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Web server (HTTP)</strong></td>
+                            <td>IIS on Windows Server hosting an internal intranet site</td>
+                        </tr>
+                        <tr>
+                            <td><strong>DHCP server</strong></td>
+                            <td>Assigns IP addresses to clients on boot</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mail server</strong></td>
+                            <td>Handles email for network users</td>
+                        </tr>
+                        <tr>
+                            <td><strong>File server</strong></td>
+                            <td>Centralized storage; users store/retrieve files instead of sharing from their own
+                                machines</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph">Client computers in a client-server network do not act as servers. Keeping
+                    clients in a pure client role reduces security risk.</p>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.2.5 Legacy Systems</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">7.2.5 Legacy Systems</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Legacy System</dt>
+                    <dd class="notes-definition">A system no longer directly supported by its vendor, due to the vendor
+                        going out of business or formally deprecating the product.</dd>
+                    <dt class="notes-term">EOL (End-of-Life)</dt>
+                    <dd class="notes-definition">Status of a product that is no longer supported by its vendor; no
+                        further patches or updates will be issued.</dd>
+                </dl>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Why Legacy Systems Stay on Networks</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Run services that are too complex or expensive to migrate to a modern
+                        platform.</li>
+                    <li class="notes-list-item">May include legacy OSs, application software, or old-style mainframe
+                        computers.</li>
+                    <li class="notes-list-item">Generally still functional for their intended purpose, which is why
+                        replacement is deprioritized.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Security Risks and Mitigations</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Risk</th>
+                            <th>Mitigation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>No vendor patches available for discovered exploits</td>
+                            <td><strong>Isolate</strong> legacy systems as far as possible from the rest of the network
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Unpatched vulnerabilities can be exploited by attackers</td>
+                            <td><strong>Protect and monitor</strong> all network channels linking legacy systems</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8.2.6 Lab: Manage IaaS VMs in Azure</title>
+  <link rel="stylesheet" href="../../styles/site.css">
+  <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+  <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+    <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+    <span class="sidebar-toggle__label">Menu</span>
+  </button>
+
+  <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+  <div class="site-shell site-shell--sidebar">
+    <header class="site-header site-sidebar" id="site-sidebar">
+      <div class="site-sidebar__inner">
+        <p class="site-title">Course Navigation</p>
+        <nav class="site-nav" aria-label="Primary"></nav>
+      </div>
+    </header>
+
+    <main class="page-content notes-content">
+      <h1 class="notes-title">8.2.6 Lab: Manage IaaS Virtual Machines in Azure</h1>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Lab Scenario</h2>
+        <p class="notes-paragraph">You are the network administrator for your company. You have decided to begin the configuration of Azure to help manage your network. As part of this setup, you need to create a virtual server in Azure.</p>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Required Configuration</h2>
+        <table class="notes-table">
+          <thead class="notes-table-head">
+            <tr class="notes-table-row">
+              <th class="notes-table-heading">Category</th>
+              <th class="notes-table-heading">Setting</th>
+              <th class="notes-table-heading">Value</th>
+            </tr>
+          </thead>
+          <tbody class="notes-table-body">
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Virtual machine type</td>
+              <td class="notes-table-cell">Type</td>
+              <td class="notes-table-cell"><b>Azure virtual machine</b></td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Project details</td>
+              <td class="notes-table-cell">Subscription</td>
+              <td class="notes-table-cell"><b>CorpNet Production</b></td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Project details</td>
+              <td class="notes-table-cell">Resource group</td>
+              <td class="notes-table-cell"><b>CorpNetCloud</b></td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Instance details</td>
+              <td class="notes-table-cell">Virtual machine name</td>
+              <td class="notes-table-cell"><b>CorpCloud1</b></td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Instance details</td>
+              <td class="notes-table-cell">Region</td>
+              <td class="notes-table-cell"><b>(US) West US2</b></td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Instance details</td>
+              <td class="notes-table-cell">Image</td>
+              <td class="notes-table-cell"><b>Windows Server 2022 Datacenter: Azure Edition - Gen2</b></td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Instance details</td>
+              <td class="notes-table-cell">Size</td>
+              <td class="notes-table-cell"><b>Standard_D4s_v3 - 4 vcpu, 16 GiB memory ($327.04/month)</b></td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Administrator account</td>
+              <td class="notes-table-cell">Username</td>
+              <td class="notes-table-cell"><b>CorpAdmin</b></td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Administrator account</td>
+              <td class="notes-table-cell">Password</td>
+              <td class="notes-table-cell"><b>corpP@ssw0rd</b></td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Administrator account</td>
+              <td class="notes-table-cell">Confirm password</td>
+              <td class="notes-table-cell"><b>corpP@ssw0rd</b></td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Disk options</td>
+              <td class="notes-table-cell">OS disk type</td>
+              <td class="notes-table-cell"><b>Standard HDD</b></td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Disk options</td>
+              <td class="notes-table-cell">Delete with VM</td>
+              <td class="notes-table-cell"><b>Selected</b></td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Networking</td>
+              <td class="notes-table-cell">Virtual network</td>
+              <td class="notes-table-cell"><b>(new) CorpNetCloud-vnet</b></td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Networking</td>
+              <td class="notes-table-cell">Subnet</td>
+              <td class="notes-table-cell"><b>(new) default (10.0.0.0/24)</b></td>
+            </tr>
+            <tr class="notes-table-row">
+              <td class="notes-table-cell">Networking</td>
+              <td class="notes-table-cell">Public IP</td>
+              <td class="notes-table-cell"><b>(new) CorpCloud1-ip</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 1 - Configure Basic Settings</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">Maximize the <b>Google Chrome</b> window for better viewing.</li>
+          <li class="notes-list-item">Under <b>Azure Services</b>, select <b>Virtual machines</b>.</li>
+          <li class="notes-list-item">From the menu bar, select <b>Create</b> &gt; <b>Azure virtual machine</b>.</li>
+          <li class="notes-list-item">For <b>Subscription</b>, select <b>CorpNet Production</b>.</li>
+          <li class="notes-list-item">For <b>Resource group</b>, select <b>CorpNetCloud</b>.</li>
+          <li class="notes-list-item">For <b>Virtual machine name</b>, enter <b>CorpCloud1</b>.</li>
+          <li class="notes-list-item">For <b>Region</b>, select <b>(US) West US2</b>.</li>
+          <li class="notes-list-item">For <b>Image</b>, select <b>Windows Server 2022 Datacenter: Azure Edition - Gen2</b>.</li>
+          <li class="notes-list-item">For <b>Size</b>, select <b>Standard_D4s_v3 - 4 vcpu, 16 GiB memory ($327.04/month)</b>.</li>
+          <li class="notes-list-item">For <b>Username</b>, enter <b>CorpAdmin</b>.</li>
+          <li class="notes-list-item">For <b>Password</b>, enter <b>corpP@ssw0rd</b>.</li>
+          <li class="notes-list-item">For <b>Confirm password</b>, enter <b>corpP@ssw0rd</b>.</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 2 - Configure Disks</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">From the bottom menu bar, select <b>Next: Disks</b>.</li>
+          <li class="notes-list-item">Under <b>Disk options</b>, set <b>OS disk type</b> to <b>Standard HDD</b>.</li>
+          <li class="notes-list-item">Make sure the <b>Delete with VM</b> box is selected.</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 3 - Configure Networking</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">From the bottom menu bar, select <b>Next: Networking</b>.</li>
+          <li class="notes-list-item">Under <b>Network Interface</b>, verify <b>Virtual network</b> is <b>(new) CorpNetCloud-vnet</b>.</li>
+          <li class="notes-list-item">Verify <b>Subnet</b> is <b>(new) default (10.0.0.0/24)</b>.</li>
+          <li class="notes-list-item">Verify <b>Public IP</b> is <b>(new) CorpCloud1-ip</b>.</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 4 - Review and Validate</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">From the bottom menu bar, select <b>Review + create</b>.</li>
+          <li class="notes-list-item">Review the virtual machine details.</li>
+        </ul>
+      </section>
+
+      <section class="notes-section">
+        <h2 class="notes-section-title">Step 5 - Create the Virtual Machine</h2>
+        <ul class="notes-list">
+          <li class="notes-list-item">From the bottom menu bar, select <b>Create</b>.</li>
+          <li class="notes-list-item">Monitor the creation process until the deployment is complete.</li>
+          <li class="notes-list-item">After the deployment is complete, select <b>Go to resource</b>.</li>
+          <li class="notes-list-item">Verify that the virtual machine has been created.</li>
+        </ul>
+      </section>
+
+      <blockquote>
+        <p><strong>Important:</strong> Use the exact VM name, account name, password, image, size, disk, network, and region values shown in the configuration table.</p>
+      </blockquote>
+    </main>
+  </div>
+</body>
+
+</html>

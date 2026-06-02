@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.1.10 Lab: Configure Network Printing</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">10.1.10 Lab: Configure Network Printing</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Required Actions</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">On <b>Office1</b>, share the <b>HP Photosmart Plus</b> printer.</li>
+                    <li class="notes-list-item">On <b>Office2</b>, add the shared <b>HP Photosmart Plus</b> printer.</li>
+                    <li class="notes-list-item">On <b>Office2</b>, set the shared printer as the default printer.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Configuration Values</h2>
+                <table class="notes-table">
+                    <thead class="notes-table-head">
+                        <tr class="notes-table-row">
+                            <th class="notes-table-heading">Setting</th>
+                            <th class="notes-table-heading">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody class="notes-table-body">
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Printer to share</td>
+                            <td class="notes-table-cell"><b>HP Photosmart Plus</b></td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Share name</td>
+                            <td class="notes-table-cell"><b>HP Photosmart Plus</b></td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Client rendering option</td>
+                            <td class="notes-table-cell"><b>Render print jobs on client computers</b> checked</td>
+                        </tr>
+                        <tr class="notes-table-row">
+                            <td class="notes-table-cell">Shared printer on Office2</td>
+                            <td class="notes-table-cell"><b>HP Photosmart Plus on Office1</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Step 1 - Share the Printer on Office1</h2>
+                <ol class="notes-list">
+                    <li class="notes-list-item">On the <b>Office1</b> computer, right-click <b>Start</b>, then select <b>Settings</b>.</li>
+                    <li class="notes-list-item">Select <b>Bluetooth &amp; devices</b>.</li>
+                    <li class="notes-list-item">Select <b>Printers &amp; scanners</b>.</li>
+                    <li class="notes-list-item">Select <b>HP Photosmart Plus</b>.</li>
+                    <li class="notes-list-item">Select <b>Printer properties</b>.</li>
+                    <li class="notes-list-item">Select the <b>Sharing</b> tab.</li>
+                    <li class="notes-list-item">Select <b>Share this printer</b>.</li>
+                    <li class="notes-list-item">Use the default share name: <b>HP Photosmart Plus</b>.</li>
+                    <li class="notes-list-item">Verify that <b>Render print jobs on client computers</b> is checked.</li>
+                    <li class="notes-list-item">Select <b>OK</b>.</li>
+                </ol>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Step 2 - Add the Shared Printer on Office2</h2>
+                <ol class="notes-list">
+                    <li class="notes-list-item">From the top navigation area, select <b>Floor 1 Overview</b>.</li>
+                    <li class="notes-list-item">Under <b>Office 2</b>, select <b>Office2</b>.</li>
+                    <li class="notes-list-item">Right-click <b>Start</b>, then select <b>Settings</b>.</li>
+                    <li class="notes-list-item">Select <b>Bluetooth &amp; devices</b>.</li>
+                    <li class="notes-list-item">Select <b>Printers &amp; scanners</b>.</li>
+                    <li class="notes-list-item">Select <b>Add device</b>.</li>
+                    <li class="notes-list-item">For <b>HP Photosmart Plus on Office1</b>, select <b>Add device</b>.</li>
+                    <li class="notes-list-item">Wait for the printer to install.</li>
+                </ol>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Step 3 - Set the Default Printer on Office2</h2>
+                <ol class="notes-list">
+                    <li class="notes-list-item">Select <b>HP Photosmart Plus on Office1</b>.</li>
+                    <li class="notes-list-item">Select <b>Set as default</b>.</li>
+                </ol>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

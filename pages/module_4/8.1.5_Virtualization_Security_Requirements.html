@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8.1.5 Virtualization Security Requirements</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">8.1.5 Virtualization Security Requirements</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Guest OS Security</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Each guest OS requires regular patching and malware protection, just
+                        like a physical OS.</li>
+                    <li class="notes-list-item">Patching individual VMs impacts performance — use a <strong>patched
+                            template image</strong> that is tested before deploying to production.</li>
+                    <li class="notes-list-item">Running antivirus/IPS on every guest degrades performance. Use
+                        <strong>virtualization-aware security solutions</strong> managed at the hypervisor/host level
+                        instead.</li>
+                    <li class="notes-list-item">Standard host antivirus <strong>cannot detect malware inside guest
+                            OSs</strong>. Scanning virtual disks from the host causes severe performance issues.</li>
+                </ul>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Rogue VMs / VM Sprawl</dt>
+                    <dd class="notes-definition">Uncontrolled deployment of unauthorized VMs leads to VM sprawl,
+                        complicating security and resource management. System management tools can detect and control
+                        rogue builds.</dd>
+                    <dt class="notes-term">Logic Bombs</dt>
+                    <dd class="notes-definition">Malicious code inserted into VM images by rogue developers or
+                        contractors; a key reason to enforce strict controls over VM template development.</dd>
+                </dl>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Host Security</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">The host is a <strong>single point of failure</strong> — if it goes
+                        down, all guest VMs go offline simultaneously.</li>
+                    <li class="notes-list-item">Mitigations: <strong>high availability</strong> (automatically restart
+                        VMs on another host on failure) and <strong>power redundancy</strong> (UPS, backup generators).
+                    </li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Hypervisor Security</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">VM Escaping</dt>
+                    <dd class="notes-definition">A critical threat where malware on a guest OS exploits hypervisor
+                        vulnerabilities to access other guest VMs or the host itself. Mitigation: keep the hypervisor
+                        patched.</dd>
+                </dl>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">PowerShell VM Management (Hyper-V)</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Cmdlet</th>
+                            <th>Purpose</th>
+                            <th>Key Switches</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>New-VM</strong></td>
+                            <td>Creates a new VM; defines basic properties</td>
+                            <td><code>-Name</code>, <code>-Path</code>, <code>-MemoryStartupBytes</code>,
+                                <code>-Generation</code>, <code>-VHDPath</code>, <code>-VHDSizeBytes</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Set-VM</strong></td>
+                            <td>Modifies VM configuration after creation</td>
+                            <td><code>-Name</code>, <code>-DynamicMemoryEnabled</code> ($true/$false),
+                                <code>-MemoryMinimumBytes</code>, <code>-MemoryMaximumBytes</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Connect-VMNetworkAdapter</strong></td>
+                            <td>Connects VM's virtual NIC to a virtual switch</td>
+                            <td><code>-VMName</code>, <code>-SwitchName</code> (internal, external, or private)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

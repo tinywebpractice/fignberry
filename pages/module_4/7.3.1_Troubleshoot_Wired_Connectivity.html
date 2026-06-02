@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.3.1 Troubleshoot Wired Connectivity</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">7.3.1 Troubleshoot Wired Connectivity</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Typical Ethernet Link Components</h2>
+                <p class="notes-paragraph">For a single-host wired issue, isolate the physical location of the fault
+                    across these components:</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><strong>NIC port</strong> on the host</li>
+                    <li class="notes-list-item"><strong>RJ45 patch cord</strong> from host to wall port</li>
+                    <li class="notes-list-item"><strong>Structured cable</strong> (permanent link) from wall port to
+                        patch panel, terminated to <strong>IDC (insulation displacement connector)</strong> blocks</li>
+                    <li class="notes-list-item"><strong>RJ45 patch cord</strong> from patch panel port to switch port
+                    </li>
+                    <li class="notes-list-item"><strong>Network transceiver</strong> in the switch port</li>
+                </ul>
+                <p class="notes-paragraph">Link LEDs on NIC and switch ports indicate whether the link is active and at
+                    what speed. LEDs flicker to show network activity.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Troubleshooting Steps: No / Intermittent Connectivity</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Step</th>
+                            <th>Action</th>
+                            <th>Tools</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1</strong></td>
+                            <td>Check patch cords are properly terminated and seated; substitute with a known good cable
+                                if suspect.</td>
+                            <td>Cable tester</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2</strong></td>
+                            <td>If patch cords are good, test the transceivers for a bad port.</td>
+                            <td>Loopback tool</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3</strong></td>
+                            <td>If no loopback tool, substitute known working hosts (connect a different PC or swap
+                                switch ports). Note: may disrupt network; port security can make this unreliable.</td>
+                            <td>Known good host</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4</strong></td>
+                            <td>If patch cords and ports are ruled out, test the structured (permanent) cabling. May
+                                need new permanent link; could be a termination or interference issue.</td>
+                            <td>Cable tester / Certifier</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5</strong></td>
+                            <td>If cabling is good, verify Ethernet speed/duplex settings on the switch interface and
+                                NIC (should be set to auto-negotiate). Consider updating the NIC driver.</td>
+                            <td>Switch config / Device Manager</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Tools</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Cable Tester</dt>
+                    <dd class="notes-definition">Verifies patch cords and structured cabling for continuity and correct
+                        termination.</dd>
+                    <dt class="notes-term">Certifier</dt>
+                    <dd class="notes-definition">Advanced cable tester that reports detailed performance metrics and
+                        interference data.</dd>
+                    <dt class="notes-term">Loopback Tool</dt>
+                    <dd class="notes-definition">Plugs into a port to test whether the NIC or switch port transceiver is
+                        functioning correctly.</dd>
+                </dl>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Port Flapping</h2>
+                <p class="notes-paragraph"><strong>Port flapping</strong> is when a NIC or switch interface continually
+                    transitions between up and down states. Common causes: bad cabling, external interference, or a
+                    faulty NIC. Use the switch configuration interface to report how long a port remains in the up
+                    state.</p>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

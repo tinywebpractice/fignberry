@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8.4 Module Quiz</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+
+<body>
+    <button class="sidebar-toggle" aria-label="Toggle sidebar">&#9776;</button>
+    <div class="sidebar-backdrop"></div>
+    <nav class="site-sidebar" aria-label="Site navigation"></nav>
+    <nav class="site-nav" aria-label="Primary"></nav>
+
+    <main class="page-content notes-content">
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q1. Which term refers to a software implementation of a computer system that
+                executes programs like a physical machine?</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item correct">Virtual machine ✓</li>
+                <li class="notes-list-item">Hypervisor</li>
+                <li class="notes-list-item">Workload management</li>
+                <li class="notes-list-item">Physical host</li>
+            </ul>
+            <p class="note">A virtual machine (VM) is a software implementation of a computer system that runs programs
+                just like a physical machine, with its own allocated CPU, RAM, storage, and network access. The
+                hypervisor creates and manages VMs; the physical host is the hardware the hypervisor runs on.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q2. Which of the following BEST describes the Platform as a Service (PaaS)
+                cloud computing service model?</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item correct">PaaS delivers everything a developer needs to build an application
+                    on the existing cloud infrastructure. ✓</li>
+                <li class="notes-list-item">PaaS delivers software applications to the client either over the internet
+                    or on a local area network.</li>
+                <li class="notes-list-item">PaaS stores and provides data from a centralized location without the need
+                    for local collection and storage.</li>
+                <li class="notes-list-item">PaaS delivers infrastructure to the client, such as processing, storage,
+                    networks, and virtualized environments.</li>
+            </ul>
+            <p class="note">PaaS provides infrastructure plus development tools, databases, and runtime environments for
+                building and deploying applications. Delivering finished apps over a network is SaaS; raw infrastructure
+                only is IaaS; centralized data storage describes cloud storage/SaaS.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q3. Which of the following BEST describes a community cloud? (Select two.)
+            </h2>
+            <ul class="notes-list">
+                <li class="notes-list-item correct">Designed to be shared by several organizations ✓</li>
+                <li class="notes-list-item">Provides a combination of cloud resources from different service providers.
+                </li>
+                <li class="notes-list-item correct">Commonly hosted externally by a third party ✓</li>
+                <li class="notes-list-item">Access is granted only to the users within a single organization.</li>
+                <li class="notes-list-item">Platforms, applications, and storage are made available to the general
+                    public.</li>
+            </ul>
+            <p class="note">Community cloud is shared among multiple organizations with common concerns and is commonly
+                hosted by a third-party provider. Combining resources from different providers describes multicloud;
+                single-org access is private cloud; general public access is public cloud.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q4. Your company currently has an on-premises cloud solution that provides
+                services to its employees. However, the company would like to begin offering some services to the public
+                from the cloud. Which of the following cloud computing solutions would BEST meet your company's new
+                cloud computing requirements?</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item">Community cloud</li>
+                <li class="notes-list-item">Private cloud</li>
+                <li class="notes-list-item correct">Hybrid cloud ✓</li>
+                <li class="notes-list-item">Public cloud</li>
+            </ul>
+            <p class="note">Hybrid cloud combines private and public cloud elements. The company keeps its existing
+                on-premises private cloud for employees while extending to a public cloud for external services.
+                Community cloud requires multi-org coordination; private cloud is internal only; switching entirely to
+                public cloud would abandon the existing solution.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q5. Which of the following cloud computing solutions delivers software
+                applications to a client either over the internet or on a local area network?</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item">PaaS</li>
+                <li class="notes-list-item">DaaS</li>
+                <li class="notes-list-item">IaaS</li>
+                <li class="notes-list-item correct">SaaS ✓</li>
+            </ul>
+            <p class="note">SaaS delivers ready-to-use software applications to clients over the internet or a LAN with
+                no local installation required. PaaS provides a development environment; DaaS delivers a full virtual
+                desktop; IaaS delivers raw infrastructure.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q6. A mid-sized marketing agency is looking to improve collaboration among
+                its remote teams. They want a solution that allows team members to work on the same documents
+                simultaneously, track changes, and ensure that files are always accessible from multiple devices.
+                Additionally, they want to ensure that the solution provides fast access to files for team members
+                located in different regions. Which cloud file storage solution feature would BEST meet their needs?
+            </h2>
+            <ul class="notes-list">
+                <li class="notes-list-item">Cloud storage with limited access to mobile devices</li>
+                <li class="notes-list-item">Single datacenter file storage with no replication</li>
+                <li class="notes-list-item correct">Automated file synchronization with change tracking and commenting ✓
+                </li>
+                <li class="notes-list-item">On-premises file storage with manual synchronization</li>
+            </ul>
+            <p class="note">Automated cloud file sync with change tracking and commenting directly satisfies all
+                requirements: simultaneous collaboration, change tracking, multi-device access, and regional
+                availability via CDN and replication. The other options either restrict access, lack replication, or
+                require manual processes incompatible with real-time collaboration.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q7. You are reviewing the security setup of a client-side virtualization
+                environment at a law firm. During your analysis, you notice: the hypervisor is not updated regularly;
+                guest OSes are configured with unrestricted network access; snapshots of VMs are stored on a shared
+                drive accessible to all employees. Which of the following actions would most effectively address the
+                ROOT cause of potential security vulnerabilities in this environment?</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item">Limit the number of guest OSes running simultaneously to reduce resource
+                    strain.</li>
+                <li class="notes-list-item correct">Regularly update the hypervisor and host OS to patch known
+                    vulnerabilities. ✓</li>
+                <li class="notes-list-item">Implement access controls to restrict who can access VM snapshots on the
+                    shared drive.</li>
+                <li class="notes-list-item">Disable network access for all guest OSes to prevent external threats.</li>
+            </ul>
+            <p class="note">The hypervisor is the foundation of the entire virtual environment. An unpatched hypervisor
+                is the root vulnerability -- if compromised, all guest OSes are exposed regardless of other controls.
+                The other issues are misconfigurations that should also be addressed, but patching the hypervisor
+                resolves the root cause.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q8. What is another name for virtual machines?</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item correct">Guest operating systems ✓</li>
+                <li class="notes-list-item">Sandbox</li>
+                <li class="notes-list-item">Hypervisors</li>
+                <li class="notes-list-item">Host machines</li>
+            </ul>
+            <p class="note">Virtual machines are referred to as guest OSes because they run inside the hypervisor on top
+                of the host. The hypervisor creates and manages VMs; the host machine is the physical hardware; a
+                sandbox is an isolated testing environment, not a synonym for VMs in general.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q9. You are tasked with setting up a client-side virtualization workstation
+                to run multiple guest operating systems for software testing. The host machine has a CPU without
+                virtualization extensions enabled, 8 GB of RAM, and 500 GB of storage. Which of the following actions
+                should you take first to ensure optimal virtualization performance?</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item">Install a 64-bit hypervisor to support 64-bit guest OSes.</li>
+                <li class="notes-list-item correct">Enable Intel VT-x or AMD-V in the system firmware. ✓</li>
+                <li class="notes-list-item">Increase the storage capacity to 1 TB.</li>
+                <li class="notes-list-item">Upgrade the system memory to 16 GB.</li>
+            </ul>
+            <p class="note">Hardware virtualization extensions (Intel VT-x or AMD-V) must be enabled in BIOS/UEFI before
+                the hypervisor can properly manage guest OSes. This is the prerequisite for all other steps. Installing
+                a hypervisor without extensions enabled will result in poor performance or failure; storage and RAM
+                upgrades may help later but do not address the identified blocking issue.</p>
+        </div>
+
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Q10. As the network engineer for a large financial institution, you have
+                been given the responsibility to provide a new financial desktop to the financial advisors in all
+                company branch offices. Requirements: it must be a virtualization solution, hosted in the cloud by a
+                third party, and must run on a tablet. Which of the following virtualization types BEST meets your
+                desktop software requirements?</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item">Type 2 hypervisor</li>
+                <li class="notes-list-item correct">VDI ✓</li>
+                <li class="notes-list-item">Type 1 hypervisor</li>
+                <li class="notes-list-item">Container virtualization</li>
+            </ul>
+            <p class="note">VDI (Virtual Desktop Infrastructure) delivers a virtualized desktop hosted in the cloud by a
+                third party, accessible from any device including tablets -- matching all three requirements. Type 1 and
+                Type 2 hypervisors are infrastructure components, not desktop delivery solutions. Container
+                virtualization virtualizes application environments, not full desktops.</p>
+        </div>
+
+    </main>
+
+    <script src="../../js/nav.js"></script>
+</body>
+
+</html>

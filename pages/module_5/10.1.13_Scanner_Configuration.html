@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10.1.13 Scanner Configuration</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+<main class="page-content notes-content">
+
+        <h1 class="notes-title">10.1.13 Scanner Configuration</h1>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Overview</h2>
+            <p class="notes-paragraph">Multi-function devices (MFDs) combine printing, scanning, copying, and faxing.
+                Scanners create digital bitmap files from physical flat objects (documents, receipts, photos). Optical
+                character recognition (OCR) software can convert scanned text into editable documents.</p>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Scanner Types</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">Flatbed Scanner</dt>
+                <dd class="notes-definition">Object is placed on a glass surface; a bright light shines on it. Mirrors
+                    reflect the image onto a lens, which splits it into RGB via a prism or focuses it onto imaging
+                    sensors with color filters. Output is a bitmap file.</dd>
+                <dt class="notes-term">Automatic Document Feeder (ADF)</dt>
+                <dd class="notes-definition">Paper is passed over a fixed scan head. Efficiently scans multi-page
+                    documents without manual page placement.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Network Scan Services</h2>
+            <p class="notes-paragraph">An MFD or standalone scanner can be configured as a network device and directed
+                to deliver scan output to various destinations:</p>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Scan Destination</th>
+                        <th>How It Works</th>
+                        <th>Requirements</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Scan to Email</td>
+                        <td>Scan is sent as an email attachment.</td>
+                        <td>MFD must be configured with the IP address of an SMTP server; SMTP server typically
+                            authenticates the user before sending.</td>
+                    </tr>
+                    <tr>
+                        <td>Scan to SMB (Server Message Block)</td>
+                        <td>Scan is saved to a shared network folder.</td>
+                        <td>MFD must be configured with the file server path and share name; users must have write
+                            permissions to the share.</td>
+                    </tr>
+                    <tr>
+                        <td>Scan to Cloud</td>
+                        <td>Scan is uploaded to a cloud storage service (e.g., OneDrive, Dropbox).</td>
+                        <td>MFD offers preset options or custom templates; users authenticate to their cloud account
+                            through the scan dialog.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.3.5 Troubleshoot VoIP Issues</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">7.3.5 Troubleshoot VoIP Issues</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">VoIP vs. Bursty Data</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Bursty Data (HTTP, FTP, Email)</th>
+                            <th>Real-Time / VoIP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Packet loss</strong></td>
+                            <td>Sensitive (retransmission required)</td>
+                            <td>Tolerant (some loss acceptable)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Delivery delay / sequence</strong></td>
+                            <td>Tolerant</td>
+                            <td>Very sensitive</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Symptoms of problems</strong></td>
+                            <td>Slow transfers</td>
+                            <td>Dropouts, echo, glitches in call</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key Terms: Latency and Jitter</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Latency</dt>
+                    <dd class="notes-definition">Time for a signal to reach the recipient, measured in
+                        <strong>ms</strong>. Increases with distance and router processing delays. VoIP maximum one-way
+                        latency: ~<strong>150 ms</strong>.</dd>
+                    <dt class="notes-term">RTT (Round Trip Time)</dt>
+                    <dd class="notes-definition">Two-way latency; time for a host to receive a response to a probe.</dd>
+                    <dt class="notes-term">Jitter</dt>
+                    <dd class="notes-definition">Variation in delay between packets arriving, measured by sampling
+                        elapsed time between packets. VoIP can buffer up to ~<strong>30 ms</strong> of jitter without
+                        severe call quality impact. Typically caused by network congestion at routers and switches.</dd>
+                </dl>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">QoS (Quality of Service)</h2>
+                <p class="notes-paragraph"><strong>QoS</strong> configures switches, APs, and routers to identify and
+                    prioritize VoIP traffic over bursty data. It is the primary solution for ensuring acceptable VoIP
+                    call quality.</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><strong>Enterprise:</strong> Sophisticated QoS and traffic engineering
+                        protocols on managed switches and routers.</li>
+                    <li class="notes-list-item"><strong>SOHO:</strong> Bandwidth control / QoS feature on the
+                        router/modem; prioritize the port used by the VoIP app over other protocols. QoS cannot be
+                        guaranteed over a public network (Internet).</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Diagnosing Latency / Jitter</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Use the router/modem management interface to report latency and jitter.
+                    </li>
+                    <li class="notes-list-item">If unavailable, use a <strong>speed test site</strong> to measure
+                        latency and bandwidth.</li>
+                    <li class="notes-list-item">If latency persistently exceeds the agreed service level, contact your
+                        <strong>ISP</strong>.</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

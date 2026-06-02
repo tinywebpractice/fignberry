@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10.1.6 Printer Properties</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+<main class="page-content notes-content">
+
+        <h1 class="notes-title">10.1.6 Printer Properties</h1>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Overview</h2>
+            <p class="notes-paragraph">Each logical printer object has default configuration settings managed through
+                its driver or app. In Windows, printers are managed via <strong>Settings &gt; Devices &gt; Printers
+                    &amp; Scanners</strong>, where you can open the queue, manage settings, or remove the device.</p>
+            <p class="notes-paragraph">Windows provides two distinct configuration dialogs for a local printer:
+                <strong>Printer Properties</strong> and <strong>Printing Preferences</strong>.
+            </p>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Printer Properties vs. Printing Preferences</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Dialog</th>
+                        <th>Scope</th>
+                        <th>Key Settings</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Printer Properties</td>
+                        <td>Printer object and hardware configuration</td>
+                        <td>Update driver, change port, sharing and permissions, install/configure duplex unit or
+                            finisher unit, set default paper types per tray, printer memory, font substitution, job
+                            separator</td>
+                    </tr>
+                    <tr>
+                        <td>Printing Preferences</td>
+                        <td>Default job-level settings for print output</td>
+                        <td>Paper size, orientation, quality, color, duplex mode per print job</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Printer Properties -- Device Settings Tab</h2>
+            <p class="notes-paragraph">The Device Settings tab exposes hardware-level installable options. Example
+                settings from the HP LaserJet 200 MFP:</p>
+            <ul class="notes-list">
+                <li class="notes-list-item"><strong>Form to Tray Assignment:</strong> Maps paper sizes to specific trays
+                    (e.g., Printer auto select, Manual Feed, Tray 1 -- all set to A4).</li>
+                <li class="notes-list-item"><strong>Font Substitution Table / External Fonts:</strong> Controls font
+                    handling at the device level.</li>
+                <li class="notes-list-item"><strong>Installable Options:</strong> Automatic Configuration, Printer
+                    Status Notification, Allow Manual Duplexing, Printer Memory, Job Separator.</li>
+            </ul>
+            <p class="notes-paragraph">The <strong>About</strong> tab contains driver version info, vendor details, and
+                links to support and troubleshooting resources.</p>
+        </section>
+
+    </main>
+    </div>
+</body>
+
+</html>

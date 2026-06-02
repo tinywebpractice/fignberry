@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.5.5 Exercise: Troubleshooting with Command-Line Tools</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">7.5.5 Exercise: Troubleshooting with Command-Line Tools</h1>
+
+            <p class="notes-paragraph">This lesson is a scenario-based exercise. CompTIA asks you to apply five
+                command-line tools across five network troubleshooting scenarios and write up your findings. The
+                reference material below covers each tool and its scenario.</p>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Command-Line Tools Reference</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Tool</th>
+                            <th>OS</th>
+                            <th>Purpose</th>
+                            <th>Key Command</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>ipconfig</strong></td>
+                            <td>Windows</td>
+                            <td>Display IP address, subnet mask, default gateway, DNS</td>
+                            <td><code>ipconfig /all</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>ifconfig</strong></td>
+                            <td>Linux / macOS</td>
+                            <td>Same as ipconfig; display and configure network interfaces</td>
+                            <td><code>ifconfig</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>nslookup</strong></td>
+                            <td>Windows / Linux</td>
+                            <td>Query DNS to resolve domain names to IP addresses</td>
+                            <td><code>nslookup example.com</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>netstat</strong></td>
+                            <td>Windows / Linux</td>
+                            <td>Display active connections, listening ports, network stats</td>
+                            <td><code>netstat -an</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>arp</strong></td>
+                            <td>Windows / Linux</td>
+                            <td>View and manage ARP table (IP-to-MAC address mappings)</td>
+                            <td><code>arp -a</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>ping</strong></td>
+                            <td>Windows / Linux</td>
+                            <td>Test connectivity; measure response time and packet loss</td>
+                            <td><code>ping &lt;IP or hostname&gt;</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Scenarios and Expected Findings</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Scenario</th>
+                            <th>Symptom</th>
+                            <th>Tool</th>
+                            <th>What to Look For</th>
+                            <th>Resolution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1</strong></td>
+                            <td>Cannot access the Internet</td>
+                            <td><code>ipconfig</code> / <code>ifconfig</code></td>
+                            <td>APIPA address (169.254.x.x) = no DHCP lease; missing default gateway = no route out</td>
+                            <td>Release/renew DHCP lease; check DHCP server; verify gateway config</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2</strong></td>
+                            <td>Cannot reach a specific website</td>
+                            <td><code>nslookup</code></td>
+                            <td>Failure to resolve domain = DNS issue; if IP resolves but site unreachable =
+                                server/routing issue</td>
+                            <td>Correct DNS server settings; test alternate DNS (e.g., 8.8.8.8)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3</strong></td>
+                            <td>Slow network performance</td>
+                            <td><code>netstat</code></td>
+                            <td>Excessive open connections or unusual foreign addresses may indicate a bottleneck or
+                                malware</td>
+                            <td>Close unnecessary connections; investigate suspicious processes; scan for malware</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4</strong></td>
+                            <td>Cannot connect to a local printer</td>
+                            <td><code>arp -a</code></td>
+                            <td>Printer IP not in ARP table or mapped to wrong MAC = ARP resolution failure</td>
+                            <td>Verify printer IP; clear stale ARP entry (<code>arp -d</code>); confirm printer is
+                                online</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5</strong></td>
+                            <td>Intermittent connectivity</td>
+                            <td><code>ping</code></td>
+                            <td>Packet loss or high/variable response times to default gateway = unstable local
+                                connection</td>
+                            <td>Check cable/NIC; check switch port; contact ISP if gateway pings succeed but internet
+                                fails</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Exam Objective</h2>
+                <p class="notes-paragraph">This exercise supports <strong>A+ Core 1 (220-1201) Objective 5.5</strong>:
+                    Given a scenario, troubleshoot network issues.</p>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

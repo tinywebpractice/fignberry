@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9.2.7 – Location Services</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+<main class="page-content notes-content">
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Location Services</h2>
+            <p class="notes-paragraph">Geolocation uses network attributes to identify or estimate the physical position
+                of a device. Location data is highly personal and apps must be explicitly granted permission to access
+                it.</p>
+
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>System</th>
+                        <th>How It Works</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Global Positioning System (GPS)</td>
+                        <td>Determines latitude and longitude using signals from orbital satellites via a GPS sensor
+                        </td>
+                        <td>Not all mobile devices include a GPS sensor</td>
+                    </tr>
+                    <tr>
+                        <td>Indoor Positioning System</td>
+                        <td>Triangulates location based on proximity to cellular radio towers, Wi-Fi access points, and
+                            Bluetooth/RFID beacons</td>
+                        <td>Used indoors or where GPS signal is unavailable</td>
+                    </tr>
+                    <tr>
+                        <td>Magnetometer (optional)</td>
+                        <td>Measures magnetic field to determine compass direction</td>
+                        <td>Fitted on some devices; enables more accurate compass readings</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Configuring Location Permissions</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item">iOS: Settings → Privacy → Location Services; per-app permissions
+                    configurable individually</li>
+                <li class="notes-list-item">Android: Settings → Location → App access to location; also controls Wi-Fi
+                    and Bluetooth scanning, Google Location Accuracy, and carrier location access</li>
+                <li class="notes-list-item">Apps must request and receive user permission before accessing location data
+                </li>
+            </ul>
+        </section>
+
+    </main>
+    </div>
+</body>
+
+</html>

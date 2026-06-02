@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10.1.14 Lesson Review</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+<main class="page-content notes-content">
+
+        <h1 class="notes-title">10.1.14 Lesson Review</h1>
+
+        <!-- Q1 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 1</h2>
+            <p class="notes-paragraph">Several employees have called you to complain about the default configuration
+                settings on the network printer. One has asked to change the page orientation, another has wanted to
+                change the collating setting, and another asked about duplexing. Which of the following print features
+                would allow the employees to make the requested changes to their print jobs?</p>
+            <ul class="answer-list">
+                <li>Print spooling</li>
+                <li class="correct">Printer Properties</li>
+                <li>Print queue</li>
+                <li>Print server</li>
+            </ul>
+            <p class="note">Orientation, collating, and duplexing are per-job output settings configured through
+                Printing Preferences, accessed via Printer Properties. Print spooling queues jobs, the print queue
+                manages job order, and the print server handles shared access -- none expose per-job formatting options
+                to end users.</p>
+        </div>
+
+        <!-- Q2 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 2</h2>
+            <p class="notes-paragraph">Your company has received complaints about the quality of printed marketing
+                materials, specifically regarding color accuracy and paper handling. Upon reviewing the Printing
+                Preferences dialog, you notice several settings that could be contributing to the issue. Which setting
+                should you analyze and adjust to address both color accuracy and paper handling problems?</p>
+            <ul class="answer-list">
+                <li>Enable duplex printing to save paper.</li>
+                <li>Adjust the printer's network settings to prioritize bandwidth.</li>
+                <li>Update the printer's driver to the latest version.</li>
+                <li class="correct">Change the color profile and ensure the correct paper type is selected.</li>
+            </ul>
+            <p class="note">The Color tab in Printing Preferences controls the color profile, and the Paper/Quality tab
+                controls paper type -- these directly address both reported problems. Duplex affects double-sided
+                printing, network bandwidth doesn't affect print quality, and a driver update doesn't specifically
+                target color or paper settings.</p>
+        </div>
+
+        <!-- Q3 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 3</h2>
+            <p class="notes-paragraph">Which of the following allows a computer to communicate with a printer?</p>
+            <ul class="answer-list">
+                <li>Print queue</li>
+                <li>Printer port</li>
+                <li>Print spooler</li>
+                <li class="correct">Print driver</li>
+            </ul>
+            <p class="note">The print driver is the software interface between the OS and the print device, translating
+                print commands into a PDL the printer understands. The print queue holds jobs waiting to be processed,
+                the printer port is the connection point the driver uses, and the print spooler is a service that
+                schedules jobs -- all depend on the driver to actually communicate with the device.</p>
+        </div>
+
+        <!-- Q4 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 4</h2>
+            <p class="notes-paragraph">Your system administrator shared a USB laser printer connected to your Windows 11
+                system, so other users on the network could send jobs to it. A network user has sent a large job to the
+                printer, but the print job has stalled. You try to delete the print job but can't. Which of the
+                following BEST describes the reason you cannot delete the print job?</p>
+            <ul class="answer-list">
+                <li>You do not have the Print permission.</li>
+                <li>You do not have the Manage this printer permission.</li>
+                <li class="correct">You do not have the Manage documents permission.</li>
+                <li>You do not have the Manage network printers permission.</li>
+            </ul>
+            <p class="note">Deleting jobs submitted by other users requires the Manage documents permission. The Print
+                permission only allows submitting your own jobs. Manage this printer controls printer-level
+                administration (pausing, settings, sharing), not individual document management. "Manage network
+                printers" is not a standard Windows printer permission.</p>
+        </div>
+
+        <!-- Q5 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 5</h2>
+            <p class="notes-paragraph">You have connected your printer directly to your Windows workstation with a USB
+                cable. Which type of printer have you set up?</p>
+            <ul class="answer-list">
+                <li class="correct">A local printer</li>
+                <li>A shared printer</li>
+                <li>A network printer</li>
+                <li>A web-enabled printer</li>
+            </ul>
+            <p class="note">A printer connected via USB to a single workstation is a local printer -- accessible only to
+                that machine. It becomes a shared printer only after sharing is explicitly enabled. Network printers
+                connect via Ethernet or Wi-Fi directly to the network. Web-enabled printers use cloud or web services
+                such as HP ePrint.</p>
+        </div>
+
+        <!-- Q6 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 6</h2>
+            <p class="notes-paragraph">What can be done to allow workstations on the same network to send print jobs to
+                a printer that is directly connected to a Windows workstation?</p>
+            <ul class="answer-list">
+                <li>Configure the printer to be a print server.</li>
+                <li>Disconnect the printer from the workstation and connect the printer to the network.</li>
+                <li class="correct">Configure the printer to be a shared printer.</li>
+                <li>Configure the workstation as a printer driver.</li>
+            </ul>
+            <p class="note">Enabling sharing via Printer Properties > Sharing tab allows the workstation to act as a
+                print server and lets other network clients send jobs to the locally attached printer. The printer
+                itself is not configured as a print server -- the workstation takes that role. A printer driver is
+                software, not a workstation role.</p>
+        </div>
+
+        <!-- Q7 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 7</h2>
+            <p class="notes-paragraph">As an IT technician, you added a printer for a client. When you did this, you
+                were prompted to select and install the drivers. Which of the following can you do to avoid repeating
+                this step for subsequent clients?</p>
+            <ul class="answer-list">
+                <li>Configure the computer for each client to act as a print server.</li>
+                <li>Reconfigure the printer as a wireless printer so that the printer drivers are not necessary.</li>
+                <li class="correct">Install the printer drivers on the print server.</li>
+                <li>Configure a wireless print server to be accessible on the network.</li>
+            </ul>
+            <p class="note">Installing drivers on the print server via Printer Properties > Sharing > Additional Drivers
+                allows connecting clients to automatically download the appropriate driver when they connect to the
+                print share. Drivers are always required regardless of connection type. Changing connectivity method
+                doesn't solve driver distribution.</p>
+        </div>
+
+        <!-- Q8 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 8</h2>
+            <p class="notes-paragraph">You are an IT support specialist tasked with setting up a new network printer in
+                a small office. The office requires that the printer be accessible to all employees and that it can be
+                managed remotely. The office network uses DHCP for IP address allocation. Which of the following steps
+                should you take to ensure the printer is correctly connected and accessible over the network?</p>
+            <ul class="answer-list">
+                <li class="correct">Connect the printer to the network with an Ethernet cable and allow it to obtain an
+                    IP address automatically from DHCP.</li>
+                <li>Connect the printer to the network using an Ethernet cable, manually configure a static IP address,
+                    and disable DHCP on the printer.</li>
+                <li>Connect the printer to a computer via USB and configure the computer to act as a print server.</li>
+                <li>Connect the printer to a computer via USB and share it over the network.</li>
+            </ul>
+            <p class="note">Ethernet connectivity with DHCP is the straightforward correct approach given the existing
+                network setup. Disabling DHCP on the printer is unnecessary added complexity. USB-to-workstation
+                connections create a dependency on that one machine being available and limit remote management
+                capability.</p>
+        </div>
+
+        <!-- Q9 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 9</h2>
+            <p class="notes-paragraph">Which of the following is a key reason for regularly updating the firmware on
+                multifunction devices and printers?</p>
+            <ul class="answer-list">
+                <li class="correct">To improve performance, fix bugs, and address security vulnerabilities.</li>
+                <li>To enhance the color resolution of printed documents.</li>
+                <li>To change the printer's physical dimensions.</li>
+                <li>To increase the physical printing speed of the device.</li>
+            </ul>
+            <p class="note">Firmware updates serve three core purposes: performance improvements, bug fixes, and
+                security patches. Print resolution and ppm are hardware specifications that firmware cannot change.
+                Firmware is software and has no effect on physical dimensions.</p>
+        </div>
+
+        <!-- Q10 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 10</h2>
+            <p class="notes-paragraph">Your company has recently upgraded to a new network scanner that supports
+                advanced security features and network scan services. During a routine audit, you discover that scanned
+                documents are not being delivered to the intended recipients and unauthorized users have accessed some
+                scanned files. What should you analyze first to resolve these issues and enhance security?</p>
+            <ul class="answer-list">
+                <li class="correct">The scanner's user authentication and access control settings</li>
+                <li>The type of paper used in the scanner to ensure it is compatible with the device</li>
+                <li>The physical location of the scanner to ensure it is not in a high-traffic area</li>
+                <li>The network configuration settings to verify the correct IP address and DNS settings</li>
+            </ul>
+            <p class="note">Misdirected scan output and unauthorized file access both point directly to authentication
+                and access control -- who can authenticate, where scan output is directed, and whether permissions on
+                scan destinations (SMB shares, email, cloud) are correctly configured. Paper type is irrelevant to a
+                scanner. Physical location doesn't explain misdirected digital files. A basic network misconfiguration
+                would prevent the scanner from functioning at all.</p>
+        </div>
+
+        <!-- Q11 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 11</h2>
+            <p class="notes-paragraph">You have just received a new multifunction printer for your office. After
+                unboxing it, you notice that the printer was delivered on a cold winter day and has been sitting in the
+                delivery truck for several hours. What is the BEST course of action before powering on the printer?</p>
+            <ul class="answer-list">
+                <li>Power on the printer immediately to ensure it is functioning properly after delivery.</li>
+                <li>Place the printer near a heater to warm it up quickly and then power it on.</li>
+                <li>Unbox the printer, connect it to the power outlet, and run a test print immediately to check for any
+                    issues.</li>
+                <li class="correct">Allow the printer to acclimate to room temperature for a few hours before powering
+                    it on.</li>
+            </ul>
+            <p class="note">When a printer moves from a cold environment to a warm one, leaving it powered off for a few
+                hours prevents condensation from forming on internal components. Powering on immediately or using an
+                external heat source risks condensation damage. Rapid warming from a heater can also cause uneven
+                thermal expansion.</p>
+        </div>
+
+        <!-- Q12 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 12</h2>
+            <p class="notes-paragraph">As a network administrator, you notice several multifunction devices (MFDs) in
+                your organization are experiencing intermittent printing errors, and security vulnerabilities have been
+                reported. After analyzing the situation, you determine that the firmware across these devices is
+                outdated. Which of the following actions should you prioritize to address the printing errors and
+                security vulnerabilities?</p>
+            <ul class="answer-list">
+                <li class="correct">Perform a test firmware update on a single device before deploying it across all
+                    devices.</li>
+                <li>Increase the frequency of maintenance checks on the MFDs to monitor performance.</li>
+                <li>Disable all network connections to the MFDs until the issues are resolved.</li>
+                <li>Conduct a network-wide reset of all MFDs to restore factory settings.</li>
+            </ul>
+            <p class="note">Best practice for firmware updates is to test on a single device first to verify
+                compatibility and stability before fleet-wide deployment. Monitoring doesn't fix outdated firmware.
+                Taking all printers offline is unnecessarily disruptive. A factory reset reverts configuration but does
+                not update firmware, and would wipe custom settings across all devices simultaneously.</p>
+        </div>
+
+        <!-- Q13 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 13</h2>
+            <p class="notes-paragraph">You are preparing to print a batch of high-quality brochures for a client
+                presentation. You want to ensure that the print quality is optimal and that the brochures are printed on
+                glossy paper. Which option should you adjust in the Printing Preferences dialog to achieve this?</p>
+            <ul class="answer-list">
+                <li>Update the printer's firmware to the latest version.</li>
+                <li>Change the printer's IP address to a static one.</li>
+                <li class="correct">Select the glossy paper type and set the print quality to high.</li>
+                <li>Enable USB debugging mode for better connectivity.</li>
+            </ul>
+            <p class="note">Paper type and print quality are both configured in the Paper/Quality tab of Printing
+                Preferences. Selecting glossy paper adjusts ink/toner application for that media. Firmware updates and
+                IP address changes are not made in Printing Preferences and don't affect per-job output settings. USB
+                debugging is a diagnostic tool unrelated to print quality.</p>
+        </div>
+
+        <!-- Q14 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 14</h2>
+            <p class="notes-paragraph">Which of the following is a key consideration when configuring a network scanner
+                to ensure optimal performance and functionality?</p>
+            <ul class="answer-list">
+                <li>Using a USB connection for faster data transfer rates</li>
+                <li>Ensuring the scanner is placed in direct sunlight for better visibility</li>
+                <li>Disabling all security features to simplify the scanning process</li>
+                <li class="correct">Regularly updating the scanner's firmware to fix bugs and improve security</li>
+            </ul>
+            <p class="note">Regular firmware updates keep networked MFDs performing optimally, fix bugs, and patch
+                security vulnerabilities. USB connectivity removes the scanner from the network entirely. Direct
+                sunlight is explicitly a placement hazard to avoid. Disabling security on a networked device exposes it
+                to unauthorized access.</p>
+        </div>
+
+        <!-- Q15 -->
+        <div class="notes-section question">
+            <h2 class="notes-section-title">Question 15</h2>
+            <p class="notes-paragraph">What is the primary purpose of regularly updating firmware in multifunction
+                devices (MFDs) and printers?</p>
+            <ul class="answer-list">
+                <li>To enhance the color quality of printed documents.</li>
+                <li>To change the physical appearance of the printer.</li>
+                <li class="correct">To improve performance, fix bugs, and address security vulnerabilities.</li>
+                <li>To increase the physical printing speed of the device.</li>
+            </ul>
+            <p class="note">This is the same core concept as Q9. The primary purpose of firmware updates is performance
+                improvement, bug fixes, and security patches. Color quality and ppm are hardware specifications.
+                Firmware is software and cannot alter physical appearance or mechanical print speed.</p>
+        </div>
+
+    </main>
+    </div>
+</body>
+
+</html>

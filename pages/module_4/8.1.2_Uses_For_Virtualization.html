@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8.1.2 Uses for Virtualization</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">8.1.2 Uses for Virtualization</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Client-Side Virtualization</h2>
+                <p class="notes-paragraph">Runs on standard desktops/workstations where users interact directly with the
+                    virtualization host. Typically uses a Type 2 (host-based) hypervisor. Common use cases:</p>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Use Case</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Sandboxing</strong></td>
+                            <td>Isolated VM environment for analyzing malware (viruses, worms, Trojans) without risk to
+                                the host or network.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Legacy software support</strong></td>
+                            <td>Run an older OS as a VM to maintain access to software incompatible with a newer host
+                                OS.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cross-platform testing</strong></td>
+                            <td>Test applications under different OSs and resource constraints.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Training / lab environments</strong></td>
+                            <td>Students practice on live OSs without affecting production. VM changes can be discarded
+                                to restore the original state for the next user.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Server-Side Virtualization</h2>
+                <p class="notes-paragraph">Deploys server roles as VMs. Primary benefit is <strong>server
+                        consolidation</strong> — a physical server typically uses only ~10% of its resources, so 8-9
+                    additional server instances can run on the same hardware without compromising performance.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Desktop Virtualization (VDI)</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">VDI (Virtual Desktop Infrastructure)</dt>
+                    <dd class="notes-definition">Uses VMs to provision corporate desktops. Users connect via
+                        <strong>thin clients</strong> — low-spec devices that boot a minimal OS and connect to a VM on a
+                        server using a remote desktop protocol (Microsoft Remote Desktop or Citrix ICA).</dd>
+                    <dt class="notes-term">Thin Client</dt>
+                    <dd class="notes-definition">A computer that relies on a centralized server for processing and
+                        storage instead of a local hard drive. Only handles display, audio output, and input device data
+                        transfer.</dd>
+                    <dt class="notes-term">Connection Broker</dt>
+                    <dd class="notes-definition">Manages mapping of thin clients to their correct VM image; may use 1:1
+                        mapping by machine name or IP address.</dd>
+                    <dt class="notes-term">DaaS (Desktop as a Service)</dt>
+                    <dd class="notes-definition">VDI provisioned as a cloud service.</dd>
+                </dl>
+                <p class="notes-paragraph"><strong>Benefits:</strong> simplified backups, easier
+                    support/troubleshooting, VM changes easily overwritten from a template, IT infrastructure can be
+                    offloaded to a third party.</p>
+                <p class="notes-paragraph"><strong>Disadvantage:</strong> no local processing during server or network
+                    failures, potentially causing costly downtime.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Application Virtualization</h2>
+                <p class="notes-paragraph">Allows clients to access or stream applications from a server without local
+                    installation. Users always run the latest version; simplifies admin updates and maintenance.</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><strong>Citrix Virtual Apps</strong> (formerly XenApp) — most widely
+                        used</li>
+                    <li class="notes-list-item"><strong>Microsoft App-V</strong> — included in Windows Server</li>
+                    <li class="notes-list-item"><strong>VMware ThinApp</strong></li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Container Virtualization</h2>
+                <p class="notes-paragraph">Isolates resources at the OS level — no hypervisor required. Containers run
+                    through the <strong>host OS kernel</strong>, each allocated CPU and memory.</p>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Virtual Machines</th>
+                            <th>Containers</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Isolation level</strong></td>
+                            <td>Full OS per VM (hardware emulation)</td>
+                            <td>OS-level (shared kernel)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Requires hypervisor</strong></td>
+                            <td>Yes</td>
+                            <td>No (uses container engine, e.g., Docker)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>OS kernel</strong></td>
+                            <td>Each VM has its own kernel</td>
+                            <td>All containers share the host OS kernel</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cross-OS support</strong></td>
+                            <td>Can run different OS families</td>
+                            <td>Must use the same OS kernel (e.g., cannot run Windows in a Linux container)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Weight</strong></td>
+                            <td>Heavier (full OS per instance)</td>
+                            <td>Lightweight (app + libraries + env variables only)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Example product</strong></td>
+                            <td>VMware, VirtualBox, Hyper-V</td>
+                            <td>Docker</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph">Containerization is also used to implement corporate workspaces on mobile
+                    devices.</p>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.5.6 Exercise: Build a Smart Home Device Capstone</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">7.5.6 Exercise: Build a Smart Home Device Capstone</h1>
+
+            <p class="notes-paragraph">This is a hands-on capstone exercise. CompTIA asks you to design and build a
+                basic IoT smart home device using a microcontroller, sensor, and actuator. The reference material below
+                covers the key concepts behind the exercise.</p>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Key IoT Component Types</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Role</th>
+                            <th>Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Microcontroller</strong></td>
+                            <td>The embedded system brain; reads sensor data and controls actuators based on programmed
+                                logic</td>
+                            <td>Arduino, Raspberry Pi</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sensor</strong></td>
+                            <td>Detects physical input from the environment and sends data to the microcontroller</td>
+                            <td>Motion sensor (PIR), temperature sensor (DHT11)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Actuator</strong></td>
+                            <td>Takes physical action based on microcontroller output</td>
+                            <td>LED light, fan, relay switch</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Project Options</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Sensor</th>
+                            <th>Actuator</th>
+                            <th>Logic</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Motion-Activated Light</strong></td>
+                            <td>PIR motion sensor</td>
+                            <td>LED light</td>
+                            <td>Motion detected = light on; no motion after set period = light off</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Temperature-Controlled Fan</strong></td>
+                            <td>Temperature sensor</td>
+                            <td>Fan</td>
+                            <td>Temp exceeds threshold = fan on; temp drops below threshold = fan off</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">How Embedded Systems Work in IoT (Exam Concept)</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Embedded systems are purpose-built to perform specific tasks; they do
+                        not run general-purpose software.</li>
+                    <li class="notes-list-item">In IoT devices, the embedded system continuously reads sensor input,
+                        applies programmed logic, and triggers actuator output.</li>
+                    <li class="notes-list-item">IoT devices connect to networks (Wi-Fi, Zigbee, Z-Wave) to enable remote
+                        monitoring and control.</li>
+                    <li class="notes-list-item">A hub or control system (e.g., smart home hub) coordinates multiple IoT
+                        devices on the same network.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Exam Objective</h2>
+                <p class="notes-paragraph">This exercise supports <strong>A+ Core 1 (220-1201) Objective 2.3</strong>:
+                    Summarize services provided by networked hosts.</p>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

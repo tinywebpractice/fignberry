@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.2.3 Spam Gateways and Unified Threat Management</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">7.2.3 Spam Gateways and Unified Threat Management</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Overview</h2>
+                <p class="notes-paragraph">Networks connected to the Internet use security scanners to protect against
+                    malicious threats. These can run as software on PC servers, but enterprise networks typically use
+                    purpose-built <strong>Internet security appliances</strong>.</p>
+            </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Security Functions</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Function</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Firewall</strong></td>
+                        <td>Allows or blocks traffic based on a network access control list (ACL) specifying
+                            source/destination IP addresses and application ports.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>IDS</strong> (Intrusion Detection System)</td>
+                        <td>Uses scripts to identify known malicious traffic patterns; raises an alert on a match.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>IPS</strong> (Intrusion Prevention System)</td>
+                        <td>Like IDS, but can also take action to block the source of malicious packets.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Antivirus/Anti-malware</strong></td>
+                        <td>Scans files transferred over the network for matches against known malware signatures in
+                            binary data.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Spam Gateway</strong></td>
+                        <td>Uses <strong>SPF</strong>, <strong>DKIM</strong>, and <strong>DMARC</strong> to verify mail
+                            server authenticity; filters spoofed, misleading, malicious, or unwanted messages before
+                            delivery to inbox.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Content Filter</strong></td>
+                        <td>Blocks outgoing access to unauthorized websites and services.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DLP</strong> (Data Leak/Loss Prevention)</td>
+                        <td>Scans outgoing traffic for confidential or personal data; verifies authorization and blocks
+                            unauthorized transfers.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Spam Gateway: Key Protocols</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">SPF (Sender Policy Framework)</dt>
+                <dd class="notes-definition">Verifies that the sending mail server is authorized to send on behalf of a
+                    domain.</dd>
+                <dt class="notes-term">DKIM (DomainKeys Identified Mail)</dt>
+                <dd class="notes-definition">Uses cryptographic signatures to verify that a message was not altered in
+                    transit and originated from the claimed domain.</dd>
+                <dt class="notes-term">DMARC (Domain-based Message Authentication, Reporting, and Conformance)</dt>
+                <dd class="notes-definition">Builds on SPF and DKIM; defines a policy for how failed authentication
+                    should be handled and enables reporting.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">UTM (Unified Threat Management)</h2>
+            <p class="notes-paragraph">A <strong>UTM appliance</strong> combines multiple security functions into a
+                single device, enforcing a variety of security policies and controls.</p>
+            <ul class="notes-list">
+                <li class="notes-list-item">Replaces separate appliances or server applications each with their own
+                    configuration and logging.</li>
+                <li class="notes-list-item">Centralizes threat management for simpler configuration and unified
+                    reporting.</li>
+                <li class="notes-list-item">Typically includes: Firewall, IDS/IPS, Antivirus/Anti-malware, Spam Gateway,
+                    Content Filter, and DLP.</li>
+            </ul>
+        </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

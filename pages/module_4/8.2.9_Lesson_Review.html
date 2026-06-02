@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8.2.9 Lesson Review</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+
+<body>
+  <button class="sidebar-toggle" aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop"></div>
+  <nav class="site-sidebar" aria-label="Site navigation"></nav>
+  <nav class="site-nav" aria-label="Primary"></nav>
+
+  <main class="page-content notes-content">
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Q1. A mid-sized e-commerce company is experiencing rapid growth and needs to
+        expand its IT infrastructure to handle increased website traffic during seasonal sales. The company has a
+        limited budget and prefers a solution that minimizes upfront costs while allowing it to scale resources as
+        needed. Security is important, but they are willing to accept some shared infrastructure risks to save costs.
+        Which cloud deployment model would BEST meet their needs?</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item">Private Cloud</li>
+        <li class="notes-list-item correct">Public Cloud ✓</li>
+        <li class="notes-list-item">Community Cloud</li>
+        <li class="notes-list-item">Hybrid Cloud</li>
+      </ul>
+      <p class="note">Public cloud minimizes upfront costs, scales on demand, and accepts shared infrastructure risk --
+        the exact trade-off profile described. Private cloud is too costly; community cloud requires multi-org
+        coordination; hybrid adds management complexity not warranted here.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Q2. Which of the following BEST describes the Platform as a Service (PaaS) cloud
+        computing service model?</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item correct">PaaS delivers everything a developer needs to build an application on the
+          existing cloud infrastructure. ✓</li>
+        <li class="notes-list-item">PaaS delivers software applications to the client either over the internet or on a
+          local area network.</li>
+        <li class="notes-list-item">PaaS stores and provides data from a centralized location without the need for local
+          collection and storage.</li>
+        <li class="notes-list-item">PaaS delivers infrastructure to the client, such as processing, storage, networks,
+          and virtualized environments.</li>
+      </ul>
+      <p class="note">PaaS provides infrastructure plus development tools for building, testing, and deploying
+        applications. Delivering finished apps over a network is SaaS; raw infrastructure only is IaaS; centralized data
+        storage describes cloud storage/SaaS.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Q3. For security reasons, an organization needs to ensure that its information is
+        isolated and managed only by its employees. What cloud model should this organization adopt?</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item">Public</li>
+        <li class="notes-list-item">Community</li>
+        <li class="notes-list-item">Hybrid</li>
+        <li class="notes-list-item correct">Private ✓</li>
+      </ul>
+      <p class="note">Private cloud is exclusively owned and managed by a single organization, ensuring only its own
+        employees have access. Public shares infrastructure with all tenants; community shares among multiple orgs;
+        hybrid still includes a public component.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Q4. Which of the following BEST describes a community cloud implementation?</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item correct">Designed to be shared by several organizations ✓</li>
+        <li class="notes-list-item">Designed to be used by a single organization</li>
+        <li class="notes-list-item">Designed to be a combination of public and private cloud resources</li>
+        <li class="notes-list-item">Designed to be accessed by the general public</li>
+      </ul>
+      <p class="note">Community cloud is shared among multiple organizations with common concerns (e.g., regulatory
+        compliance, security policies). Single org = private; public + private combination = hybrid; general public
+        access = public.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Q5. Which of the following cloud computing solutions delivers software
+        applications to a client either over the internet or on a local area network?</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item">PaaS</li>
+        <li class="notes-list-item">DaaS</li>
+        <li class="notes-list-item">IaaS</li>
+        <li class="notes-list-item correct">SaaS ✓</li>
+      </ul>
+      <p class="note">SaaS delivers ready-to-use software applications over the internet or LAN with no local
+        installation required. PaaS provides a development environment; DaaS delivers a full virtual desktop; IaaS
+        delivers raw infrastructure.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Q6. A law firm is transitioning to a cloud-based infrastructure to ensure minimal
+        downtime for its critical legal applications. The firm has strict requirements for maintaining service
+        availability, as even a few minutes of downtime could result in significant financial and reputational losses.
+        Which of the following cloud features would BEST meet the firm's need for high availability?</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item correct">Five Nines (99.999%) availability ✓</li>
+        <li class="notes-list-item">Scalability through horizontal scaling</li>
+        <li class="notes-list-item">Shared resource pooling for cost efficiency</li>
+        <li class="notes-list-item">Rapid Elasticity for handling demand changes</li>
+      </ul>
+      <p class="note">Five Nines means roughly 5 minutes of downtime per year, directly addressing the strict uptime
+        requirement. Horizontal scaling addresses load, not uptime; resource pooling targets cost; rapid elasticity
+        handles demand fluctuation, not availability.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Q7. A network technician configures a foundational cloud setup that will allow the
+        developers to start all application development using a standardized server and database setup. What type of
+        cloud service model is the technician configuring?</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item">SaaS</li>
+        <li class="notes-list-item correct">PaaS ✓</li>
+        <li class="notes-list-item">IaaS</li>
+        <li class="notes-list-item">DaaS</li>
+      </ul>
+      <p class="note">A standardized server and database environment for application development is the definition of
+        PaaS. SaaS delivers finished apps; IaaS delivers raw infrastructure with no development tooling; DaaS delivers
+        virtual desktops.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Q8. Google Cloud, Amazon Web Services, and Microsoft Azure are some of the most
+        widely used cloud storage solutions for enterprises. Which of the following factors prompt companies to take
+        advantage of cloud storage? (Select two.)</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item">Need for a storage provider to manage access control</li>
+        <li class="notes-list-item">Need for a platform to develop applications</li>
+        <li class="notes-list-item correct">Growing demand for storage ✓</li>
+        <li class="notes-list-item">Need for software to manage enterprise applications</li>
+        <li class="notes-list-item correct">Need to bring costs down ✓</li>
+      </ul>
+      <p class="note">Growing storage needs and cost reduction are the primary drivers for cloud storage adoption -- it
+        eliminates hardware purchases and offers tiered pricing. Access control management is a security concern;
+        developing applications describes PaaS; managing enterprise apps describes SaaS.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Q9. A global e-commerce company is experiencing delays in file access for its
+        employees located in different regions. The company uses a cloud file storage solution but has noticed that
+        employees in regions far from the primary datacenter experience slower access times. After analyzing the
+        situation, the IT team identifies that the current solution does not utilize replication or Content Delivery
+        Networks (CDNs). Which action should the company take to resolve the issue?</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item">Restrict file access to employees located near the primary datacenter</li>
+        <li class="notes-list-item">Switch to an on-premises file storage solution for all employees</li>
+        <li class="notes-list-item correct">Implement file replication across multiple datacenters and use CDNs ✓</li>
+        <li class="notes-list-item">Increase the storage capacity of the primary datacenter</li>
+      </ul>
+      <p class="note">The scenario identifies the exact problem: no replication or CDNs. CDNs store files closer to
+        download locations; replication across datacenters ensures fast regional access. Restricting access ignores
+        remote users; on-premises remains centralized; adding capacity at one site does not reduce latency for remote
+        employees.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Q10. A cloud administrator configures a cloud instance to increase its resources
+        during times of high utilization and decrease its resources when peak utilization times end. What cloud
+        characteristic does this represent?</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item">HA</li>
+        <li class="notes-list-item correct">Rapid elasticity ✓</li>
+        <li class="notes-list-item">Scalability</li>
+        <li class="notes-list-item">Metered utilization</li>
+      </ul>
+      <p class="note">Rapid elasticity is the ability to automatically scale resources up during high demand and back
+        down when demand drops. HA refers to minimizing downtime; scalability describes general growth capacity without
+        implying automatic scale-down; metered utilization is a billing model, not a resource adjustment characteristic.
+      </p>
+    </div>
+
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+
+</html>

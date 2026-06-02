@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9.2.1 – Mobile Apps</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+<main class="page-content notes-content">
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Mobile Apps Overview</h2>
+            <p class="notes-paragraph">An app is an installable program that extends the functionality of a mobile
+                device. Apps must be written and compiled for a specific mobile OS -- an iOS app cannot be directly
+                installed on Android. Developers must produce a separate version for each platform.</p>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">iOS vs. Android App Ecosystem</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>iOS</th>
+                        <th>Android</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Distribution</strong></td>
+                        <td>Apple App Store only (walled garden model)</td>
+                        <td>Google Play Store and third-party stores (e.g., Amazon App Store)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>App Approval</strong></td>
+                        <td>Apps must be submitted to and approved by Apple before release</td>
+                        <td>More relaxed; apps available without Apple-style mandatory review</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Security Model</strong></td>
+                        <td>Walled garden prevents malware and faulty code</td>
+                        <td>More open; greater risk from third-party sources</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Development IDE</strong></td>
+                        <td>Xcode (macOS only)</td>
+                        <td>Android Studio (Linux, Windows, macOS)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Language</strong></td>
+                        <td>Swift</td>
+                        <td>Java-based</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Commercial Models</strong></td>
+                        <td colspan="2">Free, free with in-app purchases, or paid</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">App Permissions</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item">On both iOS and Android, apps run in a sandbox and only have privileges
+                    granted by the user</li>
+                <li class="notes-list-item">Apps prompt the user when requesting permissions (e.g., camera, microphone,
+                    contacts, storage)</li>
+                <li class="notes-list-item">Permissions can be granted, denied, or revoked at any time via the app's
+                    Settings page</li>
+            </ul>
+        </section>
+
+    </main>
+    </div>
+</body>
+
+</html>

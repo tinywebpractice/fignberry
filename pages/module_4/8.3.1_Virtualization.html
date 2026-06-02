@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8.3.1 – Virtualization</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+
+<body>
+    <button class="sidebar-toggle" aria-label="Toggle sidebar">&#9776;</button>
+    <div class="sidebar-backdrop"></div>
+    <nav class="site-sidebar" aria-label="Site navigation"></nav>
+    <nav class="site-nav" aria-label="Primary"></nav>
+
+    <main class="page-content notes-content">
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Virtualization</h2>
+            <p class="notes-paragraph">Modern hardware (multi-core CPUs, gigabit NICs, SSDs, large RAM) is powerful
+                enough that most systems run well below capacity. Virtualization allows that unused capacity to be fully
+                utilized by running multiple operating systems simultaneously on one physical machine.</p>
+            <p class="notes-paragraph">The key software component is the <strong>hypervisor</strong>, which manages
+                virtual machine instances and handles communication between guest OSes and physical hardware/drivers.
+            </p>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Hypervisor Types</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Also Called</th>
+                        <th>How It Works</th>
+                        <th>Use Case</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Host-based</td>
+                        <td>Type 2</td>
+                        <td>Installed on top of an existing host OS; guest OSes run within the hypervisor layer</td>
+                        <td>Personal/home use, development</td>
+                    </tr>
+                    <tr>
+                        <td>Bare metal</td>
+                        <td>Type 1</td>
+                        <td>Installed directly on hardware with no host OS underneath; hypervisor + VM management
+                            software run directly on the machine</td>
+                        <td>Cloud environments, enterprise server farms</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Virtual Machine Instances</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item">Each instance gets its own allocated RAM, disk space, and network access
+                </li>
+                <li class="notes-list-item">Guest OSes do not need to match the host OS -- Linux, Windows versions, DOS,
+                    macOS, and server OSes can all run simultaneously</li>
+                <li class="notes-list-item">Instances can be added or removed dynamically without reinstalling the host
+                </li>
+                <li class="notes-list-item">Resources are shared -- too many instances degrade overall performance</li>
+                <li class="notes-list-item">New instances can be provisioned via API in minutes rather than days</li>
+            </ul>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Virtualization and the Cloud</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item">Large server farms run bare metal hypervisors, hosting hundreds of virtual
+                    servers per physical machine</li>
+                <li class="notes-list-item">Virtual switches and load balancers also run within the virtual environment
+                    -- no dedicated physical hardware required</li>
+                <li class="notes-list-item">Spinning up servers in minutes vs. days or weeks is the core advantage
+                    driving cloud scalability</li>
+                <li class="notes-list-item">All virtual resources behave like physical hardware to the guest OS</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="../../js/nav.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.3.7 Lesson Review — Q&amp;A</title>
+    <link rel="stylesheet" href="../../styles/site.css">
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">7.3.7 Lesson Review — Q&amp;A</h1>
+
+            <!-- Q1 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 1</h2>
+                <p class="notes-paragraph">After several new computers are connected to a network device, every computer
+                    connected to the device begins to experience slow transfer speeds. Which of the following is the
+                    FIRST step to troubleshoot this problem?</p>
+                <ul class="notes-list">
+                    <li class="correct">Determine whether the network device is a hub or a switch.</li>
+                    <li class="notes-list-item">Use a loopback plug to determine whether each port on the network device
+                        is good.</li>
+                    <li class="notes-list-item">Use a cable tester to determine whether all cables between each computer
+                        and the device are good.</li>
+                    <li class="notes-list-item">Use a loopback plug to determine whether the NIC in each computer is
+                        good.</li>
+                </ul>
+                <p class="note">The problem affects all connected computers, pointing to the device itself. A hub shares
+                    bandwidth among all devices, so adding more computers degrades performance for everyone. Identifying
+                    the device type is the logical first step before any cable or port testing.</p>
+            </div>
+
+            <!-- Q2 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 2</h2>
+                <p class="notes-paragraph">You have just installed a wireless network, but the network is experiencing
+                    slow speeds, especially when accessing the internet from your workstation. Which action should you
+                    try FIRST to resolve the issue?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Move your workstation closer to the wireless access point.</li>
+                    <li class="notes-list-item">Add a network extender.</li>
+                    <li class="correct">Move the wireless access point.</li>
+                    <li class="notes-list-item">Reset your wireless router to the factory defaults.</li>
+                </ul>
+                <p class="note">Moving the AP is the easiest and least expensive first step. Moving the workstation
+                    could involve significant effort or may not be an option. A network extender is valid but adds cost.
+                    Factory reset could cause other issues and is unlikely to resolve slow speeds.</p>
+            </div>
+
+            <!-- Q3 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 3</h2>
+                <p class="notes-paragraph">A user reports intermittent connectivity and slow transfer speeds on the
+                    office Wi-Fi network. Upon investigation, you find that the user's device is connected to the 2.4
+                    GHz band, while other devices connected to the 5 GHz band are not experiencing any issues.
+                    Additionally, the Wi-Fi analyzer shows that the 2.4 GHz band is heavily congested with multiple
+                    overlapping networks. What is the BEST course of action to resolve the issue?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Adjust the channel settings on the wireless access point to a less
+                        congested channel in the 2.4 GHz band.</li>
+                    <li class="notes-list-item">Move the user's device closer to the wireless access point to improve
+                        the signal strength.</li>
+                    <li class="notes-list-item">Replace the wireless access point with a newer model that supports
+                        higher speeds.</li>
+                    <li class="correct">Configure the user's device to connect to the 5 GHz band instead of the 2.4 GHz
+                        band.</li>
+                </ul>
+                <p class="note">The 2.4 GHz band is confirmed congested by the analyzer, and 5 GHz devices are
+                    unaffected. Switching the user's device to 5 GHz directly eliminates the interference source.
+                    Adjusting channels within 2.4 GHz provides limited relief given heavy congestion. Proximity and
+                    hardware replacement do not address the root cause.</p>
+            </div>
+
+            <!-- Q4 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 4</h2>
+                <p class="notes-paragraph">A user reports limited connectivity on their workstation. Upon investigation,
+                    you find that the workstation is connected to the network but cannot access certain external
+                    websites. Other users on the same network do not have this issue. You run the
+                    <strong>ipconfig</strong> command and notice that the workstation has a valid IP address, subnet
+                    mask, and default gateway. What is the MOST likely cause of the issue, and what should you do next?
+                </p>
+                <ul class="notes-list">
+                    <li class="correct">The DNS server settings are incorrect. Reconfigure the workstation to use the
+                        correct DNS server.</li>
+                    <li class="notes-list-item">The user's computer has a malware infection. Disconnect the workstation
+                        and run a malware scan.</li>
+                    <li class="notes-list-item">The switch port is experiencing port flapping. Check the switch logs for
+                        port status changes.</li>
+                    <li class="notes-list-item">The network cable is faulty. Replace the cable with a known good one.
+                    </li>
+                </ul>
+                <p class="note">Valid IP/subnet/gateway means Layer 3 routing is functional. Inability to reach external
+                    websites by name on a single host points to DNS misconfiguration. Port flapping and faulty cables
+                    would cause no/intermittent connectivity, not selective website failures.</p>
+            </div>
+
+            <!-- Q5 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 5</h2>
+                <p class="notes-paragraph">A user reports that their file transfers over the network are significantly
+                    slower than usual. Upon investigation, you find that the issue is isolated to this user's
+                    workstation. You check the cabling and find no visible damage or interference. What should you do
+                    next to troubleshoot the issue?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Reposition the user's workstation closer to the router.</li>
+                    <li class="correct">Check the duplex settings on the user's network adapter and the switch port.
+                    </li>
+                    <li class="notes-list-item">Replace the user's Ethernet cable with a shielded cable.</li>
+                    <li class="notes-list-item">Update the firmware on the router.</li>
+                </ul>
+                <p class="note">Cabling is cleared; issue is single-host. The next structured step is checking for a
+                    speed/duplex mismatch between the NIC and switch port, both of which should be set to autonegotiate.
+                    Repositioning is a wireless fix. Shielded cable addresses interference that was not found. Router
+                    firmware affects all users, not just one.</p>
+            </div>
+
+            <!-- Q6 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 6</h2>
+                <p class="notes-paragraph">What is the maximum one-way latency that VoIP can support without
+                    significantly impacting call quality?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">500 milliseconds (ms)</li>
+                    <li class="notes-list-item">300 milliseconds (ms)</li>
+                    <li class="notes-list-item">50 milliseconds (ms)</li>
+                    <li class="correct">150 milliseconds (ms)</li>
+                </ul>
+                <p class="note">VoIP supports a maximum one-way latency of ~150 ms. 500 ms and 300 ms far exceed the
+                    threshold; 50 ms is too conservative.</p>
+            </div>
+
+            <!-- Q7 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 7</h2>
+                <p class="notes-paragraph">A network technician troubleshoots an issue where the video conferencing
+                    system keeps freezing up and dropping out. The technician determines that the network is not
+                    congested and the signal is not being processed fast enough to meet the streaming requirement. What
+                    is this type of issue known as?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">QoS</li>
+                    <li class="notes-list-item">Jitter</li>
+                    <li class="correct">Latency</li>
+                    <li class="notes-list-item">VoIP</li>
+                </ul>
+                <p class="note">Signal not being processed fast enough describes latency: the delay in data reaching the
+                    recipient. Jitter is variation in delay between packets and is typically caused by congestion, which
+                    is ruled out here. QoS is a fix mechanism, not a problem type. VoIP is a technology category.</p>
+            </div>
+
+            <!-- Q8 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 8</h2>
+                <p class="notes-paragraph">A company is experiencing poor VoIP call quality, including jitter and
+                    delays. You analyze the network and find that the issue occurs during peak usage times when multiple
+                    devices are streaming videos and downloading large files. The company uses a SOHO router without
+                    advanced traffic management features. What is the MOST likely cause of the VoIP issues?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">The VoIP application is not compatible with the SOHO router.</li>
+                    <li class="notes-list-item">The VoIP phones are outdated and cannot handle modern network traffic.
+                    </li>
+                    <li class="correct">The SOHO router lacks Quality of Service (QoS) configuration to prioritize VoIP
+                        traffic.</li>
+                    <li class="notes-list-item">The Internet Service Provider (ISP) is throttling VoIP traffic during
+                        peak hours.</li>
+                </ul>
+                <p class="note">Competing bursty traffic (streaming, downloads) floods the network during peak times.
+                    Without QoS, the router treats all traffic equally, causing VoIP packets to be delayed. The scenario
+                    identifies internal congestion and lack of traffic management as the key factors.</p>
+            </div>
+
+            <!-- Q9 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 9</h2>
+                <p class="notes-paragraph">You are an IT technician tasked with resolving a wired connectivity issue for
+                    a workstation in an office. The user reports intermittent connectivity problems. Upon inspection,
+                    you notice that the link LEDs on the network adapter and switch port are flickering inconsistently.
+                    What is the BEST next step to troubleshoot and resolve the issue?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Use a loopback tool to test the switch port.</li>
+                    <li class="correct">Substitute the current patch cord with a known good cable.</li>
+                    <li class="notes-list-item">Update the NIC's device driver software.</li>
+                    <li class="notes-list-item">Replace the network adapter (NIC) on the workstation.</li>
+                </ul>
+                <p class="note">Inconsistently flickering LEDs indicate an unstable physical link. Step 1 of wired
+                    troubleshooting is always to check and substitute the patch cord. Loopback testing (Step 2), driver
+                    updates (Step 5), and NIC replacement all come later in the process.</p>
+            </div>
+
+            <!-- Q10 -->
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 10</h2>
+                <p class="notes-paragraph">What is the first step in troubleshooting a limited connectivity issue for a
+                    single host in a wired network?</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Update the NIC's device driver software.</li>
+                    <li class="notes-list-item">Use a cable tester to verify the structured cabling.</li>
+                    <li class="correct">Verify that the patch cords are properly terminated and connected to the network
+                        ports.</li>
+                    <li class="notes-list-item">Check the switch configuration for port security settings.</li>
+                </ul>
+                <p class="note">Step 1 is always to check patch cord termination and connection. Structured cabling
+                    testing is Step 4; driver updates are Step 5; port security is a secondary consideration when
+                    substituting hosts.</p>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>

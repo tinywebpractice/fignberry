@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8.2.8 – Content Delivery Networks</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+
+<body>
+    <button class="sidebar-toggle" aria-label="Toggle sidebar">&#9776;</button>
+    <div class="sidebar-backdrop"></div>
+    <nav class="site-sidebar" aria-label="Site navigation"></nav>
+    <nav class="site-nav" aria-label="Primary"></nav>
+
+    <main class="page-content notes-content">
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Content Delivery Networks (CDNs)</h2>
+            <p class="notes-paragraph">A CDN solves the latency problem of serving all users from a single centralized
+                origin server by distributing copies of content to multiple edge servers around the world. Requests are
+                served from the edge server closest to the user, reducing delivery time and load on the origin.</p>
+            <ul class="notes-list">
+                <li class="notes-list-item">Content is cached on edge servers distributed globally</li>
+                <li class="notes-list-item">User requests are routed to the nearest edge server for faster delivery</li>
+                <li class="notes-list-item">Reduces load on any single server</li>
+                <li class="notes-list-item">Handles high traffic and server failures by redirecting requests to the next
+                    best available server</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="../../js/nav.js"></script>
+</body>
+
+</html>

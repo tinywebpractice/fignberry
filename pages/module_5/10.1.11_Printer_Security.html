@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10.1.11 Printer Security</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+<main class="page-content notes-content">
+
+        <h1 class="notes-title">10.1.11 Printer Security</h1>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">User Authentication</h2>
+            <p class="notes-paragraph">Restricts print job submission to authorized accounts only. In Windows, configure
+                permissions via the <strong>Sharing</strong> and <strong>Security</strong> tabs in Printer Properties.
+            </p>
+            <dl class="notes-terms">
+                <dt class="notes-term">Local authentication</dt>
+                <dd class="notes-definition">Usernames and passwords stored directly on the printer.</dd>
+                <dt class="notes-term">Network authentication</dt>
+                <dd class="notes-definition">Printer communicates with a directory server (e.g., Active Directory) to
+                    verify users.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Secured Print and Badging</h2>
+            <p class="notes-paragraph">Secured print holds a job on the device until the user authenticates at the
+                printer, preventing confidential output from sitting unattended in the output tray.</p>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Authentication Method</th>
+                        <th>How It Works</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PIN entry</td>
+                        <td>User enters a password or code on the device control panel to release the job.</td>
+                    </tr>
+                    <tr>
+                        <td>Badging</td>
+                        <td>Device has a smart card reader; user presents their ID badge to release the job.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul class="notes-list">
+                <li class="notes-list-item">Can be set as a default or configured per job.</li>
+                <li class="notes-list-item">Cached jobs are deleted after a time limit if not released.</li>
+                <li class="notes-list-item">Device may require additional memory or storage to cache encrypted print
+                    jobs.</li>
+            </ul>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Audit Logs</h2>
+            <p class="notes-paragraph">Print servers and print devices can log each job, recording which user printed
+                what document and from which device. Useful for tracking missing documents or unauthorized information
+                release. Logs generated on the device can be forwarded to a centralized server using
+                <strong>syslog</strong>.</p>
+        </section>
+
+    </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8.3.4 – Exercise: Cloud Service Model Exploration</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+
+<body>
+    <button class="sidebar-toggle" aria-label="Toggle sidebar">&#9776;</button>
+    <div class="sidebar-backdrop"></div>
+    <nav class="site-sidebar" aria-label="Site navigation"></nav>
+    <nav class="site-nav" aria-label="Primary"></nav>
+
+    <main class="page-content notes-content">
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Exercise Overview</h2>
+            <p class="notes-paragraph">CompTIA A+ Core 1 (220-1201) Exam Objective: 4.2 Summarize cloud computing
+                concepts.</p>
+            <p class="notes-paragraph">Goal: Identify core differences between IaaS, PaaS, and SaaS; provide real-world
+                examples; and determine practical applications in computer networks and business environments.</p>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Cloud Service Model Comparison</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>IaaS</th>
+                        <th>PaaS</th>
+                        <th>SaaS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>What the provider delivers</strong></td>
+                        <td>Raw compute, storage, and networking infrastructure</td>
+                        <td>Infrastructure plus development tools, databases, and runtime environments</td>
+                        <td>Fully built and managed software applications</td>
+                    </tr>
+                    <tr>
+                        <td><strong>What the customer manages</strong></td>
+                        <td>OS, middleware, apps, data</td>
+                        <td>Application code, data, security of the app</td>
+                        <td>Data and user access only</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Key benefits</strong></td>
+                        <td>Maximum control and flexibility; no physical hardware cost</td>
+                        <td>Accelerates development; no infrastructure setup required</td>
+                        <td>No installation or maintenance; accessible from any device</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Best for</strong></td>
+                        <td>IT teams needing custom environments; startups scaling infrastructure</td>
+                        <td>Development teams building and deploying applications</td>
+                        <td>End users and businesses needing ready-to-use software</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Examples</strong></td>
+                        <td>AWS EC2, Google Compute Engine</td>
+                        <td>Google App Engine, Microsoft Azure App Service</td>
+                        <td>Microsoft 365, Dropbox</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Real-World Examples</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">AWS EC2 (IaaS)</dt>
+                <dd class="notes-definition">Provides on-demand virtual servers with configurable CPU, RAM, and storage.
+                    Organizations use EC2 to host websites, run batch processing jobs, and build custom server
+                    environments without owning physical hardware. Aligns with IaaS because the customer controls the OS
+                    and everything above it.</dd>
+
+                <dt class="notes-term">Google Compute Engine (IaaS)</dt>
+                <dd class="notes-definition">Google's scalable virtual machine service. Used by enterprises to run large
+                    workloads and migrate on-premises infrastructure to the cloud. The customer manages OS
+                    configuration, middleware, and applications.</dd>
+
+                <dt class="notes-term">Google App Engine (PaaS)</dt>
+                <dd class="notes-definition">A fully managed platform for deploying web applications. Developers write
+                    and upload code; Google handles servers, scaling, and availability. Aligns with PaaS because
+                    infrastructure management is abstracted away, letting developers focus on the application.</dd>
+
+                <dt class="notes-term">Microsoft Azure App Service (PaaS)</dt>
+                <dd class="notes-definition">Hosts web apps, REST APIs, and mobile backends on Azure infrastructure.
+                    Supports multiple languages and frameworks. Developers deploy code without configuring underlying
+                    VMs or networking.</dd>
+
+                <dt class="notes-term">Microsoft 365 (SaaS)</dt>
+                <dd class="notes-definition">Delivers Word, Excel, Outlook, Teams, and other productivity tools over the
+                    internet on a subscription basis. No installation required. Used by organizations of all sizes to
+                    support communication and document collaboration.</dd>
+
+                <dt class="notes-term">Dropbox (SaaS)</dt>
+                <dd class="notes-definition">Cloud file storage and synchronization service. Files are accessible from
+                    any device and can be shared with collaborators. The provider manages all infrastructure, storage,
+                    and the application itself.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Summary</h2>
+            <p class="notes-paragraph">IaaS, PaaS, and SaaS represent increasing levels of abstraction in cloud service
+                delivery. IaaS gives organizations the most control by providing raw infrastructure, making it ideal for
+                IT teams that need to configure custom environments or migrate existing workloads. PaaS removes
+                infrastructure management from the equation and lets development teams focus entirely on writing and
+                deploying application code, significantly reducing time to deployment. SaaS delivers finished,
+                ready-to-use applications over the internet, requiring no setup from the end user and making it the most
+                accessible model for businesses and individuals. The right model depends on how much control an
+                organization needs versus how much management overhead it wants to offload to the provider.</p>
+        </section>
+
+    </main>
+
+    <script src="../../js/nav.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9.2.6 – Enterprise Mobility Management</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+<main class="page-content notes-content">
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Enterprise Mobility Management (EMM)</h2>
+            <p class="notes-paragraph">EMM is a class of management software that applies security policies to mobile
+                devices and apps in the enterprise. The challenge of identifying and managing all devices on a network
+                is called visibility. One common deployment model is bring your own device (BYOD), where employees use
+                personally owned devices to access corporate accounts, apps, and data.</p>
+
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Function</th>
+                        <th>Acronym</th>
+                        <th>Scope</th>
+                        <th>Key Capabilities</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mobile Device Management</td>
+                        <td>MDM</td>
+                        <td>Device level</td>
+                        <td>Authentication policies, policy enforcement, feature use (camera, microphone), connectivity
+                            settings, device resets, remote wipes</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile Application Management</td>
+                        <td>MAM</td>
+                        <td>App level</td>
+                        <td>Controls which apps can process corporate data; prevents data transfer to personal apps;
+                            configures enterprise-managed container/workspace; enforces data loss prevention (DLP)
+                            controls</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Enterprise Workspace Mode</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item">When enrolled in MAM, a device can be locked to only authorized corporate
+                    applications</li>
+                <li class="notes-list-item">Corporate apps (email, calendar, cloud storage, contacts) store data
+                    separately from personal apps</li>
+                <li class="notes-list-item">Messages and attachments may be subject to DLP controls to prevent
+                    unauthorized forwarding of confidential or privacy-sensitive data</li>
+            </ul>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Private App Distribution</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">Apple Business Manager</dt>
+                <dd class="notes-definition">Apple's enterprise program for private app distribution; allows a MAM suite
+                    to push apps directly to enrolled devices.</dd>
+
+                <dt class="notes-term">Managed Google Play</dt>
+                <dd class="notes-definition">Google Play's private channel option; allows a MAM suite to push approved
+                    apps to enrolled Android devices.</dd>
+            </dl>
+            <p class="notes-paragraph">EMM solution providers include Omnissa ONE, Microsoft Intune, Broadcom, and
+                Citrix Endpoint Management.</p>
+        </section>
+
+    </main>
+    </div>
+</body>
+
+</html>

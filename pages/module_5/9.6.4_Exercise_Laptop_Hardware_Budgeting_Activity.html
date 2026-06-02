@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9.6.4 Exercise: Laptop Hardware Budgeting Activity</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+<main class="page-content notes-content">
+
+        <h1 class="notes-title">9.6.4 Exercise: Laptop Hardware Budgeting Activity</h1>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">About This Exercise</h2>
+            <p class="notes-paragraph">This is a CompTIA A+ Core 1 (220-1201) budgeting and decision-making activity
+                supporting exam objective 1.1: Given a scenario, monitor mobile device hardware and use appropriate
+                replacement techniques. The goal is to evaluate and prioritize laptop hardware components within a
+                $1,000 fixed budget for a chosen purpose, and to understand the trade-offs between cost and performance.
+            </p>
+            <p class="notes-paragraph">Requirements: choose a laptop purpose, select components (CPU, RAM, storage, GPU
+                if applicable, display, battery, ports, webcam), write a justification for each choice, identify the
+                hardest component to budget for, discuss a $200 upgrade scenario, and reflect on how purpose drove
+                decisions.</p>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Chosen Purpose: IT Technician / General Productivity Laptop</h2>
+            <p class="notes-paragraph">A laptop for an IT technician doing helpdesk work, studying for certifications,
+                running virtual machines for lab practice, and occasional remote support. Priorities: strong CPU and RAM
+                for virtualization, fast SSD for responsiveness, reliable battery life, and a full port selection to
+                avoid dongles in the field.</p>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Component Selections</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Selection</th>
+                        <th>Approx. Price</th>
+                        <th>Justification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CPU</td>
+                        <td>AMD Ryzen 5 7530U (6-core, 12-thread)</td>
+                        <td>Included in system</td>
+                        <td>Multi-threaded performance handles virtual machines well. Ryzen 5 series offers strong
+                            performance per dollar compared to equivalent Intel options at this price tier.</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>16 GB DDR4 (dual-channel)</td>
+                        <td>~$50 upgrade if needed</td>
+                        <td>16 GB is the practical minimum for running one or two VMs alongside a host OS. Dual-channel
+                            configuration improves throughput. 8 GB would bottleneck virtualization workloads.</td>
+                    </tr>
+                    <tr>
+                        <td>Storage</td>
+                        <td>512 GB M.2 NVMe SSD</td>
+                        <td>Included / ~$60 if upgraded</td>
+                        <td>NVMe provides significantly faster read/write speeds than SATA SSD. 512 GB is sufficient for
+                            an OS, VM images, and lab files. HDD was ruled out entirely due to speed impact on VM
+                            performance.</td>
+                    </tr>
+                    <tr>
+                        <td>Display</td>
+                        <td>15.6" 1080p IPS, 250 nit</td>
+                        <td>Included</td>
+                        <td>1080p is the standard for productivity work. IPS panel provides better viewing angles than
+                            TN. 15.6" gives enough screen real estate to work with multiple windows side by side.</td>
+                    </tr>
+                    <tr>
+                        <td>GPU</td>
+                        <td>Integrated AMD Radeon (CPU-included)</td>
+                        <td>$0</td>
+                        <td>Dedicated GPU is not needed for this use case. Integrated graphics handle display output and
+                            basic tasks. Allocating budget to a discrete GPU would be wasteful here.</td>
+                    </tr>
+                    <tr>
+                        <td>Battery</td>
+                        <td>50 Wh, estimated 7-8 hours typical use</td>
+                        <td>Included</td>
+                        <td>Adequate for a full workday of documentation and light lab work. Heavy VM usage will reduce
+                            this significantly, so a charger should be available for intensive sessions.</td>
+                    </tr>
+                    <tr>
+                        <td>Ports</td>
+                        <td>USB-A x2, USB-C, HDMI, SD card reader, RJ-45 Ethernet</td>
+                        <td>Included</td>
+                        <td>RJ-45 is critical for an IT technician doing network troubleshooting. HDMI enables external
+                            monitor connection. USB-A ports reduce reliance on adapters in the field.</td>
+                    </tr>
+                    <tr>
+                        <td>Webcam</td>
+                        <td>720p integrated webcam with privacy shutter</td>
+                        <td>Included</td>
+                        <td>Sufficient for video calls and remote support sessions. Privacy shutter is a practical
+                            security feature aligned with IT security awareness.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td>Lenovo IdeaPad or similar mid-range business laptop</td>
+                        <td><strong>~$750-850</strong></td>
+                        <td>Stays within the $1,000 budget with room to spare.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Most Challenging Component to Budget</h2>
+            <p class="notes-paragraph">RAM was the most challenging. 16 GB is genuinely necessary for virtualization
+                workloads, but many laptops in this price range ship with 8 GB soldered to the motherboard with no
+                upgrade path. Finding a model with 16 GB at launch, or with an available SODIMM slot, required careful
+                review of spec sheets and service documentation. The risk of buying an 8 GB model and discovering it is
+                non-upgradeable is a real budget trap at this price tier.</p>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">$200 Upgrade Scenario</h2>
+            <p class="notes-paragraph">The upgrade would go toward expanding RAM to 32 GB. For an IT technician running
+                multiple VMs simultaneously (for example, a Windows Server instance alongside a client machine for
+                Active Directory lab practice), 16 GB becomes a bottleneck quickly. Doubling RAM to 32 GB extends the
+                useful life of the machine for lab work and allows more complex virtualization scenarios without
+                performance degradation.</p>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Reflection</h2>
+            <p class="notes-paragraph">Choosing a purpose first made every subsequent decision easier. Because the use
+                case was virtualization and field IT work, the CPU and RAM choices were locked in early as
+                non-negotiable priorities. The display, GPU, and webcam selections were easy to resolve cheaply because
+                the use case did not demand high-end versions of those components. The port selection was influenced
+                directly by the job context: an IT technician without a physical Ethernet port is at a disadvantage in
+                the field. This exercise reinforces a core principle of hardware selection: there is no universally best
+                configuration, only configurations that are well or poorly matched to a specific workload. A gaming
+                laptop and a helpdesk laptop at the same price point should look very different internally.</p>
+        </section>
+
+    </main>
+    </div>
+</body>
+
+</html>

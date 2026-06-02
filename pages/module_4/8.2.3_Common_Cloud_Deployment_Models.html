@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8.2.3 – Common Cloud Deployment Models</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+
+<body>
+    <button class="sidebar-toggle" aria-label="Toggle sidebar">&#9776;</button>
+    <div class="sidebar-backdrop"></div>
+    <nav class="site-sidebar" aria-label="Site navigation"></nav>
+    <nav class="site-nav" aria-label="Primary"></nav>
+
+    <main class="page-content notes-content">
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Cloud Deployment Models</h2>
+            <dl class="notes-terms">
+                <dt class="notes-term">Public (Multitenancy)</dt>
+                <dd class="notes-definition">Offered over the Internet by a cloud service provider (CSP) to multiple
+                    tenants. Includes subscription, pay-as-you-go, and free tier options. Shared resource model carries
+                    performance and security risks. Multicloud architectures use services from multiple CSPs.</dd>
+
+                <dt class="notes-term">Private</dt>
+                <dd class="notes-definition">Cloud infrastructure exclusively owned and managed by a single
+                    organization. A dedicated business unit manages it while other units consume it. Greater control
+                    over privacy and security; ideal for banking and government requiring strict access control.</dd>
+
+                <dt class="notes-term">Community</dt>
+                <dd class="notes-definition">Several organizations share the costs of a hosted private or fully private
+                    cloud. Resources are pooled for common concerns such as standardization and security policies.</dd>
+
+                <dt class="notes-term">Hybrid</dt>
+                <dd class="notes-definition">Combines public, private, and/or community cloud elements. Example: a
+                    travel org uses private cloud most of the year, bursting to public cloud during peak times.
+                    Sensitive data stays on-premises while public cloud handles other functions.</dd>
+            </dl>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Matching Exercise Answers</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>Scenario</th>
+                        <th>Model</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Software startup wants cost efficiency, scalability, and universal reach</td>
+                        <td>Public</td>
+                    </tr>
+                    <tr>
+                        <td>Financial institution uses cloud for online banking but keeps sensitive data on-premises
+                        </td>
+                        <td>Hybrid</td>
+                    </tr>
+                    <tr>
+                        <td>PPO doctor partners with other offices to collaborate on patient care</td>
+                        <td>Community</td>
+                    </tr>
+                    <tr>
+                        <td>Organization encourages internal partnerships but does not share work outside the company
+                        </td>
+                        <td>Private</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <script src="../../js/nav.js"></script>
+</body>
+
+</html>
