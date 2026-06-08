@@ -27,7 +27,7 @@
       <h1 class="notes-title">3.2.7 RAID 5 and RAID 10</h1>
 
       <section class="notes-section">
-        <h2 class="notes-section-title">RAID 5 – Striping with Distributed Parity</h2>
+        <h2 class="notes-section-title">RAID 5 â€“ Striping with Distributed Parity</h2>
         <p class="notes-paragraph">
           RAID 5 combines <b>striping</b> (like RAID 0) with <b>distributed parity</b>. Error correction
           information is spread across all disks in the array. Data and parity information are always
@@ -48,7 +48,7 @@
             </tr>
             <tr class="notes-table-row">
               <td class="notes-table-cell">Fault tolerance</td>
-              <td class="notes-table-cell">1 disk failure — data can be reconstructed from parity</td>
+              <td class="notes-table-cell">1 disk failure - data can be reconstructed from parity</td>
             </tr>
             <tr class="notes-table-row">
               <td class="notes-table-cell">Read performance</td>
@@ -56,7 +56,7 @@
             </tr>
             <tr class="notes-table-row">
               <td class="notes-table-cell">Write performance</td>
-              <td class="notes-table-cell">Slower — parity must be calculated on every write</td>
+              <td class="notes-table-cell">Slower - parity must be calculated on every write</td>
             </tr>
             <tr class="notes-table-row">
               <td class="notes-table-cell">Usable capacity</td>
@@ -69,7 +69,7 @@
           </tbody>
         </table>
         <p class="notes-paragraph notes-paragraph--note">
-          <b>Note:</b> Fault tolerance and usable space are <b>inversely related</b> — more disks means
+          <b>Note:</b> Fault tolerance and usable space are <b>inversely related</b> - more disks means
           more usable space but a greater chance of failure. If <b>more than one disk fails</b>, the entire
           volume becomes unavailable.
         </p>
@@ -101,7 +101,7 @@
       </section>
 
       <section class="notes-section">
-        <h2 class="notes-section-title">RAID 10 – Stripe of Mirrors</h2>
+        <h2 class="notes-section-title">RAID 10 â€“ Stripe of Mirrors</h2>
         <p class="notes-paragraph">
           RAID 10 is a <b>nested RAID level</b> that combines RAID 1 (mirroring) and RAID 0 (striping).
           It creates a <b>striped volume made up of mirrored pairs</b>. One disk in each mirrored pair
@@ -125,11 +125,11 @@
             </tr>
             <tr class="notes-table-row">
               <td class="notes-table-cell">Read performance</td>
-              <td class="notes-table-cell">Excellent — benefits from both striping and mirroring</td>
+              <td class="notes-table-cell">Excellent - benefits from both striping and mirroring</td>
             </tr>
             <tr class="notes-table-row">
               <td class="notes-table-cell">Write performance</td>
-              <td class="notes-table-cell">Good — no parity calculation needed</td>
+              <td class="notes-table-cell">Good - no parity calculation needed</td>
             </tr>
             <tr class="notes-table-row">
               <td class="notes-table-cell">Usable capacity</td>
@@ -191,12 +191,12 @@
       <section class="notes-section">
         <h2 class="notes-section-title">Key Terms</h2>
         <ul class="notes-list">
-          <li class="notes-list-item"><b>Distributed parity</b> – Error correction data spread evenly across all disks in the array (used in RAID 5)</li>
-          <li class="notes-list-item"><b>Parity</b> – Mathematical error-checking data used to reconstruct lost data if a disk fails</li>
-          <li class="notes-list-item"><b>RAID 5</b> – Striping with distributed parity; min. 3 disks; tolerates 1 disk failure</li>
-          <li class="notes-list-item"><b>RAID 10</b> – Nested RAID combining RAID 0 striping and RAID 1 mirroring; min. 4 disks; excellent fault tolerance and performance</li>
-          <li class="notes-list-item"><b>Nested RAID</b> – A RAID configuration that combines two RAID levels (e.g. RAID 10 = RAID 1 + RAID 0)</li>
-          <li class="notes-list-item"><b>Sub-volume</b> – A mirrored pair within a RAID 10 array that acts as one unit in the stripe</li>
+          <li class="notes-list-item"><b>Distributed parity</b> â€“ Error correction data spread evenly across all disks in the array (used in RAID 5)</li>
+          <li class="notes-list-item"><b>Parity</b> â€“ Mathematical error-checking data used to reconstruct lost data if a disk fails</li>
+          <li class="notes-list-item"><b>RAID 5</b> â€“ Striping with distributed parity; min. 3 disks; tolerates 1 disk failure</li>
+          <li class="notes-list-item"><b>RAID 10</b> â€“ Nested RAID combining RAID 0 striping and RAID 1 mirroring; min. 4 disks; excellent fault tolerance and performance</li>
+          <li class="notes-list-item"><b>Nested RAID</b> â€“ A RAID configuration that combines two RAID levels (e.g. RAID 10 = RAID 1 + RAID 0)</li>
+          <li class="notes-list-item"><b>Sub-volume</b> â€“ A mirrored pair within a RAID 10 array that acts as one unit in the stripe</li>
         </ul>
       </section>
 

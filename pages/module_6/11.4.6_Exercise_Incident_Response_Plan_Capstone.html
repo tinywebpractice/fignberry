@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11.4.6 Exercise: Incident Response Plan Capstone</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">11.4.6 Exercise: Incident Response Plan Capstone</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">About This Exercise</h2>
+      <p class="notes-paragraph">This is a CompTIA capstone activity supporting A+ Core 2 exam objectives 4.1 and 4.7. The scenario: you are a cybersecurity analyst for a mid-sized company tasked with drafting a basic Incident Response Plan (IRP) to guide the team when handling security incidents. The plan must cover four components: Incident Reporting, Incident Documentation, Incident Resolution, and a Communication Plan.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Incident Response Plan (IRP)</h2>
+
+      <h3 style="margin:1rem 0 0.5rem;">1. Incident Reporting</h3>
+      <p class="notes-paragraph">Any employee who identifies a potential security incident must report it immediately using the company ticketing system. If the ticketing system is unavailable, the incident should be reported by phone or email to the IT Security team. All incidents must be reported within 30 minutes of identification.</p>
+      <p class="notes-paragraph">Responsible parties: end users report initial observations; IT Security team owns the ticket from creation onward; supervisors are notified if the incident affects business operations.</p>
+      <p class="notes-paragraph">Sample incident reporting form:</p>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Example / Instructions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Reporter name</td>
+            <td>Full name of the person submitting the report</td>
+          </tr>
+          <tr>
+            <td>Department</td>
+            <td>Reporter's department or team</td>
+          </tr>
+          <tr>
+            <td>Date and time reported</td>
+            <td>MM/DD/YYYY HH:MM</td>
+          </tr>
+          <tr>
+            <td>Date and time incident occurred (if known)</td>
+            <td>MM/DD/YYYY HH:MM</td>
+          </tr>
+          <tr>
+            <td>Incident description</td>
+            <td>Brief description of what was observed (e.g., "Suspicious email received with attachment; user clicked link")</td>
+          </tr>
+          <tr>
+            <td>Systems or assets affected</td>
+            <td>Hostnames, IP addresses, applications, or data involved</td>
+          </tr>
+          <tr>
+            <td>Any actions already taken</td>
+            <td>Steps the reporter took before submitting (e.g., "Disconnected from network")</td>
+          </tr>
+          <tr>
+            <td>Reporting method</td>
+            <td>Ticketing system / phone / email</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin:1rem 0 0.5rem;">2. Incident Documentation</h3>
+      <p class="notes-paragraph">All incidents must be documented in the ticketing system immediately upon report. Accurate and complete records are critical for analysis, regulatory compliance, and post-incident review. Tickets must never be deleted; they must be updated throughout the lifecycle of the incident.</p>
+      <p class="notes-paragraph">Required fields for every ticket:</p>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ticket ID</td>
+            <td>Auto-generated unique identifier</td>
+          </tr>
+          <tr>
+            <td>Date and time of incident</td>
+            <td>When the incident occurred or was first detected</td>
+          </tr>
+          <tr>
+            <td>Date and time reported</td>
+            <td>When the ticket was created</td>
+          </tr>
+          <tr>
+            <td>Incident category</td>
+            <td>e.g., malware, phishing, unauthorized access, data loss</td>
+          </tr>
+          <tr>
+            <td>Priority level</td>
+            <td>Critical / High / Medium / Low (assigned by IT Security)</td>
+          </tr>
+          <tr>
+            <td>Description</td>
+            <td>Detailed account of what occurred</td>
+          </tr>
+          <tr>
+            <td>Systems or data affected</td>
+            <td>Specific assets, accounts, or data sets involved</td>
+          </tr>
+          <tr>
+            <td>Actions taken</td>
+            <td>Chronological log of all mitigation and response steps, with timestamps and responsible party for each entry</td>
+          </tr>
+          <tr>
+            <td>Current status</td>
+            <td>Open / In Progress / Escalated / Resolved / Closed</td>
+          </tr>
+          <tr>
+            <td>Assigned technician</td>
+            <td>Name of the IT staff member handling the ticket</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin:1rem 0 0.5rem;">3. Incident Resolution</h3>
+      <p class="notes-paragraph">Resolution follows a structured sequence to ensure consistent, traceable handling of every incident:</p>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Step</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1. Initial assessment</td>
+            <td>IT Security reviews the ticket, confirms the incident is valid, and determines scope and impact</td>
+          </tr>
+          <tr>
+            <td>2. Prioritization</td>
+            <td>Assign priority level (Critical / High / Medium / Low) based on business impact and urgency; Critical incidents receive immediate response</td>
+          </tr>
+          <tr>
+            <td>3. Assignment</td>
+            <td>Ticket is assigned to the appropriate technician or team; escalate to senior staff or external specialists if the issue exceeds current capability</td>
+          </tr>
+          <tr>
+            <td>4. Containment</td>
+            <td>Take immediate steps to prevent the incident from spreading (e.g., isolate affected systems, revoke compromised credentials)</td>
+          </tr>
+          <tr>
+            <td>5. Resolution</td>
+            <td>Implement a fix or workaround; document every action taken with timestamps in the ticket</td>
+          </tr>
+          <tr>
+            <td>6. Verification</td>
+            <td>Confirm the resolution is effective; verify with the affected user or system that normal operation has been restored</td>
+          </tr>
+          <tr>
+            <td>7. Ticket closure</td>
+            <td>Update the ticket status to Closed; record the final resolution summary and time to resolve</td>
+          </tr>
+          <tr>
+            <td>8. Post-incident review</td>
+            <td>Within 5 business days of closure, conduct a review to identify root cause, evaluate the response, and document lessons learned and any recommended policy or procedure changes</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin:1rem 0 0.5rem;">4. Communication Plan</h3>
+      <p class="notes-paragraph">Clear communication throughout an incident prevents misinformation, ensures appropriate parties can act, and maintains stakeholder confidence.</p>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Stakeholder</th>
+            <th>When to Notify</th>
+            <th>Method</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>IT Security team</td>
+            <td>Immediately upon ticket creation</td>
+            <td>Ticketing system alert + direct message</td>
+          </tr>
+          <tr>
+            <td>IT Manager</td>
+            <td>All High and Critical incidents; within 1 hour of detection</td>
+            <td>Phone call + email</td>
+          </tr>
+          <tr>
+            <td>Affected department supervisor</td>
+            <td>When business operations are impacted</td>
+            <td>Email or phone</td>
+          </tr>
+          <tr>
+            <td>Executive leadership</td>
+            <td>Critical incidents or confirmed data breaches</td>
+            <td>Direct briefing by IT Manager</td>
+          </tr>
+          <tr>
+            <td>Affected end users</td>
+            <td>When their systems or data are involved; at resolution</td>
+            <td>Email or in-person</td>
+          </tr>
+          <tr>
+            <td>Legal / Compliance</td>
+            <td>If regulated data (PII, financial, health records) is involved</td>
+            <td>Email + formal incident report</td>
+          </tr>
+          <tr>
+            <td>External parties (customers, vendors)</td>
+            <td>Only if their data or services are affected; coordinated by leadership and legal</td>
+            <td>Formal written notification per legal guidance</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="notes-paragraph">Status updates must be posted to the ticket at a minimum of every 2 hours during active High/Critical incidents. All external communications must be reviewed by IT management and legal before release.</p>
+    </section>
+
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

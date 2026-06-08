@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.2.2 Update and Security Settings</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.2.2 Update and Security Settings</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Overview</h2>
+      <p class="notes-paragraph">The <strong>Update &amp; Security</strong> section of Settings (Windows 10) / <strong>Privacy &amp; Security</strong> (Windows 11) provides a unified interface for patch management, security, backup, recovery, and activation. Key concepts:</p>
+      <ul class="notes-list">
+        <li class="notes-list-item"><strong>Patch / update:</strong> A file containing replacement system or application code that fixes reliability, security, or performance issues.</li>
+        <li class="notes-list-item"><strong>Security apps:</strong> Detect and block threats such as viruses, malware, and unauthorized network traffic.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Update &amp; Security Categories</h2>
+      <table class="notes-table">
+        <thead>
+          <tr><th>Category</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Windows Update</td><td>Critical updates, security patches, optional software/driver updates, Feature Updates</td></tr>
+          <tr><td>Delivery Optimisation</td><td>Controls how updates are downloaded (peer-to-peer vs. Microsoft servers)</td></tr>
+          <tr><td>Windows Security</td><td>Shortcuts to Windows Defender antivirus/threat protection and firewall</td></tr>
+          <tr><td>Backup</td><td>File History and backup configuration</td></tr>
+          <tr><td>Troubleshoot</td><td>Built-in automated troubleshooters</td></tr>
+          <tr><td>Recovery</td><td>Reset this PC, advanced startup options</td></tr>
+          <tr><td>Activation</td><td>Product activation status and product key entry</td></tr>
+          <tr><td>Find my device</td><td>Locate the device remotely</td></tr>
+          <tr><td>For developers</td><td>Developer mode, remote PowerShell, device portal</td></tr>
+          <tr><td>Windows Insider Programme</td><td>Opt into preview/beta builds</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Windows Update</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item">Hosts critical updates, security patches, optional software updates, and hardware driver updates.</li>
+        <li class="notes-list-item">In the basic interface, Windows Update can only be <strong>paused temporarily</strong>, it cannot be completely disabled.</li>
+        <li class="notes-list-item">Supports manual check for updates and selection of optional updates.</li>
+        <li class="notes-list-item"><strong>Feature Updates:</strong> Released periodically; introduce changes to OS features and tools. Can be used to perform an in-place upgrade from Windows 10 to Windows 11 if hardware is compatible.</li>
+        <li class="notes-list-item"><strong>Update logging:</strong> Activity is recorded in Event Viewer at Applications and Service Logs &gt; Microsoft\Windows &gt; WindowsUpdateClient &gt; Operational. Failed updates produce an error code that can be looked up on the Microsoft Knowledge Base.</li>
+      </ul>
+      <p class="notes-paragraph">Key options on the Windows Update page:</p>
+      <ul class="notes-list">
+        <li class="notes-list-item">Check for updates (manual)</li>
+        <li class="notes-list-item">View optional updates</li>
+        <li class="notes-list-item">Pause updates for 7 days (Advanced Options to change pause duration)</li>
+        <li class="notes-list-item">Change active hours (window when Windows will not reboot for updates)</li>
+        <li class="notes-list-item">View update history</li>
+        <li class="notes-list-item">Advanced options</li>
+      </ul>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Windows Security</h2>
+      <p class="notes-paragraph">Provides shortcuts to management pages for the built-in <strong>Windows Defender</strong> virus/threat protection and firewall. Use this section to identify which antivirus tool is active on the system. In Windows 11, Privacy &amp; security settings are grouped under the same heading, with Windows Update as a separate heading.</p>
+
+      <h3 style="margin-top:1rem;">Firewall and Network Protection Profiles</h3>
+      <p class="notes-paragraph">Windows Firewall settings are divided into three network profiles:</p>
+      <table class="notes-table">
+        <thead>
+          <tr><th>Profile</th><th>When Applied</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Domain</td><td>System is joined to a Windows domain</td><td>Typically managed by organizational policy</td></tr>
+          <tr><td>Private network</td><td>Home or trusted networks</td><td>Less restrictive firewall rules</td></tr>
+          <tr><td>Public network</td><td>Away from home (coffee shops, hotels, etc.)</td><td>More restrictive rules recommended; stricter settings than Private</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Activation</h2>
+      <p class="notes-paragraph"><strong>Microsoft Product Activation</strong> is an anti-piracy technology that verifies software is legitimately purchased. Windows must be activated within a grace period after installation; after the grace period, certain features are disabled until activated over the Internet using a valid <strong>product key</strong> or <strong>digital license</strong>. The Activation page shows current status and allows entry of a different product key.</p>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

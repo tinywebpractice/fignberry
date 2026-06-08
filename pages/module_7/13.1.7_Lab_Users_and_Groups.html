@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>13.1.7 Lab: Users and Groups</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">13.1.7 Lab: Users and Groups</h1>
+    <p class="notes-paragraph">This is a CompTIA CertMaster Learn exercise. The scenario involves creating three local user accounts and assigning each to the appropriate security group based on their job responsibilities.</p>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Scenario</h2>
+      <p class="notes-paragraph">Three employees need accounts on a support office computer. All users are automatically placed in the <strong>Users</strong> group upon account creation.</p>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Required Access</th>
+            <th>Group(s)</th>
+            <th>Password</th>
+            <th>Force Change</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sylvia</td>
+            <td>Perform all actions on the computer (full admin)</td>
+            <td>Users, <strong>Administrators</strong></td>
+            <td><code>0Clever1</code></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Scott</td>
+            <td>Back up and restore files; no other elevated rights</td>
+            <td>Users, <strong>Backup Operators</strong></td>
+            <td><code>0Clever1</code></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Jed</td>
+            <td>Normal access (start computer, run apps, save files)</td>
+            <td>Users (no additional group)</td>
+            <td><code>0Clever1</code></td>
+            <td>Yes</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Task 1: Create User Accounts</h2>
+      <ol class="notes-list">
+        <li class="notes-list-item">Right-click <strong>Start</strong> and select <strong>Computer Management</strong>. Maximize the window.</li>
+        <li class="notes-list-item">Expand <strong>Local Users and Groups</strong>.</li>
+        <li class="notes-list-item">Right-click <strong>Users</strong> and select <strong>New User</strong>.</li>
+        <li class="notes-list-item">Enter the username in the <strong>User Name</strong> field.</li>
+        <li class="notes-list-item">Enter <code>0Clever1</code> in the <strong>Password</strong> field (0 is a zero).</li>
+        <li class="notes-list-item">Re-enter <code>0Clever1</code> in the <strong>Confirm password</strong> field.</li>
+        <li class="notes-list-item">Ensure <strong>User must change password at next logon</strong> is checked.</li>
+        <li class="notes-list-item">Select <strong>Create</strong>.</li>
+        <li class="notes-list-item">Repeat steps 3 through 8 to create accounts for all three users.</li>
+        <li class="notes-list-item">Select <strong>Close</strong> when done.</li>
+      </ol>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Task 2: Add Users to Groups</h2>
+      <ol class="notes-list">
+        <li class="notes-list-item">In the left pane of Computer Management, select <strong>Groups</strong> under Local Users and Groups.</li>
+        <li class="notes-list-item">In the center pane, right-click the target group and select <strong>Add to Group</strong>.</li>
+        <li class="notes-list-item">Select <strong>Add</strong>.</li>
+        <li class="notes-list-item">Under <strong>Enter the object names to select</strong>, type the username, then select <strong>OK</strong>.</li>
+        <li class="notes-list-item">Select <strong>OK</strong> to confirm.</li>
+        <li class="notes-list-item">Repeat for each additional group assignment:
+          <ul class="notes-list">
+            <li class="notes-list-item">Add <strong>Sylvia</strong> to <strong>Administrators</strong>.</li>
+            <li class="notes-list-item">Add <strong>Scott</strong> to <strong>Backup Operators</strong>.</li>
+            <li class="notes-list-item"><strong>Jed</strong> requires no additional group assignment; Users membership is sufficient.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Key Concepts</h2>
+      <dl class="notes-terms">
+        <dt class="notes-term">Administrators group</dt>
+        <dd class="notes-definition">Grants complete and unrestricted access to the local computer. Appropriate for users who need to install software, manage other accounts, and change system-wide settings.</dd>
+        <dt class="notes-term">Backup Operators group</dt>
+        <dd class="notes-definition">Allows members to back up and restore files regardless of file permissions, without granting full administrative rights. Ideal for users with backup responsibilities only.</dd>
+        <dt class="notes-term">Users group</dt>
+        <dd class="notes-definition">Default group for all new accounts. Provides standard access: log on, run applications, and save files. Cannot make system-wide changes.</dd>
+        <dt class="notes-term">User must change password at next logon</dt>
+        <dd class="notes-definition">Forces the user to set their own password on first login, ensuring the administrator-assigned initial password is not retained.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

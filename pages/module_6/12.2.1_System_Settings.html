@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.2.1 System Settings</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.2.1 System Settings</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Overview</h2>
+      <p class="notes-paragraph">The <strong>System Settings</strong> page (Settings app) provides options for configuring input/output devices, power, remote desktop, notifications, and clipboard. The <strong>About</strong> page displays key hardware and OS version information.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">System Settings Categories</h2>
+      <table class="notes-table">
+        <thead>
+          <tr><th>Category</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Display</td><td>Resolution, scaling, orientation, multiple monitors</td></tr>
+          <tr><td>Sound</td><td>Audio input/output device configuration</td></tr>
+          <tr><td>Notifications &amp; actions</td><td>App notification behavior and quick action buttons</td></tr>
+          <tr><td>Focus assist</td><td>Suppress notifications during specified activities</td></tr>
+          <tr><td>Power &amp; sleep</td><td>Screen timeout and sleep settings</td></tr>
+          <tr><td>Storage</td><td>Disk usage and Storage Sense configuration</td></tr>
+          <tr><td>Tablet</td><td>Tablet mode behavior</td></tr>
+          <tr><td>Multi-tasking</td><td>Snap, virtual desktops, Alt+Tab behavior</td></tr>
+          <tr><td>Projecting to this PC</td><td>Wireless display projection settings</td></tr>
+          <tr><td>Shared experiences</td><td>Nearby sharing and cross-device activity</td></tr>
+          <tr><td>Clipboard</td><td>Clipboard history and sync across devices</td></tr>
+          <tr><td>Remote Desktop</td><td>Enable/disable incoming Remote Desktop connections</td></tr>
+          <tr><td>About</td><td>Device specifications and Windows specifications</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">About Page</h2>
+      <p class="notes-paragraph">The About page shows two groups of information:</p>
+      <ul class="notes-list">
+        <li class="notes-list-item"><strong>Device specifications:</strong> Device name, Processor, Installed RAM, Device ID, Product ID, System type, Pen and touch support</li>
+        <li class="notes-list-item"><strong>Windows specifications:</strong> Edition, Version, Installed on (date), OS build, Experience pack</li>
+      </ul>
+      <p class="notes-paragraph">Also provides buttons to <strong>Copy</strong> device specs and <strong>Rename this PC</strong>.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Related Settings Links (Bottom of About Page)</h2>
+      <p class="notes-paragraph">The bottom of the About page provides shortcuts to:</p>
+      <ul class="notes-list">
+        <li class="notes-list-item"><strong>BitLocker</strong> disk encryption settings</li>
+        <li class="notes-list-item"><strong>System protection</strong> (System Restore)</li>
+        <li class="notes-list-item"><strong>Advanced system settings</strong></li>
+      </ul>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Advanced System Settings</h2>
+      <dl class="notes-terms">
+        <dt class="notes-term">Performance options</dt>
+        <dd class="notes-definition">Configure desktop visual effects for best appearance or best performance; manually configure virtual memory (paging file); set operation mode to favor foreground or background processes. Desktop PCs should always be optimized for <strong>foreground processes</strong>.</dd>
+        <dt class="notes-term">Startup and recovery options</dt>
+        <dd class="notes-definition">Configure boot behavior and what happens when a system failure occurs (e.g., kernel memory dump settings).</dd>
+        <dt class="notes-term">Environment variables</dt>
+        <dd class="notes-definition">Set file path variables used by the OS and applications. Example: <code>%SYSTEMROOT%</code> expands to <code>C:\Windows</code> by default.</dd>
+        <dt class="notes-term">User profiles</dt>
+        <dd class="notes-definition">Manage profile data stored for each user account.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Legacy Access</h2>
+      <p class="notes-paragraph">In earlier Windows versions these options were managed via the <strong>System Applet</strong> in Control Panel. In current Windows, the System Applet redirects directly to the System Settings menu.</p>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

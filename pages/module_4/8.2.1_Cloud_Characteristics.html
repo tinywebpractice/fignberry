@@ -40,7 +40,7 @@
                 <li class="notes-list-item">Type 2</li>
                 <li class="notes-list-item">Guest OS</li>
             </ul>
-            <p class="note">Bare metal and Type 1 are two names for the same thing -- a hypervisor that runs directly on
+            <p class="note">Bare metal and Type 1 are two names for the same thing - a hypervisor that runs directly on
                 hardware with no host OS underneath. Type 2 runs on top of a host OS. Guest OS runs inside a VM on top
                 of the hypervisor.</p>
         </div>
@@ -69,7 +69,7 @@
                 <li class="notes-list-item">Server-side virtualization</li>
                 <li class="notes-list-item">Container virtualization</li>
             </ul>
-            <p class="note">Application virtualization streams the app from a central server at runtime -- it never
+            <p class="note">Application virtualization streams the app from a central server at runtime - it never
                 fully installs on the client, so the developer controls the version centrally and all clients
                 automatically get the current version. Client-side virtualization still requires per-client updates;
                 server-side virtualization is about resource management; containers don't inherently guarantee all
@@ -155,7 +155,7 @@
             </ul>
             <p class="note">Each guest VM needs its own RAM allocation on top of host OS usage; CPU virtualization
                 extensions (Intel VT-x/AMD-V) must be enabled in BIOS/UEFI; a virtual switch/network is required for VMs
-                to communicate with each other. Storage requirements are actually high, not low -- each VM has its own
+                to communicate with each other. Storage requirements are actually high, not low - each VM has its own
                 virtual disk image.</p>
         </div>
 
@@ -170,7 +170,7 @@
                 <li class="notes-list-item">Install additional memory.</li>
             </ul>
             <p class="note">CPU virtualization extensions (Intel VT-x/AMD-V) are present on modern processors but are
-                often disabled by default in BIOS/UEFI -- enabling them is the required prerequisite. VMs use virtual
+                often disabled by default in BIOS/UEFI - enabling them is the required prerequisite. VMs use virtual
                 disk files on existing storage, so a separate physical disk is not needed. A BIOS flash doesn't add
                 virtualization capability; it's already built into the CPU hardware. Additional RAM may improve
                 performance but is not a prerequisite.</p>

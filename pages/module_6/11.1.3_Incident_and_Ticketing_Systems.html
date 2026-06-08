@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11.1.3 Incident and Ticketing Systems</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">11.1.3 Incident and Ticketing Systems</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Ticketing Systems Overview</h2>
+                <p class="notes-paragraph">A ticketing system manages requests, incidents, and problems for both
+                    internal end-users and external customers. Each ticket receives a unique job ticket ID and is assigned
+                    to an agent.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Ticket Management Process</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><strong>Step 1: Contact and ticket creation:</strong> User contacts the
+                        help desk via phone, email, or the ticketing system directly. A unique ticket ID is generated and
+                        an agent is assigned. Basic details captured include user information (name, contact, department,
+                        job role; may link to employee or CRM database) and device information (service tag or asset ID;
+                        may link to inventory record).</li>
+                    <li class="notes-list-item"><strong>Step 2: Issue description:</strong> The user describes the
+                        problem. The agent may ask clarifying questions to ensure an accurate initial description.</li>
+                    <li class="notes-list-item"><strong>Step 3: Categorization and assessment:</strong> The agent
+                        categorizes the support case, assesses urgency and severity, and estimates time to resolution.
+                    </li>
+                    <li class="notes-list-item"><strong>Step 4: Troubleshooting and escalation:</strong> The agent walks
+                        the user through initial troubleshooting steps. If unresolved, the ticket is escalated to
+                        deskside support or a senior technician.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Ticket Fields and Categories</h2>
+                <p class="notes-paragraph">Ticketing systems like osTicket organize tickets by help topic. Each topic is
+                    configured with the following attributes:</p>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Help Topic</td>
+                            <td>Category of the issue (e.g., Feedback, General Inquiry, Report a Problem, Access Issue)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td>Whether the topic is active or inactive</td>
+                        </tr>
+                        <tr>
+                            <td>Type</td>
+                            <td>Visibility scope (e.g., Public or Private)</td>
+                        </tr>
+                        <tr>
+                            <td>Priority</td>
+                            <td>Urgency level (Low, Normal, High)</td>
+                        </tr>
+                        <tr>
+                            <td>Department</td>
+                            <td>Team responsible for handling the ticket (e.g., Support, Maintenance)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Ticket Types (Categories)</h2>
+                <p class="notes-paragraph">Categories and subcategories group related tickets for routing, reporting,
+                    and analysis. Service management standards define three basic ticket types:</p>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Requests</dt>
+                    <dd class="notes-definition">Tickets for provisioning items covered by an existing SOP: new user
+                        accounts, hardware/software purchases, server deployments, etc. Complex requests not covered by
+                        existing procedures are better handled as projects.</dd>
+                    <dt class="notes-term">Incidents</dt>
+                    <dd class="notes-definition">Tickets related to errors or unexpected situations faced by end-users or
+                        customers. Further categorized by severity: minor, major, and critical.</dd>
+                    <dt class="notes-term">Problems</dt>
+                    <dd class="notes-definition">Tickets representing the root cause of one or more incidents, requiring
+                        analysis and service reconfiguration to resolve. Typically generated internally when the help desk
+                        receives many incidents of the same type.</dd>
+                </dl>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Practical Category Strategies</h2>
+                <p class="notes-paragraph">End-users cannot reliably distinguish incidents from problems, so exposing raw
+                    ticket types to them is not practical. Two common strategies:</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><strong>Simplified top-level categories for end-users:</strong> A short
+                        list of self-service options such as New Device Request, New App Request, Employee Onboarding,
+                        Employee Offboarding, Help/Support, and Security Incident. Technicians then apply a longer
+                        internal subcategory list for reporting and analysis.</li>
+                    <li class="notes-list-item"><strong>Keyword tagging:</strong> Standard keyword tags added to each
+                        ticket. More flexible than fixed categories but depends on consistent tagging by technicians.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Severity Levels</h2>
+                <p class="notes-paragraph">Severity classifies tickets into priority order. A three-level system based on
+                    impact is commonly sufficient:</p>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Severity</th>
+                            <th>Definition</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Critical</td>
+                            <td>Widespread effect on customers, or involves a potential or actual data breach</td>
+                        </tr>
+                        <tr>
+                            <td>Major</td>
+                            <td>Affects a limited group of customers, or involves a suspected security violation</td>
+                        </tr>
+                        <tr>
+                            <td>Minor</td>
+                            <td>No significant effect on customer groups</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph">High-volume environments may require more discrete levels measuring both
+                    impact and urgency. Severity levels can also trigger automatic notifications to senior technicians
+                    and managers for major and critical incidents.</p>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

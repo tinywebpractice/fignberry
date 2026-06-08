@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11.1.11 Knowledge Base Articles</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">11.1.11 Knowledge Base Articles</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Why Knowledge Base Articles Matter</h2>
+                <p class="notes-paragraph">Knowledge base articles allow team members to perform operations they would
+                    not otherwise know how to do. They are especially critical when specialized knowledge exists in only
+                    one person and that person leaves the organization.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Real-World Example: Web Development Crisis</h2>
+                <p class="notes-paragraph">A web developer who managed all Azure web services left the company. Six
+                    months later the company website stopped working. No remaining team members had web development
+                    experience. Because the departing employee had written a knowledge base article documenting the
+                    entire process, the team was able to restore the site within an hour.</p>
+                <p class="notes-paragraph">The issue turned out to be an Azure web app with a custom domain requiring a
+                    bound SSL certificate in .PFX format. The article documented every step: opening the web service in
+                    Azure, configuring the custom domain, retrieving the SSL certificate from the registrar (GoDaddy),
+                    and using OpenSSL on the command line to convert the certificate to the .PFX format required by Azure
+                    before uploading.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Building a Documentation Culture</h2>
+                <p class="notes-paragraph">Following this incident, the team established a policy requiring each
+                    employee to write knowledge base articles covering their specific functions, with emphasis on
+                    specialized or non-obvious tasks. Examples from the team's knowledge base include:</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Creating a virtual machine and joining it to an Azure Managed Domain
+                        Service (for legacy applications) or performing an Azure domain join (for modern applications)
+                    </li>
+                    <li class="notes-list-item">Creating a SharePoint list and building a Power App</li>
+                    <li class="notes-list-item">Help desk basics for interns: connecting a computer using HDMI, DVI, and
+                        VGA ports</li>
+                </ul>
+                <p class="notes-paragraph">The key principle is that documentation should cover all levels of complexity,
+                    from advanced cloud architecture tasks down to the most basic hardware connection procedures, so that
+                    any team member can perform any function when needed.</p>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

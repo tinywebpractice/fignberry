@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.1.5 Using the Windows Desktop Interface</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.1.5 Using the Windows Desktop Interface</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">User Account Types</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Account Type</th>
+            <th>Capabilities</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Administrator</td>
+            <td>Full system configuration privileges; can manage, delete, and modify any account.</td>
+          </tr>
+          <tr>
+            <td>Standard user</td>
+            <td>Can change own password and manage own profile settings; no system-wide changes.</td>
+          </tr>
+          <tr>
+            <td>Guest</td>
+            <td>Limited account sometimes created by administrators; minimal privileges.</td>
+          </tr>
+          <tr>
+            <td>Backup/install accounts</td>
+            <td>Special-purpose accounts that may exist alongside standard and admin accounts.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">User Profiles</h2>
+      <p class="notes-paragraph">When a new user account is created, Windows automatically generates a profile containing default folders and files associated with that account. Access to those files is restricted to the account owner and administrators (local or domain).</p>
+      <p class="notes-paragraph">Permissions on profile files are assigned to the account owner by default. An administrator of the local computer or the domain the computer is joined to can also access them.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Accessing Account Settings</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item">Click the username in the Start menu to switch users or access account settings.</li>
+        <li class="notes-list-item">Account settings allow changes to profile picture, personal information, and security settings.</li>
+        <li class="notes-list-item">The Control Panel User Accounts applet can be used to view account types, change passwords, and manage accounts.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Personalization</h2>
+      <p class="notes-paragraph">Users can customize their Windows environment via right-click on the desktop and selecting Personalize, or through Settings &gt; Personalization. Customizable options include background image, color themes, and other personal preferences.</p>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

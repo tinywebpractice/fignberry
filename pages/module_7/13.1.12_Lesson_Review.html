@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>13.1.12 Lesson Review</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">13.1.12 Lesson Review</h1>
+
+    <section class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 1:</strong> You are setting up a new workstation for a department with multiple employees who need access to shared resources. Each employee requires different levels of access based on their role. Using the Local Users and Groups Console, what is the best way to configure access?</p>
+      <ul class="answer-list">
+        <li>Assign all employees to the Guest account to ensure limited access to the system.</li>
+        <li>Create a single user account for the department and share the login credentials with all employees.</li>
+        <li>Use the Administrator account for all employees to simplify access management.</li>
+        <li class="correct">Create individual user accounts for each employee and assign them to appropriate security groups based on their roles.</li>
+      </ul>
+      <p class="note">Individual accounts with group-based permissions is the correct Local Users and Groups approach. Guest accounts are too restrictive, shared credentials eliminate accountability and violate security policy, and giving all employees Administrator rights violates least privilege.</p>
+    </section>
+
+    <section class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 2:</strong> You are tasked with securing online transactions for your organization. Which of the following scenarios BEST demonstrates the appropriate use of the Certificate Manager to evaluate and ensure the security of digital certificates?</p>
+      <ul class="answer-list">
+        <li>Using the Certificate Manager to schedule regular updates for all installed certificates.</li>
+        <li>Using the Certificate Manager to create new user accounts and assign them to security groups.</li>
+        <li class="correct">Using the Certificate Manager to verify the validity and trustworthiness of a digital certificate before installing it.</li>
+        <li>Using the Certificate Manager to optimize the performance of the system's storage devices.</li>
+      </ul>
+      <p class="note">Certificate Manager (certmgr.msc) is used to view, manage, and evaluate certificates, including checking issuer, expiration, and trust chain before use. It does not schedule updates, manage user accounts, or affect storage performance.</p>
+    </section>
+
+    <section class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 3:</strong> What is the primary purpose of the Disk Management Console in Windows?</p>
+      <ul class="answer-list">
+        <li class="correct">To manage all fixed and removable disks attached to the system.</li>
+        <li>To configure and enforce group policies across the system.</li>
+        <li>To manage and edit user accounts and security groups.</li>
+        <li>To troubleshoot and update device drivers.</li>
+      </ul>
+      <p class="note">Disk Management (diskmgmt.msc) initializes disks, creates/deletes/formats partitions, assigns drive letters, and manages internal and external storage. Group policies belong to gpedit.msc, user accounts to lusrmgr.msc, and driver management to devmgmt.msc.</p>
+    </section>
+
+    <section class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 4:</strong> A user starts experiencing a blue screen of death (BSoD) on start-up. Where should the user check for changes after getting back on the computer?</p>
+      <ul class="answer-list">
+        <li>taskschd.msc</li>
+        <li>WSL</li>
+        <li>services.msc</li>
+        <li class="correct">devmgmt.msc</li>
+      </ul>
+      <p class="note">Device Manager (devmgmt.msc) surfaces recently changed, flagged, or problematic drivers and hardware, which are common BSoD triggers. Task Scheduler manages automated jobs, WSL is a Linux compatibility layer, and Services manages Windows service configurations.</p>
+    </section>
+
+    <section class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 5:</strong> A user reports that their Windows system is experiencing frequent crashes after a recent software installation. Upon investigation, you suspect the software has made incorrect changes to the Windows Registry. How should you analyze and address the issue using the Registry Editor?</p>
+      <ul class="answer-list">
+        <li>Reinstall the operating system to ensure all registry settings are reset to their default values.</li>
+        <li>Delete all registry keys associated with the recently installed software to eliminate any potential conflicts.</li>
+        <li>Use the Registry Editor to disable all startup programs to prevent the software from running and causing crashes.</li>
+        <li class="correct">Compare the current registry settings with a backup or baseline to identify discrepancies, then carefully restore or modify the affected keys.</li>
+      </ul>
+      <p class="note">The correct Registry Editor workflow is to export a backup, compare against a known-good baseline, and surgically correct only the changed keys. OS reinstall is a last resort, mass-deleting keys risks breaking dependencies, and disabling startup programs does not address the underlying registry changes.</p>
+    </section>
+
+    <section class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 6:</strong> Which of the following is a primary purpose of the Disk Defragmenter tool on a hard disk drive (HDD)?</p>
+      <ul class="answer-list">
+        <li>Identify files safe for deletion to free up disk space.</li>
+        <li>Perform a TRIM operation to mark OS-deletable data as writable.</li>
+        <li>Repair corrupted files caused by physical damage to the disk.</li>
+        <li class="correct">Reorganize file data into contiguous clusters to improve read performance.</li>
+      </ul>
+      <p class="note">Disk Defragmenter consolidates fragmented files into consecutive clusters on the platter, reducing read head seek time and improving HDD performance. Identifying files for deletion is Disk Cleanup's role, TRIM is SSD-specific, and corrupted file repair belongs to chkdsk or sfc.</p>
+    </section>
+
+    <section class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 7:</strong> What is the primary purpose of the Group Policy Editor in Windows?</p>
+      <ul class="answer-list">
+        <li>To schedule automated tasks.</li>
+        <li>To update and troubleshoot device drivers in Device Manager.</li>
+        <li>To create and manage disk partitions for storage optimization.</li>
+        <li class="correct">To manage and configure user and computer settings in a Windows environment.</li>
+      </ul>
+      <p class="note">The Local Group Policy Editor (gpedit.msc) defines and enforces security policies, software settings, and environment configurations for users and computers. Automated tasks belong to taskschd.msc, driver management to devmgmt.msc, and partition management to diskmgmt.msc.</p>
+    </section>
+
+    <section class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 8:</strong> What is the primary purpose of the Certificate Manager in Windows?</p>
+      <ul class="answer-list">
+        <li>To configure and manage user accounts and security groups.</li>
+        <li>To monitor and optimize disk performance.</li>
+        <li>To manage and schedule automated tasks on a computer.</li>
+        <li class="correct">To manage digital certificates for securing online transactions and communications.</li>
+      </ul>
+      <p class="note">Certificate Manager (certmgr.msc) stores and manages digital certificates used to establish trust, authenticate identities, and encrypt communications. User accounts belong to lusrmgr.msc, disk performance to perfmon.msc and Optimize Drives, and task scheduling to taskschd.msc.</p>
+    </section>
+
+    <section class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 9:</strong> Device manufacturers are constantly finding bugs, vulnerabilities, and better ways for their devices to communicate with the operating system. Because of this, which of the following is a best practice to perform before installing a new device?</p>
+      <ul class="answer-list">
+        <li>Let the installation program find the latest driver and download it during installation.</li>
+        <li>Use the driver included in the installation disc.</li>
+        <li class="correct">Obtain the latest driver from the manufacturer's website.</li>
+        <li>Obtain the latest driver from the manufacturer's website, but only if there's a problem.</li>
+      </ul>
+      <p class="note">Best practice is to proactively download the most current driver from the manufacturer before installation to ensure the latest bug fixes, security patches, and compatibility improvements are in place. Installation programs may not pull the newest driver, disc-included drivers are often outdated, and waiting for a problem is reactive rather than proactive.</p>
+    </section>
+
+    <section class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 10:</strong> A system administrator is evaluating disk maintenance tools to improve the performance of a workstation. The workstation has an SSD as its primary storage device and is experiencing slow performance. Which of the following actions would be the most appropriate to optimize the SSD's performance?</p>
+      <ul class="answer-list">
+        <li>Use the Disk Defragmenter tool to reorganize file data into contiguous clusters.</li>
+        <li class="correct">Run the Optimize Drives tool to perform a TRIM operation.</li>
+        <li>Repartition the SSD to create additional logical partitions.</li>
+        <li>Run the Disk Clean-up tool to delete temporary files and free up disk space.</li>
+      </ul>
+      <p class="note">When Optimize Drives (dfrgui.exe) detects an SSD, it runs TRIM instead of defrag. TRIM informs the SSD firmware which blocks are no longer in use so they can be erased and prepared, restoring write performance. Defragmentation is harmful to SSDs, repartitioning does not affect performance, and Disk Cleanup does not optimize at the firmware/block level.</p>
+    </section>
+
+    <section class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 11:</strong> You are tasked with improving security settings across all employee workstations in a Windows environment. Which of the following scenarios best justifies the use of the Group Policy Editor?</p>
+      <ul class="answer-list">
+        <li>You need to expand an existing disk partition to optimize storage space.</li>
+        <li>You need to defragment a hard drive to improve system performance.</li>
+        <li class="correct">You need to configure a policy that enforces password complexity requirements for all users.</li>
+        <li>You need to update a malfunctioning device driver to resolve hardware issues.</li>
+      </ul>
+      <p class="note">Enforcing uniform security settings such as password complexity rules across multiple workstations is a core Group Policy Editor (gpedit.msc) use case. Partition management belongs to diskmgmt.msc, defragmentation to Optimize Drives, and driver updates to devmgmt.msc.</p>
+    </section>
+
+    <section class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 12:</strong> You are configuring a new hard drive on a Windows system using the Disk Management Console. The drive appears as "Unallocated" in the console. Your goal is to make the drive usable for storing files. What is the first step you should take?</p>
+      <ul class="answer-list">
+        <li class="correct">Initialize the drive using either MBR or GPT partition style.</li>
+        <li>Format the drive with the NTFS file system.</li>
+        <li>Run the Disk Cleanup tool to prepare the drive for use.</li>
+        <li>Create a new user account and assign permissions to the drive.</li>
+      </ul>
+      <p class="note">A drive showing as "Unallocated" must be initialized first, writing the partition table (MBR or GPT) before any partitioning or formatting can occur. Formatting requires a partition to already exist, Disk Cleanup operates on existing volumes, and user permissions are configured after the volume is created.</p>
+    </section>
+
+    <section class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 13:</strong> A system administrator notices that the disk optimizer task scheduled by the Task Scheduler has not been running successfully. What would be the MOST effective course of action to evaluate and resolve the issue?</p>
+      <ul class="answer-list">
+        <li>Reinstall the Disk Management Console to ensure proper functionality.</li>
+        <li>Update the drivers for the storage devices using the Device Manager.</li>
+        <li class="correct">Manually run the disk optimizer tool and monitor its performance for errors.</li>
+        <li>Disable the Task Scheduler and rely on manual optimization instead.</li>
+      </ul>
+      <p class="note">Manually running Optimize Drives allows the administrator to observe the tool's behavior directly and capture any error output, which helps diagnose why the scheduled task is failing. Reinstalling Disk Management Console is not possible as it is a built-in snap-in, driver updates do not address a scheduling failure, and disabling Task Scheduler is not a fix.</p>
+    </section>
+
+    <section class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 14:</strong> A helpdesk operator wants to use a set of tools that will help them during troubleshooting. What can help the operator customize their toolset?</p>
+      <ul class="answer-list">
+        <li>gpedit.msc</li>
+        <li>lusrmgr.msc</li>
+        <li>taskschd.msc</li>
+        <li class="correct">mmc</li>
+      </ul>
+      <p class="note">Microsoft Management Console (mmc.exe) is a customizable shell that allows adding, removing, and arranging any combination of snap-ins into a single console, making it ideal for building a personalized troubleshooting toolset. gpedit.msc, lusrmgr.msc, and taskschd.msc are all single-purpose tools that cannot be customized in this way.</p>
+    </section>
+
+    <section class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 15:</strong> A user reports that a specific application is not functioning correctly due to a misconfigured setting in the Windows Registry. As an IT professional, how should you evaluate the situation and proceed using the Registry Editor?</p>
+      <ul class="answer-list">
+        <li class="correct">Back up the registry, locate the specific registry key, and carefully modify the misconfigured value.</li>
+        <li>Use the Registry Editor to disable all registry keys related to the application to prevent further issues.</li>
+        <li>Delete the entire registry key associated with the application to reset its settings.</li>
+        <li>Reinstall the application without using the Registry Editor, as modifying the registry is unnecessary.</li>
+      </ul>
+      <p class="note">Proper Registry Editor procedure is to export a backup first, then surgically locate and correct only the specific misconfigured key. Disabling all related keys is not a recognized repair technique and would likely break the application further, deleting the entire key destroys all settings, and reinstalling may not overwrite a misconfigured value when the root cause is already identified.</p>
+    </section>
+
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

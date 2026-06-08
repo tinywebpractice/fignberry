@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.1.12 Indexing Options</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.1.12 Indexing Options</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Overview</h2>
+      <p class="notes-paragraph">File search behavior is configured in two places: the <strong>Search</strong> tab of the File Explorer Options dialog, and the <strong>Indexing Options</strong> applet (Control Panel). Indexing Options allows you to define indexed locations and rebuild the index. Indexed locations can include folders and email data stores. A corrupted index is a common cause of search problems.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Indexing Options: Main Dialog</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item">Displays the number of items currently indexed and indexing status.</li>
+        <li class="notes-list-item"><strong>Modify</strong>: Add or remove indexed locations (folders, email stores).</li>
+        <li class="notes-list-item"><strong>Advanced</strong>: Opens the Advanced Options dialog.</li>
+        <li class="notes-list-item">Default index storage location: <code>C:\ProgramData\Microsoft</code></li>
+      </ul>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Advanced Options Dialog</h2>
+      <table class="notes-table">
+        <thead>
+          <tr><th>Tab / Section</th><th>Setting</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Index Settings: File Settings</td>
+            <td>Index encrypted files</td>
+            <td>Off by default; enables search within encrypted files</td>
+          </tr>
+          <tr>
+            <td>Index Settings: File Settings</td>
+            <td>Treat similar words with diacritics as different words</td>
+            <td>Affects how accented characters are matched in searches</td>
+          </tr>
+          <tr>
+            <td>Index Settings: Troubleshooting</td>
+            <td>Delete and rebuild index</td>
+            <td>Use <strong>Rebuild</strong> button to fix a corrupted index</td>
+          </tr>
+          <tr>
+            <td>Index Settings: Index location</td>
+            <td>Move index to a new location</td>
+            <td>Takes effect after the indexing service is restarted</td>
+          </tr>
+          <tr>
+            <td>File Types</td>
+            <td>Control which file extensions are indexed</td>
+            <td>Can index properties only, or properties and file contents</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Key Troubleshooting Point</h2>
+      <p class="notes-paragraph">A <strong>corrupted index</strong> is a common cause of file search failures. Use <strong>Advanced &gt; Rebuild</strong> to delete and regenerate the index from scratch.</p>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

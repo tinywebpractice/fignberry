@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.2.10 Network Settings</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.2.10 Network Settings</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Network Adapters and Profiles</h2>
+      <p class="notes-paragraph">A Windows host can have one or more network adapters. Adapter types include Ethernet, Wi-Fi, cellular radio, and VPN. Each adapter requires IP address configuration. Each network connection must be assigned a <strong>trust profile</strong> that determines firewall policy:</p>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Profile</th>
+            <th>Firewall Policy</th>
+            <th>Typical Use</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Public</td>
+            <td>Most restrictive</td>
+            <td>Untrusted networks (coffee shops, hotels)</td>
+          </tr>
+          <tr>
+            <td>Private</td>
+            <td>Less restrictive</td>
+            <td>Home or trusted networks</td>
+          </tr>
+          <tr>
+            <td>Domain</td>
+            <td>Managed by domain policy</td>
+            <td>Corporate networks joined to a Windows domain</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Network Configuration Utilities</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Location</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Network &amp; Internet settings</td>
+            <td>Settings &gt; Network &amp; Internet</td>
+            <td>View network status, change IP address properties per adapter, access other tools</td>
+          </tr>
+          <tr>
+            <td>Network Connections (<code>ncpa.cpl</code>)</td>
+            <td>Control Panel</td>
+            <td>Manage adapter devices and IP address information</td>
+          </tr>
+          <tr>
+            <td>Network and Sharing Center</td>
+            <td>Control Panel</td>
+            <td>View network status and connection details</td>
+          </tr>
+          <tr>
+            <td>Advanced sharing settings</td>
+            <td>Control Panel</td>
+            <td>Configure network discovery; enable/disable file and printer sharing</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Windows Defender Firewall</h2>
+      <p class="notes-paragraph">Determines which processes, protocols, and hosts are permitted to communicate with the local computer over the network.</p>
+      <ul class="notes-list">
+        <li class="notes-list-item"><strong>Windows Security settings app</strong> and the <strong>Control Panel applet</strong> allow the firewall to be enabled or disabled.</li>
+        <li class="notes-list-item"><strong>Windows Defender Firewall with Advanced Security</strong> (MMC snap-in) is used to configure complex inbound and outbound firewall rules.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Internet Options (Control Panel)</h2>
+      <p class="notes-paragraph">The <strong>Internet Options</strong> applet exposes configuration settings for web browsers installed on Windows. The <strong>Security tab</strong> restricts what types of potentially risky active content are allowed to run. These settings affect all installed browsers, though modern browsers (Microsoft Edge, Google Chrome, Mozilla Firefox, Apple Safari) also have their own built-in settings menus.</p>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

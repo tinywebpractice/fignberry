@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10.5.5 Exercise: Troubleshooting Common Printer Problems</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">10.5.5 Exercise: Troubleshooting Common Printer Problems</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Exercise Overview</h2>
+                <p class="notes-paragraph">This is a CompTIA exercise. The activity involves researching five common
+                    printer problems with causes and resolutions, and identifying three diagnostic tools used for printer
+                    troubleshooting. The completed exercise is below.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Common Printer Problems</h2>
+
+                <h3>1. Paper Jams</h3>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Signs and impact</dt>
+                    <dd class="notes-definition">The printer stops mid-job, displays a jam error, and may refuse to
+                        accept new jobs until cleared. Repeated jams cause wear on rollers and the paper path.</dd>
+                    <dt class="notes-term">Potential causes</dt>
+                    <dd class="notes-definition">Incorrect paper type or weight; overfilled input tray; worn or dirty
+                        feed rollers; torn paper fragments left in the path; misaligned paper guides.</dd>
+                    <dt class="notes-term">Resolution steps</dt>
+                    <dd class="notes-definition">Power off the printer before clearing. Remove paper slowly in the
+                        direction of travel to avoid tearing. Check all access panels (rear, duplex unit, tray area) for
+                        fragments. Clean feed rollers with isopropyl alcohol. Reload the tray with the correct media,
+                        aligned to the guides, and do not overfill. Replace rollers if worn.</dd>
+                </dl>
+
+                <h3>2. Print Quality Issues (Streaks, Faded Output, Spots)</h3>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Signs and impact</dt>
+                    <dd class="notes-definition">Output shows horizontal or vertical streaks, faded or uneven coverage,
+                        consistent spots or lines on every page, or blank sections. Usability of printed documents is
+                        compromised.</dd>
+                    <dt class="notes-term">Potential causes</dt>
+                    <dd class="notes-definition">Low or depleted ink/toner; clogged inkjet printhead nozzles; dirty or
+                        worn drum, fuser, or transfer rollers (laser); debris on the thermal printhead (thermal);
+                        incorrect print quality settings.</dd>
+                    <dt class="notes-term">Resolution steps</dt>
+                    <dd class="notes-definition">Check and replace ink or toner if low. Run the printhead cleaning
+                        utility (inkjet). Inspect and clean rollers, drum, and fuser surfaces with appropriate tools. For
+                        consistent marks on every page, identify the repeating component (drum circumference determines
+                        repeat interval) and clean or replace it. Reset print settings to defaults and retest.</dd>
+                </dl>
+
+                <h3>3. Printer Not Detected / Connectivity Error</h3>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Signs and impact</dt>
+                    <dd class="notes-definition">The OS reports no printer found, the device does not appear in the
+                        device list, or print jobs are sent but never received. The printer is completely non-functional
+                        from the user's perspective.</dd>
+                    <dt class="notes-term">Potential causes</dt>
+                    <dd class="notes-definition">Loose or damaged USB or Ethernet cable; incorrect or changed IP address
+                        (network printer); Wi-Fi association dropped; print server offline; missing, corrupt, or
+                        incompatible driver.</dd>
+                    <dt class="notes-term">Resolution steps</dt>
+                    <dd class="notes-definition">Start at the physical layer: reseat cables and swap with known-good
+                        cables. Power cycle the printer. For network printers, verify the IP address matches what the OS
+                        has configured; confirm the print server is running. For Wi-Fi, verify the printer is associated
+                        with the correct access point. Reinstall or update the driver if the device is detected but not
+                        functioning. Reset to factory defaults as a last resort.</dd>
+                </dl>
+
+                <h3>4. Print Spooler Errors / Jobs Stuck in Queue</h3>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Signs and impact</dt>
+                    <dd class="notes-definition">Print jobs appear in the queue but do not process or clear. New jobs
+                        cannot be sent. The spooler service may crash or become unresponsive.</dd>
+                    <dt class="notes-term">Potential causes</dt>
+                    <dd class="notes-definition">Corrupted print job blocking the queue; Print Spooler service crashed
+                        or stopped; insufficient disk space for spool files; driver conflict.</dd>
+                    <dt class="notes-term">Resolution steps</dt>
+                    <dd class="notes-definition">Open the print queue, right-click stuck jobs, and delete them. If jobs
+                        cannot be deleted, open Services (services.msc), stop the Print Spooler service, navigate to
+                        C:\Windows\System32\spool\PRINTERS and delete all files in that folder (not the folder itself),
+                        then restart the Print Spooler service. Verify adequate disk space on the system drive.
+                        Reinstall the driver if the issue recurs.</dd>
+                </dl>
+
+                <h3>5. Garbled Output / Incorrect Driver</h3>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Signs and impact</dt>
+                    <dd class="notes-definition">Printed pages contain random symbols, raw PostScript or PCL code,
+                        corrupted images, or unreadable characters. The printer produces output but it is completely
+                        unusable.</dd>
+                    <dt class="notes-term">Potential causes</dt>
+                    <dd class="notes-definition">Wrong driver installed for the printer model or language (PCL vs.
+                        PostScript mismatch); driver corrupted after an OS update; printer language setting mismatch
+                        between driver and firmware.</dd>
+                    <dt class="notes-term">Resolution steps</dt>
+                    <dd class="notes-definition">Confirm the exact printer model and download the correct driver from
+                        the manufacturer's website for the installed OS version. Uninstall the current driver fully
+                        (including via Print Management or the manufacturer's uninstaller, not just Device Manager).
+                        Reinstall the correct driver. If a recent driver update caused the issue, roll it back via Device
+                        Manager. Verify the printer language setting in the driver matches the printer's firmware
+                        configuration.</dd>
+                </dl>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Diagnostic Tools and Software</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Tool</th>
+                            <th>Purpose</th>
+                            <th>Problems It Addresses</th>
+                            <th>Example Use</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HP Print and Scan Doctor (manufacturer utility)</td>
+                            <td>Automated diagnostic tool from HP that detects and repairs common printer and scanner
+                                issues on Windows and macOS</td>
+                            <td>Connectivity errors, driver problems, spooler errors, printer not detected, print
+                                quality issues</td>
+                            <td>Download and run the tool; it scans for the printer, tests the connection, checks driver
+                                status, and attempts automatic repair. If the printer is offline, it walks through
+                                reconnection steps and resets the spooler if needed.</td>
+                        </tr>
+                        <tr>
+                            <td>Windows Printer Troubleshooter (built-in OS tool)</td>
+                            <td>Built-in Windows diagnostic wizard that checks printer status, driver health, spooler
+                                state, and connectivity, then applies automated fixes</td>
+                            <td>Printer not detected, spooler errors, jobs stuck in queue, driver conflicts</td>
+                            <td>Open Settings, navigate to System, then Troubleshoot, then Other troubleshooters, and run
+                                the Printer troubleshooter. The tool checks whether the Print Spooler is running, clears
+                                stuck jobs, and prompts the user to reconnect or reinstall the printer if the device is
+                                not detected.</td>
+                        </tr>
+                        <tr>
+                            <td>Print Management (Windows MMC snap-in)</td>
+                            <td>Centralized administrative console for managing all local and network printers, drivers,
+                                ports, and queues on Windows</td>
+                            <td>Driver management, queue monitoring across multiple printers, port configuration,
+                                identifying offline printers on a network</td>
+                            <td>Open Print Management (printmanagement.msc). Navigate to All Printers to see status
+                                across every shared and local printer. Right-click a printer to pause, resume, or clear
+                                its queue. Use the Drivers node to remove outdated drivers cleanly before installing a
+                                replacement. Particularly useful in enterprise environments managing multiple shared
+                                print queues.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

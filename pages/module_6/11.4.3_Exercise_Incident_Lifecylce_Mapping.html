@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11.4.3 Exercise: Incident Lifecycle Mapping</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">11.4.3 Exercise: Incident Lifecycle Mapping</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">About This Exercise</h2>
+      <p class="notes-paragraph">This is a CompTIA hands-on activity supporting A+ Core 2 exam objectives 4.1 and 4.7. The goal is to identify and visualize the lifecycle of an IT incident, including key steps and decision points. The exercise asks you to produce a flowchart using a tool of your choice (pen and paper, PowerPoint, Lucidchart, Visio, etc.).</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Incident Lifecycle Steps</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Step</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1. Incident Reporting</td>
+            <td>Incident is identified and reported by a user or monitoring system</td>
+          </tr>
+          <tr>
+            <td>2. Ticket Creation</td>
+            <td>Incident is documented in a tracking system to create a formal record</td>
+          </tr>
+          <tr>
+            <td>3. Categorization</td>
+            <td>Incident is classified by type or category to route it appropriately</td>
+          </tr>
+          <tr>
+            <td>4. Prioritization</td>
+            <td>Priority level is assigned based on impact and urgency</td>
+          </tr>
+          <tr>
+            <td>5. Escalation</td>
+            <td>Incident is transferred to a higher support level if it cannot be resolved at the current level</td>
+          </tr>
+          <tr>
+            <td>6. Resolution</td>
+            <td>A solution is implemented to resolve the incident</td>
+          </tr>
+          <tr>
+            <td>7. Closure</td>
+            <td>Resolution is verified with the user and the ticket is formally closed</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Decision Points</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Decision Point</th>
+            <th>Yes</th>
+            <th>No</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Can the incident be resolved at the current support level?</td>
+            <td>Proceed to Resolution</td>
+            <td>Escalate to higher-level support</td>
+          </tr>
+          <tr>
+            <td>Was the resolution successful?</td>
+            <td>Proceed to Closure</td>
+            <td>Return to Escalation or attempt a different resolution</td>
+          </tr>
+          <tr>
+            <td>Is the resolution verified by the user?</td>
+            <td>Close the ticket</td>
+            <td>Reopen the ticket and return to Resolution</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Incident Lifecycle Flowchart</h2>
+      <p class="notes-paragraph">Flowchart conventions: rectangles represent process steps; diamonds represent decision points; arrows indicate the direction of flow.</p>
+      <svg viewBox="0 0 520 900" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:520px;display:block;margin:1rem 0;font-family:inherit;">
+        <!-- Step 1: Incident Reporting -->
+        <rect x="160" y="20" width="200" height="50" rx="6" fill="#4a90d9" stroke="#2c5f8a" stroke-width="1.5"/>
+        <text x="260" y="41" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Incident Reporting</text>
+        <text x="260" y="58" text-anchor="middle" fill="#fff" font-size="10">Incident identified and reported</text>
+        <!-- Arrow -->
+        <line x1="260" y1="70" x2="260" y2="90" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <!-- Step 2: Ticket Creation -->
+        <rect x="160" y="90" width="200" height="50" rx="6" fill="#4a90d9" stroke="#2c5f8a" stroke-width="1.5"/>
+        <text x="260" y="111" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Ticket Creation</text>
+        <text x="260" y="128" text-anchor="middle" fill="#fff" font-size="10">Incident documented in tracking system</text>
+        <!-- Arrow -->
+        <line x1="260" y1="140" x2="260" y2="160" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <!-- Step 3: Categorization -->
+        <rect x="160" y="160" width="200" height="50" rx="6" fill="#4a90d9" stroke="#2c5f8a" stroke-width="1.5"/>
+        <text x="260" y="181" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Categorization</text>
+        <text x="260" y="198" text-anchor="middle" fill="#fff" font-size="10">Classified by type or category</text>
+        <!-- Arrow -->
+        <line x1="260" y1="210" x2="260" y2="230" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <!-- Step 4: Prioritization -->
+        <rect x="160" y="230" width="200" height="50" rx="6" fill="#4a90d9" stroke="#2c5f8a" stroke-width="1.5"/>
+        <text x="260" y="251" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Prioritization</text>
+        <text x="260" y="268" text-anchor="middle" fill="#fff" font-size="10">Priority set by impact and urgency</text>
+        <!-- Arrow -->
+        <line x1="260" y1="280" x2="260" y2="300" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <!-- Decision 1: Can it be resolved? -->
+        <polygon points="260,300 370,345 260,390 150,345" fill="#f5a623" stroke="#c47d00" stroke-width="1.5"/>
+        <text x="260" y="338" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Resolvable at</text>
+        <text x="260" y="354" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">current level?</text>
+        <!-- Yes arrow down -->
+        <line x1="260" y1="390" x2="260" y2="415" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <text x="268" y="408" fill="#333" font-size="10">Yes</text>
+        <!-- No arrow right to Escalation -->
+        <line x1="370" y1="345" x2="440" y2="345" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <text x="376" y="338" fill="#333" font-size="10">No</text>
+        <!-- Escalation box (right side) -->
+        <rect x="440" y="318" width="65" height="54" rx="6" fill="#e05c5c" stroke="#a02020" stroke-width="1.5"/>
+        <text x="472" y="340" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Escalate</text>
+        <text x="472" y="356" text-anchor="middle" fill="#fff" font-size="9">Transfer to</text>
+        <text x="472" y="368" text-anchor="middle" fill="#fff" font-size="9">higher support</text>
+        <!-- Escalation loops back down to Resolution -->
+        <line x1="472" y1="372" x2="472" y2="440" stroke="#555" stroke-width="1.5"/>
+        <line x1="472" y1="440" x2="361" y2="440" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <!-- Step 5: Resolution -->
+        <rect x="160" y="415" width="200" height="50" rx="6" fill="#4a90d9" stroke="#2c5f8a" stroke-width="1.5"/>
+        <text x="260" y="436" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Resolution</text>
+        <text x="260" y="453" text-anchor="middle" fill="#fff" font-size="10">Solution implemented</text>
+        <!-- Arrow -->
+        <line x1="260" y1="465" x2="260" y2="490" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <!-- Decision 2: Resolution successful? -->
+        <polygon points="260,490 370,535 260,580 150,535" fill="#f5a623" stroke="#c47d00" stroke-width="1.5"/>
+        <text x="260" y="528" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Resolution</text>
+        <text x="260" y="544" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">successful?</text>
+        <!-- No arrow left, loops back to Resolution -->
+        <line x1="150" y1="535" x2="80" y2="535" stroke="#555" stroke-width="1.5"/>
+        <text x="110" y="528" fill="#333" font-size="10">No</text>
+        <line x1="80" y1="535" x2="80" y2="440" stroke="#555" stroke-width="1.5"/>
+        <line x1="80" y1="440" x2="160" y2="440" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <!-- Yes arrow down -->
+        <line x1="260" y1="580" x2="260" y2="605" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <text x="268" y="598" fill="#333" font-size="10">Yes</text>
+        <!-- Decision 3: Resolution verified? -->
+        <polygon points="260,605 370,650 260,695 150,650" fill="#f5a623" stroke="#c47d00" stroke-width="1.5"/>
+        <text x="260" y="643" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Resolution</text>
+        <text x="260" y="659" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">verified by user?</text>
+        <!-- No arrow left, reopen -->
+        <line x1="150" y1="650" x2="80" y2="650" stroke="#555" stroke-width="1.5"/>
+        <text x="100" y="643" fill="#333" font-size="10">No</text>
+        <line x1="80" y1="650" x2="80" y2="440" stroke="#555" stroke-width="1.5"/>
+        <!-- Yes arrow down to Closure -->
+        <line x1="260" y1="695" x2="260" y2="720" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <text x="268" y="713" fill="#333" font-size="10">Yes</text>
+        <!-- Step 6: Closure -->
+        <rect x="160" y="720" width="200" height="50" rx="6" fill="#5ba85b" stroke="#2f6b2f" stroke-width="1.5"/>
+        <text x="260" y="741" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Closure</text>
+        <text x="260" y="758" text-anchor="middle" fill="#fff" font-size="10">Ticket formally closed</text>
+        <!-- Arrow marker -->
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+          </marker>
+        </defs>
+      </svg>
+    </section>
+
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

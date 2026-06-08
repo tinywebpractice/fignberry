@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>13.1.9 Group Policy Editor</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">13.1.9 Group Policy Editor</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Overview</h2>
+      <p class="notes-paragraph">GUI tools like Settings and Control Panel modify registry-backed configurations, but many registry settings are not accessible through those tools. The <strong>Group Policy Editor</strong> provides a structured way to configure Windows settings without directly editing the registry. Vendors can also supply administrative templates to configure third-party software via policies.</p>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Scope</th>
+            <th>Run Command</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Local Group Policy Editor</td>
+            <td>All settings for the local computer (Computer Configuration + User Configuration)</td>
+            <td><code>gpedit.msc</code></td>
+          </tr>
+          <tr>
+            <td>Local Security Policy Editor</td>
+            <td>Security settings only for the local computer</td>
+            <td><code>secpol.msc</code></td>
+          </tr>
+          <tr>
+            <td>Group Policy Management (domain)</td>
+            <td>Centrally manage GPOs across an entire Active Directory domain/OU structure</td>
+            <td>GPMC (Group Policy Management Console)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Local Group Policy Editor Structure</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Node</th>
+            <th>Contents</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Computer Configuration &gt; Software Settings</td>
+            <td>Software installation policies</td>
+          </tr>
+          <tr>
+            <td>Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Account Policies &gt; Password Policy</td>
+            <td>Password history, max/min age, minimum length, complexity requirements, reversible encryption</td>
+          </tr>
+          <tr>
+            <td>Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Account Policies &gt; Account Lockout Policy</td>
+            <td>Lockout threshold, duration, and reset counter</td>
+          </tr>
+          <tr>
+            <td>Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Local Policies</td>
+            <td>Audit policy, user rights assignment, security options</td>
+          </tr>
+          <tr>
+            <td>Computer Configuration &gt; Administrative Templates</td>
+            <td>Registry-based settings for OS components; vendor templates added here</td>
+          </tr>
+          <tr>
+            <td>User Configuration</td>
+            <td>Software Settings, Windows Settings, and Administrative Templates scoped to user accounts rather than the computer</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Password Policy Settings (Default Values)</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Policy</th>
+            <th>Default Setting</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Enforce password history</td><td>0 passwords remembered</td></tr>
+          <tr><td>Maximum password age</td><td>42 days</td></tr>
+          <tr><td>Minimum password age</td><td>0 days</td></tr>
+          <tr><td>Minimum password length</td><td>0 characters</td></tr>
+          <tr><td>Minimum password length audit</td><td>Not Defined</td></tr>
+          <tr><td>Password must meet complexity requirements</td><td>Disabled</td></tr>
+          <tr><td>Relax minimum password length limits</td><td>Not Defined</td></tr>
+          <tr><td>Store passwords using reversible encryption</td><td>Disabled</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Domain Group Policy (Active Directory)</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item">Domain GPOs are created and managed in the <strong>Group Policy Management Console</strong> and stored as <strong>Group Policy Objects (GPOs)</strong> in Active Directory.</li>
+        <li class="notes-list-item">GPOs can be linked to the domain root (applies to all computers/users) or to specific <strong>Organizational Units (OUs)</strong> to scope them to a department or group.</li>
+        <li class="notes-list-item">The <strong>Default Domain Policy</strong> exists in every Active Directory environment and applies to all computers and users in the domain. The password policy is commonly configured here. Avoid modifying it for other purposes.</li>
+        <li class="notes-list-item">Policies can be triggered by events (user sign-in, startup) and are applied at boot and logon, and refreshed periodically in the background.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Policy States and Best Practices</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item">Most policies have three states: <strong>Enabled</strong>, <strong>Disabled</strong>, and <strong>Not Defined</strong>. Some require a discrete value. Read each policy description carefully before changing it.</li>
+        <li class="notes-list-item">Always document policy changes. Troubleshooting the source of an unexpected setting change across many linked GPOs is a common and difficult IT task.</li>
+        <li class="notes-list-item">In large networks, Group Policy avoids the need to manually configure individual machines. One GPO change can affect hundreds or thousands of computers.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

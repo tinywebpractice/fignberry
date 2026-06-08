@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10.3.1 Printer Connectivity Issues</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">10.3.1 Printer Connectivity Issues</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Overview</h2>
+                <p class="notes-paragraph">Printer connectivity issues occur when a device cannot be located during
+                    installation or when the OS reports an installed device as offline or unavailable. The key diagnostic
+                    question is: <strong>"What has changed?"</strong> Determine whether the problem is something that
+                    never worked, such as an installation error, or something that stopped working, such as a
+                    configuration change or maintenance issue.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">1. Basic Checks</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Verify the printer is powered on and set to online status. Printers can
+                        be taken offline accidentally via the control panel.</li>
+                    <li class="notes-list-item">Confirm all components and cartridges are correctly installed, service
+                        panels are closed, and at least one paper tray is loaded.</li>
+                    <li class="notes-list-item">Print a test page from the printer's control panel. If successful, the
+                        issue is with the connection to the computer or network, not the printer itself.</li>
+                    <li class="notes-list-item">Cycle the printer's power. If unresolved, consider performing a factory
+                        reset.</li>
+                    <li class="notes-list-item">Inspect USB/Ethernet cables and connectors. Swap in a known-good cable
+                        to rule out cable or connector failure.</li>
+                    <li class="notes-list-item">If one connection type fails, such as wireless, try an alternate type,
+                        such as USB or Ethernet, to isolate the problem.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">2. Wireless Printer Connectivity</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Confirm the printer is connected to the correct Wi-Fi network. When
+                        multiple routers are in range, wireless printers may connect to the wrong one.</li>
+                    <li class="notes-list-item">Check for RF interference from other wireless devices or physical
+                        obstacles such as walls.</li>
+                    <li class="notes-list-item">Restart the router or access point. The issue may reside in the network
+                        infrastructure rather than the printer.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">3. Firmware and Driver Updates</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Update printer firmware and drivers. Outdated firmware is a common cause
+                        of connectivity issues, especially after an OS update.</li>
+                    <li class="notes-list-item">Modern printers often support automatic firmware updates, but this
+                        feature may require manual enablement.</li>
+                    <li class="notes-list-item">Verify the host computer's OS is current and compatible with the
+                        installed printer drivers.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">4. Cloud Printing</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">If the printer is configured for cloud printing, verify it is correctly
+                        registered with the cloud service.</li>
+                    <li class="notes-list-item">Check for account-related issues, such as expired credentials or a
+                        deauthorized device, that may be blocking access.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Troubleshooting Summary</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Key Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Basic</td>
+                            <td>Power cycle, test page, check cables, verify consumables and panels</td>
+                        </tr>
+                        <tr>
+                            <td>Wireless</td>
+                            <td>Correct SSID, interference check, restart router/AP</td>
+                        </tr>
+                        <tr>
+                            <td>Firmware/Drivers</td>
+                            <td>Update printer firmware, update/reinstall drivers, verify OS compatibility</td>
+                        </tr>
+                        <tr>
+                            <td>Cloud Printing</td>
+                            <td>Verify cloud registration, check account credentials</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

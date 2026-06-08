@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.2.5 Display and Sound Settings</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.2.5 Display and Sound Settings</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Display Settings</h2>
+      <p class="notes-paragraph">Accessed via <strong>Settings &gt; System &gt; Display</strong>. Principal configuration options:</p>
+      <dl class="notes-terms">
+        <dt class="notes-term">Scale</dt>
+        <dd class="notes-definition">Makes the system use proportionally larger fonts and UI elements. Useful on large high-resolution screens where default font sizes would be too small to read.</dd>
+        <dt class="notes-term">Color</dt>
+        <dd class="notes-definition">Monitor calibration to ensure colors match the designer's intent. Important for graphics design workflows.</dd>
+        <dt class="notes-term">Multiple displays</dt>
+        <dd class="notes-definition">When the desktop is extended across multiple screens, set relative positions so the cursor moves between them in a predictable pattern.</dd>
+        <dt class="notes-term">Resolution and refresh rate</dt>
+        <dd class="notes-definition">TFT and OLED displays are designed to operate only at their <strong>native resolution and refresh rate</strong>. Windows should auto-detect this, but can be manually adjusted if necessary. Path: Settings &gt; System &gt; Display &gt; Advanced display settings.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Screen Saver</h2>
+      <p class="notes-paragraph">Path: <strong>Settings &gt; Personalization &gt; Lock screen &gt; Screen saver</strong>. Options include:</p>
+      <ul class="notes-list">
+        <li class="notes-list-item">Select a screen saver type from the drop-down list</li>
+        <li class="notes-list-item">Set the wait time (minutes of inactivity before activation)</li>
+        <li class="notes-list-item">Enable <strong>On resume, display logon screen</strong> to require credentials to dismiss the screen saver</li>
+      </ul>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Sound Settings</h2>
+      <p class="notes-paragraph">Accessed via <strong>Settings &gt; System &gt; Sound</strong> or the <strong>Sound Applet</strong> in Control Panel. Used to select and configure audio input and output devices.</p>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Section</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Output</td>
+            <td>Choose where to play sound (speakers, headphones, display audio); set volume; toggle Mono audio; add output device</td>
+          </tr>
+          <tr>
+            <td>Input</td>
+            <td>Choose a device for speaking or recording (microphone); set input level; add input device</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="notes-paragraph">Volume can also be controlled via the <strong>speaker icon in the Notification Area</strong> (system tray).</p>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

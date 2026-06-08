@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.2.12 Management Shortcuts</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.2.12 Management Shortcuts</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Quick Access Methods</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>How</th>
+            <th>Opens / Accesses</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>WinX menu</td>
+            <td><kbd>Win+X</kbd> or right-click the Windows button</td>
+            <td>Shortcut menu with links to: Installed apps, Power Options, Event Viewer, System, Device Manager, Network Connections, Disk Management, Computer Management, Terminal, Terminal (Admin), Task Manager, Settings, File Explorer, Search, Run, Shut down or sign out, Desktop</td>
+          </tr>
+          <tr>
+            <td>Instant Search</td>
+            <td>Press <kbd>Win</kbd>, then type program name, utility name, or file path</td>
+            <td>Executes programs, configuration options, or opens files/unregistered programs by path</td>
+          </tr>
+          <tr>
+            <td>Run dialog</td>
+            <td><kbd>Win+R</kbd></td>
+            <td>Execute programs with switches, open Settings pages, open Control Panel applets</td>
+          </tr>
+          <tr>
+            <td>Object context menus</td>
+            <td>Right-click system objects or notification area icons</td>
+            <td>Shortcuts to configuration tools (e.g., right-click This PC &gt; Properties opens System settings; right-click This PC &gt; Manage opens Computer Management)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Run Dialog - Useful Commands</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Command</th>
+            <th>Opens</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>ms-settings:system</code></td>
+            <td>System page of the Settings app (pattern works for any Settings page)</td>
+          </tr>
+          <tr>
+            <td><code>control ncpa.cpl</code></td>
+            <td>Network Connections (pattern: <code>control &lt;applet.cpl&gt;</code> for Control Panel applets)</td>
+          </tr>
+          <tr>
+            <td><code>compmgmt.msc</code></td>
+            <td>Computer Management</td>
+          </tr>
+          <tr>
+            <td><code>eventvwr.msc</code></td>
+            <td>Event Viewer</td>
+          </tr>
+          <tr>
+            <td><code>services.msc</code></td>
+            <td>Services console</td>
+          </tr>
+          <tr>
+            <td><code>regedit.exe</code></td>
+            <td>Registry Editor</td>
+          </tr>
+          <tr>
+            <td><code>perfmon /comp</code></td>
+            <td>Performance Monitor (computer view)</td>
+          </tr>
+          <tr>
+            <td><code>msconfig</code></td>
+            <td>System Configuration</td>
+          </tr>
+          <tr>
+            <td><code>secpol.msc</code></td>
+            <td>Local Security Policy</td>
+          </tr>
+          <tr>
+            <td><code>taskschd.msc</code></td>
+            <td>Task Scheduler</td>
+          </tr>
+          <tr>
+            <td><code>resmon.exe</code></td>
+            <td>Resource Monitor</td>
+          </tr>
+          <tr>
+            <td><code>dfrgui.exe</code></td>
+            <td>Defragment and Optimize Drives</td>
+          </tr>
+          <tr>
+            <td><code>cleanmgr.exe</code></td>
+            <td>Disk Cleanup</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10.3.3 Print Quality Issues</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">10.3.3 Print Quality Issues</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Overview</h2>
+                <p class="notes-paragraph">Smudged, faded, or marked output is typically caused by printer hardware or
+                    media faults. Print defects are often specific to the imaging technology in use. Always consult
+                    manufacturer documentation for model-specific guidance.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Laser Printer Print Defects</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Symptom</th>
+                            <th>Likely Cause</th>
+                            <th>Resolution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Faded or faint prints</td>
+                            <td>Toner cartridge low or depleted; or draft/low-density mode selected</td>
+                            <td>Replace toner cartridge; check print density settings</td>
+                        </tr>
+                        <tr>
+                            <td>Blank pages</td>
+                            <td>Application/driver issue; packing seals not removed from cartridge; damaged transfer
+                                roller</td>
+                            <td>Reinstall driver; remove cartridge seals; replace transfer roller</td>
+                        </tr>
+                        <tr>
+                            <td>White stripes</td>
+                            <td>Unevenly distributed toner; dirty or damaged transfer roller</td>
+                            <td>Gently shake the toner cartridge; clean or replace transfer roller</td>
+                        </tr>
+                        <tr>
+                            <td>Black stripes or whole page black</td>
+                            <td>Dirty or damaged primary charge roller; malfunctioning high-voltage power supply</td>
+                            <td>Try a known-good toner cartridge; service/replace primary charge roller or HVPS</td>
+                        </tr>
+                        <tr>
+                            <td>Speckling on output</td>
+                            <td>Loose toner contaminating paper</td>
+                            <td>Clean printer interior with an approved toner vacuum</td>
+                        </tr>
+                        <tr>
+                            <td>Vertical or horizontal lines (repetitive)</td>
+                            <td>Dirty feed rollers, including rollers inside toner cartridge and fuser; damaged or
+                                dirty photosensitive drum</td>
+                            <td>Clean or replace rollers; clean or replace drum</td>
+                        </tr>
+                        <tr>
+                            <td>Toner not fused / smudging</td>
+                            <td>Fuser unit failing</td>
+                            <td>Replace the fuser unit</td>
+                        </tr>
+                        <tr>
+                            <td>Double/echo images (ghosting)</td>
+                            <td>Photosensitive drum not properly cleaned between passes</td>
+                            <td>Print different images to test; replace drum/toner cartridge if issue persists</td>
+                        </tr>
+                        <tr>
+                            <td>Incorrect chroma / color cast</td>
+                            <td>Toner cartridges installed in wrong slots or low on toner; transfer belt or cartridge
+                                misalignment</td>
+                            <td>Reseat cartridges in correct slots; run calibration utility; print test page</td>
+                        </tr>
+                        <tr>
+                            <td>Color missing entirely</td>
+                            <td>Depleted or failed cartridge; dirty cartridge contacts</td>
+                            <td>Replace cartridge; if issue persists, clean contacts between printer and cartridge</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Inkjet Print Defects</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Symptom</th>
+                            <th>Likely Cause</th>
+                            <th>Resolution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lines through printouts</td>
+                            <td>Dirty printhead or blocked ink nozzle</td>
+                            <td>Run a nozzle check, then a cleaning cycle from the printer maintenance utility</td>
+                        </tr>
+                        <tr>
+                            <td>Smearing, wavy, or blurry output</td>
+                            <td>Incompatible or unsuitable media; persistent marks indicate dirty feed roller</td>
+                            <td>Use correct media; clean paper rollers via maintenance utility</td>
+                        </tr>
+                        <tr>
+                            <td>Print head jam</td>
+                            <td>Mechanical carriage fault</td>
+                            <td>Power off the printer, unplug it, then power back on</td>
+                        </tr>
+                        <tr>
+                            <td>Inconsistent color output</td>
+                            <td>Low ink in one color reservoir; blocked printhead for a specific color</td>
+                            <td>Refill/replace affected cartridge; run cleaning cycle</td>
+                        </tr>
+                        <tr>
+                            <td>No color printing</td>
+                            <td>Color printing not selected in print settings</td>
+                            <td>Verify color is selected in the print driver settings</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Dot Matrix Print Defects</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Symptom</th>
+                            <th>Likely Cause</th>
+                            <th>Resolution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lines in output</td>
+                            <td>Stuck pin in the printhead</td>
+                            <td>Service or replace the printhead</td>
+                        </tr>
+                        <tr>
+                            <td>Faint printing</td>
+                            <td>Platen gap too wide</td>
+                            <td>Adjust platen to reduce gap between paper and printhead</td>
+                        </tr>
+                        <tr>
+                            <td>Smudging</td>
+                            <td>Platen gap too narrow</td>
+                            <td>Adjust platen to increase gap</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph">The platen adjusts the gap between the paper and printhead to accommodate
+                    different paper types and thicknesses. Incorrect platen position directly affects output quality.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Using Printer Maintenance Utilities (Inkjet)</h2>
+                <p class="notes-paragraph">Most inkjet print drivers include a maintenance application, such as Canon My
+                    Printer, accessible from the printer software. Common functions available under the Maintenance tab:
+                </p>
+                <ul class="notes-list">
+                    <li class="notes-list-item"><strong>Nozzle Check:</strong> Prints a test pattern of colored lines.
+                        White lines or faint areas in the pattern confirm clogged nozzles.</li>
+                    <li class="notes-list-item"><strong>Cleaning Cycle:</strong> Purges and flushes clogged nozzles.
+                        Uses significant ink; run only when necessary.</li>
+                    <li class="notes-list-item"><strong>Print Alignment:</strong> Prints alignment patterns and prompts
+                        the user to select the straightest lines. Corrects misaligned printheads causing crooked or
+                        offset output.</li>
+                    <li class="notes-list-item"><strong>Bottom Plate / Paper Roller Cleaning:</strong> Cleans interior
+                        surfaces to address smearing caused by ink or debris on the feed path.</li>
+                    <li class="notes-list-item">If problems persist after software cleaning, the issue is likely
+                        physical. Consult the printer manufacturer's documentation for manual cleaning procedures
+                        specific to that model.</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

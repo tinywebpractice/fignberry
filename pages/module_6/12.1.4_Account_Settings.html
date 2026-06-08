@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.1.4 Accounts Settings</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.1.4 Accounts Settings</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">User Account Fundamentals</h2>
+      <p class="notes-paragraph">A user account controls access to the computer. Accounts are assigned rights/privileges for OS configuration changes and permissions on files, folders, and printers. Access is protected by authentication (username/password, facial recognition, etc.). Each account is associated with a profile containing personal folders (documents, pictures, videos, music) and application configuration data.</p>
+      <dl class="notes-terms">
+        <dt class="notes-term">Administrator account</dt>
+        <dd class="notes-definition">Has privileges to change any aspect of system configuration. The first user of a computer is set up as the default administrator.</dd>
+        <dt class="notes-term">Standard user account</dt>
+        <dd class="notes-definition">Has privileges on their own profile only, not the whole computer. Additional accounts beyond the first are usually standard users.</dd>
+        <dt class="notes-term">Local account</dt>
+        <dd class="notes-definition">Can only sign in on a single computer.</dd>
+        <dt class="notes-term">Microsoft account</dt>
+        <dd class="notes-definition">Gives access to Microsoft cloud services; syncs desktop settings and profile data across multiple devices.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Windows Account Settings App</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Section</th>
+            <th>Function</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Your info</td>
+            <td>Manage the current user account. Microsoft accounts link to a web portal.</td>
+          </tr>
+          <tr>
+            <td>Email &amp; accounts</td>
+            <td>Add sign-in credentials for email or social networking accounts for quick access.</td>
+          </tr>
+          <tr>
+            <td>Sign-in options</td>
+            <td>Configure fingerprint, PIN, or password authentication. Set automatic lock. To change a password: Settings &gt; Accounts &gt; Sign-in options &gt; Password &gt; Change, then enter current password, new password, confirm, and optional hint.</td>
+          </tr>
+          <tr>
+            <td>Access work or school</td>
+            <td>Join the computer to a centrally managed domain network.</td>
+          </tr>
+          <tr>
+            <td>Family and other users</td>
+            <td>Permit other local or Microsoft accounts to log on. Additional users should generally be configured as standard users.</td>
+          </tr>
+          <tr>
+            <td>Sync settings</td>
+            <td>Use the cloud to apply the same personalization and preferences across devices signed in with a Microsoft account.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">User Accounts Control Panel Applet (Legacy)</h2>
+      <p class="notes-paragraph">The User Accounts applet in Control Panel is the legacy interface. Many functions are obfuscated or hidden; it is not well suited for adding new accounts. It does allow:</p>
+      <ul class="notes-list">
+        <li class="notes-list-item">Adjusting the account name</li>
+        <li class="notes-list-item">Changing account privilege level (administrator vs. standard user)</li>
+        <li class="notes-list-item">Changing User Account Control (UAC) settings</li>
+      </ul>
+      <dl class="notes-terms">
+        <dt class="notes-term">UAC (User Account Control)</dt>
+        <dd class="notes-definition">A system to prevent unauthorized use of administrator privileges. At the default level, making an administrative change requires the user to confirm a prompt or enter administrator credentials.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

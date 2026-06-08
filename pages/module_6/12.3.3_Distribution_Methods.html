@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.3.3 Distribution Methods</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.3.3 Distribution Methods</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Overview</h2>
+      <p class="notes-paragraph">A <strong>distribution method</strong> is the means by which a vendor makes an application available to install. Many apps are published through app stores where installation is handled automatically. Desktop applications are installed from a setup file.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Setup File Formats by OS</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>OS</th>
+            <th>Setup File Format(s)</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Windows</td>
+            <td><code>.EXE</code>, <code>.MSI</code></td>
+            <td>Packs executables, config files, and media; extracts to application directory during install</td>
+          </tr>
+          <tr>
+            <td>macOS</td>
+            <td><code>.DMG</code>, <code>.PKG</code></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Linux (Debian-based)</td>
+            <td><code>.DEB</code></td>
+            <td>Managed with APT package manager</td>
+          </tr>
+          <tr>
+            <td>Linux (RPM-based)</td>
+            <td><code>.RPM</code></td>
+            <td>Managed with Dandified YUM (DNF)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Distribution Methods</h2>
+      <dl class="notes-terms">
+        <dt class="notes-term">App store</dt>
+        <dd class="notes-definition">Vendor publishes app in a curated store (e.g., Microsoft Store); installation mechanics are handled automatically.</dd>
+        <dt class="notes-term">Physical media</dt>
+        <dd class="notes-definition">Setup file distributed on CD/DVD or USB thumb drive.</dd>
+        <dt class="notes-term">Internet download</dt>
+        <dd class="notes-definition">Setup file downloaded directly from vendor. Must verify authenticity and integrity before installing and scan for malware. Windows uses <strong>digital signatures</strong> to identify valid developers. Linux uses <strong>hash values</strong>. Download the package, generate your own hash, and compare it to the value published by the package maintainer.</dd>
+        <dt class="notes-term">ISO file</dt>
+        <dd class="notes-definition">Contains the complete contents of an optical disc in a single file. Used to install virtual machine OSes and complex applications (e.g., databases) with many components. In Windows: right-click the ISO file &gt; <strong>Mount</strong>; it appears in File Explorer with the next available drive letter.</dd>
+        <dt class="notes-term">Image deployment (network push)</dt>
+        <dd class="notes-definition">Enterprise method where a complete system image is pushed to workstations over the network. The image contains OS settings and files, application settings and files, and licensing/activation settings. Deploys as a complete installation unit rather than installing one application at a time.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">UAC and Unknown Publishers</h2>
+      <p class="notes-paragraph">When running a setup file from an unknown or unverified publisher, Windows UAC displays a warning prompt ("Do you want to allow this app from an unknown publisher to make changes to your device?"). Exercise caution. Only proceed if the source is trusted and the package integrity has been verified.</p>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

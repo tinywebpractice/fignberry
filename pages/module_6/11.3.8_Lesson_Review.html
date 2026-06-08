@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11.3.8 Lesson Review</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">11.3.8 Lesson Review</h1>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 1</h2>
+      <p class="notes-paragraph">A company is transitioning its development team to a mixed environment where developers will use both macOS and Linux systems. The team needs to collaborate on large project files stored on a shared external drive. The file system must support large file sizes and provide reliable read/write access for both macOS and Linux. After analyzing the requirements, which file system would BEST meet the team's needs?</p>
+      <ul class="answer-list">
+        <li>HFS+</li>
+        <li class="correct">exFAT</li>
+        <li>ext4</li>
+        <li>APFS</li>
+      </ul>
+      <p class="note">exFAT is a 64-bit file system designed for removable drives and flash media, supports large file sizes beyond the 4 GB FAT32 limit, and provides read/write access on both macOS and Linux - making it the correct choice for a shared cross-OS external drive. HFS+ has unreliable Linux read/write support. ext4 has no native macOS read/write support. APFS has no reliable native Linux support.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 2</h2>
+      <p class="notes-paragraph">Which of the following is a web-browser-based operating system?</p>
+      <ul class="answer-list">
+        <li>macOS</li>
+        <li>Windows</li>
+        <li>Linux</li>
+        <li class="correct">Chrome OS</li>
+      </ul>
+      <p class="note">Chrome OS is designed primarily around web applications accessed through a browser, relying on server-hosted software and reducing the need for powerful local hardware (11.3.2). macOS, Windows, and Linux are all full-featured OSes built around locally installed software.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 3</h2>
+      <p class="notes-paragraph">A server administrator needs to set up a Linux server but mainly deals with Windows servers. The administrator wants to use a subscription-based version to have support when needed. Which of the following should the server administrator use?</p>
+      <ul class="answer-list">
+        <li>Arch</li>
+        <li class="correct">SUSE Linux Enterprise</li>
+        <li>Fedora</li>
+        <li>Mint</li>
+      </ul>
+      <p class="note">SUSE is one of two subscription-based Linux distros covered in 11.3.2 (along with RHEL), providing vendor support on demand. Arch, Fedora, and Mint are all community-supported with no subscription model.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 4</h2>
+      <p class="notes-paragraph">Jack has a small retail business. He had a custom application developed for his inventory tracking. All of Jack's company computers have an operating system that will soon reach end of life because a newer version was released two years ago. Jack is afraid that his custom inventory application won't be compatible with the new version of the operating system. Which of the following is a risk that Jack is taking if he continues to use the operating system after its end of life?</p>
+      <ul class="answer-list">
+        <li>He may lose some of the OS's features that he relies on.</li>
+        <li>He may lose sales during the migration process.</li>
+        <li class="correct">The OS will become increasingly vulnerable to cyberattacks.</li>
+        <li>The custom application may no longer be compatible.</li>
+      </ul>
+      <p class="note">Per 11.3.7, EOL systems no longer receive security updates, making them a critical vulnerability. Feature loss is not a consequence of EOL status. Losing sales describes a risk of upgrading, not of staying on the EOL OS. The custom application compatibility concern applies to upgrading to the new OS, not to remaining on the current one.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 5</h2>
+      <p class="notes-paragraph">A network administrator is looking for an alternative network operating system (NOS) but does not want a steep learning curve. Which of the following optimizes for NOS functionality?</p>
+      <ul class="answer-list">
+        <li>macOS</li>
+        <li>Windows 11</li>
+        <li class="correct">Windows Server 2019</li>
+        <li>Windows 10</li>
+      </ul>
+      <p class="note">Windows Server 2019 is explicitly optimized as a NOS (11.3.1). The low learning curve is addressed by the fact that Windows Server shares the same underlying code and desktop interface as Windows client versions. macOS, Windows 11, and Windows 10 are all client OSes, not NOSs.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 6</h2>
+      <p class="notes-paragraph">The lead for a company's vulnerability management program is looking at the mobile aspect of the company's program. They started with end of life devices, then addressed patching statuses, and are now looking at hardening. Which of the following has the widest variety of change and will prove the most difficult?</p>
+      <ul class="answer-list">
+        <li class="correct">Android</li>
+        <li>iPadOS</li>
+        <li>iOS</li>
+        <li>Windows</li>
+      </ul>
+      <p class="note">Android's open-source nature allows manufacturers to create custom versions, and each manufacturer controls update deployment, resulting in significant fragmentation across OS versions and patch levels (11.3.3). iOS and iPadOS are tightly controlled by Apple with low fragmentation. Windows is not a mobile OS.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 7</h2>
+      <p class="notes-paragraph">You are an IT consultant tasked with recommending an operating system for a small startup company. The company requires an OS that is cost-effective, supports a wide range of hardware, and can be used for both desktop and server environments. Additionally, the company values flexibility in software customization and prefers an open-source solution. Which operating system would you recommend?</p>
+      <ul class="answer-list">
+        <li class="correct">Linux</li>
+        <li>Chrome OS</li>
+        <li>macOS</li>
+        <li>Windows Server 2022</li>
+      </ul>
+      <p class="note">Linux is open-source, cost-effective, runs on a wide range of hardware, and serves as both a desktop and server OS (11.3.2). Chrome OS is limited to specific hardware and web-based workflows. macOS is proprietary, closed-source, and restricted to Apple hardware. Windows Server 2022 is proprietary, not open-source, and is a NOS only.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 8</h2>
+      <p class="notes-paragraph">You are a system administrator tasked with configuring a new Windows 11 workstation for a graphic design team. The team requires a file system that supports large file sizes, advanced permissions, and encryption to ensure data security. Which file system should you choose to meet these requirements?</p>
+      <ul class="answer-list">
+        <li>FAT32</li>
+        <li>ReFS</li>
+        <li class="correct">NTFS</li>
+        <li>exFAT</li>
+      </ul>
+      <p class="note">NTFS supports large file sizes, advanced permissions/ownership, and encryption via EFS - satisfying all three requirements (11.3.4). FAT32 has a 4 GB file size limit and no permissions or encryption. ReFS does not support EFS encryption. exFAT supports access permissions but explicitly does not support encryption.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 9</h2>
+      <p class="notes-paragraph">Which of the following file systems is commonly used by macOS?</p>
+      <ul class="answer-list">
+        <li>NTFS</li>
+        <li class="correct">APFS</li>
+        <li>ext4</li>
+        <li>FAT32</li>
+      </ul>
+      <p class="note">Apple File System (APFS) is the proprietary file system used on Apple Mac workstations and laptops (11.3.5). NTFS is Microsoft's Windows file system. ext4 is the default for most Linux distributions. FAT32 is a legacy cross-platform format used for removable media, not primary fixed disk partitions.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 10</h2>
+      <p class="notes-paragraph">Which of the following statements is true about macOS?</p>
+      <ul class="answer-list">
+        <li>macOS is available in editions for both business workstations and home PCs.</li>
+        <li>macOS can be installed on both Apple and non-Apple PCs.</li>
+        <li class="correct">macOS is derived from the UNIX kernel.</li>
+        <li>macOS supports touch screens on all Apple devices.</li>
+      </ul>
+      <p class="note">macOS is derived from a UNIX kernel with additional code for its graphical interface and system utilities (11.3.1). Separate business/home editions describe Windows, not macOS. macOS is exclusive to Apple hardware and cannot be installed on non-Apple PCs. macOS supports the Magic Trackpad but does not support touch screens.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 11</h2>
+      <p class="notes-paragraph">A Windows administrator wants to become more familiar with Linux but still wants to use Windows primarily. The administrator installs the bash subsystem for Windows and is reading about how Windows has made strides to become more compatible with Linux. To facilitate better compatibility with Linux, which of the following was part of the changes to the underlying New Technology File System (NTFS) structure?</p>
+      <ul class="answer-list">
+        <li>Indexing</li>
+        <li>Snapshots</li>
+        <li class="correct">Case-sensitive naming</li>
+        <li>Journaling</li>
+      </ul>
+      <p class="note">POSIX Compliance is the NTFS feature specifically engineered for UNIX/Linux compatibility, including case-sensitive naming, hard links, and other features required by UNIX/Linux applications (11.3.4). Indexing is a Windows search performance feature. Snapshots support backup and version history. Journaling is a crash-recovery reliability feature - not added specifically for Linux compatibility.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 12</h2>
+      <p class="notes-paragraph">You are an IT technician tasked with upgrading the operating system on a company's fleet of laptops. The laptops are five years old and currently run Windows 10. The company wants to upgrade to Windows 11 to take advantage of new features. However, after reviewing the hardware specifications of the laptops, you discover that they do not meet the minimum requirements for Windows 11. What should you conclude about the situation?</p>
+      <ul class="answer-list">
+        <li>The laptops can run Windows 11 without any issues because they already run Windows 10.</li>
+        <li>The laptops should remain on Windows 10 because compatibility issues are irrelevant.</li>
+        <li class="correct">The laptops will need hardware upgrades or replacements to support Windows 11.</li>
+        <li>The laptops can run Windows 11 if you install additional drivers.</li>
+      </ul>
+      <p class="note">Windows 11 requires TPM 2.0 support - a hardware requirement that cannot be resolved with software or drivers (11.3.6). Running Windows 10 does not guarantee Windows 11 compatibility. Remaining on Windows 10 is also a security risk since it reached EOL on October 14, 2025 (11.3.7). Driver installation cannot compensate for missing hardware features like TPM 2.0.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 13</h2>
+      <p class="notes-paragraph">You are in the process of preparing a 128-GB flash drive and must determine which file system to use. Which of the following BEST describes the advantages of using the exFAT file system rather than NTFS on the flash drive?</p>
+      <ul class="answer-list">
+        <li>Support for files over 4 GB</li>
+        <li>Support for volumes over 32 GB</li>
+        <li>Access control lists and permissions</li>
+        <li class="correct">Lower overhead and risk of corruption</li>
+      </ul>
+      <p class="note">exFAT was designed specifically for flash media - its simpler structure produces lower overhead and fewer write operations than NTFS, reducing flash wear and the risk of corruption. Both exFAT and NTFS support files over 4 GB and volumes well beyond 32 GB, so those are not differentiating advantages. NTFS actually has more robust permissions support than exFAT.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 14</h2>
+      <p class="notes-paragraph">You are an IT consultant advising a company that plans to deploy a fleet of mobile devices for its employees. The company prioritizes security and centralized control over the devices, ensuring that only approved apps can be installed. Additionally, the company wants to minimize fragmentation issues across devices. Based on these requirements, which mobile operating system would you recommend?</p>
+      <ul class="answer-list">
+        <li class="correct">iOS</li>
+        <li>Chrome OS</li>
+        <li>Android</li>
+        <li>Linux</li>
+      </ul>
+      <p class="note">iOS is closed-source, Apple-controlled, and pushed updates directly to devices, resulting in minimal fragmentation, a uniform OS version across the fleet, and centralized app control via the App Store (11.3.3). Chrome OS is not a mobile OS. Android's manufacturer-controlled updates cause significant fragmentation. Linux is not a deployable mobile platform for a corporate device fleet.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 15</h2>
+      <p class="notes-paragraph">A client administrator plans an upgrade from Windows 10 to Windows 11 in the environment but has to plan from a budgetary perspective. What type of hardware requirement will the administrator need to consider?</p>
+      <ul class="answer-list">
+        <li class="correct">TPM chip</li>
+        <li>App compatibility</li>
+        <li>Network protocol support</li>
+        <li>User training</li>
+      </ul>
+      <p class="note">Windows 11 requires TPM version 2.0 support on the CPU or motherboard (11.3.6). Machines lacking TPM 2.0 require hardware upgrades or replacements, directly affecting budget planning. App compatibility is a software concern. Network protocol support and user training are operational concerns, not hardware requirements.</p>
+    </div>
+
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

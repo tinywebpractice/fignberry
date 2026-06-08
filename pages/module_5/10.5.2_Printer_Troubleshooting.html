@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10.5.2 Printer Troubleshooting</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">10.5.2 Printer Troubleshooting</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Printer Communication and Basic Checks</h2>
+                <p class="notes-paragraph">Modern printers communicate bidirectionally with the host computer,
+                    reporting low ink/toner levels and other status messages. When the OS reports no printer found,
+                    work through the following checks systematically.</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Verify device power; recycle power if needed</li>
+                    <li class="notes-list-item">Check removable components: cartridges, paper, service panels</li>
+                    <li class="notes-list-item">Inspect cables and connectors first (physical layer priority)</li>
+                    <li class="notes-list-item">USB: unplug and reseat the cable; swap with a known-good cable</li>
+                    <li class="notes-list-item">Network printer: verify IP address, test Ethernet cable, check Wi-Fi
+                        association with the access point, confirm print server is running</li>
+                    <li class="notes-list-item">Run a test print from the printer's configuration menu; observe whether
+                        the job appears in the print queue</li>
+                    <li class="notes-list-item">Check/reinstall or roll back the printer driver if the job appears
+                        garbled or the device is not recognized</li>
+                    <li class="notes-list-item">Reset to factory defaults as a last resort to clear cached configuration
+                    </li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Print Quality Issues</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Symptom</th>
+                            <th>Likely Cause</th>
+                            <th>Resolution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Faded/dim text or images</td>
+                            <td>Low toner or ink</td>
+                            <td>Replace toner cartridge or ink</td>
+                        </tr>
+                        <tr>
+                            <td>Blank pages</td>
+                            <td>Incorrect print settings; job contains blank pages</td>
+                            <td>Reset printer settings to defaults; inspect the document</td>
+                        </tr>
+                        <tr>
+                            <td>White stripes</td>
+                            <td>Toner not distributing evenly</td>
+                            <td>Replace transfer rollers (laser)</td>
+                        </tr>
+                        <tr>
+                            <td>Black stripes or all-black pages</td>
+                            <td>Toner defect or paper supply issue</td>
+                            <td>Replace toner; check paper supply</td>
+                        </tr>
+                        <tr>
+                            <td>Consistent spots/dots on every page</td>
+                            <td>Debris on rollers or fuser (laser)</td>
+                            <td>Clean rollers and fuser</td>
+                        </tr>
+                        <tr>
+                            <td>Streaks (inkjet)</td>
+                            <td>Dust on printhead</td>
+                            <td>Clean printhead; run head-cleaning utility</td>
+                        </tr>
+                        <tr>
+                            <td>Vertical or horizontal lines on every page</td>
+                            <td>Defect on drum or rollers (laser)</td>
+                            <td>Replace drum or rollers</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="notes-paragraph">Key principle: if a defect appears consistently on every page, suspect a
+                    recurring component (roller, drum, fuser). If it appears only on isolated pages, look to the document
+                    or paper source instead.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Print Job and Queue Issues</h2>
+                <p class="notes-paragraph">The OS print queue operates as a FIFO (first in, first out) buffer. Jobs can
+                    be viewed, restarted, or deleted from the queue manager (system tray in Windows; equivalent utilities
+                    in macOS and Linux).</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Jobs stuck in queue: check for a paper jam in the feeder path</li>
+                    <li class="notes-list-item">Multiple jobs backed up with no output: clear and restart the print
+                        queue</li>
+                    <li class="notes-list-item">Shared network printer with stalled jobs: contact IT to clear the queue,
+                        as other users may also be sending jobs</li>
+                    <li class="notes-list-item">Garbled output (raw data, strange symbols, random images): driver
+                        mismatch; verify the correct driver is installed for the printer model and OS version; roll back
+                        or update as needed</li>
+                    <li class="notes-list-item">Incorrect fonts or corrupt output: driver or font compatibility issue;
+                        update or reinstall the driver</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

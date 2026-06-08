@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10.3.4 Finishing Issues</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">10.3.4 Finishing Issues</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Overview</h2>
+                <p class="notes-paragraph">A finisher unit on laser printers and MFDs performs post-print operations
+                    such as stapling pages or hole-punching for binders. The finisher must be configured as an installed
+                    output option in the printer settings before it can be selected for a print job.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Common Finishing Issues</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Issue</th>
+                            <th>Cause</th>
+                            <th>Resolution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Incorrect page orientation</td>
+                            <td>Wrong paper size or orientation selected for the print job; pagination errors common
+                                with booklet printing where staples are applied to the sheet center</td>
+                            <td>Set correct paper size and orientation in the Finishing tab of Printing Preferences. The
+                                dialog icon shows the binding edge. Test settings on a short document before a full print
+                                run.</td>
+                        </tr>
+                        <tr>
+                            <td>Hole punch jam</td>
+                            <td>Sheet count exceeds the finisher unit's maximum capacity; heavier paper stock further
+                                reduces the maximum allowable count</td>
+                            <td>Split large print jobs into smaller batches within the permissible sheet count for the
+                                finisher unit.</td>
+                        </tr>
+                        <tr>
+                            <td>Staple jam</td>
+                            <td>Too many sheets fed through the staple mechanism, bending a staple and lodging it in the
+                                punch mechanism</td>
+                            <td>Remove the staple cartridge and release the catch to extract stuck staples. Reduce sheet
+                                count per job to stay within limits.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Finishing Tab (Printing Preferences)</h2>
+                <p class="notes-paragraph">The Finishing tab in the print driver's Printing Preferences dialog contains
+                    key output options:</p>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Print on both sides</dt>
+                    <dd class="notes-definition">Enables duplex printing. Manual duplex requires the user to reinsert
+                        the paper.</dd>
+                    <dt class="notes-term">Flip pages up</dt>
+                    <dd class="notes-definition">Changes the binding orientation for double-sided jobs, such as
+                        top-bound vs. side-bound.</dd>
+                    <dt class="notes-term">Booklet layout</dt>
+                    <dd class="notes-definition">Arranges pages for folded booklet output with center stapling. Off by
+                        default.</dd>
+                    <dt class="notes-term">Pages per sheet</dt>
+                    <dd class="notes-definition">Controls N-up printing, where multiple logical pages are printed on a
+                        single physical sheet.</dd>
+                    <dt class="notes-term">Orientation</dt>
+                    <dd class="notes-definition">Portrait, Landscape, or Rotate by 180 degrees.</dd>
+                </dl>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -36,7 +36,7 @@
                     computer. Clients install via vendor tools, which discover the printer by IP, hardware address, and
                     hostname.</dd>
                 <dt class="notes-term">Public printer</dt>
-                <dd class="notes-definition">No access controls -- any guest can print. Modern implementations typically
+                <dd class="notes-definition">No access controls - any guest can print. Modern implementations typically
                     add some security such as network segmentation, user authentication, or a dedicated guest Wi-Fi
                     network.</dd>
                 <dt class="notes-term">Windows print server (shared printer)</dt>
@@ -51,21 +51,21 @@
             <p class="notes-paragraph">Configure sharing via <strong>Printer Properties &gt; Sharing tab</strong>. Key
                 options:</p>
             <ul class="notes-list">
-                <li class="notes-list-item"><strong>Share this printer</strong> -- enables the share and sets the share
+                <li class="notes-list-item"><strong>Share this printer</strong> - enables the share and sets the share
                     name (network-visible name).</li>
-                <li class="notes-list-item"><strong>Render print jobs on client computers</strong> -- offloads rendering
+                <li class="notes-list-item"><strong>Render print jobs on client computers</strong> - offloads rendering
                     from the server to the client.</li>
-                <li class="notes-list-item"><strong>Additional Drivers</strong> -- install x86 (32-bit) and/or x64
+                <li class="notes-list-item"><strong>Additional Drivers</strong> - install x86 (32-bit) and/or x64
                     (64-bit) drivers so clients on different Windows architectures can download the correct driver
                     automatically when connecting.</li>
             </ul>
             <p class="notes-paragraph">Driver type notes:</p>
             <ul class="notes-list">
-                <li class="notes-list-item"><strong>Type 2</strong> -- requires specific driver versions per Windows
+                <li class="notes-list-item"><strong>Type 2</strong> - requires specific driver versions per Windows
                     release.</li>
-                <li class="notes-list-item"><strong>Type 3</strong> -- add x86/x64 variants for mixed-architecture
+                <li class="notes-list-item"><strong>Type 3</strong> - add x86/x64 variants for mixed-architecture
                     networks.</li>
-                <li class="notes-list-item"><strong>Type 4</strong> (Windows 10+) -- print class driver framework; one
+                <li class="notes-list-item"><strong>Type 4</strong> (Windows 10+) - print class driver framework; one
                     driver works with multiple devices. Client can pull the driver from Windows Update instead of the
                     print server.</li>
             </ul>
@@ -92,10 +92,10 @@
                         <td><code>Set-Printer</code></td>
                         <td>Modify properties of an existing printer</td>
                         <td>
-                            <code>-Name</code> -- local printer name<br>
-                            <code>-Shared $true/$false</code> -- enable/disable sharing<br>
-                            <code>-ShareName</code> -- network-visible share name<br>
-                            <code>-RenderPrintJobsOnClient $true/$false</code> -- client ($true) or server ($false)
+                            <code>-Name</code> - local printer name<br>
+                            <code>-Shared $true/$false</code> - enable/disable sharing<br>
+                            <code>-ShareName</code> - network-visible share name<br>
+                            <code>-RenderPrintJobsOnClient $true/$false</code> - client ($true) or server ($false)
                             renders jobs
                         </td>
                     </tr>
@@ -107,7 +107,7 @@
                     <tr>
                         <td><code>Set-DefaultPrinter</code></td>
                         <td>Set the default printer</td>
-                        <td><code>-Name</code> -- local or network printer name</td>
+                        <td><code>-Name</code> - local or network printer name</td>
                     </tr>
                 </tbody>
             </table>

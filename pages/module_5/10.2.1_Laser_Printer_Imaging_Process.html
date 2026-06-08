@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10.2.1 Laser Printer Imaging Process</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+        <main class="page-content notes-content">
+
+        <h1 class="notes-title">10.2.1 Laser Printer Imaging Process</h1>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Overview</h2>
+            <p class="notes-paragraph">Laser printers are popular for office use due to affordability, quiet operation,
+                speed, and high-quality output. Available in grayscale and color models. Key hardware components: laser,
+                primary charge roller (PCR), imaging drum, toner hopper, developer roller, transfer rollers, fuser unit
+                (heat and pressure rollers), pickup/feed/separation rollers.</p>
+            <p class="notes-paragraph">The imaging drum, PCR, developer roller, and toner hopper are typically packaged
+                together inside a toner cartridge. The drum's circumference is smaller than a sheet of paper, so the
+                early stages repeat 2-4 times per page.</p>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">The Seven Stages of Laser Printing</h2>
+            <table class="notes-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Stage</th>
+                        <th>What Happens</th>
+                        <th>Key Component(s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Processing</td>
+                        <td>OS driver encodes the page and sends it to the printer, where it is processed into a bitmap
+                            and stored in RAM.</td>
+                        <td>OS driver, printer RAM</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Charging</td>
+                        <td>A uniform negative charge is applied to the photosensitive imaging drum.</td>
+                        <td>Primary charge roller (PCR)</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Exposing</td>
+                        <td>The laser fires light pulses for each raster dot, neutralizing the PCR charge on target
+                            areas and forming an electrostatic latent image on the drum.</td>
+                        <td>Laser, imaging drum</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Developing</td>
+                        <td>Toner is attracted to the neutralized (exposed) areas on the drum, forming the visible
+                            image.</td>
+                        <td>Developer roller, toner hopper</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Transferring</td>
+                        <td>Paper is guided through and given a positive charge, attracting toner off the drum and onto
+                            the paper.</td>
+                        <td>Transfer rollers, pickup/feed/separation rollers</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Fusing</td>
+                        <td>Heat and pressure bond the toner permanently to the paper.</td>
+                        <td>Fuser unit (heat and pressure rollers)</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Cleaning</td>
+                        <td>Residual toner and charge are removed from the drum, resetting it for the next print cycle.
+                        </td>
+                        <td>Imaging drum, cleaning blade</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Duplex Printing and Paper Output</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item"><strong>Automatic duplex:</strong> After fusing, the duplexing assembly
+                    flips the paper and returns it to the developer unit for the second side.</li>
+                <li class="notes-list-item"><strong>Manual duplex:</strong> Printer pauses after the first side; user
+                    reloads printed pages into the input tray without changing orientation, then printing resumes.</li>
+                <li class="notes-list-item">Without duplexing, paper exits to the selected output bin via exit rollers.
+                </li>
+            </ul>
+        </section>
+
+        <section class="notes-section">
+            <h2 class="notes-section-title">Color Laser Printers</h2>
+            <ul class="notes-list">
+                <li class="notes-list-item">Use separate toner cartridges for each CMYK color (cyan, magenta, yellow,
+                    black).</li>
+                <li class="notes-list-item"><strong>Four-pass process:</strong> Each color is applied sequentially in
+                    separate passes.</li>
+                <li class="notes-list-item"><strong>Single-pass process:</strong> All CMYK colors are combined on a
+                    transfer roller/belt and applied in one pass - faster.</li>
+            </ul>
+        </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

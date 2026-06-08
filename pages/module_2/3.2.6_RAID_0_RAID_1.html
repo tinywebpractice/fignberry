@@ -30,10 +30,10 @@
                 <h2 class="notes-section-title">Choosing a RAID Level</h2>
                 <p class="notes-paragraph">When selecting a RAID level, consider these four factors:</p>
                 <ul class="notes-list">
-                    <li class="notes-list-item"><b>Fault tolerance</b> – How many disks can fail without data loss?</li>
-                    <li class="notes-list-item"><b>Read/write performance</b> – Does the array need to be fast?</li>
-                    <li class="notes-list-item"><b>Capacity</b> – How much usable storage is needed?</li>
-                    <li class="notes-list-item"><b>Cost</b> – How many disks are required?</li>
+                    <li class="notes-list-item"><b>Fault tolerance</b> â€“ How many disks can fail without data loss?</li>
+                    <li class="notes-list-item"><b>Read/write performance</b> â€“ Does the array need to be fast?</li>
+                    <li class="notes-list-item"><b>Capacity</b> â€“ How much usable storage is needed?</li>
+                    <li class="notes-list-item"><b>Cost</b> â€“ How many disks are required?</li>
                 </ul>
                 <p class="notes-paragraph notes-paragraph--note">
                     <b>Important:</b> Always use disks that are <b>identical in capacity, type, and performance</b>.
@@ -43,7 +43,7 @@
             </section>
 
             <section class="notes-section">
-                <h2 class="notes-section-title">RAID 0 – Striping without Parity</h2>
+                <h2 class="notes-section-title">RAID 0 â€“ Striping without Parity</h2>
                 <p class="notes-paragraph">
                     Data is divided into blocks and distributed across all disks in the array, allowing multiple
                     disks to service requests in parallel for improved performance.
@@ -66,7 +66,7 @@
                         </tr>
                         <tr class="notes-table-row">
                             <td class="notes-table-cell">Fault tolerance</td>
-                            <td class="notes-table-cell"><b>None</b> — if any disk fails, the entire volume fails</td>
+                            <td class="notes-table-cell"><b>None</b> - if any disk fails, the entire volume fails</td>
                         </tr>
                         <tr class="notes-table-row">
                             <td class="notes-table-cell">Performance</td>
@@ -85,7 +85,7 @@
             </section>
 
             <section class="notes-section">
-                <h2 class="notes-section-title">RAID 1 – Mirroring</h2>
+                <h2 class="notes-section-title">RAID 1 â€“ Mirroring</h2>
                 <p class="notes-paragraph">
                     Every write operation is duplicated on a second disk simultaneously. Read operations can use
                     either disk, slightly boosting read performance.
@@ -113,11 +113,11 @@
                         </tr>
                         <tr class="notes-table-row">
                             <td class="notes-table-cell">Write performance</td>
-                            <td class="notes-table-cell">Slight overhead — data must be written to both disks</td>
+                            <td class="notes-table-cell">Slight overhead - data must be written to both disks</td>
                         </tr>
                         <tr class="notes-table-row">
                             <td class="notes-table-cell">Read performance</td>
-                            <td class="notes-table-cell">Slightly improved — either disk can serve reads</td>
+                            <td class="notes-table-cell">Slightly improved - either disk can serve reads</td>
                         </tr>
                         <tr class="notes-table-row">
                             <td class="notes-table-cell">Rebuild speed</td>
@@ -184,15 +184,15 @@
             <section class="notes-section">
                 <h2 class="notes-section-title">Key Terms</h2>
                 <ul class="notes-list">
-                    <li class="notes-list-item"><b>Striping (RAID 0)</b> – Data is split into blocks and spread across
+                    <li class="notes-list-item"><b>Striping (RAID 0)</b> â€“ Data is split into blocks and spread across
                         multiple disks for performance; no fault tolerance</li>
-                    <li class="notes-list-item"><b>Mirroring (RAID 1)</b> – Data is written identically to two disks
+                    <li class="notes-list-item"><b>Mirroring (RAID 1)</b> â€“ Data is written identically to two disks
                         simultaneously; protects against one disk failure</li>
-                    <li class="notes-list-item"><b>Fault tolerance</b> – The ability to survive a disk failure without
+                    <li class="notes-list-item"><b>Fault tolerance</b> â€“ The ability to survive a disk failure without
                         losing data</li>
-                    <li class="notes-list-item"><b>Rebuild</b> – The process of restoring data to a replacement disk
+                    <li class="notes-list-item"><b>Rebuild</b> â€“ The process of restoring data to a replacement disk
                         after a failure</li>
-                    <li class="notes-list-item"><b>Disk striping</b> – Dividing data into blocks and distributing them
+                    <li class="notes-list-item"><b>Disk striping</b> â€“ Dividing data into blocks and distributing them
                         across all disks for parallel access</li>
                 </ul>
             </section>

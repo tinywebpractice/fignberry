@@ -31,18 +31,18 @@
             <section class="notes-section">
                 <h2 class="notes-section-title">Common Network Failure Points</h2>
                 <ul class="notes-list">
-                    <li class="notes-list-item"><strong>Cables</strong> — damaged, improperly seated, or faulty patch
+                    <li class="notes-list-item"><strong>Cables</strong> - damaged, improperly seated, or faulty patch
                         cords</li>
-                    <li class="notes-list-item"><strong>NICs</strong> — failed hardware or bad/incompatible drivers</li>
-                    <li class="notes-list-item"><strong>Switch/router ports</strong> — damaged ports, disabled ports,
+                    <li class="notes-list-item"><strong>NICs</strong> - failed hardware or bad/incompatible drivers</li>
+                    <li class="notes-list-item"><strong>Switch/router ports</strong> - damaged ports, disabled ports,
                         misconfigured settings</li>
-                    <li class="notes-list-item"><strong>Wi-Fi</strong> — interference, misconfiguration, signal issues
+                    <li class="notes-list-item"><strong>Wi-Fi</strong> - interference, misconfiguration, signal issues
                     </li>
-                    <li class="notes-list-item"><strong>Power problems</strong> — power blinks can wipe unsaved
+                    <li class="notes-list-item"><strong>Power problems</strong> - power blinks can wipe unsaved
                         configurations</li>
-                    <li class="notes-list-item"><strong>Driver problems</strong> — new/updated drivers that cause
+                    <li class="notes-list-item"><strong>Driver problems</strong> - new/updated drivers that cause
                         issues; rollback may be required</li>
-                    <li class="notes-list-item"><strong>Configuration mistakes</strong> — human error (wrong IPs,
+                    <li class="notes-list-item"><strong>Configuration mistakes</strong> - human error (wrong IPs,
                         gateway, VLAN, etc.)</li>
                 </ul>
             </section>
@@ -115,17 +115,17 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>1 — Physical</strong></td>
+                            <td><strong>1 - Physical</strong></td>
                             <td>Cables, link LEDs, NIC hardware</td>
                             <td>Visual inspection, cable tester, loopback ping, swap cable/port</td>
                         </tr>
                         <tr>
-                            <td><strong>2 — Data Link</strong></td>
+                            <td><strong>2 - Data Link</strong></td>
                             <td>NIC driver, switch port status, port configuration</td>
                             <td>Check switch config, enable/move port, update or roll back NIC driver</td>
                         </tr>
                         <tr>
-                            <td><strong>3 — Network</strong></td>
+                            <td><strong>3 - Network</strong></td>
                             <td>IP address, subnet mask, default gateway, DHCP scope</td>
                             <td><code>ipconfig /all</code>, ping default gateway, check DHCP server scope</td>
                         </tr>
@@ -158,11 +158,11 @@
                 <h2 class="notes-section-title">Scope-Based Isolation</h2>
                 <p class="notes-paragraph">Before diving into physical checks, determine the scope of the problem:</p>
                 <ul class="notes-list">
-                    <li class="notes-list-item"><strong>Only one host affected</strong> — problem is likely local
+                    <li class="notes-list-item"><strong>Only one host affected</strong> - problem is likely local
                         (cable, NIC, IP config).</li>
-                    <li class="notes-list-item"><strong>Multiple hosts affected</strong> — problem is likely
+                    <li class="notes-list-item"><strong>Multiple hosts affected</strong> - problem is likely
                         infrastructure (switch port, DHCP server, router, gateway config).</li>
-                    <li class="notes-list-item"><strong>Other hosts can reach the target but one cannot</strong> —
+                    <li class="notes-list-item"><strong>Other hosts can reach the target but one cannot</strong> -
                         server/path is fine; focus troubleshooting on the affected host.</li>
                 </ul>
                 <p class="notes-paragraph">Real-world example: a DHCP scope configured with the wrong default gateway

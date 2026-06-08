@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>13.1.10 Registry Editor</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">13.1.10 Registry Editor</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Overview</h2>
+      <p class="notes-paragraph">The Windows registry is a remotely accessible binary database storing configuration information for the OS, devices, and applications. Use <strong>Registry Editor</strong> (<code>regedit.msc</code>) to view or edit it. The registry is organized into root keys, subkeys, and value entries, similar to drives, folders, and files.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Five Root Keys</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Root Key</th>
+            <th>Abbreviation</th>
+            <th>Contents</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HKEY_LOCAL_MACHINE</td>
+            <td>HKLM</td>
+            <td>System-wide settings for the computer, regardless of which user is logged in.</td>
+          </tr>
+          <tr>
+            <td>HKEY_USERS</td>
+            <td>HKU</td>
+            <td>Settings for all individual user profiles on the computer (e.g., desktop personalization).</td>
+          </tr>
+          <tr>
+            <td>HKEY_CURRENT_USER</td>
+            <td>HKCU</td>
+            <td>Subset of HKU; contains settings for the currently logged-in user only.</td>
+          </tr>
+          <tr>
+            <td>HKEY_CLASSES_ROOT</td>
+            <td>HKCR</td>
+            <td>Registered applications, file associations, and OLE object classes; determines which app opens each file type.</td>
+          </tr>
+          <tr>
+            <td>HKEY_CURRENT_CONFIG</td>
+            <td>HKCC</td>
+            <td>Current hardware profile used at startup; dynamically built at boot time.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Registry Hives (Storage)</h2>
+      <p class="notes-paragraph">The registry is stored in binary files called <strong>hives</strong>. Each hive consists of:</p>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>File</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Main file (no extension)</td>
+            <td>Primary hive data</td>
+          </tr>
+          <tr>
+            <td>.LOG</td>
+            <td>Transaction log for crash recovery</td>
+          </tr>
+          <tr>
+            <td>.SAV</td>
+            <td>Setup copy of the hive</td>
+          </tr>
+          <tr>
+            <td>.ALT</td>
+            <td>Backup file for the system hive only</td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="notes-list">
+        <li class="notes-list-item">Most hive files are stored in <code>C:\Windows\System32\Config</code>.</li>
+        <li class="notes-list-item">Each user profile's hive (<code>NTUSER.DAT</code>) is stored in the user's profile folder (e.g., <code>C:\Users\Username\</code>).</li>
+      </ul>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Value Entry Data Types</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>REG_SZ</td>
+            <td>Fixed-length string (most common)</td>
+          </tr>
+          <tr>
+            <td>REG_EXPAND_SZ</td>
+            <td>Expandable string with environment variable references (e.g., %SystemRoot%)</td>
+          </tr>
+          <tr>
+            <td>REG_MULTI_SZ</td>
+            <td>Multi-string value (multiple strings in one entry)</td>
+          </tr>
+          <tr>
+            <td>REG_DWORD</td>
+            <td>32-bit binary/numeric value</td>
+          </tr>
+          <tr>
+            <td>REG_QWORD</td>
+            <td>64-bit binary/numeric value</td>
+          </tr>
+          <tr>
+            <td>REG_BINARY</td>
+            <td>Raw binary data</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Editing and Exporting</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item">Use <strong>Edit &gt; Find</strong> to search for keys, subkeys, or value entries by name.</li>
+        <li class="notes-list-item">Right-click a key to create new subkeys or value entries, rename, delete, or export.</li>
+        <li class="notes-list-item">To copy registry settings to another computer: <strong>File &gt; Export Registry File</strong>. The exported <code>.reg</code> file can be merged into another registry by double-clicking it or calling it from a script.</li>
+        <li class="notes-list-item">Always back up the registry (or export the relevant key) before making changes. Incorrect edits can cause system instability or boot failure.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

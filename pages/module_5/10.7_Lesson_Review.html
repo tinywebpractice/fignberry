@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10.7 Checkpoint Review</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">10.7 Checkpoint Review</h1>
+
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 1</h2>
+                <p>Why is mass storage necessary in a computer system?</p>
+                <ul class="answer-list">
+                    <li>To control the motherboard's system clock</li>
+                    <li class="correct">To preserve data and files when the computer is turned off</li>
+                    <li>To increase the processing speed of the CPU</li>
+                    <li>To store only non-essential data temporarily</li>
+                </ul>
+                <p class="note">Mass storage (HDDs, SSDs, etc.) is non-volatile, retaining data without power. This is
+                    its core purpose: persisting the OS, applications, and user files across power cycles. The system
+                    clock is controlled by the RTC chip and CMOS battery. CPU speed is determined by the processor
+                    itself. Temporary storage is the role of RAM, which is volatile.</p>
+            </div>
+
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 2</h2>
+                <p>Which of the following IP addresses have a default subnet mask of 255.255.0.0? (Select three.)</p>
+                <ul class="answer-list">
+                    <li class="correct">129.0.0.1</li>
+                    <li>123.254.19.6</li>
+                    <li class="correct">168.16.5.1</li>
+                    <li>228.62.18.6</li>
+                    <li class="correct">191.168.2.15</li>
+                    <li>1.6.45.254</li>
+                </ul>
+                <p class="note">A default subnet mask of 255.255.0.0 belongs to Class B, which covers first octets
+                    128-191. 129.0.0.1 (129), 168.16.5.1 (168), and 191.168.2.15 (191) are all Class B. 123.254.19.6
+                    (123) and 1.6.45.254 (1) are Class A (default mask 255.0.0.0). 228.62.18.6 (228) is Class D
+                    multicast with no default subnet mask.</p>
+            </div>
+
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 3</h2>
+                <p>You are a first-line desktop support technician. A user reports that he cannot access several network
+                    files. After some investigation, you determine that the problem is with a network server. Which of
+                    the following actions should you perform next?</p>
+                <ul class="answer-list">
+                    <li class="correct">Determine if escalation is needed.</li>
+                    <li>Fix the problem.</li>
+                    <li>Create an action plan.</li>
+                    <li>Document the problem.</li>
+                </ul>
+                <p class="note">The problem is on a network server, which is outside the scope of a first-line desktop
+                    support technician. Before creating an action plan or attempting a fix, the correct next step is to
+                    determine whether the issue needs to be escalated to a server/network team. Escalation determination
+                    comes before planning or acting. Documentation is the final step after resolution.</p>
+            </div>
+
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 4</h2>
+                <p>What best describes a Local Area Network (LAN)?</p>
+                <ul class="answer-list">
+                    <li>A network that spans multiple geographic locations worldwide</li>
+                    <li class="correct">A group of computers connected within a close geographic location</li>
+                    <li>A specialized network dedicated to data storage</li>
+                    <li>A network that covers a city or municipality</li>
+                </ul>
+                <p class="note">A LAN connects devices within a limited area such as a home, office, or building. A WAN
+                    spans multiple geographic locations worldwide. A SAN (Storage Area Network) is dedicated to storage.
+                    A MAN (Metropolitan Area Network) covers a city or municipality.</p>
+            </div>
+
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 5</h2>
+                <p>You connect your computer to a wireless network available at the local library. You find that you
+                    cannot access several websites on the internet. Which of the following is the MOST likely cause of
+                    this problem?</p>
+                <ul class="answer-list">
+                    <li class="correct">A proxy server is filtering access to websites.</li>
+                    <li>The router has not been configured to perform port forwarding.</li>
+                    <li>A firewall is blocking ports 80 and 443.</li>
+                    <li>Port triggering is redirecting traffic to the wrong IP address.</li>
+                </ul>
+                <p class="note">Public library networks commonly use a proxy server to filter and control internet
+                    access, blocking certain categories of websites. The scenario specifies only several websites are
+                    inaccessible, consistent with selective content filtering. If ports 80 and 443 were blocked, no
+                    websites would be accessible at all. Port forwarding and port triggering are inbound traffic features
+                    unrelated to outbound web browsing.</p>
+            </div>
+
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 6</h2>
+                <p>You've just installed a new USB card reader on your Windows computer. Every time you perform a certain
+                    action using the card reader, you get an error message that you've never seen before. Which of the
+                    following actions should you perform FIRST?</p>
+                <ul class="answer-list">
+                    <li>Replace the card reader with a new device.</li>
+                    <li class="correct">Check the manufacturer's website for information about the error.</li>
+                    <li>Install the device on another computer.</li>
+                    <li>Uninstall the device and then reinstall it.</li>
+                </ul>
+                <p class="note">The error is unfamiliar, so the first step is to gather information. The manufacturer's
+                    website is the authoritative source for known issues, updated drivers, firmware, and documented error
+                    codes. Research before acting; replacing hardware, testing on another machine, or reinstalling
+                    without understanding the error skips the information-gathering phase of the troubleshooting
+                    methodology.</p>
+            </div>
+
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 7</h2>
+                <p>You are a security consultant tasked with assessing the vulnerabilities of a smart home system that
+                    includes various IoT devices such as smart cameras, smart locks, and a smart refrigerator. During
+                    your analysis, you discover that the system uses a hub/control system connected to the Wi-Fi network,
+                    while the IoT devices communicate using Zigbee protocol. What potential security risk should you
+                    prioritize addressing?</p>
+                <ul class="answer-list">
+                    <li class="correct">The risk of unauthorized access to the Wi-Fi network through the hub/control
+                        system</li>
+                    <li>The risk of physical tampering with the smart devices themselves</li>
+                    <li>The risk of data interception due to the low-power nature of the Zigbee protocol</li>
+                    <li>The risk of insufficient data storage capacity for logs and device settings</li>
+                </ul>
+                <p class="note">The hub bridges the Zigbee IoT network and the Wi-Fi network. If compromised, an attacker
+                    gains a foothold on the Wi-Fi network and access to all connected devices including smart locks and
+                    cameras. This bridge point represents the highest-priority risk due to its lateral movement
+                    potential. Physical tampering requires physical presence. Zigbee uses AES-128 encryption. Storage
+                    capacity is an operational concern, not a security vulnerability.</p>
+            </div>
+
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 8</h2>
+                <p>A law firm needs to run legacy software that is incompatible with its current operating system. They
+                    decide to use virtualization to address this issue. Which of the following solutions would BEST meet
+                    their needs?</p>
+                <ul class="answer-list">
+                    <li class="correct">Use a Type 2 hypervisor to create a VM with the legacy OS.</li>
+                    <li>Use application virtualization to stream the legacy software.</li>
+                    <li>Install a Type 1 hypervisor and create a VM with the legacy OS.</li>
+                    <li>Implement container virtualization to run the legacy software.</li>
+                </ul>
+                <p class="note">A Type 2 hypervisor runs on top of the existing host OS, allowing the legacy OS to run in
+                    a VM alongside the current OS without replacing anything. This is low-disruption and purpose-built
+                    for this scenario. A Type 1 (bare-metal) hypervisor replaces the host OS entirely, which is
+                    inappropriate for a workstation. Application virtualization may not handle software requiring a
+                    specific legacy OS environment. Containers share the host OS kernel and cannot run a different OS.
+                </p>
+            </div>
+
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 9</h2>
+                <p>Which of the following is a term used to identify memory modules?</p>
+                <ul class="answer-list">
+                    <li class="correct">DIMM</li>
+                    <li>AGP</li>
+                    <li>PATA</li>
+                    <li>SATA</li>
+                </ul>
+                <p class="note">A DIMM (Dual Inline Memory Module) is the standard form factor for RAM modules installed
+                    into motherboard memory slots. AGP (Accelerated Graphics Port) is a legacy expansion slot for
+                    graphics cards. PATA (Parallel ATA) is a legacy storage interface. SATA (Serial ATA) is the current
+                    standard interface for storage devices.</p>
+            </div>
+
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 10</h2>
+                <p>You are a technician tasked with resolving an issue where a user's computer is unable to detect a
+                    fixed disk during boot. After ensuring that the drive is powered and the activity LED is lit, you
+                    proceed to inspect the data connections. Which of the following actions should you take next to
+                    troubleshoot the drive availability issue?</p>
+                <ul class="answer-list">
+                    <li>Replace the data cables with new ones to ensure there is no damage.</li>
+                    <li>Reinstall the operating system to ensure that the boot sector is correctly configured.</li>
+                    <li class="correct">Verify that the drive is enabled in the UEFI/BIOS settings.</li>
+                    <li>Perform a system restore to revert any recent changes that might have affected the drive
+                        detection.</li>
+                </ul>
+                <p class="note">Power is confirmed (LED is lit) and data connections have been inspected. The next
+                    logical step is to check whether the drive is recognized and enabled in UEFI/BIOS; a drive can be
+                    physically connected but disabled in firmware, preventing boot detection. Reinstalling the OS is
+                    impossible if the drive is not detected. System restore requires a bootable OS. Cable replacement was
+                    effectively addressed by inspecting connections.</p>
+            </div>
+
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 11</h2>
+                <p>You have just finished replacing the motherboard in your friend Ethan's computer with the same type of
+                    motherboard that the computer had originally. You tested the motherboard by powering it on and
+                    verifying that the operating system started and that the applications work. Now Ethan is complaining
+                    that his computer no longer recognizes his external hard drive, which he had connected to the
+                    previous motherboard. Which of the following is MOST likely causing the external hard drive not to
+                    function?</p>
+                <ul class="answer-list">
+                    <li>The replacement motherboard does not support external hard drives.</li>
+                    <li>The computer's power supply was not connected properly.</li>
+                    <li class="correct">The USB front panel connector was not properly connected.</li>
+                    <li>The hard drive has failed.</li>
+                </ul>
+                <p class="note">When replacing a motherboard, front panel connectors (USB, audio, power button, LEDs)
+                    must all be manually reconnected to the new board's headers. This is one of the most commonly missed
+                    steps during a motherboard swap. If the front panel USB header was not reseated, front panel USB
+                    ports would not function. The OS boots and apps work, ruling out a PSU issue. The same motherboard
+                    type rules out support issues. A coincidental drive failure is possible but far less likely than a
+                    missed connector.</p>
+            </div>
+
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 12</h2>
+                <p>A medium-sized company has recently installed several networked printers in their office. The IT
+                    manager is concerned about the security of these devices, especially since they handle sensitive
+                    documents. Which of the following measures should the IT manager implement to ensure the security of
+                    the networked printers?</p>
+                <ul class="answer-list">
+                    <li>Disable all network connectivity features on the printers to prevent unauthorized access.</li>
+                    <li>Share the printers with all employees using a public network to facilitate easy access.</li>
+                    <li class="correct">Regularly update the printer firmware and enable user authentication for
+                        accessing print jobs.</li>
+                    <li>Allow unrestricted access to the printer settings for all employees to ensure transparency.</li>
+                </ul>
+                <p class="note">Firmware updates patch known security vulnerabilities in networked devices. User
+                    authentication ensures only authorized personnel can send and retrieve print jobs, critical when
+                    sensitive documents are involved. Disabling network connectivity makes the printers non-functional.
+                    Placing printers on a public network removes access controls entirely. Unrestricted access to printer
+                    settings is a significant security risk.</p>
+            </div>
+
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 13</h2>
+                <p>Which of the following mobile connection types can enable other mobile devices to connect to the
+                    internet?</p>
+                <ul class="answer-list">
+                    <li>Bluetooth</li>
+                    <li>USB</li>
+                    <li>NFC</li>
+                    <li class="correct">Hotspot</li>
+                </ul>
+                <p class="note">A mobile hotspot broadcasts a Wi-Fi signal from a cellular-connected device, allowing
+                    multiple other mobile devices to connect to the internet through it. Bluetooth tethering can share a
+                    connection but is not the primary feature designed for this purpose. USB tethering shares a connection
+                    with only one directly connected device via cable. NFC is a very short-range standard used for
+                    tap-to-pay and pairing, not internet sharing.</p>
+            </div>
+
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 14</h2>
+                <p>A network administrator is analyzing a connectivity issue between two devices on different networks.
+                    The administrator observes the following during troubleshooting: the source device successfully sends
+                    packets to its default gateway; the default gateway forwards the packets to the next router in the
+                    path; the packets are dropped at an intermediate router, and no response is sent back to the source
+                    device. Based on this information, which of the following is the MOST likely cause of the issue?</p>
+                <ul class="answer-list">
+                    <li class="correct">The intermediate router does not have a route to the destination network in its
+                        routing table.</li>
+                    <li>The source device is using an incorrect subnet mask for its IP address configuration.</li>
+                    <li>The Address Resolution Protocol (ARP) is failing to resolve the MAC address of the destination
+                        device.</li>
+                    <li>The destination device is not running a compatible application protocol.</li>
+                </ul>
+                <p class="note">The packet successfully travels from source to gateway to the next router, but is dropped
+                    silently at an intermediate router. This is a classic symptom of a missing routing table entry; when
+                    a router has no route to the destination and no default route, it drops the packet. A subnet mask
+                    misconfiguration would prevent the source from reaching the gateway at all. ARP operates at Layer 2
+                    within local segments and is not involved in inter-network routing. An application protocol
+                    incompatibility would result in a response from the destination, not a silent drop at a router.</p>
+            </div>
+
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 15</h2>
+                <p>Which of the following actions does an ATX power supply perform? (Select two.)</p>
+                <ul class="answer-list">
+                    <li class="correct">Aids in thermal management</li>
+                    <li class="correct">Converts AC to DC</li>
+                    <li>Protects against power spikes</li>
+                    <li>Supplies backup power</li>
+                    <li>Provides 110 volts to internal components</li>
+                </ul>
+                <p class="note">An ATX PSU converts AC wall power to DC voltages (+3.3V, +5V, +12V) used by internal
+                    components, and includes a fan that aids system thermal management. Surge protection is the function
+                    of a surge protector or UPS. Backup power is the function of a UPS. Internal components receive low
+                    DC voltages, never 110V AC.</p>
+            </div>
+
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 16</h2>
+                <p>Which of the following are characteristics of a coaxial network cable? (Select two.)</p>
+                <ul class="answer-list">
+                    <li>It is totally immune to electromagnetic interference (EMI).</li>
+                    <li class="correct">It uses two concentric metallic conductors.</li>
+                    <li class="correct">It has a conductor made from copper in the center.</li>
+                    <li>It is made of plastic or glass in the center.</li>
+                    <li>It has conductors that are twisted around each other to eliminate crosstalk.</li>
+                </ul>
+                <p class="note">Coaxial cable has a central copper conductor surrounded by insulation, a metallic shield,
+                    and an outer jacket: two conductors sharing the same axis (hence "co-axial"). It has good EMI
+                    resistance but is not totally immune. A plastic or glass core describes fiber optic cable. Twisted
+                    conductors describe UTP/STP twisted pair cable.</p>
+            </div>
+
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 17</h2>
+                <p>Which term describes the layer of software that resides between the virtual operating system and the
+                    physical hardware in a virtualization environment?</p>
+                <ul class="answer-list">
+                    <li class="correct">Hypervisor</li>
+                    <li>Virtual machine</li>
+                    <li>Virtual hard disk</li>
+                    <li>Workload management</li>
+                </ul>
+                <p class="note">A hypervisor is the software layer between the virtual OS(es) and physical hardware that
+                    abstracts and allocates CPU, memory, storage, and network resources to VMs. A VM is the guest OS
+                    instance running on top of the hypervisor. A virtual hard disk is a file emulating a storage drive.
+                    Workload management is an operational/administrative concept, not a virtualization layer.</p>
+            </div>
+
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 18</h2>
+                <p>Your system administrator shared a USB laser printer connected to your Windows 11 system, so other
+                    users on the network could send jobs to it. A network user has sent a large job to the printer, but
+                    the print job has stalled. You try to delete the print job but cannot. Which of the following BEST
+                    describes the reason you cannot delete the print job?</p>
+                <ul class="answer-list">
+                    <li>You do not have the Print permission.</li>
+                    <li>You do not have the Manage this printer permission.</li>
+                    <li class="correct">You do not have the Manage documents permission.</li>
+                    <li>You do not have the Manage network printers permission.</li>
+                </ul>
+                <p class="note">In Windows, the "Manage documents" permission specifically controls the ability to pause,
+                    resume, restart, and delete print jobs in the queue. Users can delete their own jobs by default, but
+                    deleting another user's job requires this permission. The Print permission controls sending jobs.
+                    "Manage this printer" controls printer-level administration. "Manage network printers" is not a
+                    standard Windows printer permission.</p>
+            </div>
+
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 19</h2>
+                <p>Which of the following components is an example of firmware?</p>
+                <ul class="answer-list">
+                    <li class="correct">BIOS/UEFI</li>
+                    <li>EEPROM</li>
+                    <li>Cache</li>
+                    <li>RAM</li>
+                </ul>
+                <p class="note">BIOS/UEFI is the canonical example of firmware: software stored on a flash chip on the
+                    motherboard that initializes and controls hardware before the OS loads. EEPROM is the type of memory
+                    chip that firmware is often stored on; it is the medium, not the software itself. Cache is fast
+                    temporary memory used by the CPU. RAM is volatile system memory that loses its contents when powered
+                    off.</p>
+            </div>
+
+            <div class="notes-section question">
+                <h2 class="notes-section-title">Question 20</h2>
+                <p>Which of the following is a sign of a potential malware issue on a mobile device?</p>
+                <ul class="answer-list">
+                    <li>Physical damage to the charging port</li>
+                    <li class="correct">Unusually high battery usage</li>
+                    <li>Device overheating due to direct sunlight exposure</li>
+                    <li>Swollen battery causing device deformation</li>
+                </ul>
+                <p class="note">Malware running in the background consumes CPU cycles, network activity, and memory,
+                    draining the battery faster than normal. Unexplained battery drain is a classic indicator of
+                    unauthorized background processes. Physical damage to the charging port is a hardware wear issue.
+                    Overheating from sunlight is an environmental cause. Battery swelling is caused by degradation,
+                    overcharging, or a manufacturing defect; all hardware/chemical issues unrelated to malware.</p>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>

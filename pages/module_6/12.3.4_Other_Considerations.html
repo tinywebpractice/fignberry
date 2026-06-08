@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.3.4 Other Considerations</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.3.4 Other Considerations</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Overview</h2>
+      <p class="notes-paragraph">Before deploying new applications, their impact on the business, operations, and network devices must be assessed and mitigated. The IT department must maintain control over all third-party software. Unsanctioned software and devices (<strong>shadow IT</strong>) raise substantial operational and business risks.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Impact to Business</h2>
+      <dl class="notes-terms">
+        <dt class="notes-term">Licensing</dt>
+        <dd class="notes-definition">Commercial software must be used within its license constraints, which typically limit the number of devices or users. Installing unlicensed software exposes a company to financial and legal penalties.</dd>
+        <dt class="notes-term">Support</dt>
+        <dd class="notes-definition">Software may come with paid support (updates, security monitoring, technical assistance) or be supported internally. Either way, the impact on IT operations must be assessed.</dd>
+        <dt class="notes-term">Training</dt>
+        <dd class="notes-definition">Complex apps can have substantial and ongoing user-training costs as new versions introduce interface/feature changes, and new employees require initial training. Internal support staff may also need technical training to maintain the application securely.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Impact to Operations</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item">Large-scale deployments (hundreds of desktops) require automated tools to deploy, update, and support applications.</li>
+        <li class="notes-list-item"><strong>Network-based installer:</strong> Setup file is copied to a shared network folder; client computers run setup from the network. In Windows, <strong>Group Policy Objects (GPOs)</strong> can remotely install applications without manual administrator intervention.</li>
+        <li class="notes-list-item"><strong>Push deployment:</strong> Tools such as centrally managed antivirus suites can push the client or security sensor to each desktop remotely.</li>
+        <li class="notes-list-item">Network deployments and image pushes cause <strong>network congestion and increased latency</strong>. Organizations typically schedule these during non-critical times (overnight or weekends).</li>
+        <li class="notes-list-item">GPO deployment allows setup to run under a <strong>service account</strong>, so users do not need local administrator privileges. Write/modify permissions on application directories are restricted to administrator-level accounts, preventing unauthorized changes.</li>
+        <li class="notes-list-item">Users need <strong>read/execute</strong> permission on the application's installation directory. User-specific files and settings should be saved to the user's home folder/profile, not the application directory.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Impact to Device and Network</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Threat / Risk</th>
+            <th>Description</th>
+            <th>Mitigation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Trojan Horse</td>
+            <td>Malware whose true malicious purpose is concealed; designed to steal data or provide covert remote access once installed</td>
+            <td>Install only from trusted sources; verify the installer is digitally signed by a reputable publisher</td>
+          </tr>
+          <tr>
+            <td>Virus-infected installer</td>
+            <td>Setup file infected with a computer virus, intentionally or unintentionally</td>
+            <td>Scan installer for malware; verify digital signatures and hash values</td>
+          </tr>
+          <tr>
+            <td>Resource overconsumption</td>
+            <td>Software consumes more CPU, memory, or network bandwidth than anticipated</td>
+            <td>Test in a lab environment before wide deployment</td>
+          </tr>
+          <tr>
+            <td>Compatibility problems</td>
+            <td>Conflicts with other local or network applications</td>
+            <td>Test in a lab environment; research known compatibility issues</td>
+          </tr>
+          <tr>
+            <td>Unpatched vulnerabilities</td>
+            <td>Could allow worm malware to propagate and crash the network</td>
+            <td>Research security advisories; verify developer has a robust patch process</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="notes-paragraph">Best practice: test all applications in a <strong>lab environment</strong> before deploying more widely. Research security advisories associated with the software and confirm the developer has a robust approach to identifying and resolving security issues.</p>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

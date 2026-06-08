@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.5.3 Exercise: Exploring Windows Utilities</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.5.3 Exercise: Exploring the Purpose of Different Windows Utilities</h1>
+    <p class="notes-paragraph">This is a CompTIA CertMaster Learn exercise. The objective is to identify the purpose of various Windows utilities, navigate Control Panel and Windows Settings, and apply them to real-world troubleshooting scenarios. Exam objective: A+ Core 2 (220-1202) 1.6. Given a scenario, configure Microsoft Windows settings.</p>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Device Manager</h2>
+      <dl class="notes-terms">
+        <dt class="notes-term">Purpose</dt>
+        <dd class="notes-definition">Provides a centralized view of all hardware installed in or connected to the computer. Allows management of device drivers and hardware status.</dd>
+        <dt class="notes-term">Hardware managed</dt>
+        <dd class="notes-definition">Network adapters, display adapters, disk drives, USB controllers, audio devices, processors, input devices (keyboards, mice), and more.</dd>
+        <dt class="notes-term">Troubleshooting a hardware issue</dt>
+        <dd class="notes-definition">Open Device Manager and look for visual indicators: a yellow exclamation point signals a driver or configuration error; a yellow question mark indicates an unknown device; a down arrow means the device is disabled. Right-click the device and select Properties to review the status message and Driver tab. From there, update, roll back, or uninstall the driver as needed.</dd>
+        <dt class="notes-term">Real-world example</dt>
+        <dd class="notes-definition">After a Windows update, a network card stops working. In Device Manager, the adapter shows a yellow exclamation point. Opening Properties reveals a driver conflict. Using the Driver tab to roll back to the previous driver restores connectivity.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Network and Sharing Center</h2>
+      <dl class="notes-terms">
+        <dt class="notes-term">Purpose</dt>
+        <dd class="notes-definition">Displays the current network status and connection type, and provides access to network configuration and troubleshooting tools.</dd>
+        <dt class="notes-term">Viewing and managing connections</dt>
+        <dd class="notes-definition">Shows active network connections and their type (private, public, domain). "Change adapter settings" opens the Network Connections applet listing all installed adapters. Right-clicking an adapter and selecting Properties allows configuration of TCP/IPv4, TCP/IPv6, and other bound protocols.</dd>
+        <dt class="notes-term">Troubleshooting options</dt>
+        <dd class="notes-definition">"Troubleshoot problems" launches the Windows network diagnostics wizard. Adapter properties allow manual IP address configuration. Disabling and re-enabling an adapter can resolve connectivity issues caused by driver or DHCP lease problems.</dd>
+        <dt class="notes-term">Real-world example</dt>
+        <dd class="notes-definition">A user cannot reach the internet despite being connected to the LAN. Opening Network and Sharing Center shows the connection stops at the local network and does not reach the internet. Checking TCP/IPv4 properties reveals the default gateway is misconfigured; correcting it restores internet access.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">System Properties</h2>
+      <dl class="notes-terms">
+        <dt class="notes-term">Location</dt>
+        <dd class="notes-definition">Right-click Start menu and select System, or navigate to Settings &gt; System &gt; About. The classic System Properties dialog is accessible via "Advanced system settings."</dd>
+        <dt class="notes-term">Information displayed</dt>
+        <dd class="notes-definition">Processor type and speed, installed RAM, Windows edition and version, device name, and product ID.</dd>
+        <dt class="notes-term">Advanced System Settings options</dt>
+        <dd class="notes-definition">Performance (visual effects, virtual memory/paging file), User Profiles (stored profiles per user), Startup and Recovery (default OS, crash dump settings), Environment Variables, and Remote (Remote Assistance and Remote Desktop settings).</dd>
+        <dt class="notes-term">Real-world example</dt>
+        <dd class="notes-definition">A workstation is experiencing slow performance. Opening Advanced System Settings and adjusting the virtual memory (paging file) size can provide relief when physical RAM is insufficient for running applications.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Programs and Features</h2>
+      <dl class="notes-terms">
+        <dt class="notes-term">Purpose</dt>
+        <dd class="notes-definition">Lists all installed applications and Windows features. Allows uninstalling, changing, or repairing installed programs. Found in Control Panel; the modern equivalent is Settings &gt; Apps.</dd>
+        <dt class="notes-term">Managing installed software</dt>
+        <dd class="notes-definition">Displays application name, publisher, install date, and disk size. Select a program and click Uninstall to remove it. "Turn Windows features on or off" enables or disables optional OS components (e.g., Hyper-V, Telnet client, IIS).</dd>
+        <dt class="notes-term">Real-world example</dt>
+        <dd class="notes-definition">A technician notices a computer has unknown software consuming significant disk space, possibly installed via a drive-by download from a compromised website. Programs and Features is used to identify and uninstall the unwanted application.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Windows Update</h2>
+      <dl class="notes-terms">
+        <dt class="notes-term">Purpose</dt>
+        <dd class="notes-definition">Downloads and installs OS patches, security updates, driver updates, and feature upgrades from Microsoft. Closing known vulnerabilities is the primary security function.</dd>
+        <dt class="notes-term">Keeping the system current</dt>
+        <dd class="notes-definition">Enable automatic updates so patches install as soon as they are available. Optionally enable notifications before installation. On enterprise networks, updates are first downloaded to a local update server (e.g., WSUS), tested in a sandbox, then pushed to client machines to prevent untested updates from causing network-wide issues.</dd>
+        <dt class="notes-term">Real-world example</dt>
+        <dd class="notes-definition">A critical zero-day vulnerability is disclosed publicly. Microsoft releases an emergency patch. Automatic updates ensure home users receive the fix immediately, while enterprise IT tests and deploys it through their update server within a controlled window.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Optional Utilities</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Utility</th>
+            <th>Purpose</th>
+            <th>Common Use</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Disk Management</td>
+            <td>View, partition, format, and assign drive letters to storage volumes.</td>
+            <td>Initialize a new drive; shrink a volume to create a new partition; assign a missing drive letter.</td>
+          </tr>
+          <tr>
+            <td>Task Manager</td>
+            <td>Monitor running processes, CPU/RAM/disk/network usage, startup programs, and services.</td>
+            <td>Identify a process consuming excessive CPU; disable unnecessary startup programs to improve boot time; end a frozen application.</td>
+          </tr>
+          <tr>
+            <td>Ease of Access Center</td>
+            <td>Configure accessibility features for users with visual, auditory, or motor impairments.</td>
+            <td>Enable Magnifier, Narrator, high contrast mode, or sticky keys for a user with accessibility needs.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

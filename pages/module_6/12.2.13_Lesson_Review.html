@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.2.13 Lesson Review</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.2.13 Lesson Review</h1>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 1</h2>
+      <p class="notes-paragraph">You are troubleshooting a Windows computer for a user who reports that a specific application is not functioning correctly. The user wants to repair the application without uninstalling it. Which of the following steps should you take to resolve the issue?</p>
+      <ul class="answer-list">
+        <li class="correct">Open the "Apps, Programs, and Features" settings, select the application, and choose the "Modify" or "Repair" option if available.</li>
+        <li>Open "System Settings" and adjust the virtual memory to improve application performance.</li>
+        <li>Navigate to "Windows Update" and check for updates related to the application.</li>
+        <li>Open "Device Manager," locate the application, and update its driver.</li>
+      </ul>
+      <p class="note">Settings &gt; Apps &gt; Installed apps (or Programs and Features in Control Panel) allows you to select an installed application and choose Modify or Repair to fix corrupted or missing files without a full uninstall. Virtual memory affects system performance, not individual app functionality. Windows Update delivers OS and driver patches, not app repair. Device Manager manages hardware drivers, not software applications.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 2</h2>
+      <p class="notes-paragraph">You work for a large company as an IT administrator. With the many external attacks being perpetrated in the form of security breaches, you are concerned that your Windows 11 computers may be vulnerable. You also want to ensure that Windows is using the latest features. Which of the following would BEST protect your computers?</p>
+      <ul class="answer-list">
+        <li>Scheduled backups</li>
+        <li>Antivirus updates</li>
+        <li class="correct">Windows updates</li>
+        <li>Scheduled disk maintenance</li>
+      </ul>
+      <p class="note">Windows Update delivers both security patches and Feature Updates, directly addressing both concerns. Scheduled backups aid recovery but do not prevent breaches. Antivirus updates improve security but do not deliver new Windows features. Disk maintenance addresses storage performance, not security or feature currency.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 3</h2>
+      <p class="notes-paragraph">A user reports that their system is running out of storage space, and they suspect that unused applications and unnecessary optional features are taking up significant space. They also want to identify which apps are consuming the most storage. What should the user do to analyze and address the issue?</p>
+      <ul class="answer-list">
+        <li>Access the Update and Security Settings page to delete old Windows updates and free up space.</li>
+        <li>Open the System Settings page and adjust virtual memory settings to free up space.</li>
+        <li class="correct">Open the Apps Settings page to review installed applications and optional features and uninstall unnecessary ones.</li>
+        <li>Use the Device Settings page to check for unused hardware drivers and remove them.</li>
+      </ul>
+      <p class="note">Settings &gt; Apps &gt; Installed apps shows all applications and storage usage and allows uninstalling unused apps and disabling optional Windows Features. Update cleanup frees limited space and does not address app or feature storage. Virtual memory is a performance setting, not a storage reclamation tool. Device Settings manages hardware configuration, not software storage.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 4</h2>
+      <p class="notes-paragraph">A user reports that their USB mouse, which was working previously, is no longer functioning after a recent Windows update. Upon investigation, you find that the mouse is listed in Device Manager with a warning icon. You suspect the issue is related to the driver. What is the BEST course of action?</p>
+      <ul class="answer-list">
+        <li class="correct">Roll back the driver to a previous version using Device Manager.</li>
+        <li>Disable and re-enable the mouse in the Bluetooth &amp; Devices Settings page.</li>
+        <li>Adjust the performance options in the System Settings page to prioritize foreground processes.</li>
+        <li>Use the Devices and Printers applet to manually add the mouse again.</li>
+      </ul>
+      <p class="note">The device has a warning icon and stopped working after a Windows update, a clear driver compatibility issue. Device Manager's Roll Back Driver option restores the previous driver version. Toggling the device in Bluetooth &amp; Devices does not fix driver incompatibility. Performance options have no effect on device driver functionality. The mouse is already detected; the issue is driver-related, not a detection problem.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 5</h2>
+      <p class="notes-paragraph">A user wants to uninstall an application that they no longer use and also check if there are any optional features they can add to enhance their system's functionality. Which section of Windows Settings should they navigate to?</p>
+      <ul class="answer-list">
+        <li>Device Settings</li>
+        <li class="correct">Apps Settings</li>
+        <li>Update and Security Settings</li>
+        <li>System Settings</li>
+      </ul>
+      <p class="note">Settings &gt; Apps covers both tasks: uninstalling applications via Installed apps and enabling/disabling optional Windows Features. Device Settings manages hardware peripherals. Update and Security handles patches and recovery. System Settings covers display, sound, power, and notifications.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 6</h2>
+      <p class="notes-paragraph">Why is the Administrative Tools menu important in Windows system management?</p>
+      <ul class="answer-list">
+        <li class="correct">It provides shortcuts to configure advanced system settings and management tools.</li>
+        <li>It provides access to the Windows Update settings for patch management.</li>
+        <li>It allows users to install third-party applications directly.</li>
+        <li>It is used to manage user accounts and passwords exclusively.</li>
+      </ul>
+      <p class="note">Administrative Tools / Windows Tools is a folder of shortcuts to advanced configuration consoles such as Event Viewer, Computer Management, Services, Registry Editor, and Task Scheduler. Windows Update is in Settings &gt; Update &amp; Security. Administrative Tools contains management consoles, not a software installer. While Local Users and Groups is one snap-in available through Computer Management, Administrative Tools covers a much broader range of functions.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 7</h2>
+      <p class="notes-paragraph">You are a system administrator tasked with troubleshooting a printer that is connected to a Windows computer but is not functioning properly. You suspect the issue is related to the printer driver. Which tool should you use to verify the printer driver and update it if necessary?</p>
+      <ul class="answer-list">
+        <li>System Settings page for Display and Sound</li>
+        <li>Devices and Printers applet in Control Panel</li>
+        <li class="correct">Device Manager</li>
+        <li>Bluetooth &amp; Devices Settings page</li>
+      </ul>
+      <p class="note">Device Manager is the correct tool for verifying driver status and updating, rolling back, or reinstalling drivers for any hardware device including printers. Display and Sound settings are unrelated to printer drivers. Devices and Printers shows connected devices but does not expose driver management at the needed level. Bluetooth &amp; Devices manages adding/removing devices and basic preferences, not driver updates.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 8</h2>
+      <p class="notes-paragraph">Which settings page in Windows allows you to configure Display and Sound devices?</p>
+      <ul class="answer-list">
+        <li>Bluetooth &amp; Devices Settings</li>
+        <li>Device Manager</li>
+        <li class="correct">System Settings</li>
+        <li>Devices and Printers applet</li>
+      </ul>
+      <p class="note">The System settings pages contain options for configuring Display (Settings &gt; System &gt; Display) and Sound (Settings &gt; System &gt; Sound) devices. Bluetooth &amp; Devices handles input devices, printers, and Bluetooth peripherals. Device Manager manages drivers at an advanced level. Devices and Printers is for adding and managing connected peripheral devices.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 9</h2>
+      <p class="notes-paragraph">Which of the following methods can be used to access the Administrative Tools menu in Windows?</p>
+      <ul class="answer-list">
+        <li>By right-clicking on the desktop</li>
+        <li>By pressing Ctrl + Alt + Del</li>
+        <li class="correct">Through the Control Panel</li>
+        <li>Through the Task Manager</li>
+      </ul>
+      <p class="note">Administrative Tools / Windows Tools is accessed via Control Panel, where it appears as a shortcut to the folder of advanced management consoles. The desktop context menu offers display and personalization options. Ctrl+Alt+Del opens the Windows security screen. Task Manager monitors processes and performance and does not link to Administrative Tools.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 10</h2>
+      <p class="notes-paragraph">A user reports that their Windows 10 computer is unable to connect to the internet after a recent update. Upon investigation, you find that the network adapter is enabled, but the system is not obtaining an IP address automatically. Which of the following actions should you take to analyze and resolve the issue?</p>
+      <ul class="answer-list">
+        <li class="correct">Check the Windows Event Viewer logs for errors related to the network adapter.</li>
+        <li>Disable and re-enable the Windows Defender Firewall to reset network settings.</li>
+        <li>Uninstall and reinstall the most recent Windows update to restore connectivity.</li>
+        <li>Manually assign a static IP address to the network adapter.</li>
+      </ul>
+      <p class="note">Event Viewer logs provide detailed information about errors related to the network adapter or recent updates, allowing you to identify the root cause (failed update, driver issue, etc.) and take appropriate corrective action. The firewall does not control IP address assignment or DHCP functionality. Manually assigning a static IP is a workaround, not a solution. It does not address why DHCP is failing. Uninstalling updates should only be done after confirming the update is the root cause, which requires analysis first.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 11</h2>
+      <p class="notes-paragraph">Which of the following is a primary purpose of the Network Settings in Windows?</p>
+      <ul class="answer-list">
+        <li class="correct">To manage network connections and settings.</li>
+        <li>To adjust power options for energy efficiency.</li>
+        <li>To configure display and sound devices.</li>
+        <li>To configure user profiles and environment variables.</li>
+      </ul>
+      <p class="note">Settings &gt; Network &amp; Internet is used to view network status, configure IP address properties per adapter, assign network profiles, and access related tools. Power options are in Settings &gt; System &gt; Power &amp; Sleep. Display and Sound are in Settings &gt; System. User profiles and environment variables are in Advanced system settings.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 12</h2>
+      <p class="notes-paragraph">You are leaving the office for a two-hour journey home with a laptop whose battery only lasts about one hour. You have many programs and files open. When you arrive home and open the lid, nothing happens; after plugging in and powering on, all programs and files have been closed. Which power setting should you configure to prevent this in future?</p>
+      <ul class="answer-list">
+        <li class="correct">When I close the lid: Hibernate</li>
+        <li>When I close the lid: Sleep/Suspend</li>
+        <li>When I close the lid: Shut down</li>
+        <li>When I close the lid: Standby</li>
+      </ul>
+      <p class="note">Hibernate saves the entire RAM contents to disk (hiberfil.sys) and powers off completely, so no battery is consumed during transit and all work is restored exactly as left. Sleep/Suspend and Standby maintain power to RAM and would drain the failing battery within the one-hour lifespan, causing data loss. Shut down does not save open programs and files.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 13</h2>
+      <p class="notes-paragraph">Which keyboard shortcut provides access to the Management Shortcuts menu in Windows, allowing users to quickly access tools like Device Manager, Disk Management, and Task Manager?</p>
+      <ul class="answer-list">
+        <li>Alt + Tab</li>
+        <li>Ctrl + Alt + Del</li>
+        <li>Windows + R</li>
+        <li class="correct">Windows + X</li>
+      </ul>
+      <p class="note">Win+X (or right-clicking the Windows button) opens the WinX menu with direct shortcuts to Device Manager, Disk Management, Computer Management, Task Manager, and other administrative tools. Alt+Tab cycles through open windows. Ctrl+Alt+Del opens the Windows security screen. Win+R opens the Run dialog.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 14</h2>
+      <p class="notes-paragraph">Which of the following best describes the purpose of the "Apps, Programs, and Features" settings in Windows?</p>
+      <ul class="answer-list">
+        <li>To manage hardware devices and install drivers for peripherals.</li>
+        <li class="correct">To manage and configure installed applications.</li>
+        <li>To update the operating system and install security patches.</li>
+        <li>To configure system-level settings such as power options and virtual memory.</li>
+      </ul>
+      <p class="note">Apps, Programs, and Features settings are used to view, uninstall, modify, and repair installed applications, enable or disable Windows Features, set default apps, and manage startup apps. Hardware and driver management is in Device Manager and Bluetooth &amp; Devices. OS updates and patches are in Windows Update. Power options and virtual memory are in System Settings and Advanced system settings.</p>
+    </div>
+
+    <div class="notes-section question">
+      <h2 class="notes-section-title">Question 15</h2>
+      <p class="notes-paragraph">Which of the following options can be configured on the System Settings page of the Windows Settings app?</p>
+      <ul class="answer-list">
+        <li>Windows Defender Firewall rule sets</li>
+        <li>Device drivers for hardware peripherals</li>
+        <li>Desktop visual effects and virtual memory settings</li>
+        <li class="correct">Input and output devices, power, and clipboard settings</li>
+      </ul>
+      <p class="note">The System Settings page presents options for configuring input and output devices, power, remote desktop, notifications, and clipboard. Firewall rules are configured in Windows Security and Windows Defender Firewall with Advanced Security. Device drivers are managed in Device Manager. Desktop visual effects and virtual memory are under Advanced system settings, accessible via the About page's related links, not the System Settings page itself.</p>
+    </div>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

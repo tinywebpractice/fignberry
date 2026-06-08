@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11.3.5 Linux and macOS File System Types</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">11.3.5 Linux and macOS File System Types</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Linux File Systems</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>File System</th>
+            <th>Description</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ext4</td>
+            <td>Latest version of the extended (ext) file system; default for most Linux distros</td>
+            <td>Better performance than earlier ext versions; supports journaling</td>
+          </tr>
+          <tr>
+            <td>XFS</td>
+            <td>High Performance Scalable File System; introduced 1993; 64-bit journaling</td>
+            <td>Default for Red Hat Enterprise Linux (RHEL); supported by other distros</td>
+          </tr>
+          <tr>
+            <td>VFAT (FAT/FAT32)</td>
+            <td>Linux designation for FAT/FAT32 support</td>
+            <td>Alternative to ext; useful for cross-OS removable media</td>
+          </tr>
+          <tr>
+            <td>NFS (Network File System)</td>
+            <td>Protocol for mounting remote storage devices to the local Linux file system</td>
+            <td>Allows a remote file resource to appear as if directly attached to the local system</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Apple File System (APFS)</h2>
+      <p class="notes-paragraph">APFS is the proprietary file system used on Apple Mac workstations and laptops. It supports journaling, snapshots, permissions/ownership, and encryption.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Default File System by OS</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>OS</th>
+            <th>Default File System</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Windows</td>
+            <td>NTFS</td>
+          </tr>
+          <tr>
+            <td>Linux (most distros)</td>
+            <td>ext4</td>
+          </tr>
+          <tr>
+            <td>Linux (RHEL)</td>
+            <td>XFS</td>
+          </tr>
+          <tr>
+            <td>macOS</td>
+            <td>APFS</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

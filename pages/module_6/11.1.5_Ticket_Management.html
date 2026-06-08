@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11.1.5 Ticket Management</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">11.1.5 Ticket Management</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Ticket Management Overview</h2>
+                <p class="notes-paragraph">After a ticket is opened, the troubleshooting process is applied until
+                    resolution. The system must track ownership (who is handling the ticket) and status (what has been
+                    done) at each stage. Clear written communication is required throughout, including across escalation
+                    routes.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Escalation</h2>
+                <p class="notes-paragraph">Escalation occurs when an agent cannot resolve the ticket. Common reasons
+                    include:</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">The incident is related to a problem requiring analysis by senior
+                        technicians or a third-party/warranty support service.</li>
+                    <li class="notes-list-item">The incident severity needs to be upgraded (minor to major, or major to
+                        critical), requiring senior decision-maker involvement.</li>
+                    <li class="notes-list-item">The incident requires sales or marketing involvement to handle service
+                        complaints or refund requests.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Support Tier Model</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Tier</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tier 0</td>
+                            <td>Self-service options: knowledge base (FAQs and common troubleshooting procedures) or
+                                help bot. User attempts resolution before filing a ticket.</td>
+                        </tr>
+                        <tr>
+                            <td>Tier 1</td>
+                            <td>Initial agent contact for diagnosis and possible incident resolution.</td>
+                        </tr>
+                        <tr>
+                            <td>Tier 2: Internal</td>
+                            <td>Escalation to senior technicians within the organization.</td>
+                        </tr>
+                        <tr>
+                            <td>Tier 2: External</td>
+                            <td>Escalation to a third-party support group.</td>
+                        </tr>
+                        <tr>
+                            <td>Tier 3</td>
+                            <td>Escalation as a problem to a development/engineering team or to senior managers and
+                                decision-makers.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

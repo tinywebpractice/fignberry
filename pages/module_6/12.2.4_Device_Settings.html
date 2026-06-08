@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.2.4 Device Settings</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.2.4 Device Settings</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Plug and Play</h2>
+      <p class="notes-paragraph">Most Windows-compatible hardware uses <strong>Plug and Play (PnP)</strong>. Windows automatically detects new devices, locates drivers, and configures them with minimal user input. Drivers are most commonly supplied via <strong>Windows Update</strong>; in some cases the vendor provides a setup program to install drivers before connecting the device.</p>
+      <p class="notes-paragraph"><strong>Important:</strong> On a 64-bit edition of Windows, you must use 64-bit device drivers. 32-bit drivers will not work.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Device Management Interfaces</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Interface</th>
+            <th>Location</th>
+            <th>Used For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>System settings</td>
+            <td>Settings &gt; System</td>
+            <td>Display and Sound device configuration</td>
+          </tr>
+          <tr>
+            <td>Bluetooth &amp; Devices</td>
+            <td>Settings &gt; Bluetooth &amp; devices (Windows 11)</td>
+            <td>Input devices (mice, keyboards, touch), printers/scanners, Bluetooth/USB peripherals, cameras, AutoPlay, USB</td>
+          </tr>
+          <tr>
+            <td>Mobile Devices</td>
+            <td>Settings &gt; Bluetooth &amp; devices &gt; Mobile devices</td>
+            <td>Link a smartphone to the PC</td>
+          </tr>
+          <tr>
+            <td>Devices and Printers</td>
+            <td>Control Panel &gt; Devices and Printers</td>
+            <td>Add devices/printers manually; shortcuts to configuration pages for connected devices</td>
+          </tr>
+          <tr>
+            <td>Device Manager</td>
+            <td>Control Panel &gt; Device Manager (or via System settings)</td>
+            <td>Advanced management of system and peripheral devices; device properties, driver settings, events, troubleshooting</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Bluetooth &amp; Devices (Windows 11) - Subcategories</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item"><strong>Bluetooth</strong> - Toggle on/off; shows discoverable name and paired devices</li>
+        <li class="notes-list-item"><strong>Devices</strong> - Mouse, keyboard, pen, audio, displays, docks, and other devices; Add device button</li>
+        <li class="notes-list-item"><strong>Printers &amp; scanners</strong> - Preferences and troubleshooting</li>
+        <li class="notes-list-item"><strong>Mobile devices</strong> - Link smartphone to PC</li>
+        <li class="notes-list-item"><strong>Cameras</strong> - Connected cameras and default image settings</li>
+        <li class="notes-list-item"><strong>Mouse</strong> - Buttons, pointer speed, scrolling</li>
+        <li class="notes-list-item"><strong>Pen &amp; Windows Ink</strong> - Handedness, pen button shortcuts, handwriting</li>
+        <li class="notes-list-item"><strong>AutoPlay</strong> - Defaults for removable drives and memory cards</li>
+        <li class="notes-list-item"><strong>USB</strong> - Notifications, USB battery saver</li>
+      </ul>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Scenario - Correct Tool Selection</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Scenario</th>
+            <th>Correct Tool</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Add a new wireless printer to a workstation</td>
+            <td>Bluetooth &amp; Devices &gt; Printers &amp; scanners (or Devices and Printers in Control Panel)</td>
+          </tr>
+          <tr>
+            <td>Link a smartphone to a PC</td>
+            <td>Bluetooth &amp; Devices &gt; Mobile devices</td>
+          </tr>
+          <tr>
+            <td>Update or manage the driver for a USB keyboard</td>
+            <td>Device Manager</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

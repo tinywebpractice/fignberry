@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>13.1.2 Disk Management Console</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">13.1.2 Disk Management Console</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Overview</h2>
+      <p class="notes-paragraph">The Disk Management console summarizes all fixed and removable disks (HDDs, SSDs, optical drives) attached to the system. HDDs and SSDs can be divided into logical partitions, each represented as a volume in the top pane.</p>
+      <dl class="notes-terms">
+        <dt class="notes-term">Partition</dt>
+        <dd class="notes-definition">A defined region of an HDD or SSD storage space.</dd>
+        <dt class="notes-term">Volume</dt>
+        <dd class="notes-definition">A logical storage unit for the OS, often mapped 1:1 with a partition. Can also span multiple devices/partitions via RAID.</dd>
+        <dt class="notes-term">Drive</dt>
+        <dd class="notes-definition">In Windows, typically refers to a volume assigned a drive letter; can also mean the physical hardware storage device.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Disk 0 Standard Volumes</h2>
+      <p class="notes-paragraph">Disk 0 (the OS disk) typically contains at least three volumes:</p>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Volume</th>
+            <th>Contents</th>
+            <th>Drive Letter</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>System Volume</td>
+            <td>Boot files; uses EFI (Extensible Firmware Interface)</td>
+            <td>None assigned</td>
+          </tr>
+          <tr>
+            <td>Boot Volume</td>
+            <td>OS files (Windows)</td>
+            <td>C:</td>
+          </tr>
+          <tr>
+            <td>Recovery Partition(s)</td>
+            <td>Repair/factory reset tools (WinRE or PC vendor tool)</td>
+            <td>None assigned</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Disk Management Tasks</h2>
+      <dl class="notes-terms">
+        <dt class="notes-term">Initializing disks</dt>
+        <dd class="notes-definition">New unformatted disks must be initialized before use. Choose a partition style: <strong>MBR</strong> (Master Boot Record) or <strong>GPT</strong> (GUID Partition Table). Both define how partition information is stored on the disk.</dd>
+        <dt class="notes-term">Partitioning</dt>
+        <dd class="notes-definition">Each disk needs at least one partition. Right-click unpartitioned (unallocated) space and follow the wizard to create a new partition.</dd>
+        <dt class="notes-term">Formatting</dt>
+        <dd class="notes-definition">Writes a file system to a partition so Windows can read/write files. Reformatting an existing partition deletes all data. Options include volume label and allocation unit size.
+          <ul class="notes-list">
+            <li class="notes-list-item"><strong>NTFS</strong>: standard for Windows volumes and boot/system partitions.</li>
+            <li class="notes-list-item"><strong>FAT32</strong>: used for small removable drives; required for the system partition during OS setup.</li>
+          </ul>
+        </dd>
+        <dt class="notes-term">Repartitioning</dt>
+        <dd class="notes-definition">Expand existing partitions into adjacent unallocated space, or shrink/remove partitions to free space. System and boot partitions cannot be formatted or deleted.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Sectors and Clusters</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Concept</th>
+            <th>Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sector</td>
+            <td>Smallest physical storage unit; traditionally 512 bytes. Advanced Format drives use 4K sectors.</td>
+          </tr>
+          <tr>
+            <td>Cluster (allocation unit)</td>
+            <td>File system groups sectors into clusters of 2, 4, or 8 sectors. Smaller clusters = better capacity efficiency. Larger clusters = better I/O performance for large files.</td>
+          </tr>
+          <tr>
+            <td>4K Native mode</td>
+            <td>Advanced Format disk uses 4K sectors natively if supported by the OS.</td>
+          </tr>
+          <tr>
+            <td>512e mode</td>
+            <td>Advanced Format disk emulates 512-byte sectors for compatibility when native 4K is not supported.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Notes</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item">During OS setup: boot partition must be <strong>NTFS</strong>; system partition must be <strong>FAT32</strong>.</li>
+        <li class="notes-list-item">Dynamic disks are <strong>deprecated</strong>. Software RAID is now handled by <strong>Storage Spaces</strong>.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

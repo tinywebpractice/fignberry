@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.5.2 Windows Network Settings</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.5.2 Windows Network Settings</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Device Manager</h2>
+      <p class="notes-paragraph">Device Manager is the primary utility for managing and troubleshooting hardware, including network adapters. Modern computers often have multiple network adapters listed (wired, wireless, and virtual machine adapters).</p>
+      <ul class="notes-list">
+        <li class="notes-list-item">Focus on physical (wired) and wireless adapters for real-world connectivity troubleshooting.</li>
+        <li class="notes-list-item">Visual indicators guide diagnosis:</li>
+      </ul>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Indicator</th>
+            <th>Meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>No icon</td>
+            <td>Device working properly (per the OS)</td>
+          </tr>
+          <tr>
+            <td>Yellow exclamation point</td>
+            <td>Driver or configuration issue</td>
+          </tr>
+          <tr>
+            <td>Yellow question mark</td>
+            <td>Unknown / unrecognized device</td>
+          </tr>
+          <tr>
+            <td>"Device is disabled"</td>
+            <td>Adapter has been manually disabled</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="notes-paragraph">Note: "Device is working properly" means the OS sees no hardware fault. It does not confirm a working network connection. A cable or upstream issue can still prevent connectivity.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Adapter Properties - Tabs</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Tab</th>
+            <th>Contents</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>General</td>
+            <td>Device status (working properly, error codes)</td>
+          </tr>
+          <tr>
+            <td>Driver</td>
+            <td>Driver version, update, roll back, and uninstall options</td>
+          </tr>
+          <tr>
+            <td>Details</td>
+            <td>Advanced device and driver properties</td>
+          </tr>
+          <tr>
+            <td>Events</td>
+            <td>Log of device-related system events</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Driver Management</h2>
+      <p class="notes-paragraph">Drivers are written by third-party manufacturers and vary in quality. Common driver issues:</p>
+      <ul class="notes-list">
+        <li class="notes-list-item">Incompatibility with specific Windows versions or applications.</li>
+        <li class="notes-list-item">OS updates can break previously working drivers.</li>
+        <li class="notes-list-item">New hardware drivers may not work with the current OS version out of the box.</li>
+      </ul>
+      <p class="notes-paragraph"><strong>Roll back driver</strong>: if a new or updated driver causes problems, use the Driver tab to revert to the previously installed version. Always check the manufacturer's website for version-specific compatibility notes.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Network Connections (Legacy Applet)</h2>
+      <p class="notes-paragraph">Accessed via Start &gt; search "network connections." Lists all network adapters on the system, including disabled ones (e.g., Wi-Fi disabled, Bluetooth disabled).</p>
+      <ul class="notes-list">
+        <li class="notes-list-item">Right-click any adapter and select <strong>Properties</strong> to view the services and protocols bound to it.</li>
+        <li class="notes-list-item"><strong>TCP/IPv4</strong> must be present and enabled for internet connectivity. If missing, this is the cause of no internet access.</li>
+        <li class="notes-list-item">Click TCP/IPv4 and select <strong>Properties</strong> to manually configure IP address, subnet mask, gateway, and DNS settings.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Network Status Applet (Modern)</h2>
+      <p class="notes-paragraph">The newer Settings-based network status applet provides a quick overview of current connectivity, distinguishing between local network connection and internet access (a device can be connected to a network without reaching the internet).</p>
+      <ul class="notes-list">
+        <li class="notes-list-item">Shows connection status to the internet at a glance.</li>
+        <li class="notes-list-item">Links to Wi-Fi settings, Ethernet settings, and the legacy network connections utility.</li>
+        <li class="notes-list-item">Useful first stop when troubleshooting connectivity issues.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10.5.1 Connecting Printers</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">10.5.1 Connecting Printers</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">USB Connection</h2>
+                <p class="notes-paragraph">USB is the most common local connection method. The USB-B connector plugs
+                    into the printer; USB-A connects to the computer. Driver installation order matters: always consult
+                    the printer manual, as some older printers require the driver to be installed before connecting the
+                    USB cable. Connecting first can cause the OS to load an incorrect driver, which must then be fully
+                    uninstalled before the correct one can be applied.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Ethernet Connection</h2>
+                <p class="notes-paragraph">Many modern printers include a built-in NIC for direct connection to a TCP/IP
+                    network. An IP address is required; it can be assigned via DHCP or set statically.</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Static IP is preferred for network printers on large networks: the
+                        address does not change, allowing registration in DNS with a fully qualified domain name (FQDN)
+                        so clients can resolve the printer by name</li>
+                    <li class="notes-list-item">DHCP can cause issues if the lease changes and DNS is not updated,
+                        making the printer unreachable by name</li>
+                    <li class="notes-list-item">Local configuration utilities (often from the manufacturer) allow
+                        management of the printer from a connected computer, including ink/toner status monitoring</li>
+                    <li class="notes-list-item">Network management suites support larger deployments: device monitoring,
+                        print permissions, and queue control across multiple printers</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Bluetooth Connection</h2>
+                <p class="notes-paragraph">Bluetooth printers support direct printing from nearby devices. Effective
+                    range is approximately 30 feet. Multiple computers can discover and print to the same Bluetooth
+                    printer.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Wi-Fi Connection</h2>
+                <p class="notes-paragraph">Wi-Fi printers support two modes:</p>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Infrastructure mode</dt>
+                    <dd class="notes-definition">The printer associates with a wireless access point and joins the
+                        network. All devices on the network can print to it. This is the standard and recommended mode.
+                    </dd>
+                    <dt class="notes-term">Wi-Fi Direct</dt>
+                    <dd class="notes-definition">A device connects directly to the printer without going through an
+                        access point, similar to an ad hoc link. Less common; bypasses normal network infrastructure.
+                    </dd>
+                </dl>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Printer Drivers</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Drivers provide OS-level communication and unlock printer features; keep
+                        them current</li>
+                    <li class="notes-list-item">High-end and network printers may also have firmware updates for new
+                        functionality and security patches</li>
+                    <li class="notes-list-item">If a new driver causes problems, roll it back via Device Manager</li>
+                    <li class="notes-list-item">Check the manufacturer's website for compatibility notes before applying
+                        major OS or driver updates</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Sharing Printers</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Method</th>
+                            <th>How it works</th>
+                            <th>Best for</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Built-in print server</td>
+                            <td>Printer has an onboard server; manages its own queue and accepts jobs directly over the
+                                network</td>
+                            <td>Most deployments; simplest setup</td>
+                        </tr>
+                        <tr>
+                            <td>Computer as print server</td>
+                            <td>Printer connects via USB to a host computer; that computer manages the queue and shares
+                                the printer to other network users</td>
+                            <td>Older printers without network capability; small networks</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Printer Preferences</h2>
+                <p class="notes-paragraph">Accessible by right-clicking the printer object in the OS. Common
+                    configurable options include:</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Paper orientation (portrait/landscape)</li>
+                    <li class="notes-list-item">Paper source/feeder selection</li>
+                    <li class="notes-list-item">Duplex (double-sided) printing</li>
+                    <li class="notes-list-item">Print quality settings</li>
+                    <li class="notes-list-item">Specialty media handling (envelopes, labels, etc.)</li>
+                </ul>
+                <p class="notes-paragraph">Available options vary by manufacturer and installed driver.</p>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

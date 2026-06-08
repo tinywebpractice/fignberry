@@ -120,7 +120,7 @@
             </ul>
             <p class="note">A CNAME (Canonical Name) record creates an alias from one domain name to another. AAAA maps
                 a hostname to an IPv6 address. PTR is for reverse DNS (IP to hostname). A Record maps a hostname to an
-                IPv4 address -- not for aliasing one domain to another.</p>
+                IPv4 address - not for aliasing one domain to another.</p>
         </div>
 
         <div class="notes-section question">
@@ -133,7 +133,7 @@
                 <li>The affected devices are using static IP addresses that conflict with the DHCP scope</li>
                 <li>The DNS server is misconfigured, preventing devices from resolving domain names</li>
             </ul>
-            <p class="note">169.254.x.x is APIPA -- devices self-assign these when they can't get a DHCP lease. The
+            <p class="note">169.254.x.x is APIPA - devices self-assign these when they can't get a DHCP lease. The
                 server is running and other devices are fine, so the scope is likely exhausted. An incorrect subnet mask
                 would affect all devices. Static IP conflicts cause IP conflicts, not APIPA. DNS issues cause name
                 resolution failures, not APIPA assignment.</p>
@@ -176,7 +176,7 @@
                 <li>The VLAN configuration on the network switch is incorrect</li>
                 <li>The DHCP server is not assigning IP addresses to client devices</li>
             </ul>
-            <p class="note">IP access works but domain name access doesn't -- the classic DNS failure symptom. Routing
+            <p class="note">IP access works but domain name access doesn't - the classic DNS failure symptom. Routing
                 and connectivity are fine; only name resolution is broken. MAC addresses don't affect web access by
                 domain name. A VLAN misconfiguration would affect all connectivity. If DHCP were failing, users wouldn't
                 have IPs and couldn't reach the site by IP either.</p>
@@ -220,10 +220,10 @@
                 <li class="correct">The switch is not configured with a router or Layer 3 device to enable inter-VLAN
                     communication</li>
             </ul>
-            <p class="note">VLANs are isolated broadcast domains by design -- traffic between VLANs requires a router or
+            <p class="note">VLANs are isolated broadcast domains by design - traffic between VLANs requires a router or
                 Layer 3 switch. Different subnets across VLANs are normal and expected; a router handles that. Merging
                 all devices into one VLAN defeats the purpose of VLANs. Inter-VLAN communication is possible via routing
-                -- a single VLAN is not required.</p>
+                - a single VLAN is not required.</p>
         </div>
 
         <div class="notes-section question">
@@ -238,7 +238,7 @@
             </ul>
             <p class="note">Segmenting departments into separate VLANs on a single switch contains each department's
                 broadcast traffic. A single VLAN for all devices does nothing to reduce broadcast interference. VLANs
-                are a logical separation -- physically connecting to different switches doesn't require VLANs. Switches
+                are a logical separation - physically connecting to different switches doesn't require VLANs. Switches
                 don't assign IPs (that's DHCP), and dynamic IP assignment doesn't reduce broadcast traffic.</p>
         </div>
 
@@ -251,7 +251,7 @@
                 <li>The DNS server is down and not responding to any queries</li>
                 <li>The user's device has an incorrect subnet mask configured in its TCP/IP settings</li>
             </ul>
-            <p class="note">NXDOMAIN means "Non-Existent Domain" -- the DNS server responded but has no record of that
+            <p class="note">NXDOMAIN means "Non-Existent Domain" - the DNS server responded but has no record of that
                 domain. Other sites resolve fine, confirming DNS is functional. A corrupted cache would return a wrong
                 IP, not NXDOMAIN. If DNS were down, no sites would resolve and no response would come back at all. A
                 subnet mask issue would break all internet connectivity.</p>
@@ -267,7 +267,7 @@
                 <li>AAAA Record</li>
             </ul>
             <p class="note">A CNAME creates an alias from one domain to another, redirecting traffic without maintaining
-                two separate sites. An A Record maps a hostname to an IPv4 address -- requires pointing to a specific
+                two separate sites. An A Record maps a hostname to an IPv4 address - requires pointing to a specific
                 IP, not another domain. MX Records direct incoming email traffic, not web traffic. AAAA maps to an IPv6
                 address, not for domain aliasing.</p>
         </div>

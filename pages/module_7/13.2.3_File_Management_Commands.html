@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>13.2.3 File Management Commands</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">13.2.3 File Management Commands</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Moving and Copying Files</h2>
+      <p class="notes-paragraph">The <code>move</code> and <code>copy</code> commands transfer files using a three-part syntax:</p>
+      <p class="notes-paragraph"><code>command Source Destination</code></p>
+      <p class="notes-paragraph"><code>Source</code> specifies the drive, path, and filename to move or copy. <code>Destination</code> specifies the target drive and path.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Copying Directory Structures: robocopy</h2>
+      <p class="notes-paragraph"><code>robocopy</code> ("robust copy") is the preferred file copy utility over <code>xcopy</code>. Microsoft recommends it for better handling of long file names and NTFS attributes. Use the <code>/mov</code> switch to move files instead of copying.</p>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Switch</th>
+            <th>Function</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>/xf</code></td>
+            <td>Exclude files matching specified names or paths</td>
+          </tr>
+          <tr>
+            <td><code>/xd</code></td>
+            <td>Exclude directories matching specified names or paths</td>
+          </tr>
+          <tr>
+            <td><code>/S</code></td>
+            <td>Copy subdirectories, excluding empty ones</td>
+          </tr>
+          <tr>
+            <td><code>/E</code></td>
+            <td>Copy all subdirectories, including empty ones</td>
+          </tr>
+          <tr>
+            <td><code>/L</code></td>
+            <td>List files/directories that would be copied without actually copying</td>
+          </tr>
+          <tr>
+            <td><code>/mov</code></td>
+            <td>Move files (delete from source after copying)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Creating a Directory: md / mkdir</h2>
+      <p class="notes-paragraph">Use <code>md</code> or <code>mkdir</code> to create a new directory.</p>
+      <ul class="notes-list">
+        <li class="notes-list-item"><code>md Data</code> creates a directory named Data in the current directory.</li>
+        <li class="notes-list-item"><code>md A:\Data\Docs</code> creates Docs inside Data on the A drive, regardless of the current drive.</li>
+      </ul>
+      <p class="notes-paragraph">Reserved characters that cannot be used in folder or file names: <code>\ / : * ? " &lt; &gt; |</code></p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Removing a Directory: rd / rmdir</h2>
+      <p class="notes-paragraph">Use <code>rd Directory</code> or <code>rmdir Directory</code> to delete a directory.</p>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Switch</th>
+            <th>Function</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>/s</code></td>
+            <td>Remove directory even if it contains files or subdirectories</td>
+          </tr>
+          <tr>
+            <td><code>/q</code></td>
+            <td>Quiet mode; suppress confirmation prompts</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

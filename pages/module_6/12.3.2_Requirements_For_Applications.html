@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.3.2 OS Requirements for Applications</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.3.2 OS Requirements for Applications</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Application to OS Compatibility</h2>
+      <p class="notes-paragraph">Every software application is designed to run under a specific operating system. Key compatibility considerations:</p>
+      <ul class="notes-list">
+        <li class="notes-list-item">An app built for macOS will not run on Windows and vice versa. Always select the version that matches your OS.</li>
+        <li class="notes-list-item">An app may not be supported under newer OS versions; upgrading the OS may require upgrading the application as well.</li>
+        <li class="notes-list-item">On Linux, different package formats exist per distro, but cross-distro compatibility is generally not a significant issue. Apps not available in a compatible package can be compiled from source code manually.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">32-bit vs. 64-bit Compatibility</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>App Type</th>
+            <th>Requires</th>
+            <th>Can run on 64-bit platform?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>64-bit application</td>
+            <td>64-bit CPU + 64-bit OS</td>
+            <td>Yes (only)</td>
+          </tr>
+          <tr>
+            <td>32-bit application</td>
+            <td>32-bit or 64-bit CPU + OS</td>
+            <td>Yes, via WOW64</td>
+          </tr>
+        </tbody>
+      </table>
+      <dl class="notes-terms">
+        <dt class="notes-term">WOW64 (Windows on Windows 64-bit)</dt>
+        <dd class="notes-definition">A special application environment in 64-bit Windows that replicates the 32-bit environment expected by an application and translates its requests into operations the 64-bit CPU, memory, and file subsystems can process. Many Windows applications are still 32-bit and run via WOW64.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">File System Locations on 64-bit Windows</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Content</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>64-bit application files</td>
+            <td><code>Program Files</code></td>
+          </tr>
+          <tr>
+            <td>32-bit application files</td>
+            <td><code>Program Files (x86)</code></td>
+          </tr>
+          <tr>
+            <td>64-bit shared system files (DLLs, EXEs)</td>
+            <td><code>%SystemRoot%\system32</code></td>
+          </tr>
+          <tr>
+            <td>32-bit system files (on 64-bit Windows)</td>
+            <td><code>%SystemRoot%\syswow64</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="notes-paragraph">Note: The naming is counterintuitive. <code>system32</code> holds 64-bit files and <code>syswow64</code> holds 32-bit files on a 64-bit Windows installation.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Viewing Compatibility Settings</h2>
+      <p class="notes-paragraph">To view or configure application compatibility settings: locate the <code>.exe</code> file &gt; right-click &gt; <strong>Properties</strong> &gt; select the <strong>Compatibility</strong> tab. This allows you to run the program in compatibility mode for an older OS version.</p>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

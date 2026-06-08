@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>13.2.5 Disk Management Commands</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">13.2.5 Disk Management Commands</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">diskpart</h2>
+      <p class="notes-paragraph"><code>diskpart</code> is the command-line interface for the Disk Management tool. Unlike the GUI snap-in, it allows destructive actions such as deleting system or boot volumes; use with caution.</p>
+      <p class="notes-paragraph">Basic workflow for inspecting disks and partitions:</p>
+      <ol class="notes-list">
+        <li class="notes-list-item">Run <code>diskpart</code>, then type <code>select disk 0</code> (or the desired disk number).</li>
+        <li class="notes-list-item">Enter <code>detail disk</code> to view disk configuration. Healthy partitions should be listed; if none appear, the partition table may be corrupted.</li>
+        <li class="notes-list-item">Type <code>select partition 0</code> or <code>select volume 0</code> (or the desired number).</li>
+        <li class="notes-list-item">Use <code>detail partition</code> or <code>detail volume</code> for more info. Available follow-up commands include <code>assign</code> (change drive letter), <code>delete</code> (remove the volume), and <code>extend</code>.</li>
+        <li class="notes-list-item">Type <code>exit</code> to quit diskpart.</li>
+      </ol>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">format</h2>
+      <p class="notes-paragraph">The <code>format</code> command creates a new file system on a drive, deleting all existing file references. Basic syntax:</p>
+      <p class="notes-paragraph"><code>format X: /fs:SYS</code> (where <code>X</code> is the drive letter and <code>SYS</code> is the file system: NTFS, FAT32, or EXFAT)</p>
+      <p class="notes-paragraph">By default, <code>format</code> scans for bad sectors. Use <code>/q</code> to skip that scan (quick format).</p>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Format type</th>
+            <th>Behavior</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Standard / Quick</td>
+            <td>Removes file references in the volume boot record; does not erase actual data. Recovery is possible with third-party tools.</td>
+          </tr>
+          <tr>
+            <td>Secure format</td>
+            <td>Overwrites each sector with zeros (often multiple passes); prevents data recovery.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">chkdsk</h2>
+      <p class="notes-paragraph"><code>chkdsk</code> scans the file system and disk sectors for faults and attempts to repair detected problems. The variant <code>autochk</code> runs automatically at boot when file system errors are detected.</p>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Command</th>
+            <th>Behavior</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>chkdsk X:</code></td>
+            <td>Read-only mode; reports errors without making changes</td>
+          </tr>
+          <tr>
+            <td><code>chkdsk X: /f</code></td>
+            <td>Attempts to fix file system errors</td>
+          </tr>
+          <tr>
+            <td><code>chkdsk X: /r</code></td>
+            <td>Fixes file system errors and attempts to recover bad sectors; saves recoverable data as <code>filennnn.chk</code> in the root directory</td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="notes-list">
+        <li class="notes-list-item"><code>chkdsk</code> cannot fix open files; a scan may need to be scheduled for the next system restart.</li>
+        <li class="notes-list-item"><code>/f</code> and <code>/r</code> scans can take a long time; do not cancel mid-scan.</li>
+        <li class="notes-list-item">Run a read-only scan first to assess the situation before committing to a repair scan.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

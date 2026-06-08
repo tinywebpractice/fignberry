@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>13.1.1 Device Manager</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">13.1.1 Device Manager</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Overview</h2>
+      <p class="notes-paragraph"><strong>Device Manager</strong> (<code>devmgmt.msc</code>) is the central utility for viewing and managing installed hardware, device drivers, and device configuration. Device drivers are manufacturer-written software that enable hardware to function with a specific OS.</p>
+      <ul class="notes-list">
+        <li class="notes-list-item"><strong>Access methods:</strong> Search "device" or "devmgmt.msc" in the Start search bar; or right-click the Start menu and select Device Manager.</li>
+        <li class="notes-list-item">Displays all hardware categories alphabetically (audio, batteries, cameras ... USB controllers).</li>
+      </ul>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Device Status Indicators</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Indicator</th>
+            <th>Meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>No icon</td>
+            <td>Device functioning normally</td>
+          </tr>
+          <tr>
+            <td>Yellow exclamation point (!)</td>
+            <td>Driver or configuration error; device identified but driver not found or malfunctioning</td>
+          </tr>
+          <tr>
+            <td>Yellow question mark (?)</td>
+            <td>Unknown device; Windows cannot identify device type or find a driver</td>
+          </tr>
+          <tr>
+            <td>Down arrow</td>
+            <td>Device is disabled</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Device Properties Tabs</h2>
+      <p class="notes-paragraph">Right-click a device and select <strong>Properties</strong> to access:</p>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Tab</th>
+            <th>Contents / Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>General</td>
+            <td>Device status message; basic error information</td>
+          </tr>
+          <tr>
+            <td>Driver</td>
+            <td>Driver provider, date, version, digital signer; buttons: Driver Details, Update Driver, Roll Back Driver, Disable Device, Uninstall Device</td>
+          </tr>
+          <tr>
+            <td>Details</td>
+            <td>Advanced hardware and driver properties</td>
+          </tr>
+          <tr>
+            <td>Events</td>
+            <td>Log of device-related system events</td>
+          </tr>
+          <tr>
+            <td>Power Management</td>
+            <td>Allow device to wake computer; allow OS to power off device to save power</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Updating Drivers</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item"><strong>Automatic search:</strong> Right-click device &gt; Update driver &gt; Search automatically. Windows checks locally and via Windows Update.</li>
+        <li class="notes-list-item"><strong>Manual install:</strong> Right-click device &gt; Update driver &gt; Browse my computer. Use when a driver has been downloaded from the manufacturer's website.</li>
+        <li class="notes-list-item"><strong>Manufacturer website:</strong> Provide the product make/model and OS version to download the correct driver. Execute the downloaded file to install.</li>
+        <li class="notes-list-item"><strong>Windows Update:</strong> Driver updates may appear as optional updates.</li>
+        <li class="notes-list-item">If a device never worked, verify compatibility of both the device and driver with the installed OS version before updating.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Rolling Back Drivers</h2>
+      <p class="notes-paragraph">If a driver update causes problems, use <strong>Roll Back Driver</strong> on the Driver tab to revert to the previously installed version. Roll Back Driver is grayed out if no previous driver version is stored.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Removing, Uninstalling, and Disabling Devices</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Action</th>
+            <th>Effect</th>
+            <th>When to Use</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Physical removal (hot-swap)</td>
+            <td>Device removed; driver remains installed for future reconnection</td>
+            <td>Plug and Play / hot-swappable devices (USB, etc.); use Safely Remove Hardware icon in taskbar for storage devices first</td>
+          </tr>
+          <tr>
+            <td>Uninstall Device</td>
+            <td>Driver removed from system; device will be treated as new on next connection</td>
+            <td>Driver is corrupt or conflicting; want a clean reinstall; right-click device &gt; Uninstall device before unplugging</td>
+          </tr>
+          <tr>
+            <td>Disable Device</td>
+            <td>Device stays physically installed but is deactivated by the OS; shown with down arrow</td>
+            <td>Device is malfunctioning; restricting user access while awaiting replacement; device is hard to physically remove</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="notes-paragraph">Before removing a storage device, always use the <strong>Safely Remove Hardware</strong> icon in the system tray: close active applications, click the icon, and select the option to stop or eject the device.</p>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

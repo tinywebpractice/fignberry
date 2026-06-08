@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.3.1 System Requirements for Applications</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.3.1 System Requirements for Applications</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Overview</h2>
+      <p class="notes-paragraph"><strong>System requirements</strong> for applications refers to the PC specification required to run third-party software. App vendors should publish requirements as support information. Key requirement categories: CPU, RAM, storage, graphics, and external hardware tokens.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">CPU Requirements</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Requirement</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>32-bit vs. 64-bit</td>
+            <td>A 64-bit application requires a 64-bit CPU and 64-bit OS; cannot run on 32-bit platforms. 32-bit applications can usually run on 64-bit platforms.</td>
+          </tr>
+          <tr>
+            <td>Generation / clock speed / core count</td>
+            <td>Some apps define minimum CPU generation, clock speed, or number of cores.</td>
+          </tr>
+          <tr>
+            <td>CPU features</td>
+            <td>May require hardware-assisted virtualization or a Trusted Platform Module (TPM). If a required feature is not detected, check the system setup (BIOS/UEFI) to confirm it has not been disabled.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">RAM Requirements</h2>
+      <p class="notes-paragraph">Published RAM requirements typically assume no other foreground software is running simultaneously. Running multiple programs at the same time will require more RAM than the stated minimum.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Storage Requirements</h2>
+      <p class="notes-paragraph">Refers to the installation footprint on the fixed disk. Additional space must also be provisioned for user-generated data, temporary files, and log files beyond the base installation size.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Dedicated Graphics Card Requirements</h2>
+      <dl class="notes-terms">
+        <dt class="notes-term">Integrated graphics</dt>
+        <dd class="notes-definition">Graphics subsystem built into the CPU or motherboard chipset; shares system RAM. Sufficient for basic desktop use.</dd>
+        <dt class="notes-term">Dedicated graphics card</dt>
+        <dd class="notes-definition">A separate GPU with its own <strong>video RAM (VRAM)</strong>, independent of system RAM. Required by demanding applications such as graphic design software, 3-D rendering tools, and games. If the GPU does not meet minimum requirements, the application will fail to launch.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">External Hardware Token Requirements</h2>
+      <p class="notes-paragraph">Some applications require or recommend an <strong>external hardware token</strong> for stronger authentication than a password alone. A hardware token is a smart card or USB form factor device that stores cryptographic user identification data. Authentication requires both the physical token and a password, PIN, or fingerprint scan (multi-factor authentication).</p>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

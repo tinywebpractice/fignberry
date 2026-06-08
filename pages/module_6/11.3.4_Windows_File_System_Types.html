@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11.3.4 Windows File System Types</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">11.3.4 Windows File System Types</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Overview</h2>
+      <p class="notes-paragraph">High-level formatting prepares a disk partition for use with an OS by creating a file system on it. Each OS is associated with specific file system types.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">File System Comparison</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>File System</th>
+            <th>Bits</th>
+            <th>Max Volume Size</th>
+            <th>Max File Size</th>
+            <th>Key Use Cases</th>
+            <th>Notable Limitations</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>NTFS</td>
+            <td>64-bit</td>
+            <td>Up to 8 PB (8,000 TB) with latest Windows updates; theoretical max 16 EB</td>
+            <td>Very large (volume-limited)</td>
+            <td>Windows OS partition; additional partitions; Windows-used removable drives</td>
+            <td>Not fully supported by non-Windows OSes; macOS can read but not write; Home editions lack dynamic disks and EFS</td>
+          </tr>
+          <tr>
+            <td>ReFS</td>
+            <td>N/A</td>
+            <td>Millions of TB</td>
+            <td>Very large</td>
+            <td>Specialized enterprise workloads requiring high availability, resiliency, and scalability</td>
+            <td>Not the default for general users; NTFS remains predominant</td>
+          </tr>
+          <tr>
+            <td>FAT32</td>
+            <td>32-bit</td>
+            <td>~2 TB</td>
+            <td>4 GB minus 1 byte</td>
+            <td>System partition (boot loader); removable drives and memory cards for cross-OS use</td>
+            <td>No reliability or security features (no journaling, permissions, or encryption)</td>
+          </tr>
+          <tr>
+            <td>exFAT</td>
+            <td>64-bit</td>
+            <td>512 TB (recommended max)</td>
+            <td>Very large</td>
+            <td>Removable hard drives and flash media; cross-OS compatibility with large file support</td>
+            <td>Supports access permissions but not encryption</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">NTFS Features</h2>
+      <dl class="notes-terms">
+        <dt class="notes-term">Journaling</dt>
+        <dd class="notes-definition">Data written to an NTFS volume is re-read, verified, and logged. Bad sectors are marked and data relocated. Makes recovery after crashes and power outages faster and more reliable.</dd>
+        <dt class="notes-term">Snapshots</dt>
+        <dd class="notes-definition">Volume Shadow Copy Service (VSS) creates read-only copies of files at given points in time, even if files are locked by another process. Supports file version history and backup operations.</dd>
+        <dt class="notes-term">Security</dt>
+        <dd class="notes-definition">File permissions and ownership, file access audit trails, quota management, and Encrypting File System (EFS). Windows Home editions do not support dynamic disks or EFS.</dd>
+        <dt class="notes-term">POSIX Compliance</dt>
+        <dd class="notes-definition">Supports case-sensitive naming, hard links, and other features required by UNIX/Linux applications. Windows preserves case but does not enforce case-sensitivity.</dd>
+        <dt class="notes-term">Indexing</dt>
+        <dd class="notes-definition">Indexing Service creates a catalog of file and folder locations and properties to speed up searches.</dd>
+        <dt class="notes-term">Dynamic Disks</dt>
+        <dd class="notes-definition">Allows space on multiple physical disks to be combined into volumes. Not supported on Windows Home editions.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">ReFS Features</h2>
+      <dl class="notes-terms">
+        <dt class="notes-term">Resiliency</dt>
+        <dd class="notes-definition">Detects and repairs corrupted files and data while the volume is online and in use, including in virtualized environments.</dd>
+        <dt class="notes-term">High Performance</dt>
+        <dd class="notes-definition">Optimized for large data sets and workloads through configuration of two logical storage tiers.</dd>
+        <dt class="notes-term">Scalability</dt>
+        <dd class="notes-definition">Supports millions of terabytes without impacting performance.</dd>
+      </dl>
+      <p class="notes-paragraph">ReFS reference: https://learn.microsoft.com/en-us/windows-server/storage/refs/refs-overview</p>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10.3.2 Print Feed Issues</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">10.3.2 Print Feed Issues</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Overview</h2>
+                <p class="notes-paragraph">If connectivity with the printer is confirmed but multiple jobs still do not
+                    print, the issue is likely mechanical. Print feed problems fall into three categories: paper jams,
+                    paper feed/misfeed issues, and grinding noises.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Paper Jam Issues</h2>
+                <p class="notes-paragraph">A paper jam occurs when a sheet becomes lodged in the paper path. The
+                    printer control panel typically identifies the jam location.</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Gain proper access to the stuck sheet without force to avoid further
+                        damage.</li>
+                    <li class="notes-list-item">Most sheets can be pulled free by hand.</li>
+                    <li class="notes-list-item">If paper is stuck in the fuser unit of a laser printer, use the release
+                        levers. Forcibly pulling paper through the fuser can damage rollers and leave debris.</li>
+                    <li class="notes-list-item">In inkjet printers, the jam location is usually visible. If the sheet
+                        will not come out easily, consult the instruction manual to release components blocking
+                        removal.</li>
+                </ul>
+                <p class="notes-paragraph"><strong>Frequent/recurring jams</strong> are caused by unsuitable media,
+                    creased or improperly loaded sheets, or faulty rollers. Identify whether the jam occurs in the same
+                    location each time and perform targeted preventive maintenance.</p>
+                <p class="notes-paragraph"><strong>Jams within the drum assembly before fusing (laser):</strong> A
+                    faulty static eliminator may be responsible. This component removes the high static charge from
+                    paper as it exits the transfer unit. If it fails, paper may stick to the drum or curl as it enters
+                    the fuser.</p>
+                <p class="notes-paragraph">Always check media and pickup rollers first. If both are in good condition
+                    and jams persist, investigate other specific components.</p>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Paper Feed Issues</h2>
+                <p class="notes-paragraph">Symptoms include paper not feeding into the printer, or multipage misfeed
+                    where feed rollers pull two or more sheets at once instead of one.</p>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Verify paper size and weight are compatible with the selected tray.
+                        Confirm the media is loaded correctly with guides set properly.</li>
+                    <li class="notes-list-item">Ensure paper is not creased, damp, or dirty.</li>
+                    <li class="notes-list-item">Fan the edge of the paper stack with a thumb before loading to separate
+                        sheets. Avoid excessive fanning, which can generate static and cause sheets to cling together.</li>
+                    <li class="notes-list-item">If media is not the issue, replace the pickup rollers. On laser printers,
+                        pickup rollers are part of the maintenance kit.</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Grinding Noise Issues</h2>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Printer Type</th>
+                            <th>Likely Cause</th>
+                            <th>Resolution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Laser</td>
+                            <td>Toner cartridge, fuser, or gears/rollers</td>
+                            <td>Identify noise source, reseat all components, and check the paper path for jams or
+                                debris. Replace the toner cartridge, maintenance kit, or both if the issue persists.</td>
+                        </tr>
+                        <tr>
+                            <td>Inkjet</td>
+                            <td>Fault in the carriage mechanism</td>
+                            <td>Consult vendor documentation to re-engage the clutch mechanism with the gear that drives
+                                the cartridge carriage.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Common Jam Causes</h2>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Unsuitable Media</dt>
+                    <dd class="notes-definition">Paper or labels incompatible with the printer type or tray
+                        specification.</dd>
+                    <dt class="notes-term">Creased Paper</dt>
+                    <dd class="notes-definition">Damaged or folded sheets that cannot travel the paper path smoothly.
+                    </dd>
+                    <dt class="notes-term">Faulty Roller</dt>
+                    <dd class="notes-definition">Worn or dirty pickup/feed rollers that fail to grip or advance paper
+                        correctly.</dd>
+                    <dt class="notes-term">Faulty Static Eliminator</dt>
+                    <dd class="notes-definition">Laser printer component that discharges paper after the transfer unit.
+                        Failure causes paper to stick to the drum or curl at the fuser entrance.</dd>
+                </dl>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

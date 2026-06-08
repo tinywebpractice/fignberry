@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>13.1.8 Certificate Manager</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">13.1.8 Certificate Manager</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Overview</h2>
+      <p class="notes-paragraph">A digital certificate verifies the identity of a user, computer, or service. Its validity is guaranteed by the issuing <strong>certification authority (CA)</strong>. The Certificate Manager console displays installed certificates and allows requesting, importing, and removing them.</p>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Console</th>
+            <th>Scope</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>certmgr.msc</code></td>
+            <td>Certificates for the current user account</td>
+          </tr>
+          <tr>
+            <td><code>certlm.msc</code></td>
+            <td>Certificates for the local computer</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Key Certificate Store Folders</h2>
+      <dl class="notes-terms">
+        <dt class="notes-term">Personal</dt>
+        <dd class="notes-definition">Certificates issued to the current user account. Used for network authentication, data encryption, and digital signatures.</dd>
+        <dt class="notes-term">Trusted Root Certification Authorities</dt>
+        <dd class="notes-definition">Certificates from all trusted issuers: Microsoft's CA root, local enterprise CAs, and third-party CAs. Mostly managed automatically via Windows Update. Each entry lists: Issued To, Issued By, and Expiration Date.</dd>
+        <dt class="notes-term">Third-Party Root Certification Authorities</dt>
+        <dd class="notes-definition">Trusted issuers from non-Microsoft or non-local-enterprise providers.</dd>
+        <dt class="notes-term">Intermediate Certification Authorities</dt>
+        <dd class="notes-definition">CAs that sit between the root CA and end-entity certificates in a certificate chain.</dd>
+        <dt class="notes-term">Trusted People</dt>
+        <dd class="notes-definition">Certificates from individuals or organizations explicitly trusted by the user.</dd>
+        <dt class="notes-term">Untrusted Certificates</dt>
+        <dd class="notes-definition">Certificates that have been explicitly revoked or flagged as untrusted.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Security Considerations</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item">Trusting an unsafe CA creates critical security vulnerabilities. A rogue CA certificate could allow a malicious website to impersonate a legitimate service (e.g., a bank), and the browser would display it as trusted. This can trick users into submitting credentials.</li>
+        <li class="notes-list-item">Use Certificate Manager to identify and remove compromised or untrusted CA certificates when necessary.</li>
+        <li class="notes-list-item">Third-party browsers (e.g., Firefox) often maintain their own separate certificate store for personal certificates and trusted root CAs, independent of the Windows certificate store.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

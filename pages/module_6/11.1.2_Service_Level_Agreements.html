@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11.1.2 Service Level Agreements</title>
+    <link rel="stylesheet" href="../../styles/site.css" />
+    <script defer src="../../js/nav.js"></script>
+</head>
+
+<body class="notes-page">
+    <button class="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" data-sidebar-toggle>
+        <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+        <span class="sidebar-toggle__label">Menu</span>
+    </button>
+
+    <div class="sidebar-backdrop" hidden data-sidebar-backdrop></div>
+
+    <div class="site-shell site-shell--sidebar">
+        <header class="site-header site-sidebar" id="site-sidebar">
+            <div class="site-sidebar__inner">
+                <p class="site-title">Course Navigation</p>
+                <nav class="site-nav" aria-label="Primary"></nav>
+            </div>
+        </header>
+
+        <main class="page-content notes-content">
+            <h1 class="notes-title">11.1.2 Service Level Agreements</h1>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Service Level Agreements (SLAs)</h2>
+                <p class="notes-paragraph">An SLA defines the level of service requirements between a provider and a
+                    customer, either internally (between departments) or externally (with a third-party vendor).</p>
+                <dl class="notes-terms">
+                    <dt class="notes-term">Internal SLA examples</dt>
+                    <dd class="notes-definition">Access to shared hardware resources between departments; a maintenance
+                        department detailing how building support is provided to other departments.</dd>
+                    <dt class="notes-term">External SLA examples</dt>
+                    <dd class="notes-definition">ISP agreements specifying throughput metrics for an internet
+                        connection; cloud service provider agreements detailing delivery metrics for cloud resources.
+                    </dd>
+                </dl>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">SLA Contents</h2>
+                <ul class="notes-list">
+                    <li class="notes-list-item">Description of the service being provided</li>
+                    <li class="notes-list-item">Metrics used to measure the level of service</li>
+                    <li class="notes-list-item">Expected uptime and availability windows</li>
+                    <li class="notes-list-item">Definition of what does and does not constitute downtime</li>
+                    <li class="notes-list-item">Recourse process for filing a complaint if metrics are not met</li>
+                    <li class="notes-list-item">Financial recovery amounts available if the SLA is breached</li>
+                </ul>
+            </section>
+
+            <section class="notes-section">
+                <h2 class="notes-section-title">Rule of Nines</h2>
+                <p class="notes-paragraph">The Rule of Nines is a common metric for expressing uptime availability and
+                    data durability in SLAs.</p>
+                <table class="notes-table">
+                    <thead>
+                        <tr>
+                            <th>Rule</th>
+                            <th>Availability</th>
+                            <th>Max Downtime / Impact</th>
+                            <th>Use</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rule of 4 Nines</td>
+                            <td>99.99%</td>
+                            <td>Max 52 minutes downtime per year</td>
+                            <td>Uptime / availability</td>
+                        </tr>
+                        <tr>
+                            <td>Rule of 11 Nines</td>
+                            <td>99.999999999%</td>
+                            <td>Max 315.58 microseconds downtime per year</td>
+                            <td>Uptime / availability</td>
+                        </tr>
+                        <tr>
+                            <td>Rule of 11 Nines (durability)</td>
+                            <td>99.999999999%</td>
+                            <td>With 1 billion objects in storage, zero objects lost over 100 years</td>
+                            <td>Data/file storage durability</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

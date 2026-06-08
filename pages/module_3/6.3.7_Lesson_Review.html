@@ -64,7 +64,7 @@
                 <li>Internet Control Message Protocol (ICMP)</li>
             </ul>
             <p class="note">Speed over guaranteed delivery = UDP. Video streaming prioritizes low latency and continuous
-                flow -- dropped frames are acceptable but retransmission delays are not. TCP adds latency via
+                flow - dropped frames are acceptable but retransmission delays are not. TCP adds latency via
                 retransmissions. FTP is an Application layer file transfer protocol. ICMP is used for diagnostics (ping,
                 traceroute).</p>
         </div>
@@ -139,7 +139,7 @@
                 <li>The server's port number is incorrectly configured, causing the client to fail to respond</li>
                 <li>The server is using UDP instead of TCP, which does not require a three-way handshake</li>
             </ul>
-            <p class="note">SYN sent, SYN-ACK received, but the final ACK never goes out -- a firewall blocking outbound
+            <p class="note">SYN sent, SYN-ACK received, but the final ACK never goes out - a firewall blocking outbound
                 ACK packets is the classic explanation. The client clearly supports the handshake (it sent the SYN). The
                 server responded correctly so its port is fine. The SYN/SYN-ACK exchange is TCP-specific; UDP has no
                 handshake.</p>
@@ -157,7 +157,7 @@
                     tolerate minor data loss</li>
             </ul>
             <p class="note">Connectionless with minimal overhead = UDP. Dropped frames and audio delays are the expected
-                tradeoff for real-time video -- minor loss is acceptable to avoid retransmission latency. SSH is
+                tradeoff for real-time video - minor loss is acceptable to avoid retransmission latency. SSH is
                 TCP-based and connection-oriented. TCP is connection-oriented, not connectionless. HTTPS is an
                 Application layer protocol, not Transport layer.</p>
         </div>
@@ -172,7 +172,7 @@
                 <li>A file transfer process where missing packets would result in corrupted files</li>
             </ul>
             <p class="note">UDP is ideal when speed matters more than perfection. Remote login (SSH) requires reliable
-                delivery -- use TCP. Banking requires reliability and security -- use TCP + TLS. File transfers where
+                delivery - use TCP. Banking requires reliability and security - use TCP + TLS. File transfers where
                 missing packets corrupt the file require TCP. Video streaming can tolerate minor loss and benefits from
                 UDP's lower latency.</p>
         </div>
@@ -200,7 +200,7 @@
                 <li>Internet Layer</li>
                 <li>Link Layer</li>
             </ul>
-            <p class="note">Port numbers are a Transport layer function -- TCP and UDP both use ports to multiplex
+            <p class="note">Port numbers are a Transport layer function - TCP and UDP both use ports to multiplex
                 traffic between applications. The Application layer uses port numbers but does not assign them. The
                 Internet layer handles IP addressing and routing. The Link layer handles framing and physical
                 transmission with no concept of ports.</p>

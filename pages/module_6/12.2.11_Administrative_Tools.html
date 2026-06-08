@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.2.11 Administrative Tools</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.2.11 Administrative Tools</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Overview</h2>
+      <p class="notes-paragraph"><strong>Administrative Tools</strong> (Windows 10) / <strong>Windows Tools</strong> (Windows 11) is a Control Panel shortcut to a folder of advanced configuration consoles. Many of these are <strong>Microsoft Management Console (MMC)</strong> snap-ins used to modify advanced settings for OS subsystems.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Key Administrative Tools</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Executable / File</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Computer Management</td>
+            <td><code>compmgmt.msc</code></td>
+            <td>Default MMC console; snap-ins for Task Scheduler, Event Viewer, Shared Folders, Local Users and Groups, Performance, Device Manager, Disk Management, Services and Applications</td>
+          </tr>
+          <tr>
+            <td>Defragment and Optimize Drives</td>
+            <td><code>dfrgui.exe</code></td>
+            <td>Maintain disk performance by optimizing file storage patterns</td>
+          </tr>
+          <tr>
+            <td>Disk Cleanup</td>
+            <td><code>cleanmgr.exe</code></td>
+            <td>Regain disk capacity by deleting unwanted files</td>
+          </tr>
+          <tr>
+            <td>Event Viewer</td>
+            <td><code>eventvwr.msc</code></td>
+            <td>Review system, security, and application logs</td>
+          </tr>
+          <tr>
+            <td>Local Security Policy</td>
+            <td><code>secpol.msc</code></td>
+            <td>View and edit local security settings</td>
+          </tr>
+          <tr>
+            <td>Resource Monitor</td>
+            <td><code>resmon.exe</code></td>
+            <td>View real-time performance statistics (CPU, memory, disk, network)</td>
+          </tr>
+          <tr>
+            <td>Performance Monitor</td>
+            <td><code>perfmon.msc</code></td>
+            <td>View and log performance statistics over time</td>
+          </tr>
+          <tr>
+            <td>Registry Editor</td>
+            <td><code>regedit.exe</code></td>
+            <td>Make manual edits to the Windows configuration settings database</td>
+          </tr>
+          <tr>
+            <td>Services console</td>
+            <td><code>services.msc</code></td>
+            <td>Start, stop, and pause background processes (services)</td>
+          </tr>
+          <tr>
+            <td>Task Scheduler</td>
+            <td><code>taskschd.msc</code></td>
+            <td>Run software and scripts on calendar or event triggers</td>
+          </tr>
+          <tr>
+            <td>System Configuration</td>
+            <td><code>msconfig.exe</code></td>
+            <td>Manage startup options and boot settings</td>
+          </tr>
+          <tr>
+            <td>Windows Defender Firewall with Advanced Security</td>
+            <td>MMC snap-in</td>
+            <td>Configure complex inbound/outbound firewall rules</td>
+          </tr>
+          <tr>
+            <td>Remote Desktop Connection</td>
+            <td><code>mstsc.exe</code></td>
+            <td>Connect to remote computers via RDP</td>
+          </tr>
+          <tr>
+            <td>Quick Assist</td>
+            <td>Built-in app</td>
+            <td>Remote support tool for helping other users</td>
+          </tr>
+          <tr>
+            <td>Windows Memory Diagnostic</td>
+            <td>Built-in tool</td>
+            <td>Test RAM for errors</td>
+          </tr>
+          <tr>
+            <td>Windows PowerShell / PowerShell ISE</td>
+            <td><code>powershell.exe</code></td>
+            <td>Command-line scripting environment</td>
+          </tr>
+          <tr>
+            <td>Command Prompt</td>
+            <td><code>cmd.exe</code></td>
+            <td>Legacy command-line interface</td>
+          </tr>
+          <tr>
+            <td>Component Services</td>
+            <td>MMC snap-in</td>
+            <td>Manage COM+ applications and DCOM configuration</td>
+          </tr>
+          <tr>
+            <td>ODBC Data Sources (32-bit / 64-bit)</td>
+            <td><code>odbcad32.exe</code></td>
+            <td>Configure database connectivity</td>
+          </tr>
+          <tr>
+            <td>Print Management</td>
+            <td>MMC snap-in</td>
+            <td>Manage printers and print servers</td>
+          </tr>
+          <tr>
+            <td>iSCSI Initiator</td>
+            <td>Built-in tool</td>
+            <td>Connect to iSCSI storage targets</td>
+          </tr>
+          <tr>
+            <td>Recovery Drive</td>
+            <td>Built-in tool</td>
+            <td>Create a bootable USB recovery drive</td>
+          </tr>
+          <tr>
+            <td>Steps Recorder</td>
+            <td><code>psr.exe</code></td>
+            <td>Record and annotate user steps for troubleshooting documentation</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Microsoft Management Console (MMC)</h2>
+      <p class="notes-paragraph">The MMC is a framework that hosts one or more <strong>snap-ins</strong>, each providing an advanced management interface for a specific OS subsystem (disks, users, services, etc.). Snap-ins can be combined into a custom console saved as a <code>.msc</code> file. Computer Management (<code>compmgmt.msc</code>) is the primary pre-built MMC console.</p>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

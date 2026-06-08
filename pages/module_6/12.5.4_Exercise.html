@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.5.4 Exercise: System Settings Hands-On Practice</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.5.4 Exercise: System Settings Hands-On Practice</h1>
+    <p class="notes-paragraph">This is a CompTIA CertMaster Learn exercise covering navigation and configuration of Windows System Settings across three practical scenarios. Exam objectives: A+ Core 2 (220-1202) 1.6 (configure Windows settings) and 1.10 (install applications according to requirements).</p>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Scenario 1: Free Up Disk Space</h2>
+      <p class="notes-paragraph"><strong>Goal:</strong> Identify storage-heavy files and applications and free up disk space using Storage settings.</p>
+      <ol class="notes-list">
+        <li class="notes-list-item">Open <strong>Settings &gt; System &gt; Storage</strong>.</li>
+        <li class="notes-list-item">Windows displays a breakdown of disk usage by category (Apps, Temporary files, Documents, etc.).</li>
+        <li class="notes-list-item">Click <strong>Temporary files</strong> to see a list of cleanable items (Downloads, Recycle Bin, Windows Update cleanup, etc.). Check the desired items and select <strong>Remove files</strong>.</li>
+        <li class="notes-list-item">To enable <strong>Storage Sense</strong>, toggle it on from the Storage page. Configure it to run automatically (e.g., when disk space is low) and set rules for deleting temp files and emptying the Recycle Bin on a schedule.</li>
+        <li class="notes-list-item">To uninstall large applications, go to <strong>Settings &gt; Apps</strong>, sort by size, and uninstall unneeded programs.</li>
+      </ol>
+      <dl class="notes-terms">
+        <dt class="notes-term">Storage Sense</dt>
+        <dd class="notes-definition">An automated Windows feature that periodically removes temporary files, empties the Recycle Bin, and cleans up locally cached cloud files to reclaim disk space without manual intervention.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Scenario 2: Enable Remote Desktop Access</h2>
+      <p class="notes-paragraph"><strong>Goal:</strong> Enable Remote Desktop so a colleague can connect to the computer for remote troubleshooting, with appropriate security controls.</p>
+      <ol class="notes-list">
+        <li class="notes-list-item">Open <strong>Settings &gt; System &gt; Remote Desktop</strong>.</li>
+        <li class="notes-list-item">Toggle <strong>Enable Remote Desktop</strong> to On. Confirm the prompt.</li>
+        <li class="notes-list-item">Click <strong>Select users that can remotely access this PC</strong> and add only the specific user account(s) that need access. Do not leave access open to all users.</li>
+        <li class="notes-list-item">Ensure <strong>Network Level Authentication (NLA)</strong> is required (enabled by default). NLA requires the connecting user to authenticate before a full remote session is established, reducing attack surface.</li>
+        <li class="notes-list-item">Note the PC name shown on the Remote Desktop settings page; the colleague will need this to connect via the Remote Desktop Connection (mstsc) client.</li>
+        <li class="notes-list-item">Disable Remote Desktop again after the session if ongoing access is not needed.</li>
+      </ol>
+      <dl class="notes-terms">
+        <dt class="notes-term">Network Level Authentication (NLA)</dt>
+        <dd class="notes-definition">A security feature requiring users to authenticate before a full RDP session is established, preventing unauthorized access to the login screen and reducing exposure to credential attacks.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Scenario 3: Check for and Install Windows Updates</h2>
+      <p class="notes-paragraph"><strong>Goal:</strong> Ensure the OS is current with the latest security patches and feature updates.</p>
+      <ol class="notes-list">
+        <li class="notes-list-item">Open <strong>Settings &gt; Windows Update</strong>.</li>
+        <li class="notes-list-item">Click <strong>Check for updates</strong>. Windows queries Microsoft's update servers for available patches.</li>
+        <li class="notes-list-item">If updates are found, click <strong>Download and install</strong>. A restart may be required to complete installation.</li>
+        <li class="notes-list-item">Review <strong>Update history</strong> to confirm recently installed patches and identify any failed updates.</li>
+        <li class="notes-list-item">Enable <strong>Automatic updates</strong> to ensure future patches are applied without manual intervention.</li>
+        <li class="notes-list-item">On enterprise networks: updates are downloaded to a local update server (e.g., WSUS), tested in a sandbox, then pushed to client machines. They are not pulled directly from Microsoft to avoid untested conflicts.</li>
+      </ol>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Reflection</h2>
+      <p class="notes-paragraph"><strong>Challenges:</strong> Storage cleanup requires judgment about which files are safe to delete. Temporary file categories can include items that look disposable but may be needed. Enabling Remote Desktop requires balancing convenience with security; leaving it enabled indefinitely increases attack surface. Windows Update on a managed network requires coordination with IT policy rather than applying updates immediately.</p>
+      <p class="notes-paragraph"><strong>Professional IT application:</strong> These three scenarios represent routine tasks in any IT support role. Disk space management prevents system slowdowns and application failures. Remote Desktop is a primary remote support tool, and configuring it correctly with NLA and scoped user permissions is essential to avoiding unauthorized access. Keeping systems updated is a foundational security control that directly reduces vulnerability exposure.</p>
+      <p class="notes-paragraph"><strong>Importance of regular configuration checks:</strong> System settings drift over time. Storage fills, updates are missed, and remote access features may be left enabled unintentionally. Regular review ensures systems remain performant, secure, and compliant with organizational policy. In a professional environment, these checks are often enforced through Group Policy, MDM tools, or automated monitoring rather than manual review.</p>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

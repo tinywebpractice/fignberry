@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.1.10 File Explorer</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.1.10 File Explorer</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Overview</h2>
+      <p class="notes-paragraph">File Explorer (<code>explorer.exe</code>) is the Windows file management application. It allows users to open, copy, move, rename, view, and delete files and folders. It is often referred to simply as "Explorer."</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">System Objects (Left Navigation Pane)</h2>
+      <p class="notes-paragraph">System objects mediate access to data files and are displayed in File Explorer's left-hand navigation pane.</p>
+      <dl class="notes-terms">
+        <dt class="notes-term">User account</dt>
+        <dd class="notes-definition">Personal data folders belonging to the signed-in account profile.</dd>
+        <dt class="notes-term">OneDrive</dt>
+        <dd class="notes-definition">Visible when signed in with a Microsoft account; shows files and folders in cloud storage.</dd>
+        <dt class="notes-term">This PC</dt>
+        <dd class="notes-definition">Contains personal profile folders plus fixed disks and removable storage drives attached to the PC.</dd>
+        <dt class="notes-term">Network</dt>
+        <dd class="notes-definition">Contains computers, shared folders, and shared printers available over the network.</dd>
+        <dt class="notes-term">Recycle Bin</dt>
+        <dd class="notes-definition">Allows recovery of files and folders marked for deletion.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Drives and Folders</h2>
+      <p class="notes-paragraph">Within <strong>This PC</strong>, drives are identified by letters and optional labels. A drive can be:</p>
+      <ul class="notes-list">
+        <li class="notes-list-item">A single physical disk or a partition on a disk</li>
+        <li class="notes-list-item">A shared network folder mapped to a drive letter</li>
+        <li class="notes-list-item">A removable disk</li>
+      </ul>
+      <p class="notes-paragraph">By convention: <strong>A:</strong> = floppy disk (rarely seen); <strong>C:</strong> = primary fixed disk partition containing the Windows installation.</p>
+      <p class="notes-paragraph">Every drive contains a <strong>root directory</strong>, represented by the backslash (<code>\</code>). Example: the root of C: drive is <code>C:\</code>. Below the root is a hierarchy of subdirectories (folders), each of which can contain subfolders and files.</p>
+
+      <h3 style="margin-top:1rem;">Typical Windows Directory Structure</h3>
+      <table class="notes-table">
+        <thead>
+          <tr><th>Path</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>C:\</code></td><td>Root directory of the primary drive</td></tr>
+          <tr><td><code>C:\Users</code></td><td>Profile settings and data for all user accounts</td></tr>
+          <tr><td><code>C:\Program Files</code></td><td>Installed 64-bit applications</td></tr>
+          <tr><td><code>C:\Program Files (x86)</code></td><td>Installed 32-bit applications (64-bit Windows only)</td></tr>
+          <tr><td><code>C:\Windows</code></td><td>System root; contains drivers, logs, fonts, config files</td></tr>
+          <tr><td><code>C:\Windows\System32</code></td><td>Core system and configuration files</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">System Files and Key Folders</h2>
+      <dl class="notes-terms">
+        <dt class="notes-term">Windows</dt>
+        <dd class="notes-definition">The system root. Contains drivers, logs, add-in applications, system and configuration files (notably <code>System32</code>), and fonts.</dd>
+        <dt class="notes-term">Program Files / Program Files (x86)</dt>
+        <dd class="notes-definition">Subdirectories for installed application software. On 64-bit Windows, <code>Program Files (x86)</code> stores 32-bit applications separately.</dd>
+        <dt class="notes-term">Users</dt>
+        <dd class="notes-definition">Storage for user profile settings and data. Each user account has a named subfolder containing <code>NTUSER.DAT</code> (registry data), personal data subfolders, and hidden subfolders for application settings, favorites, shortcuts, and temp files.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">File and Folder Management Operations</h2>
+      <table class="notes-table">
+        <thead>
+          <tr><th>Operation</th><th>Method</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Create new folder</td>
+            <td>Right-click in folder &gt; <strong>New &gt; Folder</strong>, then type name and press Enter</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Copy a file</td>
+            <td>Select file &gt; <kbd>Ctrl+C</kbd>, navigate to destination &gt; <kbd>Ctrl+V</kbd></td>
+            <td>Leaves original in place; places a copy at destination</td>
+          </tr>
+          <tr>
+            <td>Rename a file</td>
+            <td>Right-click file &gt; <strong>Rename</strong>, type new name</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Delete a file</td>
+            <td>Select file &gt; <kbd>Delete</kbd></td>
+            <td>Sends to Recycle Bin; does not permanently remove</td>
+          </tr>
+          <tr>
+            <td>Restore from Recycle Bin</td>
+            <td>Open Recycle Bin &gt; right-click file &gt; <strong>Restore</strong></td>
+            <td>Returns file to its original location</td>
+          </tr>
+          <tr>
+            <td>Empty Recycle Bin</td>
+            <td>Right-click Recycle Bin on desktop &gt; <strong>Empty Recycle Bin</strong></td>
+            <td>Permanently deletes all contents; frees disk space; icon changes to empty bin</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

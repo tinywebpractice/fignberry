@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>13.1.11 Custom Microsoft Management Consoles</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">13.1.11 Custom Microsoft Management Consoles</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Overview</h2>
+      <p class="notes-paragraph">A <strong>Microsoft Management Console (MMC)</strong> is a host container for administrative tools called <strong>snap-ins</strong>. Rather than opening each tool separately, a custom MMC lets you combine multiple snap-ins into a single saved console. Most snap-ins can manage both local and remote computers on the network.</p>
+      <dl class="notes-terms">
+        <dt class="notes-term">Run command</dt>
+        <dd class="notes-definition"><code>mmc</code> opens a blank MMC console to which snap-ins can be added.</dd>
+        <dt class="notes-term">Save format</dt>
+        <dd class="notes-definition">Custom consoles are saved as <code>.msc</code> files, typically in the Administrative Tools folder.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Adding Snap-ins</h2>
+      <p class="notes-paragraph">In a blank MMC: <strong>File &gt; Add/Remove Snap-ins</strong>. Select from the available snap-ins list and add them to the console root. Some snap-ins prompt for scope configuration (e.g., the Certificates snap-in asks whether it manages certificates for a user account, service account, or computer account).</p>
+      <p class="notes-paragraph">Available snap-ins include (partial list):</p>
+      <ul class="notes-list">
+        <li class="notes-list-item">ActiveX Control</li>
+        <li class="notes-list-item">Authorization Manager</li>
+        <li class="notes-list-item">Certificates (<code>certmgr.msc</code> / <code>certlm.msc</code>)</li>
+        <li class="notes-list-item">Component Services</li>
+        <li class="notes-list-item">Computer Management</li>
+        <li class="notes-list-item">Device Manager (<code>devmgmt.msc</code>)</li>
+        <li class="notes-list-item">Disk Management</li>
+        <li class="notes-list-item">Event Viewer</li>
+        <li class="notes-list-item">Folder</li>
+        <li class="notes-list-item">Group Policy Object (<code>gpedit.msc</code>)</li>
+        <li class="notes-list-item">Hyper-V Manager</li>
+        <li class="notes-list-item">Internet Information Services (IIS)</li>
+        <li class="notes-list-item">IP Security Monitor</li>
+        <li class="notes-list-item">Local Users and Groups (<code>lusrmgr.msc</code>)</li>
+        <li class="notes-list-item">Task Scheduler</li>
+      </ul>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Common Standalone .msc Files</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>File</th>
+            <th>Tool</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>devmgmt.msc</code></td>
+            <td>Device Manager</td>
+          </tr>
+          <tr>
+            <td><code>diskmgmt.msc</code></td>
+            <td>Disk Management</td>
+          </tr>
+          <tr>
+            <td><code>gpedit.msc</code></td>
+            <td>Local Group Policy Editor</td>
+          </tr>
+          <tr>
+            <td><code>secpol.msc</code></td>
+            <td>Local Security Policy</td>
+          </tr>
+          <tr>
+            <td><code>certmgr.msc</code></td>
+            <td>Certificate Manager (current user)</td>
+          </tr>
+          <tr>
+            <td><code>certlm.msc</code></td>
+            <td>Certificate Manager (local computer)</td>
+          </tr>
+          <tr>
+            <td><code>lusrmgr.msc</code></td>
+            <td>Local Users and Groups</td>
+          </tr>
+          <tr>
+            <td><code>regedit.exe</code></td>
+            <td>Registry Editor</td>
+          </tr>
+          <tr>
+            <td><code>compmgmt.msc</code></td>
+            <td>Computer Management (combines Device Manager, Disk Management, Event Viewer, Task Scheduler, Local Users and Groups, and more)</td>
+          </tr>
+          <tr>
+            <td><code>mmc</code></td>
+            <td>Blank MMC for custom console creation</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

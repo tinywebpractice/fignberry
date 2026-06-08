@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11.3.6 OS Compatibility Issues</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">11.3.6 OS Compatibility Issues</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Compatibility Categories</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item">OS compatibility with device hardware</li>
+        <li class="notes-list-item">Software app compatibility with an OS</li>
+        <li class="notes-list-item">Host-to-host compatibility for exchanging data over a network</li>
+        <li class="notes-list-item">User training requirements</li>
+      </ul>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Hardware Compatibility and Update Limitations</h2>
+      <p class="notes-paragraph">Before upgrading or replacing an OS, verify the hardware meets the new OS requirements. A new OS version may render existing CPUs, memory, or device drivers incompatible.</p>
+      <p class="notes-paragraph">Example: Windows 11 requires TPM version 2.0 support on the CPU or motherboard, which excludes many older PCs and laptops. Use the PC Health Check tool to verify Windows 11 compatibility.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Software Compatibility</h2>
+      <p class="notes-paragraph">Apps are coded to run on a specific OS. An app written for one OS cannot be installed on a different OS - for example, an iOS app cannot run on Android. Developers must build separate versions for each target platform.</p>
+      <p class="notes-paragraph">The app ecosystem (the range of software available for a given OS) is a significant factor in whether an OS succeeds in the marketplace.</p>
+      <p class="notes-paragraph">Cross-OS file format issues are also common. Examples from the video lesson:</p>
+      <ul class="notes-list">
+        <li class="notes-list-item">A .pptx file on a Windows PC without PowerPoint installed will prompt the user to select an app - the file is fine but the required software is not installed. Resolution may require deploying software via a distribution system.</li>
+        <li class="notes-list-item">A Windows .exe installer will not run on Linux or macOS; a platform-specific installer is required.</li>
+        <li class="notes-list-item">Windows shortcut files (.url/.lnk) open in a text editor on Linux rather than launching a browser, because the shortcut format is OS-specific.</li>
+        <li class="notes-list-item">A .pptx file opened in LibreOffice on Linux may display with different fonts and shifted layouts - a compatibility concern even when the file can be opened.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Network Compatibility</h2>
+      <p class="notes-paragraph">Devices running different OSes cannot communicate directly. They must support common network protocols that allow data to be exchanged in a standard format.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">User Training and Support</h2>
+      <p class="notes-paragraph">OS upgrades or migrations introduce new desktop styles and file system navigation that can disrupt users. Upgrade projects must include training programs, self-help resources, and technician preparation.</p>
+      <p class="notes-paragraph">In enterprise environments, the high cost of compatibility testing makes businesses reluctant to adopt new OS versions without a compelling reason. Compatibility concerns are partially mitigated by web applications and cloud services, which only require browser compatibility rather than full OS compatibility. The primary web app compatibility concern is supporting touch interfaces and a wide range of display resolutions.</p>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

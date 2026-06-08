@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.2.6 Power Options</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.2.6 Power Options</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Overview</h2>
+      <p class="notes-paragraph">Power management allows Windows to selectively reduce or cut power to hardware components to save energy and extend battery life. The <strong>Advanced Configuration and Power Interface (ACPI)</strong> specification ensures software and hardware compatibility across power-saving modes.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">ACPI Power Modes</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>ACPI State</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>S0</td>
+            <td>Powered on</td>
+            <td>Normal operating state</td>
+          </tr>
+          <tr>
+            <td>S1-S3</td>
+            <td>Standby / Suspend to RAM</td>
+            <td>Cuts power to CPU, monitor, disks, and peripherals; maintains power to RAM</td>
+          </tr>
+          <tr>
+            <td>S4</td>
+            <td>Hibernate / Suspend to Disk</td>
+            <td>Saves RAM contents to disk as <code>hiberfil.sys</code> in the root of the boot volume, then powers off</td>
+          </tr>
+          <tr>
+            <td>S5</td>
+            <td>Soft power off</td>
+            <td>Powered off via OS (still draws standby power)</td>
+          </tr>
+          <tr>
+            <td>G3</td>
+            <td>Mechanically powered off</td>
+            <td>No power drawn</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Windows Power-Saving Modes</h2>
+      <dl class="notes-terms">
+        <dt class="notes-term">Sleep (laptop)</dt>
+        <dd class="notes-definition">Enters standby (S1-S3). If battery runs low, automatically switches to hibernate before power is exhausted.</dd>
+        <dt class="notes-term">Hybrid sleep (desktop)</dt>
+        <dd class="notes-definition">Creates a hibernation file, then enters standby. Can be configured to transition to full hibernate after a defined period. Protects against power loss.</dd>
+        <dt class="notes-term">Modern Standby</dt>
+        <dd class="notes-definition">Uses S0 low-power idle mode to maintain network connectivity while consuming minimal energy. Allows the device to receive updates and notifications while appearing "asleep."</dd>
+        <dt class="notes-term">Fast Startup</dt>
+        <dd class="notes-definition">Uses the hibernation file to restore the previous system RAM state on boot, making startup faster than traditional hibernate. Enabled/disabled via Power Options applet.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Configuration Interfaces</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Interface</th>
+            <th>Location</th>
+            <th>Options</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>System Power settings</td>
+            <td>Settings &gt; System &gt; Power &amp; sleep</td>
+            <td>Screen turn-off timer; sleep timer</td>
+          </tr>
+          <tr>
+            <td>Power Options applet</td>
+            <td>Control Panel &gt; Power Options</td>
+            <td>Power plans; power button/lid behavior; Fast Startup; component sleep timers; advanced settings</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Power Plans</h2>
+      <p class="notes-paragraph">A <strong>power plan</strong> is a collection of hardware and system settings (display brightness, sleep timers, etc.) that manages how the computer uses power. Windows includes three built-in plans:</p>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>Behavior</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Balanced (recommended)</td>
+            <td>Automatically balances performance with energy consumption on capable hardware</td>
+          </tr>
+          <tr>
+            <td>Power saver</td>
+            <td>Saves energy by reducing performance where possible</td>
+          </tr>
+          <tr>
+            <td>High performance</td>
+            <td>Favors performance; may use more energy</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="notes-paragraph">Advanced power plan settings allow fine-grained control over CPU states, display brightness, search and indexing behavior, and <strong>USB selective suspend</strong> (cuts power to idle USB peripheral devices).</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Power Button and Lid Actions</h2>
+      <p class="notes-paragraph">Configured via <strong>Control Panel &gt; Power Options &gt; Choose what the power buttons do</strong>. Options for pressing the power button or closing the laptop lid include: Do nothing, Sleep, Hibernate, or Shut down. Settings can differ for on-battery vs. plugged-in states.</p>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

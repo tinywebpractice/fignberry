@@ -291,6 +291,14 @@ a {
   border-width: 0 0 0 1px;
 }
 
+body > .page-content {
+  min-height: 100vh;
+  margin-left: 240px;
+  padding: var(--space-6);
+  border-radius: 0;
+  border-width: 0 0 0 1px;
+}
+
 .page-content > * {
   max-width: 750px;
 }
@@ -567,6 +575,13 @@ a {
   }
 
   .site-shell--sidebar .page-content {
+    width: 100%;
+    margin-left: 0;
+    padding: calc(var(--space-6) + 72px) var(--space-4) var(--space-5);
+    border-width: 0;
+  }
+
+  body > .page-content {
     width: 100%;
     margin-left: 0;
     padding: calc(var(--space-6) + 72px) var(--space-4) var(--space-5);

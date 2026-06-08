@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.2.8 Apps, Programs, and Features</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.2.8 Apps, Programs, and Features</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Software Types in Windows</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Admin Rights Required?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Windows Features</td>
+            <td>OS components that can be enabled or disabled (e.g., Hyper-V virtualization platform in supported editions)</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Store apps</td>
+            <td>Installed via the Microsoft Store; tied to a Microsoft account and transferable across devices. Run in a <strong>sandbox</strong> that prevents system-wide changes and OS crashes from faulty apps.</td>
+            <td>No. Standard user permissions sufficient; no UAC prompt</td>
+          </tr>
+          <tr>
+            <td>User-context applications</td>
+            <td>Installed into the user's <code>AppData</code> folder rather than System or Program Files folders</td>
+            <td>No. No admin credentials needed</td>
+          </tr>
+          <tr>
+            <td>Desktop apps</td>
+            <td>Installed via a setup program or <strong>MSI installer</strong>; install into Program Files or System folders</td>
+            <td>Yes. Administrator privileges required</td>
+          </tr>
+          <tr>
+            <td>Windows Subsystem for Linux (WSL)</td>
+            <td>Allows installation of a Linux distribution and use of Linux applications without a VM or dual-boot configuration</td>
+            <td>Yes (to enable WSL)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Key Points</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item">Store apps run in a <strong>restrictive sandbox</strong>. They cannot make system-wide changes or crash the OS.</li>
+        <li class="notes-list-item">Store apps do <strong>not</strong> require UAC confirmation or administrator privileges to install.</li>
+        <li class="notes-list-item">Desktop apps installed via setup.exe or .msi <strong>do</strong> require administrator privileges.</li>
+        <li class="notes-list-item">User-context apps installed to <code>AppData</code> bypass the need for admin credentials entirely.</li>
+        <li class="notes-list-item">WSL enables Linux app usage on Windows without virtualization overhead or dual-boot complexity.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

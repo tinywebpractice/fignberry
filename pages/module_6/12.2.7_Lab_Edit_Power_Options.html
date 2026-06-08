@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.2.7 Lab: Edit Power Options</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.2.7 Lab: Edit Power Options</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Lab Overview</h2>
+      <p class="notes-paragraph">This is a CompTIA A+ CertMaster Learn exercise. The objective is to configure laptop power and battery settings for an executive office workstation using Control Panel Power Options.</p>
+      <p class="notes-paragraph">Path: <strong>Control Panel &gt; Hardware and Sound &gt; Power Options</strong></p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Required Configuration</h2>
+
+      <h3 class="notes-subsection-title">Power Button Action (all existing power plans)</h3>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>State</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>On battery</td>
+            <td>Hibernate</td>
+          </tr>
+          <tr>
+            <td>Plugged in</td>
+            <td>Shut down</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="notes-subsection-title">Lid Close Action (all existing power plans)</h3>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>State</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>On battery</td>
+            <td>Sleep</td>
+          </tr>
+          <tr>
+            <td>Plugged in</td>
+            <td>Do nothing</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="notes-subsection-title">Wake Password</h3>
+      <p class="notes-paragraph">Require a password when the computer wakes from sleep or hibernate.</p>
+
+      <h3 class="notes-subsection-title">High Performance Plan - Display and Sleep Timers</h3>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Setting</th>
+            <th>On battery</th>
+            <th>Plugged in</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Turn off the display</td>
+            <td>5 minutes</td>
+            <td>1 hour</td>
+          </tr>
+          <tr>
+            <td>Put the computer to sleep</td>
+            <td>30 minutes</td>
+            <td>5 hours</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Procedure</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item"><strong>Open Power Options:</strong> Control Panel &gt; Hardware and Sound &gt; Power Options</li>
+        <li class="notes-list-item"><strong>Set power button and lid actions:</strong>
+          <ul class="notes-list">
+            <li class="notes-list-item">Select <strong>Choose what the power buttons do</strong> from the left pane</li>
+            <li class="notes-list-item">Set power button action: On battery = Hibernate; Plugged in = Shut down</li>
+            <li class="notes-list-item">Set lid close action: On battery = Sleep; Plugged in = Do nothing</li>
+            <li class="notes-list-item">Under Password protection on wakeup, select <strong>Require a password</strong></li>
+            <li class="notes-list-item">Click <strong>Save changes</strong></li>
+          </ul>
+        </li>
+        <li class="notes-list-item"><strong>Select and modify the High Performance plan:</strong>
+          <ul class="notes-list">
+            <li class="notes-list-item">Back in Power Options, select <strong>High performance</strong> (expand "Show additional plans" if needed)</li>
+            <li class="notes-list-item">Click <strong>Change plan settings</strong> next to High performance</li>
+            <li class="notes-list-item">Set Turn off the display: On battery = 5 minutes; Plugged in = 1 hour</li>
+            <li class="notes-list-item">Set Put the computer to sleep: On battery = 30 minutes; Plugged in = 5 hours</li>
+            <li class="notes-list-item">Click <strong>Save changes</strong></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

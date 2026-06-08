@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>13.1.4 Lab: Disk Management</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">13.1.4 Lab: Disk Management</h1>
+    <p class="notes-paragraph">This is a CompTIA CertMaster Learn exercise. The scenario involves running Disk Cleanup and configuring scheduled defragmentation on a marketing manager's computer to address slow performance caused by disk issues.</p>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Scenario</h2>
+      <p class="notes-paragraph">As IT administrator, run Disk Cleanup on C: to delete thumbnails (but not temporary files), then configure disk defragmentation to run monthly on C: only.</p>
+      <p class="notes-paragraph">Both tools are accessible via: File Explorer &gt; This PC &gt; right-click Local Disk (C:) &gt; Properties. Disk Cleanup is under the <strong>General</strong> tab; defragmentation is under the <strong>Tools</strong> tab.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Task 1: Run Disk Cleanup on C:</h2>
+      <ol class="notes-list">
+        <li class="notes-list-item">From the taskbar, select <strong>File Explorer</strong>. Maximize the window.</li>
+        <li class="notes-list-item">Select <strong>This PC</strong>.</li>
+        <li class="notes-list-item">Right-click <strong>Local Disk (C:)</strong> and select <strong>Properties</strong>.</li>
+        <li class="notes-list-item">On the <strong>General</strong> tab, select <strong>Disk Cleanup</strong>.</li>
+        <li class="notes-list-item">Under <strong>Files to Delete</strong>:
+          <ul class="notes-list">
+            <li class="notes-list-item">Ensure <strong>Thumbnails</strong> is checked.</li>
+            <li class="notes-list-item">Uncheck <strong>Temporary files</strong>. (Note: this is distinct from Temporary Internet Files. Do not confuse the two.)</li>
+          </ul>
+        </li>
+        <li class="notes-list-item">Select <strong>OK</strong>, then confirm by selecting <strong>Delete Files</strong>.</li>
+      </ol>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Task 2: Configure Scheduled Defragmentation</h2>
+      <ol class="notes-list">
+        <li class="notes-list-item">In the C: Properties dialog, select the <strong>Tools</strong> tab.</li>
+        <li class="notes-list-item">Under Optimize and defragment drive, select <strong>Optimize</strong>.</li>
+        <li class="notes-list-item">In the Optimize Drives window, select <strong>Change settings</strong>.</li>
+        <li class="notes-list-item">Ensure <strong>Run on a schedule</strong> is checked.</li>
+        <li class="notes-list-item">From the <strong>Frequency</strong> dropdown, select <strong>Monthly</strong>.</li>
+        <li class="notes-list-item">Select <strong>Choose</strong> to configure which drives are included in the schedule.</li>
+        <li class="notes-list-item">Uncheck <strong>Local Disk (D:)</strong> and <strong>Local Disk (E:)</strong>. Leave only C: selected.</li>
+        <li class="notes-list-item">Select <strong>OK</strong> to close the drive selection dialog.</li>
+        <li class="notes-list-item">Select <strong>OK</strong> to save the schedule settings.</li>
+        <li class="notes-list-item">Select <strong>Close</strong> to close the Optimize Drives window.</li>
+      </ol>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Key Concepts</h2>
+      <dl class="notes-terms">
+        <dt class="notes-term">Thumbnails vs. Temporary files</dt>
+        <dd class="notes-definition">Thumbnails are cached preview images for files and folders; safe to delete and regenerated as needed. Temporary files are created by applications during operation; deleting them can occasionally cause issues if an application is still using them. These are separate categories in Disk Cleanup.</dd>
+        <dt class="notes-term">Scheduled optimization frequency</dt>
+        <dd class="notes-definition">Windows supports Daily, Weekly, and Monthly schedules for the Optimize Drives tool. Monthly is appropriate for lower-use systems; Weekly is the default. Drives excluded from the schedule (D:, E:) can still be optimized manually.</dd>
+        <dt class="notes-term">Drive scope</dt>
+        <dd class="notes-definition">Limiting scheduled optimization to C: (the OS drive) avoids unnecessary TRIM or defrag cycles on data drives that may not need regular attention, reducing wear on SSDs.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

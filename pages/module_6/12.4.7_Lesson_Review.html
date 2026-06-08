@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.4.7 Lesson Review</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.4.7 Lesson Review</h1>
+
+    <div class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 1.</strong> What is a key consideration when purchasing a license for a cloud-based application?</p>
+      <ul class="answer-list">
+        <li>Cloud-based application licenses do not require users to read the terms and conditions.</li>
+        <li class="correct">Cloud-based application licenses may include terms about ownership of works created using the software.</li>
+        <li>Cloud-based application licenses are only available for individual users, not businesses.</li>
+        <li>Cloud-based application licenses allow unlimited installations on multiple devices.</li>
+      </ul>
+      <p class="note">Cloud licenses can differ from traditional licenses specifically around ownership of works produced by the software, which becomes more complex when cloud storage is also used. Terms and conditions must always be read. Cloud apps offer both individual and business license tiers. Installation limits still apply and violating them is a license violation.</p>
+    </div>
+
+    <div class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 2.</strong> Your organization uses Microsoft Azure for cloud services and an on-premise Active Directory for local resource management. The IT team wants employees to use the same credentials for both cloud and on-premise resources. Which solution would BEST address this requirement?</p>
+      <ul class="answer-list">
+        <li>Disable authentication for cloud resources to simplify access.</li>
+        <li>Create separate user accounts for cloud and on-premise resources to maintain security.</li>
+        <li class="correct">Configure identity synchronization between Azure and the on-premise Active Directory.</li>
+        <li>Use a third-party password manager to store and manage multiple credentials for users.</li>
+      </ul>
+      <p class="note">Microsoft Entra Connect syncs on-premises AD identities with Microsoft Entra ID so users authenticate once and access both environments with the same credentials. Disabling authentication removes security. Separate accounts are the problem being solved, not the solution. A password manager still requires multiple credentials.</p>
+    </div>
+
+    <div class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 3.</strong> Your organization uses a cloud-based project management application under a business license. A team member stored project files created using the application in a personal cloud storage account. The license includes a clause about ownership of works created using the software. What should you infer about this situation?</p>
+      <ul class="answer-list">
+        <li>Ownership of the project files is irrelevant as long as the files are accessible to the team.</li>
+        <li>The cloud storage provider automatically owns the project files once they are uploaded to personal storage.</li>
+        <li>The team member owns the project files because they created them, and storing them in personal cloud storage is acceptable.</li>
+        <li class="correct">The organization retains ownership of the project files, and they should not be stored in personal cloud storage.</li>
+      </ul>
+      <p class="note">Under a business license, works created belong to the organization, not the individual employee. Storing those files in personal cloud storage raises ownership and data security/compliance concerns. Ownership terms have legal implications and cannot be dismissed. Uploading to a storage service does not transfer IP ownership to that provider.</p>
+    </div>
+
+    <div class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 4.</strong> Which of the following is an example of a cloud-based collaboration tool that allows multiple users to edit documents in real-time?</p>
+      <ul class="answer-list">
+        <li>Adobe Photoshop</li>
+        <li>iCloud</li>
+        <li>Microsoft Exchange Server</li>
+        <li class="correct">Microsoft Office 365</li>
+      </ul>
+      <p class="note">Office 365 is a cloud-based suite enabling simultaneous real-time multi-user editing of Word, Excel, and PowerPoint documents with per-user change tracking. Adobe Photoshop is a locally installed image editor. iCloud is a storage/sync service, not a document collaboration platform. Microsoft Exchange Server is an on-premises email server.</p>
+    </div>
+
+    <div class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 5.</strong> Your company is moving its email system to the cloud to improve accessibility and synchronization across devices. Employees switch between desktops, laptops, and mobile devices and need emails and folders to stay updated in real-time. Which solution would BEST meet these requirements?</p>
+      <ul class="answer-list">
+        <li>Configuring Microsoft Outlook as a desktop-only application</li>
+        <li class="correct">Using Gmail through Google Workspace</li>
+        <li>Installing Mozilla Thunderbird as the primary email client for all employees</li>
+        <li>Deploying Microsoft Exchange as an on-premise email server</li>
+      </ul>
+      <p class="note">Gmail via Google Workspace is a cloud-based email system that syncs email and folders across all devices in real time, accessible from any browser or device. Desktop-only Outlook, Thunderbird, and on-premises Exchange are all locally bound solutions that do not inherently provide cross-device real-time cloud sync.</p>
+    </div>
+
+    <div class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 6.</strong> How does cloud storage improve file accessibility and management compared to local storage?</p>
+      <ul class="answer-list">
+        <li>It restricts file access to a single device for enhanced security.</li>
+        <li class="correct">It allows files to be accessed and synchronized across multiple devices with internet access.</li>
+        <li>It requires users to manually transfer files between devices for synchronization.</li>
+        <li>It eliminates the need for internet access to retrieve files stored in the cloud.</li>
+      </ul>
+      <p class="note">Cloud storage is accessible from any device with an internet connection and syncs automatically. Single-device restriction and manual file transfer both describe local storage limitations. Internet access is a requirement for cloud storage, not something it eliminates.</p>
+    </div>
+
+    <div class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 7.</strong> How does a cloud-based email system differ from an on-premise email server?</p>
+      <ul class="answer-list">
+        <li>On-premise email servers are managed entirely by the cloud service provider.</li>
+        <li>Cloud-based email systems require no internet connection to access emails.</li>
+        <li class="correct">Cloud-based email systems allow users to access their emails and folders from any device with an internet connection.</li>
+        <li>On-premise email servers automatically synchronize emails across multiple devices without additional configuration.</li>
+      </ul>
+      <p class="note">Cloud email is browser-accessible from anywhere and syncs across devices automatically. On-premises servers are managed by the organization's own IT staff. Internet access is required for cloud services. On-premises solutions like Exchange require additional configuration (e.g., ActiveSync, IMAP) to achieve cross-device sync.</p>
+    </div>
+
+    <div class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 8.</strong> A company needs a storage solution that allows employees to access files from multiple devices, ensures files are always up-to-date, and provides an easy way to share files with external collaborators. Which solution BEST meets their needs?</p>
+      <ul class="answer-list">
+        <li>A local file server that employees can access only when connected to the company network.</li>
+        <li>An email-based system where employees attach and send files to collaborators.</li>
+        <li>An external hard drive assigned to each employee for storing and sharing files.</li>
+        <li class="correct">A cloud storage solution like Microsoft OneDrive or Google Drive that supports synchronization and sharing.</li>
+      </ul>
+      <p class="note">Cloud storage satisfies all three requirements: multi-device access, automatic sync to keep files current, and built-in sharing for external collaborators. A local file server is network-bound. Email attachments create unsynced copies with no version control. External hard drives have no sync or external sharing capability.</p>
+    </div>
+
+    <div class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 9.</strong> What is the primary benefit of using identity synchronization in a cloud-based environment?</p>
+      <ul class="answer-list">
+        <li>It ensures that users have different permissions for cloud and on-premise systems.</li>
+        <li class="correct">It simplifies user sign-in by enabling a single set of credentials for cloud and on-premise resources.</li>
+        <li>It allows users to have multiple sets of credentials for different resources.</li>
+        <li>It eliminates the need for credentials entirely in enterprise environments.</li>
+      </ul>
+      <p class="note">Identity synchronization consolidates credentials so one set grants access to both cloud and on-premises environments, reducing burden on users and simplifying admin management. The goal is consistent permissions across both environments, not different ones. Multiple credential sets is the problem being solved. Authentication is still required; sync consolidates it, not eliminates it.</p>
+    </div>
+
+    <div class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 10.</strong> Why are cloud-based collaboration tools beneficial for remote teams working on the same document?</p>
+      <ul class="answer-list">
+        <li class="correct">They allow users to edit the same document in real-time, regardless of location.</li>
+        <li>They ensure that only one user can access the document at a time to prevent conflicts.</li>
+        <li>They require users to download the document locally before making edits.</li>
+        <li>They automatically delete older versions of the document to save storage space.</li>
+      </ul>
+      <p class="note">Cloud collaboration tools like Google Docs and Office 365 enable simultaneous multi-user editing with changes visible to all in real time. Single-user file locking describes a traditional local-file model, not cloud collaboration. Cloud tools edit documents directly without a separate download step. Most cloud platforms retain version history rather than deleting it.</p>
+    </div>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

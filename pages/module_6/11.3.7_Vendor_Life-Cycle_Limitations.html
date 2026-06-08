@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11.3.7 Vendor Life-cycle Limitations</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">11.3.7 Vendor Life-cycle Limitations</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Life-cycle Phases</h2>
+      <p class="notes-paragraph">A vendor life cycle describes the policies and procedures an OS developer or device vendor uses to support a product. Policy specifics vary by vendor, but the following phases are typical:</p>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Phase</th>
+            <th>Description</th>
+            <th>Updates / Upgrades</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Public Beta</td>
+            <td>Pre-release phase used to gather user feedback. Example: Microsoft Windows Insider Program provides access to early-release Windows versions and feature updates.</td>
+            <td>Early/preview builds only</td>
+          </tr>
+          <tr>
+            <td>Supported</td>
+            <td>Product is actively marketed. Vendor releases regular patches for critical security and operational issues, plus feature upgrades to expand OS functionality.</td>
+            <td>Regular patches and feature upgrades; OS upgrade versions available</td>
+          </tr>
+          <tr>
+            <td>Extended Support</td>
+            <td>Product is no longer commercially available but vendor continues issuing critical patches.</td>
+            <td>Critical patches only; OS upgrades may or may not be available</td>
+          </tr>
+          <tr>
+            <td>End of Life (EOL)</td>
+            <td>Product is no longer supported by the developer or vendor. No further security updates are issued. EOL systems in active use represent a critical security vulnerability.</td>
+            <td>None</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="notes-paragraph">Note: Windows 10 reached end of life on October 14, 2025. Microsoft provides no free support or updates after this date.</p>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

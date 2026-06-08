@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>13.1.5 Task Scheduler</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">13.1.5 Task Scheduler</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Overview</h2>
+      <p class="notes-paragraph">Task Scheduler automates commands, scripts, and applications on a one-time or recurring basis. Many built-in Windows processes (e.g., Disk Optimizer, Windows Update) use predefined Task Scheduler entries. Tasks can run simple applications with switches, batch files, or scripts.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Key Features</h2>
+      <dl class="notes-terms">
+        <dt class="notes-term">Triggers</dt>
+        <dd class="notes-definition">Tasks can be triggered by calendar date/time or by system events such as user sign-in, machine waking from sleep, or other Windows events.</dd>
+        <dt class="notes-term">Multiple Actions</dt>
+        <dd class="notes-definition">Each task can chain multiple actions, enabling complex automation sequences.</dd>
+        <dt class="notes-term">Logging</dt>
+        <dd class="notes-definition">All task activity is logged in the History tab, allowing investigation of failures and unsuccessful runs.</dd>
+        <dt class="notes-term">Organization</dt>
+        <dd class="notes-definition">Tasks are stored in the Task Scheduler Library and can be organized into folders (e.g., Microsoft, Intel, Mozilla) for easier management.</dd>
+      </dl>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Task Configuration Requirements</h2>
+      <ul class="notes-list">
+        <li class="notes-list-item"><strong>File/script path</strong>: the executable, batch file, or script to run.</li>
+        <li class="notes-list-item"><strong>Trigger</strong>: when or what event causes the task to run.</li>
+        <li class="notes-list-item"><strong>Credentials</strong>: the user account under which the task runs. If the account lacks sufficient permissions, the task will not execute. Options include "Run only when user is logged on" or "Run whether user is logged on or not." The "Run with highest privileges" option elevates the task to administrator level.</li>
+      </ul>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Task Scheduler Interface</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Panel / Tab</th>
+            <th>Contents</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Left pane (Task Scheduler Library)</td>
+            <td>Folder hierarchy of all scheduled tasks</td>
+          </tr>
+          <tr>
+            <td>Center pane (task list)</td>
+            <td>Name, status, and trigger summary for each task in the selected folder</td>
+          </tr>
+          <tr>
+            <td>Lower pane (General tab)</td>
+            <td>Task name, location, author, description, and security options</td>
+          </tr>
+          <tr>
+            <td>Triggers tab</td>
+            <td>All configured triggers for the selected task</td>
+          </tr>
+          <tr>
+            <td>Actions tab</td>
+            <td>Commands/scripts the task executes</td>
+          </tr>
+          <tr>
+            <td>Conditions tab</td>
+            <td>Power, network, and idle conditions required for the task to run</td>
+          </tr>
+          <tr>
+            <td>Settings tab</td>
+            <td>Behavior on failure, stop conditions, and execution time limits</td>
+          </tr>
+          <tr>
+            <td>History tab</td>
+            <td>Log of past task runs and outcomes (may need to be enabled)</td>
+          </tr>
+          <tr>
+            <td>Right pane (Actions)</td>
+            <td>Create Basic Task, Create Task, Import Task, Run, End, Disable, Export, Delete</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

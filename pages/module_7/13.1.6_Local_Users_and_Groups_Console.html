@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>13.1.6 Local Users and Groups Console</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">13.1.6 Local Users and Groups Console</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Overview</h2>
+      <p class="notes-paragraph">The Local Users and Groups console (<code>lusrmgr.msc</code>) provides an advanced interface for managing local user accounts and security groups. Actions include creating, modifying, disabling, deleting accounts, and resetting passwords.</p>
+      <p class="notes-paragraph">Security groups allow user accounts with similar permissions to be managed collectively. Default groups define the account types available through the Settings interface.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Default Security Groups</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Group</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Administrators</td>
+            <td>Complete and unrestricted access to the computer. Members can perform all administrative tasks.</td>
+          </tr>
+          <tr>
+            <td>Users</td>
+            <td>Standard user access; cannot make system-wide changes.</td>
+          </tr>
+          <tr>
+            <td>Guests</td>
+            <td>Same access as Users by default; intended for temporary or limited access.</td>
+          </tr>
+          <tr>
+            <td>Backup Operators</td>
+            <td>Can override security restrictions for backup and restore purposes.</td>
+          </tr>
+          <tr>
+            <td>Cryptographic Operators</td>
+            <td>Authorized to perform cryptographic operations.</td>
+          </tr>
+          <tr>
+            <td>Device Owners</td>
+            <td>Can change system-wide settings.</td>
+          </tr>
+          <tr>
+            <td>Event Log Readers</td>
+            <td>Can read event logs from the local machine.</td>
+          </tr>
+          <tr>
+            <td>Access Control Assistance Operators</td>
+            <td>Can remotely query authorization attributes and permissions.</td>
+          </tr>
+          <tr>
+            <td>Distributed COM Users</td>
+            <td>Can launch, activate, and use Distributed COM objects.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">PowerShell - Managing Users and Groups</h2>
+      <p class="notes-paragraph">PowerShell can perform the same tasks as the console, useful for scripting bulk user creation and group assignments.</p>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Command</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Create a new user account</td>
+            <td><code>net user UserName Password /add</code></td>
+          </tr>
+          <tr>
+            <td>Force password change at next logon</td>
+            <td><code>net user UserName Password /logonpasswordchg:yes</code></td>
+          </tr>
+          <tr>
+            <td>Add user to a local group</td>
+            <td><code>net localgroup GroupName UserName /add</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <dl class="notes-terms">
+        <dt class="notes-term">net user</dt>
+        <dd class="notes-definition">Command for managing local user accounts. Switches include <code>/add</code> (create account) and <code>/logonpasswordchg:yes</code> (force password change at next logon).</dd>
+        <dt class="notes-term">net localgroup</dt>
+        <dd class="notes-definition">Command for managing local group membership. The <code>/add</code> switch adds a specified user to a specified group (e.g., <code>Administrators</code>, <code>Backup Operators</code>).</dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

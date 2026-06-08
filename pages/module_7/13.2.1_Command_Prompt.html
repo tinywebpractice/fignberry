@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>13.2.1 Command Prompt</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">13.2.1 Command Prompt</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Overview</h2>
+      <p class="notes-paragraph">The command prompt processes legacy commands from early Windows versions. Any single command can be run from the Run dialog, but a command shell is preferred for running a series of commands or viewing output. Legacy commands also run at a modern Windows PowerShell prompt. In Windows 11, the command interface is redesigned as Windows Terminal.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Administrative Command Prompt</h2>
+      <p class="notes-paragraph">Some commands require elevated privileges. If elevation is needed, the error message displayed is: <em>"The requested operation requires elevation."</em></p>
+      <p class="notes-paragraph">Two methods to launch an elevated Command Prompt:</p>
+      <ul class="notes-list">
+        <li class="notes-list-item">Right-click the Command Prompt shortcut, select <strong>Run as administrator</strong>, and confirm the UAC prompt.</li>
+        <li class="notes-list-item">Type <code>cmd</code> in the Instant Search box and press <strong>CTRL+SHIFT+ENTER</strong>.</li>
+      </ul>
+      <p class="notes-paragraph">When elevated, the title bar shows <strong>Administrator: Command Prompt</strong> and the default directory is <code>C:\Windows\System32</code> rather than <code>C:\Users\Username</code>. This method can also open other utilities (e.g., Explorer, Notepad) with administrative privileges.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Command Syntax</h2>
+      <p class="notes-paragraph">Enter commands at the prompt (<code>&gt;</code>) using the command name, switches, and arguments in proper order, then press <strong>ENTER</strong> to execute.</p>
+      <ul class="notes-list">
+        <li class="notes-list-item">Switches are usually preceded by a forward slash (e.g., <code>/all</code>).</li>
+        <li class="notes-list-item">Arguments that include spaces must be enclosed in quotes.</li>
+        <li class="notes-list-item">Use <code>cls</code> to clear the screen.</li>
+      </ul>
+      <p class="notes-paragraph">Some commands (e.g., <code>nslookup</code>, <code>telnet</code>) operate in <strong>interactive mode</strong>: launching the command opens a sub-program that only accepts inputs relevant to that program. To exit interactive mode, use <code>exit</code> or <code>quit</code>, or press <strong>CTRL+C</strong>. Using <code>exit</code> outside of interactive mode closes the Command Prompt window entirely.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Getting Help</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Command</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>help</code></td>
+            <td>Lists all available commands</td>
+          </tr>
+          <tr>
+            <td><code>help &lt;command&gt;</code></td>
+            <td>Shows syntax and switches for a specific command</td>
+          </tr>
+          <tr>
+            <td><code>&lt;command&gt; /?</code></td>
+            <td>Displays command-specific help (e.g., <code>netstat /?</code>)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.3.5 Lesson Review</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">12.3.5 Lesson Review</h1>
+
+    <div class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 1.</strong> A server administrator tests an application migration from a 32-bit server to a 64-bit server, but the application is still 32-bit. Where will Windows run the application?</p>
+      <ul class="answer-list">
+        <li>PXE</li>
+        <li class="correct">WOW64</li>
+        <li>OEM</li>
+        <li>SED</li>
+      </ul>
+      <p class="note">WOW64 (Windows on Windows 64) is the compatibility subsystem built into 64-bit Windows that allows 32-bit applications to run. PXE is a network boot environment. OEM refers to licensing, not execution. SED (Self-Encrypting Drive) is a storage security feature.</p>
+    </div>
+
+    <div class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 2.</strong> Why is it important to verify the authenticity and integrity of an application installer downloaded from the Internet?</p>
+      <ul class="answer-list">
+        <li>To check if the application requires a dedicated graphics card.</li>
+        <li class="correct">To confirm the installer is free from malware and has not been tampered with.</li>
+        <li>To determine if the application is 32-bit or 64-bit.</li>
+        <li>To ensure the application is compatible with the operating system.</li>
+      </ul>
+      <p class="note">Verifying authenticity (via digital signature/code signing) and integrity (via hash comparison) ensures the file came from the legitimate publisher and was not modified in transit or at rest. Hardware requirements, bit-width, and OS compatibility are separate checks unrelated to integrity verification.</p>
+    </div>
+
+    <div class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 3.</strong> A graphics artist is starting to get into 3D animation and wants to ensure their computer can adequately handle the work. What should the graphics artist use?</p>
+      <ul class="answer-list">
+        <li class="correct">Dedicated graphics</li>
+        <li>LPL</li>
+        <li>Integrated graphics</li>
+        <li>Hardware token</li>
+      </ul>
+      <p class="note">3D animation is GPU-intensive and requires a dedicated graphics card with its own VRAM. Integrated graphics shares system RAM and is insufficient for demanding 3D rendering. LPL is not a standard graphics term. A hardware token is a security authentication device.</p>
+    </div>
+
+    <div class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 4.</strong> A project manager implements a new ticketing system that allows the helpdesk to record knowledge, streamline efficiencies, and automate solutions. Which of the following is the least concern for the support team?</p>
+      <ul class="answer-list">
+        <li>Support</li>
+        <li>Licensing</li>
+        <li class="correct">Distribution method</li>
+        <li>Training</li>
+      </ul>
+      <p class="note">Distribution method is a procurement/IT concern handled before implementation and is not an ongoing concern for the support team using the system. Support, licensing, and training are all directly relevant to the team operating the ticketing system day to day.</p>
+    </div>
+
+    <div class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 5.</strong> Which of the following scenarios best evaluates whether a computer system meets the CPU, System Memory, and Storage Requirements for installing a new application?</p>
+      <ul class="answer-list">
+        <li class="correct">The system has a 64-bit CPU and OS, 8GB of RAM, and 500GB of free storage space, meeting all the application's requirements.</li>
+        <li>The system has a 64-bit CPU and OS, 4GB of RAM, and 50GB of free storage space, but the application requires 8GB of RAM and 100GB of free storage space.</li>
+        <li>The system has a 64-bit CPU and OS, 16GB of RAM, and 1TB of free storage space, but the application requires a dedicated graphics card.</li>
+        <li>The system has a 32-bit CPU, 4GB of RAM, and 100GB of free storage space, but the application requires a 64-bit CPU and OS.</li>
+      </ul>
+      <p class="note">Only the first scenario satisfies all three checked requirements (CPU architecture, RAM, and storage). The second fails on RAM and storage. The third fails due to a missing dedicated GPU. The fourth is blocked by CPU architecture, which is a hard incompatibility.</p>
+    </div>
+
+    <div class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 6.</strong> Which of the following statements BEST describes the importance of OS requirements for applications?</p>
+      <ul class="answer-list">
+        <li>Applications designed for macOS can run on Windows without compatibility issues.</li>
+        <li class="correct">A 64-bit application requires both a 64-bit CPU and a 64-bit OS to function.</li>
+        <li>Linux applications are always compatible with all Linux distributions without any modifications.</li>
+        <li>32-bit applications cannot run on a 64-bit operating system.</li>
+      </ul>
+      <p class="note">A 64-bit application requires a 64-bit OS because the OS must provide the necessary instruction set and memory addressing support. macOS and Windows apps are not cross-compatible. Linux app compatibility varies across distros due to library and kernel differences. 32-bit apps can run on 64-bit Windows via WOW64.</p>
+    </div>
+
+    <div class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 7.</strong> Your organization is planning to deploy a new application to all employees. The application setup file is available as an ISO image. Which of the following would be the MOST efficient and secure approach for deployment?</p>
+      <ul class="answer-list">
+        <li>Distribute the ISO file via email and instruct employees to install it themselves.</li>
+        <li>Copy the ISO file to USB drives and distribute them to employees for installation.</li>
+        <li class="correct">Use a network-based installer to deploy the application during non-critical hours.</li>
+        <li>Mount the ISO file on each individual computer and manually install the application.</li>
+      </ul>
+      <p class="note">A network-based deployment pushes the application centrally, ensures consistency, minimizes user error, and scheduling during non-critical hours avoids business disruption. Email distribution is insecure and inconsistent. USB distribution is slow and introduces physical security risks. Manual per-machine installation is the least efficient option at scale.</p>
+    </div>
+
+    <div class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 8.</strong> Don is an accountant who receives permission to install a new accounting application, but the OS will not allow him to. A helpdesk technician later installs it on the same machine without issue. Which of the following is the MOST likely reason Don could not install the application?</p>
+      <ul class="answer-list">
+        <li class="correct">Insufficient permissions</li>
+        <li>Insufficient system RAM</li>
+        <li>Insufficient disk space</li>
+        <li>Incorrect service pack level</li>
+        <li>Failed device driver</li>
+      </ul>
+      <p class="note">The technician installed successfully on the same machine, ruling out any hardware or OS-level issue. Only the user account changed, indicating Don lacked the administrative privileges required to install software. RAM, disk space, service pack level, and driver issues would have blocked the technician equally.</p>
+    </div>
+
+    <div class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 9.</strong> You are an IT administrator tasked with deploying a new accounting application across 200 desktops. The application requires a network-based installer and must not disrupt normal business operations. What is the BEST approach?</p>
+      <ul class="answer-list">
+        <li>Install the application on one computer at a time to minimize network congestion.</li>
+        <li>Deploy the application during business hours to ensure immediate feedback from users.</li>
+        <li>Allow each user to manually install the application from a shared network folder.</li>
+        <li class="correct">Use Group Policy Objects (GPOs) to automate the deployment during non-critical times.</li>
+      </ul>
+      <p class="note">GPOs allow centralized, automated software deployment to all domain-joined machines without user interaction. Scheduling during non-critical hours satisfies the no-disruption requirement. Serial manual installs are impractical at 200 machines. Deploying during business hours directly violates the stated requirement. Self-service installs introduce inconsistency and permission issues.</p>
+    </div>
+
+    <div class="notes-section question">
+      <p class="notes-paragraph"><strong>Question 10.</strong> Cindy wants to install a new application that requires the operating system to have 1 gigabyte of working memory to function properly. Which of the following system requirements does Cindy need to check for compatibility?</p>
+      <ul class="answer-list">
+        <li class="correct">RAM capacity</li>
+        <li>VRAM capacity</li>
+        <li>CPU capacity</li>
+        <li>SSD storage capacity</li>
+      </ul>
+      <p class="note">Working memory refers to RAM (Random Access Memory). The application requires 1GB of RAM, so Cindy must verify available RAM. VRAM is dedicated graphics card memory used for rendering, not general application execution. CPU capacity addresses processing speed, not memory. SSD storage is where the application is installed, not where it runs.</p>
+    </div>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

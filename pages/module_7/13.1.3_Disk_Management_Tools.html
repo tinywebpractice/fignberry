@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>13.1.3 Disk Maintenance Tools</title>
+  <link rel="stylesheet" href="../../styles/site.css" />
+</head>
+<body>
+  <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">&#9776;</button>
+  <div class="sidebar-backdrop" data-sidebar-toggle></div>
+  <aside class="site-sidebar">
+    <nav class="site-nav" aria-label="Primary"></nav>
+  </aside>
+
+  <main class="page-content notes-content">
+    <h1 class="notes-title">13.1.3 Disk Maintenance Tools</h1>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Three Main Disk Problems</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Problem</th>
+            <th>Description</th>
+            <th>Threshold / Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fragmentation</td>
+            <td>Files become scattered across non-contiguous clusters on an HDD, reducing read performance.</td>
+            <td>HDD-specific; SSDs are not affected in the same way.</td>
+          </tr>
+          <tr>
+            <td>Capacity</td>
+            <td>More files created than deleted over time reduces available space.</td>
+            <td>Performance suffers below 20% free space on boot volume; Low Disk Space warning appears below 200 MB.</td>
+          </tr>
+          <tr>
+            <td>Damage</td>
+            <td>HDDs: physical damage from power cuts causes file corruption. SSDs: cell degradation causes bad blocks; vulnerable to impacts, overheating, and electrical issues.</td>
+            <td>Regular maintenance helps detect and address damage early.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="notes-paragraph">Run disk maintenance tools at least monthly and before software installations.</p>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Defragment and Optimize Drives</h2>
+      <p class="notes-paragraph">The <strong>Defragment and Optimize Drives</strong> tool addresses both fragmentation and SSD maintenance. Windows Task Scheduler runs it automatically (default: weekly). Regularly check for unsuccessful scheduled runs.</p>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>Drive Type</th>
+            <th>Operation Performed</th>
+            <th>Effect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HDD</td>
+            <td>Defragmentation</td>
+            <td>Reorganizes file data into contiguous clusters; reduces controller seek time when reading files.</td>
+          </tr>
+          <tr>
+            <td>SSD</td>
+            <td>TRIM operation</td>
+            <td>Marks OS-deletable data blocks as writable, allowing the drive controller's wear-leveling routines to manage them efficiently.</td>
+          </tr>
+          <tr>
+            <td>SSD (OS drive with Volume Shadow Copy)</td>
+            <td>TRIM + possible defragmentation</td>
+            <td>May also perform defragmentation in addition to TRIM when Volume Shadow Copy is enabled on the OS drive.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes-section">
+      <h2 class="notes-section-title">Disk Clean-up</h2>
+      <p class="notes-paragraph">The <strong>Disk Clean-up</strong> tool identifies files safe for deletion to reclaim disk space.</p>
+      <ul class="notes-list">
+        <li class="notes-list-item">Identifies: Recycle Bin contents, temporary files, downloaded program files, temporary internet files, and more.</li>
+        <li class="notes-list-item">Running in <strong>administrator mode</strong> with the <strong>Clean up system files</strong> option unlocks additional categories: Windows Update cache, Windows Defender cache, and other system-level temporary data.</li>
+        <li class="notes-list-item">Shows total disk space recoverable before committing to deletion.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="../../js/nav.js"></script>
+</body>
+</html>
